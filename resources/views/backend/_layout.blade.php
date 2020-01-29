@@ -12,7 +12,7 @@
 	<script>
 		WebFont.load({
 			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../assets/css/fonts.min.css']},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['http://demo.themekita.com/atlantis/livepreview/examples/assets/css/fonts.min.css']},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -30,8 +30,8 @@
 	<div class="wrapper">
 		
 		<!-- Navbar -->
-		<!-- End Navbar -->
 		@include('backend.inc._navbar')
+		<!-- End Navbar -->
 
 		<!-- Sidebar -->
 		@include('backend.inc._sidebar')
@@ -39,9 +39,13 @@
 
 		<div class="main-panel">
 			<div class="container">
+
 				@yield('content')
+
 			</div>
+
 			@include('backend.inc._footer')
+
 		</div>
 		
 		{{-- <div class="quick-sidebar">

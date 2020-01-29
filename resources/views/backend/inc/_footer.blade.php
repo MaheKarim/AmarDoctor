@@ -15,7 +15,7 @@
             </ul>
         </nav>
         <div class="copyright ml-auto">
-            2018, made with <i class="fa fa-heart heart text-danger"></i> by <a href="#">ThemeKita</a>
+            2020, made with <i class="fa fa-heart heart text-danger"></i> by <a href="#">Mahe</a>
         </div>				
     </div>
 </footer>

@@ -67,42 +67,6 @@
                                             <span class="time">5 minutes ago</span> 
                                         </div>
                                     </a>
-                                    <a href="#">
-                                        <div class="notif-img"> 
-                                            <img src="http://demo.themekita.com/atlantis/livepreview/examples/assets/img/chadengle.jpg" alt="Img Profile">
-                                        </div>
-                                        <div class="notif-content">
-                                            <span class="subject">Chad</span>
-                                            <span class="block">
-                                                Ok, Thanks !
-                                            </span>
-                                            <span class="time">12 minutes ago</span> 
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="notif-img"> 
-                                            <img src="http://demo.themekita.com/atlantis/livepreview/examples/assets/img/mlane.jpg" alt="Img Profile">
-                                        </div>
-                                        <div class="notif-content">
-                                            <span class="subject">Jhon Doe</span>
-                                            <span class="block">
-                                                Ready for the meeting today...
-                                            </span>
-                                            <span class="time">12 minutes ago</span> 
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="notif-img"> 
-                                            <img src="http://demo.themekita.com/atlantis/livepreview/examples/assets/img/talha.jpg" alt="Img Profile">
-                                        </div>
-                                        <div class="notif-content">
-                                            <span class="subject">Talha</span>
-                                            <span class="block">
-                                                Hi, Apa Kabar ?
-                                            </span>
-                                            <span class="time">17 minutes ago</span> 
-                                        </div>
-                                    </a>
                                 </div>
                             </div>
                         </li>
@@ -132,15 +96,7 @@
                                             <span class="time">5 minutes ago</span> 
                                         </div>
                                     </a>
-                                    <a href="#">
-                                        <div class="notif-icon notif-success"> <i class="fa fa-comment"></i> </div>
-                                        <div class="notif-content">
-                                            <span class="block">
-                                                Rahmad commented on Admin
-                                            </span>
-                                            <span class="time">12 minutes ago</span> 
-                                        </div>
-                                    </a>
+                                    
                                     <a href="#">
                                         <div class="notif-img"> 
                                             <img src="http://demo.themekita.com/atlantis/livepreview/examples/assets/img/profile2.jpg" alt="Img Profile">
@@ -170,7 +126,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown hidden-caret">
-                    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+                    {{-- <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fas fa-layer-group"></i>
                     </a>
                     <div class="dropdown-menu quick-actions quick-actions-info animated fadeIn">
@@ -232,7 +188,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link quick-sidebar-toggler">
@@ -251,8 +207,8 @@
                                 <div class="user-box">
                                     <div class="avatar-lg"><img src="http://demo.themekita.com/atlantis/livepreview/examples/assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
                                     <div class="u-text">
-                                        <h4>Hizrian</h4>
-                                        <p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                                    <h4>{{ Auth::user()->name }}</h4>
+                                        <p class="text-muted"></p>{{ Auth::user()->email }}<a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                                     </div>
                                 </div>
                             </li>
