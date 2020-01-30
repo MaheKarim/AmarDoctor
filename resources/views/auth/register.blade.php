@@ -40,6 +40,18 @@
                         </div>
 
                         <div class="form-group row">
+                        <label for="phn_number" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="phn_number" type="text" class="form-control @error('phn_number') is-invalid @enderror" name="phn_number" required alue="{{ old('phn_number') }}">
+                                @error('phn_number')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
