@@ -14,7 +14,10 @@ class AreaController extends Controller
      */
     public function index()
     {
-        //
+        // code start here
+        $data = [ ];
+        
+        return view('backend.area.add', $data);
     }
 
     /**
