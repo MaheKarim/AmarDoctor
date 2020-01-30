@@ -45,7 +45,7 @@
                     <h4 class="text-section">Components</h4>
                 </li>
                 <li class="nav-item">
-                <a data-toggle="collapse" href="{{ route('areaAdd') }}">
+                <a data-toggle="collapse" href="{{ route('showArea') }}">
                         <i class="fas fa-layer-group"></i>
                         <p>Area Creation</p>
                     </a>

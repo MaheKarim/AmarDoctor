@@ -24,9 +24,9 @@
 	<!-- Datatables -->
 	<script src="http://demo.themekita.com/atlantis/livepreview/examples/assets/js/plugin/datatables/datatables.min.js"></script>
 
-	<!-- Bootstrap Notify -->
+	<!-- Bootstrap Notify 
 	<script src="http://demo.themekita.com/atlantis/livepreview/examples/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
+    -->
 	<!-- Bootstrap Toggle -->
 	<script src="http://demo.themekita.com/atlantis/livepreview/examples/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
 
@@ -58,12 +58,12 @@
 	<!-- Summernote -->
 	<script src="http://demo.themekita.com/atlantis/livepreview/examples/assets/js/plugin/summernote/summernote-bs4.min.js"></script>
 
-	<!-- Select2 -->
+	<!-- Select2 
 	<script src="http://demo.themekita.com/atlantis/livepreview/examples/assets/js/plugin/select2/select2.full.min.js"></script>
-
-	<!-- Sweet Alert -->
+    -->
+	<!-- Sweet Alert 
 	<script src="http://demo.themekita.com/atlantis/livepreview/examples/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-
+    -->
 	<!-- Owl Carousel -->
 	<script src="http://demo.themekita.com/atlantis/livepreview/examples/assets/js/plugin/owl-carousel/owl.carousel.min.js"></script>
 
