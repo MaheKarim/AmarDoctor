@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('total_rate');
             $table->string('package_rate');
             $table->string('package_image');
+            $table->integer('phn_number');
             $table->timestamps();
         });
     }

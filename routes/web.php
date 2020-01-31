@@ -29,4 +29,10 @@ Route::post('/update-area','AreaController@update')->name('updateArea');
 Route::get('/area/delete/{id}','AreaController@delete')->name('deleteArea');
 
 
-Route::get('/test-check','AreaController@check');
+// Route::get('/test-check','AreaController@check');
+
+
+Route::get('/show/product','ProductController@index')->name('showProduct');
+Route::get('/add/product','ProductController@add')->name('addProduct');
+Route::post('store-product', 'ProductController@store');
+Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');

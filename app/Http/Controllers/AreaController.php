@@ -16,7 +16,7 @@ class AreaController extends Controller
     {
         // code start here
         $data = [ ];
-        
+
         return view('backend.area.add', $data);
     }
 
@@ -80,10 +80,10 @@ class AreaController extends Controller
         return view('backend.area.edit', $data);
     }
 
-    
+
     public function update(Request $request)
     {
-        // update here 
+        // update here
         $areas = Area::findOrfail($request)->first();
         $areas->area_name = $request->area_name;
         $areas->save();
@@ -108,10 +108,5 @@ class AreaController extends Controller
         return redirect(route('showArea'));
     }
 
-    public function check(){
-        
-        $data = [ ];
-        $data['areas'] = Area::all();
-        return view('backend.area.check', $data);
-    }
+
 }
