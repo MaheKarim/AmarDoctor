@@ -70,6 +70,14 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                <a href="{{ route('showCategory') }}">
+                    <i class="fas fa-medkit"></i>
+                        <p>Doctor Type / Category</p>
+                        {{-- <span class="badge badge-success">4</span> --}}
+                    </a>
+                </li>
+
                 <li class="nav-section">
                     <span class="sidebar-mini-icon">
                         <i class="fa fa-ellipsis-h"></i>

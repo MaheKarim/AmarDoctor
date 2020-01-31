@@ -29,7 +29,8 @@ Route::post('/update-area','AreaController@update')->name('updateArea');
 Route::get('/area/delete/{id}','AreaController@delete')->name('deleteArea');
 
 
-// Route::get('/test-check','AreaController@check');
+Route::get('/category/view', 'CategoryController@view')->name('showCategory');
+Route::get('/category/delete/{id}', 'CategoryController@delete')->name('deleteCategory');
 
 
 Route::get('/show/product','ProductController@index')->name('showProduct');

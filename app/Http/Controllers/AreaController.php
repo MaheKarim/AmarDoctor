@@ -104,7 +104,7 @@ class AreaController extends Controller
         $areas = Area::find($id);
         $areas->delete();
 
-        session()->flash('success','Category Deleted Successfully!');
+        session()->flash('success','Area Deleted Successfully!');
         return redirect(route('showArea'));
     }
 
