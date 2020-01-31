@@ -2,8 +2,8 @@
     <!-- Logo Header -->
     <div class="logo-header" data-background-color="blue">
         
-        <a href="index-2.html" class="logo">
-            <img src="http://demo.themekita.com/atlantis/livepreview/examples/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
+        <a href="index.html" class="logo">
+            <img src="../assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
@@ -57,7 +57,7 @@
                                 <div class="notif-center">
                                     <a href="#">
                                         <div class="notif-img"> 
-                                            <img src="http://demo.themekita.com/atlantis/livepreview/examples/assets/img/jm_denis.jpg" alt="Img Profile">
+                                            <img src="../assets/img/jm_denis.jpg" alt="Img Profile">
                                         </div>
                                         <div class="notif-content">
                                             <span class="subject">Jimmy Denis</span>
@@ -65,6 +65,42 @@
                                                 How are you ?
                                             </span>
                                             <span class="time">5 minutes ago</span> 
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="notif-img"> 
+                                            <img src="../assets/img/chadengle.jpg" alt="Img Profile">
+                                        </div>
+                                        <div class="notif-content">
+                                            <span class="subject">Chad</span>
+                                            <span class="block">
+                                                Ok, Thanks !
+                                            </span>
+                                            <span class="time">12 minutes ago</span> 
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="notif-img"> 
+                                            <img src="../assets/img/mlane.jpg" alt="Img Profile">
+                                        </div>
+                                        <div class="notif-content">
+                                            <span class="subject">Jhon Doe</span>
+                                            <span class="block">
+                                                Ready for the meeting today...
+                                            </span>
+                                            <span class="time">12 minutes ago</span> 
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="notif-img"> 
+                                            <img src="../assets/img/talha.jpg" alt="Img Profile">
+                                        </div>
+                                        <div class="notif-content">
+                                            <span class="subject">Talha</span>
+                                            <span class="block">
+                                                Hi, Apa Kabar ?
+                                            </span>
+                                            <span class="time">17 minutes ago</span> 
                                         </div>
                                     </a>
                                 </div>
@@ -96,10 +132,18 @@
                                             <span class="time">5 minutes ago</span> 
                                         </div>
                                     </a>
-                                    
+                                    <a href="#">
+                                        <div class="notif-icon notif-success"> <i class="fa fa-comment"></i> </div>
+                                        <div class="notif-content">
+                                            <span class="block">
+                                                Rahmad commented on Admin
+                                            </span>
+                                            <span class="time">12 minutes ago</span> 
+                                        </div>
+                                    </a>
                                     <a href="#">
                                         <div class="notif-img"> 
-                                            <img src="http://demo.themekita.com/atlantis/livepreview/examples/assets/img/profile2.jpg" alt="Img Profile">
+                                            <img src="../assets/img/profile2.jpg" alt="Img Profile">
                                         </div>
                                         <div class="notif-content">
                                             <span class="block">
@@ -126,7 +170,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown hidden-caret">
-                    {{-- <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fas fa-layer-group"></i>
                     </a>
                     <div class="dropdown-menu quick-actions quick-actions-info animated fadeIn">
@@ -139,76 +183,59 @@
                                 <div class="row m-0">
                                     <a class="col-6 col-md-4 p-0" href="#">
                                         <div class="quick-actions-item">
-                                            <div class="avatar-item bg-danger rounded-circle">
-                                                <i class="far fa-calendar-alt"></i>
-                                            </div>
-                                            <span class="text">Calendar</span>
+                                            <i class="flaticon-file-1"></i>
+                                            <span class="text">Generated Report</span>
                                         </div>
                                     </a>
                                     <a class="col-6 col-md-4 p-0" href="#">
                                         <div class="quick-actions-item">
-                                            <div class="avatar-item bg-warning rounded-circle">
-                                                <i class="fas fa-map"></i>
-                                            </div>
-                                            <span class="text">Maps</span>
+                                            <i class="flaticon-database"></i>
+                                            <span class="text">Create New Database</span>
                                         </div>
                                     </a>
                                     <a class="col-6 col-md-4 p-0" href="#">
                                         <div class="quick-actions-item">
-                                            <div class="avatar-item bg-info rounded-circle">
-                                                <i class="fas fa-file-excel"></i>
-                                            </div>
-                                            <span class="text">Reports</span>
+                                            <i class="flaticon-pen"></i>
+                                            <span class="text">Create New Post</span>
                                         </div>
                                     </a>
                                     <a class="col-6 col-md-4 p-0" href="#">
                                         <div class="quick-actions-item">
-                                            <div class="avatar-item bg-success rounded-circle">
-                                                <i class="fas fa-envelope"></i>
-                                            </div>
-                                            <span class="text">Emails</span>
+                                            <i class="flaticon-interface-1"></i>
+                                            <span class="text">Create New Task</span>
                                         </div>
                                     </a>
                                     <a class="col-6 col-md-4 p-0" href="#">
                                         <div class="quick-actions-item">
-                                            <div class="avatar-item bg-primary rounded-circle">
-                                                <i class="fas fa-file-invoice-dollar"></i>
-                                            </div>
-                                            <span class="text">Invoice</span>
+                                            <i class="flaticon-list"></i>
+                                            <span class="text">Completed Tasks</span>
                                         </div>
                                     </a>
                                     <a class="col-6 col-md-4 p-0" href="#">
                                         <div class="quick-actions-item">
-                                            <div class="avatar-item bg-secondary rounded-circle">
-                                                <i class="fas fa-credit-card"></i>
-                                            </div>
-                                            <span class="text">Payments</span>
+                                            <i class="flaticon-file"></i>
+                                            <span class="text">Create New Invoice</span>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    </div> --}}
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link quick-sidebar-toggler">
-                        <i class="fa fa-th"></i>
-                    </a>
+                    </div>
                 </li>
                 <li class="nav-item dropdown hidden-caret">
                     <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                         <div class="avatar-sm">
-                            <img src="http://demo.themekita.com/atlantis/livepreview/examples/assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+                            <img src="../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-user animated fadeIn">
                         <div class="dropdown-user-scroll scrollbar-outer">
                             <li>
                                 <div class="user-box">
-                                    <div class="avatar-lg"><img src="http://demo.themekita.com/atlantis/livepreview/examples/assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
+                                    <div class="avatar-lg"><img src="../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
                                     <div class="u-text">
-                                    <h4>{{ Auth::user()->name }}</h4>
-                                        <p class="text-muted"></p>{{ Auth::user()->email }}<a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                                        <h4>Hizrian</h4>
+                                        <p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                                     </div>
                                 </div>
                             </li>
@@ -220,7 +247,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Account Setting</a>
                                 <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
+                                <a class="dropdown-item" href="#">Logout</a>
                             </li>
                         </div>
                     </ul>

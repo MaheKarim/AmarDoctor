@@ -54,8 +54,8 @@
                         </div>
                            @endif
                         <!-- Notification End Here -->
-                    <form action="" method="POST">
-                        <!-- {{ url('store-category') }} -->
+                    <form action="{{ url('store-area') }}" method="POST">
+                        <!--  -->
                              @csrf
                             <div class="form-group">
                                 <label for="text">Add Area Name</label>

@@ -3,6 +3,11 @@
         <nav class="pull-left">
             <ul class="nav">
                 <li class="nav-item">
+                    <a class="nav-link" href="https://www.themekita.com">
+                        ThemeKita
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">
                         Help
                     </a>
@@ -15,7 +20,7 @@
             </ul>
         </nav>
         <div class="copyright ml-auto">
-            2020, made with <i class="fa fa-heart heart text-danger"></i> by <a href="#">Mahe</a>
+            2020, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.themekita.com">ThemeKita</a>
         </div>				
     </div>
 </footer>

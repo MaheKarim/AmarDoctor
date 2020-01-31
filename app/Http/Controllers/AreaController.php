@@ -38,7 +38,18 @@ class AreaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validation
+        $request->validate([
+            'area_name' => 'required|min:3|max:120|unique:areas',
+        ]);
+        // insert code start here
+        $areas = new Area();
+        $areas->area_name = $request->area_name;
+        $areas->save();
+        // flash msg
+        session()->flash('success','Area Created Successfully!');
+        return redirect(route('addArea'));
+
     }
 
     /**
@@ -50,6 +61,9 @@ class AreaController extends Controller
     public function show(Area $area)
     {
         //
+        $data = [ ];
+        $data['areas'] = Area::all();
+        return view('backend.area.area_view', $data);
     }
 
     /**

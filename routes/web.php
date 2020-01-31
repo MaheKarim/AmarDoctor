@@ -21,4 +21,6 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/area/view','AreaController@index')->name('showArea');
+Route::get('/area/view','AreaController@show')->name('showArea');
+Route::get('/area/add','AreaController@index')->name('addArea');
+Route::post('store-area', 'AreaController@store');
