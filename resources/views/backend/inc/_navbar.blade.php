@@ -132,26 +132,7 @@
                                             <span class="time">5 minutes ago</span> 
                                         </div>
                                     </a>
-                                    <a href="#">
-                                        <div class="notif-icon notif-success"> <i class="fa fa-comment"></i> </div>
-                                        <div class="notif-content">
-                                            <span class="block">
-                                                Rahmad commented on Admin
-                                            </span>
-                                            <span class="time">12 minutes ago</span> 
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="notif-img"> 
-                                            <img src="../assets/img/profile2.jpg" alt="Img Profile">
-                                        </div>
-                                        <div class="notif-content">
-                                            <span class="block">
-                                                Reza send messages to you
-                                            </span>
-                                            <span class="time">12 minutes ago</span> 
-                                        </div>
-                                    </a>
+                                   
                                     <a href="#">
                                         <div class="notif-icon notif-danger"> <i class="fa fa-heart"></i> </div>
                                         <div class="notif-content">
@@ -169,59 +150,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown hidden-caret">
-                    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fas fa-layer-group"></i>
-                    </a>
-                    <div class="dropdown-menu quick-actions quick-actions-info animated fadeIn">
-                        <div class="quick-actions-header">
-                            <span class="title mb-1">Quick Actions</span>
-                            <span class="subtitle op-8">Shortcuts</span>
-                        </div>
-                        <div class="quick-actions-scroll scrollbar-outer">
-                            <div class="quick-actions-items">
-                                <div class="row m-0">
-                                    <a class="col-6 col-md-4 p-0" href="#">
-                                        <div class="quick-actions-item">
-                                            <i class="flaticon-file-1"></i>
-                                            <span class="text">Generated Report</span>
-                                        </div>
-                                    </a>
-                                    <a class="col-6 col-md-4 p-0" href="#">
-                                        <div class="quick-actions-item">
-                                            <i class="flaticon-database"></i>
-                                            <span class="text">Create New Database</span>
-                                        </div>
-                                    </a>
-                                    <a class="col-6 col-md-4 p-0" href="#">
-                                        <div class="quick-actions-item">
-                                            <i class="flaticon-pen"></i>
-                                            <span class="text">Create New Post</span>
-                                        </div>
-                                    </a>
-                                    <a class="col-6 col-md-4 p-0" href="#">
-                                        <div class="quick-actions-item">
-                                            <i class="flaticon-interface-1"></i>
-                                            <span class="text">Create New Task</span>
-                                        </div>
-                                    </a>
-                                    <a class="col-6 col-md-4 p-0" href="#">
-                                        <div class="quick-actions-item">
-                                            <i class="flaticon-list"></i>
-                                            <span class="text">Completed Tasks</span>
-                                        </div>
-                                    </a>
-                                    <a class="col-6 col-md-4 p-0" href="#">
-                                        <div class="quick-actions-item">
-                                            <i class="flaticon-file"></i>
-                                            <span class="text">Create New Invoice</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+
+              <!-- Profile Settings Start Here -->
+
                 <li class="nav-item dropdown hidden-caret">
                     <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                         <div class="avatar-sm">
@@ -234,20 +165,18 @@
                                 <div class="user-box">
                                     <div class="avatar-lg"><img src="../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
                                     <div class="u-text">
-                                        <h4>Hizrian</h4>
-                                        <p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                                    <h4>{{ Auth::user()->name }}</h4>
+                                    <p class="text-muted">{{ Auth::user()->email }}</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">My Profile</a>
-                                <a class="dropdown-item" href="#">My Balance</a>
-                                <a class="dropdown-item" href="#">Inbox</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Account Setting</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Logout</a>
+                            <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
                             </li>
                         </div>
                     </ul>

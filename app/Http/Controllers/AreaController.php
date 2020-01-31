@@ -48,7 +48,7 @@ class AreaController extends Controller
         $areas->save();
         // flash msg
         session()->flash('success','Area Created Successfully!');
-        return redirect(route('addArea'));
+        return redirect(route('showArea'));
 
     }
 
@@ -72,21 +72,24 @@ class AreaController extends Controller
      * @param  \App\Area  $area
      * @return \Illuminate\Http\Response
      */
-    public function edit(Area $area)
+    public function edit($areaid)
     {
-        //
+        //  edit code start here
+        $data = [ ];
+        $data['areas'] =  Area::find($areaid);
+        return view('backend.area.edit', $data);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Area  $area
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Area $area)
+    
+    public function update(Request $request)
     {
-        //
+        // update here 
+        $areas = Area::findOrfail($request)->first();
+        $areas->area_name = $request->area_name;
+        $areas->save();
+
+        session()->flash('success','Successfully Updated!');
+        return redirect(route('showArea'));
     }
 
     /**
@@ -95,8 +98,20 @@ class AreaController extends Controller
      * @param  \App\Area  $area
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Area $area)
+    public function delete($id)
     {
         //
+        $areas = Area::find($id);
+        $areas->delete();
+
+        session()->flash('success','Category Deleted Successfully!');
+        return redirect(route('showArea'));
+    }
+
+    public function check(){
+        
+        $data = [ ];
+        $data['areas'] = Area::all();
+        return view('backend.area.check', $data);
     }
 }

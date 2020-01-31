@@ -24,3 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/area/view','AreaController@show')->name('showArea');
 Route::get('/area/add','AreaController@index')->name('addArea');
 Route::post('store-area', 'AreaController@store');
+Route::get('/area/edit/{area}','AreaController@edit')->name('editArea');
+Route::post('/update-area','AreaController@update')->name('updateArea');
+Route::get('/area/delete/{id}','AreaController@delete')->name('deleteArea');
+
+
+Route::get('/test-check','AreaController@check');

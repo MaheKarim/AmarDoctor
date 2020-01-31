@@ -14,9 +14,9 @@
                     <div class="card-header">
                         <div class="d-flex align-items-center">
 
-                            <a href="#" class="btn btn-primary btn-round ml-auto">
+                        <a href="{{ route('addArea') }}" class="btn btn-primary btn-round ml-auto">
                                 <i class="fa fa-plus"></i>
-                                Add Category
+                                Add Area
                             </a>
                         </div>
                     </div>
@@ -28,17 +28,17 @@
                             <div class="alert alert-success">
                                 {{ session()->get('success') }}
                             </div>
-                    @endif
+                        @endif
                     <!-- Notification End Here -->
 
                         <div class="table-responsive">
                             <table id="add-row" class="display table table-striped table-hover" >
                                 <thead>
                                 <tr>
-                                    <th>Category Name</th>
+                                    <th>Area Name</th>
 
-                                    <th>Created At</th>
-                                    <th>Updated At</th>
+                                    <th>Area Created At</th>
+                                    <th>Area Updated At</th>
                                     <th style="width: 10%">Action</th>
                                 </tr>
                                 </thead>
@@ -51,14 +51,14 @@
                                         <td>{{ $area->updated_at }}</td>
                                         <td>
                                             <div class="form-button-action">
-                                                <a href=" #"  type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+                                            <a href="{{ route('editArea', $area->id) }}"  type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                                {{-- @if( $category->id != 1)
-                                                    <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+                                                @if( $area->id != 1)
+                                            <a href="{{ route('deleteArea', $area->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
                                                         <i class="fa fa-times"></i>
                                                     </a>
-                                                @endif --}}
+                                                @endif
                                             </div>
                                         </td>
                                     </tr>
