@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo ;
 
     /**
      * Create a new controller instance.
@@ -35,9 +35,27 @@ class LoginController extends Controller
      * @return void
      */
     public function __construct()
+
     {
-        $this->middleware('guest')->except('logout');
+        if (Auth::check() && Auth::user()->role->id == 1 )
+        {
+           $this->redirectTo = route('admin.dashboard');
+
+        } elseif(Auth::check() && Auth::user()->role->id == 2 )
+        {
+            $this->redirectTo = route('doctor.dashboard');
+
+        } elseif(Auth::check() && Auth::user()->role->id == 3 )
+        {
+            $this->redirectTo = route('nurse.dashboard');
+
+        } else {
+            $this->redirectTo = route('user.dashboard');
+        }
+
+         $this->middleware('guest')->except('logout');
     }
+
 
     public function logout(Request $request) {
         Auth::logout();

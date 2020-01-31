@@ -19,7 +19,7 @@ Auth::routes();
 // Logout Route
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/area/view','AreaController@show')->name('showArea');
 Route::get('/area/add','AreaController@index')->name('addArea');
@@ -37,3 +37,29 @@ Route::get('/show/product','ProductController@index')->name('showProduct');
 Route::get('/add/product','ProductController@add')->name('addProduct');
 Route::post('store-product', 'ProductController@store');
 Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');
+
+// Admin related group
+
+Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function() {
+
+    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+    // product for admin
+    // Route::get('/show/product','ProductController@index')->name('showProduct');
+    // Route::get('/add/product','ProductController@add')->name('addProduct');
+    // Route::post('store-product', 'ProductController@store');
+    // Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');
+
+});
+
+Route::group(['as'=>'doctor.', 'prefix' => 'doctor', 'namespace' => 'Doctor', 'middleware' =>['auth', 'doctor']], function() {
+    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+
+});
+
+Route::group(['as'=>'nurse.' ,'prefix' => 'nurse', 'namespace' => 'Nurse', 'middleware' =>['auth', 'nurse']], function() {
+    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+});
+
+Route::group(['as'=>'user.' ,'prefix' => 'user', 'namespace' => 'User', 'middleware' =>['auth', 'user']], function() {
+    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+});
