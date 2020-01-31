@@ -1,1 +1,0 @@
-@extends('backend._layout')

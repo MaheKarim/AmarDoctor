@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use Illuminate\Support\Facades\DB;
+
 class RoleTableSeeder extends Seeder
 {
     /**
@@ -12,30 +14,23 @@ class RoleTableSeeder extends Seeder
     public function run()
     {
         //
-   \Bouncer::allow('admin')->toManage(User::class);
-   \Bouncer::allow('doctor')->to('update', \App\User::class);
-   \Bouncer::allow('nurse')->to('update', \App\User::class);
+        DB::table('roles')->insert([
+            'name' => 'Admin',
+            'slug' => 'admin',
+        ]);
+        DB::table('roles')->insert([
+            'name' => 'Doctor',
+            'slug' => 'doctor',
+        ]);
+        DB::table('roles')->insert([
+            'name' => 'Nurse',
+            'slug' => 'nurse',
+        ]);
+        DB::table('roles')->insert([
+            'name' => 'User',
+            'slug' => 'user',
+        ]);
 
-    $admin = factory(App\User::class)->create([
-        'email' => 'admin@example.com'
-    ]);
-
-    $admin->assign('admin');
-
-    $doctor = factory(App\User::class)->create([
-        'email' => 'doctor@example.com'
-    ]);
-
-    $doctor->assign('doctor');
-
-    $nurse = factory(App\User::class)->create([
-        'email' => 'doctor@example.com'
-    ]);
-
-    $nurse->assign('nurse');
-
-    factory(App\User::class)->create([
-        'email' => 'user@example.com'
-    ]);
     }
+
 }
