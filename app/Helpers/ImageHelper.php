@@ -22,7 +22,7 @@ class  ImageHelper  {
                 }
             } else {
                 // return that image
-                $avatar_url = url('default/user/'.$user->profile_image);
+                $avatar_url = url('default/'.$user->profile_image);
             }
         } else {
           //  return  redirect('/');

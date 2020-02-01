@@ -20,10 +20,10 @@ class SettingsController extends Controller
     public function updateProfile(Request $request)
     {
          // return $request;
-
+      $user = Auth::user();
         $this->validate($request,[
             'name' => 'required|min:4',
-            'username' => 'required|unique:users,username|min:4',
+            'username' => 'required|alpha_dash|unique:users, username,' .$user->id,
             // 'profile_image' => 'required|mimes:jpeg,jpg,png,bmp',
             'phn_number' => 'min:11|max:11|integer',
         ]);
