@@ -42,6 +42,11 @@ Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProd
 Route::get('/settings', 'SettingsController@index')->name('adminseetings');
 Route::put('profile-update', 'SettingsController@updateProfile')->name('profile.update');
 
+//  Custom Login Route
+
+Route::get('/custom/login', 'CustomAuthController@showPage')->name('customDoctorLogin');
+Route::post('custom-login', 'CustomAuthController@login');
+
 // Admin related group
 
 Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function() {
