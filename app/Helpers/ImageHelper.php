@@ -18,9 +18,11 @@ class  ImageHelper  {
                     $avatar_url = GravatarHelper::gravatar_image($user->email, 70);
                 } else {
                     // when there no gv image
+                    $avatar_url = url('default/default.png');
                 }
             } else {
                 // return that image
+                $avatar_url = url('default/user/'.$user->profile_image);
             }
         } else {
           //  return  redirect('/');
