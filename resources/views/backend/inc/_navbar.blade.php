@@ -79,7 +79,7 @@
                                             <span class="time">12 minutes ago</span>
                                         </div>
                                     </a>
-                                    @if(Request::is('admin'))
+
                                     <a href="#">
                                         <div class="notif-img">
                                             <img src="../assets/img/talha.jpg" alt="Img Profile">
@@ -91,7 +91,7 @@
                                             </span>
                                             <span class="time">17 minutes ago</span>
                                         </div>
-                                        @endif
+
                                     </a>
                                 </div>
                             </div>
@@ -164,7 +164,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">My Profile</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Account Setting</a>
+                                <a class="dropdown-item" href="{{ route('adminseetings') }}">Account Setting</a>
                                 <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
                             </li>

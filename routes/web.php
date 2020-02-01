@@ -38,6 +38,10 @@ Route::get('/add/product','ProductController@add')->name('addProduct');
 Route::post('store-product', 'ProductController@store');
 Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');
 
+
+Route::get('/settings', 'SettingsController@index')->name('adminseetings');
+Route::put('profile-update','SettingsController@updateProfile')->name('profile.update');
+
 // Admin related group
 
 Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function() {
@@ -49,7 +53,7 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     // Route::post('store-product', 'ProductController@store');
     // Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');
 
-    Route::get('settings', 'SettingsController@index')->name('settings');
+
 
 });
 
