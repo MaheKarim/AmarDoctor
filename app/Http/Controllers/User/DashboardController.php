@@ -10,6 +10,6 @@ class DashboardController extends Controller
     //
     public function index()
     {
-        return view('backend.user.dashboard');
+       return view('backend.multi-dashboard.user._home_user');
     }
 }

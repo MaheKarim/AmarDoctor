@@ -11,6 +11,6 @@ class DashboardController extends Controller
 
     public function index()
     {
-       return view('backend.doctor.dashboard');
+       return view('backend.multi-dashboard.doctor._home_doctor');
     }
 }

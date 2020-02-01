@@ -49,6 +49,8 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     // Route::post('store-product', 'ProductController@store');
     // Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');
 
+    Route::get('settings', 'SettingsController@index')->name('settings');
+
 });
 
 Route::group(['as'=>'doctor.', 'prefix' => 'doctor', 'namespace' => 'Doctor', 'middleware' =>['auth', 'doctor']], function() {
