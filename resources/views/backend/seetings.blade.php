@@ -33,6 +33,14 @@
                         <div class="card-header">
                             <h4 class="card-title">Seetings Page</h4>
                         </div>
+
+                        @if (session()->has('success'))
+                            <div class="alert alert-success">
+                                {{ session()->get('success') }}
+                            </div>
+                        @endif
+
+
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-5 col-md-4">
@@ -56,7 +64,7 @@
                                             @method('PUT')
 											<div class="form-group">
 												<label for="name">Full Name</label>
-                                            <input type="name" class="form-control" id="name" name="name" placeholder="Enter Name" value="{{Auth::user()->name}}">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="{{Auth::user()->name}}">
 											</div>
 											{{-- <div class="form-group">
 												<label for="disableinput">Disable Input</label>
@@ -70,10 +78,10 @@
 												<label for="text">PHN Number</label>
 												<input type="text" class="form-control" id="phn_number" name="phn_number" placeholder="Phn Number" value="{{Auth::user()->phn_number}}">
 											</div>
-											<div class="form-group">
-												<label for="exampleFormControlFile1">Profile Image</label>
-												<input type="file" class="form-control-file" id="profile_image" name="profile_image">
-                                            </div>
+{{--											<div class="form-group">--}}
+{{--												<label for="exampleFormControlFile1">Profile Image</label>--}}
+{{--												<input type="file" class="form-control-file" id="profile_image" name="profile_image">--}}
+{{--                                            </div>--}}
 
 										</div>
 									</div>

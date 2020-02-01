@@ -40,7 +40,7 @@ Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProd
 
 
 Route::get('/settings', 'SettingsController@index')->name('adminseetings');
-Route::put('profile-update','SettingsController@updateProfile')->name('profile.update');
+Route::put('profile-update', 'SettingsController@updateProfile')->name('profile.update');
 
 // Admin related group
 
