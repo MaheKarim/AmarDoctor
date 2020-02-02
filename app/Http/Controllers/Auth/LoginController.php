@@ -29,11 +29,33 @@ class LoginController extends Controller
      */
     protected $redirectTo ;
 
+  //  protected $phn_number;
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+
+
+    // public function findPhnNnumber()
+    // {
+    //     $login = request()->input('login');
+    //     $fieldType = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'phn_number';
+    //     request()->merge([$fieldType=>$login]);
+    //     return $fieldType;
+    // }
+
+
+    // public function phn_number()
+    // {
+    //    // return $this->phn_number;
+    //    $loginType = request()->input('phn_number');
+    //    $this->phn_number = filter_var($loginType, FILTER_VALIDATE_EMAIL) ? 'email' : 'phn_number';
+    //    request()->merge([$this->phn_number => $loginType]);
+    //    return property_exists($this, 'phn_number') ? $this->phn_number : 'email';
+    // }
+
     public function __construct()
 
     {
@@ -54,16 +76,18 @@ class LoginController extends Controller
         }
 
          $this->middleware('guest')->except('logout');
+        // $this->phn_number = $this->findPhnNnumber();
     }
 
+   
 
     public function logout(Request $request) {
         Auth::logout();
         return redirect('/login');
       }
 
-      public function username()
-      {
-          return 'username';
-      }
+    //   public function username()
+    //   {
+    //       return 'username';
+    //   }
 }
