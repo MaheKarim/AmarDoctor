@@ -12,22 +12,22 @@ use Illuminate\Support\Facades\Auth;
 class SettingsController extends Controller
 {
     //
-    public function index()
-    {
-        return view ('backend.seetings');
-    }
+    // public function index()
+    // {
+    //     return view ('backend.seetings');
+    // }
 
     public function updateProfile(Request $request)
     {
          // return $request;
-      $user = Auth::user();
-        $this->validate($request,[
-            'name' => 'required|min:4',
-            'username' => 'required|alpha_dash|unique:users, username,' .$user->id,
-            // 'profile_image' => 'required|mimes:jpeg,jpg,png,bmp',
-            'phn_number' => 'min:11|max:11|integer',
-        ]);
-
+    //   $user = Auth::user();
+    //     $this->validate($request,[
+    //         'name' => 'required|min:4',
+    //         'username' => 'required|alpha_dash|unique:users, username,' .$user->id,
+    //         // 'profile_image' => 'required|mimes:jpeg,jpg,png,bmp',
+    //         'phn_number' => 'min:11|max:11|integer',
+    //     ]);
+//
 //            $profile_image = $request->file('profile_image');
 //            $slug = str_slug($request->name);
 //            $user = User::findOrFail(Auth::id());
@@ -63,14 +63,14 @@ class SettingsController extends Controller
 //        }
 
 
-           $data = [ ];
-           $data['user'] = Auth::user();
-           $data['user']->name = $request->name;
-           $data['user']->username = $request->username;
-         //   $user->profile_image = $imageName;
-           $data['user']->phn_number = $request->phn_number;
-           $data['user']->save();
-            session()->flash('success','Profile Updated Successfully!');
-            return redirect(route('profile.update', $data));
+        //    $data = [ ];
+        //    $data['user'] = Auth::user();
+        //    $data['user']->name = $request->name;
+        //    $data['user']->username = $request->username;
+        //  //   $user->profile_image = $imageName;
+        //    $data['user']->phn_number = $request->phn_number;
+        //    $data['user']->save();
+        //     session()->flash('success','Profile Updated Successfully!');
+        //     return redirect(route('profile.update', $data));
     }
 }

@@ -39,8 +39,8 @@ Route::post('store-product', 'ProductController@store');
 Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');
 
 
-Route::get('/settings', 'SettingsController@index')->name('adminseetings');
-Route::put('profile-update', 'SettingsController@updateProfile')->name('profile.update');
+// Route::get('/settings', 'SettingsController@index')->name('adminseetings');
+// Route::put('profile-update', 'SettingsController@updateProfile')->name('profile.update');
 
 //  Custom Login Route
 
@@ -74,3 +74,7 @@ Route::group(['as'=>'nurse.' ,'prefix' => 'nurse', 'namespace' => 'Nurse', 'midd
 Route::group(['as'=>'user.' ,'prefix' => 'user', 'namespace' => 'User', 'middleware' =>['auth', 'user']], function() {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 });
+
+// routes by ami
+Route::get("doctor/signup", "DoctorController@signUpForm")->name("doctorSignUpForm");
+Route::post("doctor/signup", "DoctorController@signUpFormSubmit")->name("doctorSignUpFormSubmit");

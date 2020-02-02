@@ -15,13 +15,17 @@ class CreateDoctorsTable extends Migration
     {
         Schema::create('doctors', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
             $table->string('present_address')->nullable();
             $table->string('edu_inst')->nullable();
             $table->integer('passing_year')->nullable();
-            $table->integer('bmdc_reg_no')->nullable();
-            $table->integer('work_exp')->nullable();
+            $table->string('bmdc_reg_no')->nullable();
+            $table->longText('work_exp')->nullable();
             $table->string('edu_degree')->nullable();
             $table->longText('about_me')->nullable();
+            $table->string('bmdc_cer')->nullable();
+            $table->string('nid_pic')->nullable();
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
     }
