@@ -16,17 +16,27 @@
 										<div class="login-header">
 											<h3>Login <span>AmarDoctor</span></h3>
 										</div>
-										<form action="#">
+                                        <form method="POST" action="{{ route('login') }}">
+                                        @csrf
 											<div class="form-group form-focus">
-												<input type="email" class="form-control floating">
-												<label class="focus-label">Email</label>
+												<input type="email" name="email" id="email" class="form-control floating @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                <label class="focus-label">Email</label>
+
+                                                @error('email')
+                                               <span class="invalid-feedback" role="alert">
+                                               <strong>{{ $message }}</strong>
+                                               </span>
+                                                @enderror
 											</div>
 											<div class="form-group form-focus">
-												<input type="password" class="form-control floating">
+												<input type="password" id="password" name="password" class="form-control floating @error('password') is-invalid @enderror" required autocomplete="current-password">
 												<label class="focus-label">Password</label>
-											</div>
+                                            </div>
+
 											<div class="text-right">
-												<a class="forgot-link" href="forgot-password.php">Forgot Password ?</a>
+                                                @if (Route::has('password.request'))
+                                                <a class="forgot-link" href="{{ route('password.request') }}">Forgot Password ?</a>
+                                                @endif
 											</div>
 											<button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Login</button>
 											<div class="login-or">
