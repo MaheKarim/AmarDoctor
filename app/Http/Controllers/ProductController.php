@@ -57,6 +57,7 @@ class ProductController extends Controller
     public function delete($id)
     {
         $products = Product::find($id);
+        Storage::delete($products->package_image);
         $products->delete();
 
         session()->flash('success','Category Deleted Successfully!');

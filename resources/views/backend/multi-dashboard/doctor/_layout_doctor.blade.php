@@ -106,7 +106,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="index-2.php">
+                                            <a href="{{ route('logout') }}">
 													<i class="fas fa-sign-out-alt"></i>
 													<span>Logout</span>
 												</a>

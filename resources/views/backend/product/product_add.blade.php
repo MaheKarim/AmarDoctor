@@ -65,7 +65,7 @@
                                     <label for="text">Total Rate</label>
                                     <input type="text" class="form-control" name="total_rate" id="text" placeholder="Total Rate">
 
-                                    <label for="text">Add Product Description</label>
+                                    <label for="text">Package Rate</label>
                                     <input type="text" class="form-control" name="package_rate" id="text" placeholder="Package Rate">
 
                                     <label for="text">Add Product Number</label>
