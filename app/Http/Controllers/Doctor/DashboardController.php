@@ -13,4 +13,9 @@ class DashboardController extends Controller
     {
        return view('backend.multi-dashboard.doctor._home_doctor');
     }
+
+    public function profile_seetings()
+    {
+        return view('backend.multi-dashboard.doctor._profile_seetings');
+    }
 }
