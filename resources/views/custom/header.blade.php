@@ -26,8 +26,8 @@
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
+			<script src="{{ asset('/') }}frontend/assets/js/html5shiv.min.js"></script>
+			<script src="{{ asset('/') }}frontend/assets/js/respond.min.js"></script>
 		<![endif]-->
 
 	</head>
@@ -117,7 +117,7 @@
 								<a href="admin/index.php" target="_blank">Admin</a>
 							</li>
 							<li class="login-link">
-								<a href="login.php">Login / Signup</a>
+								<a href="{{route('login')}}">Login / Signup</a>
 							</li>
 						</ul>
 					</div>
@@ -132,7 +132,7 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link header-login" href="login.php">login / Signup </a>
+							<a class="nav-link header-login" href="{{route('login')}}">Login</a>
 						</li>
 					</ul>
 				</nav>

@@ -11,9 +11,13 @@
 |
 */
 
+//Suse Symfony\Component\Routing\Annotation\Route;
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
+
+//Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 
 Auth::routes();
 // Logout Route
@@ -65,6 +69,7 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
 Route::group(['as'=>'doctor.', 'prefix' => 'doctor', 'namespace' => 'Doctor', 'middleware' =>['auth', 'doctor']], function() {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('profile/seetings', 'DashboardController@profile_seetings')->name('doctorProfileSeetings');
+    Route::post('profile/update/pic', 'DashboardController@updateProfilePic')->name('update.profile_pic');
 
 });
 

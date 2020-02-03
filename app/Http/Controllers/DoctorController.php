@@ -37,10 +37,10 @@ class DoctorController extends Controller
             'created_at' => Carbon::now()
         ]);
         if ($request->has('bmdc_cer')){
-            $bmdc_cer = $request->file('bmdc_cer')->store('doctor');
+            $bmdc_cer = $request->file('bmdc_cer')->store('doctor','public');
         }
         if ($request->has('nid_pic')){
-            $nid_pic = $request->file('nid_pic')->store('doctor');
+            $nid_pic = $request->file('nid_pic')->store('doctor','public');
         }
 
         Doctor::create([
@@ -56,8 +56,7 @@ class DoctorController extends Controller
         }
 
         return "Wel Done Mr Doctor"; // error message
-
-        // inserting data to doctor table
-
     }
+
+
 }

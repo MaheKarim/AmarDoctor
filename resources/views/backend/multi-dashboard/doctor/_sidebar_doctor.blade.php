@@ -2,10 +2,10 @@
     <div class="widget-profile pro-widget-content">
         <div class="profile-info-widget">
             <a href="#" class="booking-doc-img">
-            <img src="{{ asset('/') }}frontend/assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
+            <img src="{{ asset('storage') }}/{{ \App\User::find(auth()->id())->profile_image }}" alt="User Image">
             </a>
             <div class="profile-det-info">
-                <h3>Dr. Darren Elder</h3>
+                <h3>{{Auth::user()->name}}</h3>
 
                 <div class="patient-details">
                     <h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
@@ -17,7 +17,7 @@
         <nav class="dashboard-menu">
             <ul>
                 <li class="active">
-                    <a href="doctor-dashboard.php">
+                    <a href="{{route('doctor.dashboard')}}">
                         <i class="fas fa-columns"></i>
                         <span>Dashboard</span>
                     </a>

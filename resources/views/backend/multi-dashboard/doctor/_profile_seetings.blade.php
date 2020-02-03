@@ -41,14 +41,22 @@
 											<div class="form-group">
 												<div class="change-avatar">
 													<div class="profile-img">
-														<img src="{{ asset('/') }}frontend/assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
+                                                        @if($data->profile_image == "default.png")
+														    <img src="{{ asset('/') }}default/default.png" alt="User Image">
+                                                            @else
+                                                            <img src="{{ asset('storage') }}/{{ $data->profile_image}}" alt="User Image">
+                                                        @endif
 													</div>
 													<div class="upload-img">
-														<div class="change-photo-btn">
-															<span><i class="fa fa-upload"></i> Upload Photo</span>
-															<input type="file" class="upload">
-														</div>
-														<small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small>
+                                                        <form action="{{ route('doctor.update.profile_pic') }}" method="post" enctype="multipart/form-data">
+                                                            @csrf
+                                                            <div class="change-photo-btn">
+                                                                <span><i class="fa fa-upload"></i> Upload Photo</span>
+                                                                <input type="file" name="profile_pic" class="upload">
+                                                            </div>
+                                                            <button type="submit" class="btn btn-success">Save Changes</button>
+                                                        </form>
+                                                        <small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small>
 													</div>
 												</div>
 											</div>

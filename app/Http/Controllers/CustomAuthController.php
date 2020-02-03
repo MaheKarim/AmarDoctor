@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
-
+use AuthenticatesUsers;
 class CustomAuthController extends Controller
 {
-    use AuthenticatesUsers;
+
     // start
     public function showPage(){
         return view('custom.login');
