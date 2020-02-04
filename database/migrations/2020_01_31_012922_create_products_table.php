@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('product_name');
             $table->longText('description');
+            $table->string('product_slug')->nullable();
             $table->string('total_rate');
             $table->string('package_rate');
             $table->string('package_image');

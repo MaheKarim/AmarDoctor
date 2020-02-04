@@ -45,6 +45,7 @@
                                 <thead>
                                     <tr>
                                         <th>Product Name</th>
+                                        <th>Product Slug</th>
                                         <th>Description</th>
                                         <th>Product Image</th>
                                         <th>Package Rate</th>
@@ -57,6 +58,7 @@
                                 @foreach ($products as $product)
                                     <tr>
                                     <td>{{ $product->product_name }}</td>
+                                    <td>{{ $product->product_slug }}</td>
                                     <td>{{ $product->description }}</td>
                                     <td> <img style="width:100%;max-width:400px" src="{{ asset('storage')}}/{{$product->package_image }} " /> </td>
                                     <td> {{ $product->total_rate }} </td>
@@ -68,7 +70,7 @@
                                              <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                            <a href="{{ route('admin.deleteProduct', $product->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+                                            <a href="{{ route('deleteProduct', $product->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
                                                     <i class="fa fa-times"></i>
                                                 </a>
 
