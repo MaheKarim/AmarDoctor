@@ -60,7 +60,7 @@
                                     <input type="text" class="form-control" name="product_name" id="text" placeholder="Enter product name">
 
                                     <label for="text">Add Product Description</label>
-                                    <input type="text" class="form-control" name="description" id="text" placeholder="Product Description">
+                                    <textarea id="description" type="text" class="form-control" name="description" id="text" placeholder="Product Description"></textarea>
 
                                     <label for="text">Total Rate</label>
                                     <input type="text" class="form-control" name="total_rate" id="text" placeholder="Total Rate">
@@ -88,4 +88,13 @@
             </div>
         </div>
 </div>
+
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace( 'description' );
+</script>
 @endsection
+
+{{--  --}}
+
+
