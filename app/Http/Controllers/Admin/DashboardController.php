@@ -13,9 +13,9 @@ class DashboardController extends Controller
        return view('backend.admin.dashboard');
     }
 
-    public function changePassForm()
-    {
-        $data = [ ];
-        return view('backend.admin.change_pass');
-    }
+    // public function changePassword()
+    // {
+    //     $data = [ ];
+    //     return view('backend.admin.change_pass');
+    // }
 }

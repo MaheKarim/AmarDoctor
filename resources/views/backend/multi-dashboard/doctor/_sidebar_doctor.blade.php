@@ -49,7 +49,7 @@
                 </li>
 
                 <li>
-                    <a href="doctor-change-password.php">
+                    <a href=" {{ route('doctor.changePassforDoctor') }} ">
                         <i class="fas fa-lock"></i>
                         <span>Change Password</span>
                     </a>

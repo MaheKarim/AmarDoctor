@@ -11,7 +11,7 @@
 |
 */
 
-//Suse Symfony\Component\Routing\Annotation\Route;
+// Suse Symfony\Component\Routing\Annotation\Route;
 
 Route::get('/', function () {
     return view('frontend.index');
@@ -45,10 +45,6 @@ Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProd
 // Route::get('/settings', 'SettingsController@index')->name('adminseetings');
 // Route::put('profile-update', 'SettingsController@updateProfile')->name('profile.update');
 
-//  Custom Login Route
-
-Route::get('/custom/login', 'CustomAuthController@showPage')->name('customDoctorLogin');
-Route::post('custom-login', 'CustomAuthController@login');
 
 // Admin related group
 
@@ -70,6 +66,8 @@ Route::group(['as'=>'doctor.', 'prefix' => 'doctor', 'namespace' => 'Doctor', 'm
     Route::get('profile/seetings', 'DashboardController@profile_seetings')->name('doctorProfileSeetings');
     Route::post('profile/update/pic', 'DashboardController@updateProfilePic')->name('update.profile_pic');
 
+    Route::get('change/doctor/password','DashboardController@changeDoctorPass')->name('changePassforDoctor');
+    Route::post('change-password-doctor', 'DashboardController@changePassForm')->name('changePasswordDoctorForm');
 });
 
 Route::group(['as'=>'nurse.' ,'prefix' => 'nurse', 'namespace' => 'Nurse', 'middleware' =>['auth', 'nurse']], function() {
@@ -80,6 +78,11 @@ Route::group(['as'=>'user.' ,'prefix' => 'user', 'namespace' => 'User', 'middlew
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 });
 
-// routes by ami
+
+//  Custom Login Route
+
+Route::get('/custom/login', 'CustomAuthController@showPage')->name('customDoctorLogin');
+Route::post('custom-login', 'CustomAuthController@login');
+
 Route::get("doctor/signup", "DoctorController@signUpForm")->name("doctorSignUpForm");
 Route::post("doctor/signup", "DoctorController@signUpFormSubmit")->name("doctorSignUpFormSubmit");
