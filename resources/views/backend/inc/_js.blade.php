@@ -1,7 +1,7 @@
 <!--   Core JS Files   -->
-<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
-<script src="../assets/js/core/popper.min.js"></script>
-<script src="../assets/js/core/bootstrap.min.js"></script>
+<script src="{{ asset('/') }}assets/js/core/jquery.3.2.1.min.js"></script>
+<script src="{{ asset('/') }}assets/js/core/popper.min.js"></script>
+<script src="{{ asset('/') }}assets/js/core/bootstrap.min.js"></script>
 
 <script src="{{ asset('/vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
 
@@ -24,7 +24,7 @@
 <script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
 
 <!-- Datatables -->
-<script src="../assets/js/plugin/datatables/datatables.min.js"></script>
+<script src="{{ asset('/') }}assets/js/plugin/datatables/datatables.min.js"></script>
 
 <!-- Bootstrap Notify -->
 {{-- <script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script> --}}

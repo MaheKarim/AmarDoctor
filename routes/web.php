@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 
-//Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
+// Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 
 Auth::routes();
 // Logout Route
@@ -55,8 +55,10 @@ Route::post('custom-login', 'CustomAuthController@login');
 Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function() {
 
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+
     // Password Change
-   // Route::get('/changePassword','DashboardController@showChangePasswordForm');
+
+    Route::get('/change/password','DashboardController@changePassForm')->name('changePass');
    // Route::post('/changePassword','DashboardController@changePassword')->name('changePassword');
 
 });

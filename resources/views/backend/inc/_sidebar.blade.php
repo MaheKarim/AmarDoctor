@@ -89,7 +89,7 @@
                         <div class="collapse" id="base">
                             <ul class="nav nav-collapse">
                                 <li>
-                                    <a href="components/avatars.html">
+                                    <a href="{{ route('admin.changePass')  }}">
                                         <span class="sub-item">Change Password</span>
                                     </a>
                                 </li>

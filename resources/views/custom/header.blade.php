@@ -35,7 +35,6 @@
 
 		<!-- Main Wrapper -->
 		<div class="main-wrapper">
-
 			<!-- Header -->
 			<header class="header">
 				<nav class="navbar navbar-expand-lg header-nav">
@@ -65,57 +64,13 @@
 								<a href="index.php">Home</a>
 							</li>
 							<li class="has-submenu">
-								<a href="#">Doctors <i class="fas fa-chevron-down"></i></a>
-								<ul class="submenu">
-									<li><a href="doctor-dashboard.php">Doctor Dashboard</a></li>
-									<li><a href="appointments.php">Appointments</a></li>
-									<li><a href="schedule-timings.php">Schedule Timing</a></li>
-									<li><a href="my-patients.php">Patients List</a></li>
-									<li><a href="patient-profile.php">Patients Profile</a></li>
-									<li><a href="chat-doctor.php">Chat</a></li>
-									<li><a href="invoices.php">Invoices</a></li>
-									<li><a href="doctor-profile-settings.php">Profile Settings</a></li>
-									<li><a href="reviews.php">Reviews</a></li>
-									<li><a href="doctor-register.php">Doctor Register</a></li>
-								</ul>
+								<a href="#">Digonstic</a>
+
 							</li>
 							<li class="has-submenu">
-								<a href="#">Patients <i class="fas fa-chevron-down"></i></a>
-								<ul class="submenu">
-									<li><a href="search.php">Search Doctor</a></li>
-									<li><a href="doctor-profile.php">Doctor Profile</a></li>
-									<li><a href="booking.php">Booking</a></li>
-									<li><a href="checkout.php">Checkout</a></li>
-									<li><a href="booking-success.php">Booking Success</a></li>
-									<li><a href="patient-dashboard.php">Patient Dashboard</a></li>
-									<li><a href="favourites.php">Favourites</a></li>
-									<li><a href="chat.php">Chat</a></li>
-									<li><a href="profile-settings.php">Profile Settings</a></li>
-									<li><a href="change-password.php">Change Password</a></li>
-								</ul>
+								<a href="#">Doctor Search</a>
 							</li>
-							<li class="has-submenu">
-								<a href="#">Pages <i class="fas fa-chevron-down"></i></a>
-								<ul class="submenu">
-									<li><a href="search.php">Search Doctors</a></li>
-									<li><a href="calendar.php">Calendar</a></li>
-									<li><a href="components.php">Components</a></li>
-									<li class="has-submenu">
-										<a href="invoices.php">Invoices</a>
-										<ul class="submenu">
-											<li><a href="invoices.php">Invoices</a></li>
-											<li><a href="invoice-view.php">Invoice View</a></li>
-										</ul>
-									</li>
-									<li><a href="blank-page.php">Starter Page</a></li>
-									<li><a href="login.php">Login</a></li>
-									<li><a href="register.php">Register</a></li>
-									<li><a href="forgot-password.php">Forgot Password</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="admin/index.php" target="_blank">Admin</a>
-							</li>
+
 							<li class="login-link">
 								<a href="{{route('login')}}">Login / Signup</a>
 							</li>
