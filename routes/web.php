@@ -55,17 +55,9 @@ Route::post('custom-login', 'CustomAuthController@login');
 Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function() {
 
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-    // product for admin
-    // Route::get('/show/product','ProductController@index')->name('showProduct');
-    // Route::get('/add/product','ProductController@add')->name('addProduct');
-    // Route::post('store-product', 'ProductController@store');
-    // Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');
-
-
-
-
-
-
+    // Password Change
+   // Route::get('/changePassword','DashboardController@showChangePasswordForm');
+   // Route::post('/changePassword','DashboardController@changePassword')->name('changePassword');
 
 });
 

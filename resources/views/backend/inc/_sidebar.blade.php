@@ -9,7 +9,7 @@
                     <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
                         <span>
                             {{ Auth::user()->name }}
-                            <span class="user-level">Administrator</span>
+                            <span class="user-level"> {{ Auth::user()->role->name }} </span>
                             <span class="caret"></span>
                         </span>
                     </a>
@@ -42,27 +42,9 @@
                     <span class="sidebar-mini-icon">
                         <i class="fa fa-ellipsis-h"></i>
                     </span>
-                    <h4 class="text-section">Internal Settings</h4>
+                    <h4 class="text-section">Internal Function</h4>
                 </li>
-                <li class="nav-item">
-                    <a data-toggle="collapse" href="#base">
-                        <i class="fas fa-layer-group"></i>
-                        <p>Base</p>
-                        <span class="caret"></span>
-                    </a>
-                    <div class="collapse" id="base">
-                        <ul class="nav nav-collapse">
-                            <li>
-                                <a href="components/avatars.html">
-                                    <span class="sub-item">Avatars</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="nav-item">
+                 <li class="nav-item">
                 <a href="{{ route('showArea') }}">
                         <i class="fas fa-desktop"></i>
                         <p>Area Create / Show</p>
@@ -90,6 +72,30 @@
                             <p>Product Sell</p>
                             {{-- <span class="badge badge-success">4</span> --}}
                         </a>
+                    </li>
+
+                    <li class="nav-section">
+                        <span class="sidebar-mini-icon">
+                            <i class="fa fa-ellipsis-h"></i>
+                        </span>
+                        <h4 class="text-section">Internal Function</h4>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="collapse" href="#base">
+                            <i class="fas fa-layer-group"></i>
+                            <p>Seetings</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="base">
+                            <ul class="nav nav-collapse">
+                                <li>
+                                    <a href="components/avatars.html">
+                                        <span class="sub-item">Change Password</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
                     </li>
 
             </ul>

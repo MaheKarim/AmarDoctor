@@ -59,7 +59,7 @@
                                     <tr>
                                     <td>{{ $product->product_name }}</td>
                                     <td>{{ $product->product_slug }}</td>
-                                    <td>{{ $product->description }}</td>
+                                    <td>{!! $product->description !!}</td>
                                     <td> <img style="width:100%;max-width:400px" src="{{ asset('storage')}}/{{$product->package_image }} " /> </td>
                                     <td> {{ $product->total_rate }} </td>
                                     <td> {{ $product->package_rate }} </td>
