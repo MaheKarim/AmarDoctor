@@ -1,0 +1,175 @@
+@include('custom.header')
+
+			<!-- Breadcrumb -->
+			<div class="breadcrumb-bar">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-12 col-12">
+							<nav aria-label="breadcrumb" class="page-breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.php">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+								</ol>
+							</nav>
+							<h2 class="breadcrumb-title">Profile Settings</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Breadcrumb -->
+
+			<!-- Page Content -->
+			<div class="content">
+				<div class="container-fluid">
+
+					<div class="row">
+						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+
+							<!-- Profile Sidebar -->
+                            @include('backend.multi-dashboard.doctor._sidebar_doctor')
+							<!-- /Profile Sidebar -->
+
+						</div>
+						<div class="col-md-7 col-lg-8 col-xl-9">
+
+							<!-- Basic Information -->
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Basic Information</h4>
+									<div class="row form-row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<div class="change-avatar">
+													<div class="profile-img">
+                                                        @if($data->profile_image == "default.png")
+														    <img src="{{ asset('/') }}default/default.png" alt="User Image">
+                                                            @else
+                                                            <img src="{{ asset('storage') }}/{{ $data->profile_image}}" alt="User Image">
+                                                        @endif
+													</div>
+													<div class="upload-img">
+                                                        <form action="{{ route('doctor.update.profile_pic') }}" method="post" enctype="multipart/form-data">
+                                                            @csrf
+                                                            <div class="change-photo-btn">
+                                                                <span><i class="fa fa-upload"></i> Upload Photo</span>
+                                                                <input type="file" name="profile_pic" class="upload">
+                                                            </div>
+                                                            <button type="submit" class="btn btn-success">Save Changes</button>
+                                                        </form>
+                                                        <small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Basic Information -->
+
+                            <!-- About Me -->
+                            <div class="content">
+                            <form action="{{ route('doctor.upadeteprofileSeetings') }}" method="POST">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+
+							<div class="card">
+								<div class="card-body">
+                                    <h4 class="card-title">Biography</h4>
+                                    {{-- <div class="form-group mb-0">
+                                        <div class="form-group">
+                                            <label>Full Name <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div> --}}
+									<div class="form-group mb-0">
+										<label>About Me</label>
+										<textarea class="form-control" name="about_me" rows="5"></textarea>
+									</div>
+								</div>
+							</div>
+							<!-- /About Me -->
+							<!-- Clinic Info -->
+							<!-- /Clinic Info -->
+							<!-- Contact Details -->
+							<div class="card contact-card">
+								<div class="card-body">
+									<h4 class="card-title">Contact Details</h4>
+									<div class="row form-row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label>Present Address</label>
+												<input type="text" class="form-control" name="present_address">
+											</div>
+										</div>
+										</div>
+								</div>
+							</div>
+							<!-- /Contact Details -->
+                            <!-- Pricing -->
+                            <!-- Area  Selection Start -->
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Area</h4>
+        <div class="registrations-info">
+            <div class="row form-row reg-cont">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Select Your Area</label>
+                        <select class="form-control select">
+                            @php($areas= \App\Area::all())
+                            @foreach ($areas as $area)
+                            <option value="{{$area->id}}">{{$area->area_name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Area Selection End -->
+							<!-- Services and Specialization 2-->
+							<div class="card services-card">
+								<div class="card-body">
+									<h4 class="card-title">Services and Specialization</h4>
+									<div class="col-md-6">
+										<label>Specialization </label>
+										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Specialization" name="edu_degree" value="BDS, MDS - Oral & Maxillofacial Surgery" id="edu_degree">
+										<small class="form-text text-muted">Note : It'll be under your name</small>
+                                    </div>
+                                    <br>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Select Your Specality</label>
+                                            <select class="form-control select">
+                                                @php($categories= \App\Category::all())
+                                                @foreach ($categories as $category)
+                                                <option value="{{$category->id}}">{{$category->category_name}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+								</div>
+							</div>
+							<!-- /Services and Specialization -->
+							<div class="submit-section submit-btn-bottom">
+								<button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
+							</div>
+                        </div>
+                    </form>
+<!--    ED  ED  -->
+
+
+
+
+
+
+
+                </div>
+					</div>
+				</div>
+			</div>
+			<!-- /Page Content -->
+
+	@include('custom.footer')
