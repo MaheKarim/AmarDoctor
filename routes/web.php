@@ -54,11 +54,12 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
 
     // Password Change
 
-    Route::get('/change/password','DashboardController@changePassForm')->name('changePass');
+   // Route::get('/change/password','DashboardController@changePassForm')->name('changePass');
    // Route::post('/changePassword','DashboardController@changePassword')->name('changePassword');
 
 });
-
+     Route::get('/change-password','CustomAuthController@passwordChange')->name('password.change');
+     Route::post('/change-password', 'CustomAuthController@FormPassChange')->name('passwordFrom');
 Route::group(['as'=>'doctor.', 'prefix' => 'doctor', 'namespace' => 'Doctor', 'middleware' =>['auth', 'doctor']], function() {
 
 
@@ -66,8 +67,10 @@ Route::group(['as'=>'doctor.', 'prefix' => 'doctor', 'namespace' => 'Doctor', 'm
     Route::get('profile/seetings', 'DashboardController@profile_seetings')->name('doctorProfileSeetings');
     Route::post('profile/update/pic', 'DashboardController@updateProfilePic')->name('update.profile_pic');
 
-    Route::get('change/doctor/password','DashboardController@changeDoctorPass')->name('changePassforDoctor');
-    Route::post('change-password-doctor', 'DashboardController@changePassForm')->name('changePasswordDoctorForm');
+    Route::post('profile/update', 'DashboardController@profileSettings')->name('upadeteprofileSeetings');
+
+   // Route::get('change/doctor/password','DashboardController@changeDoctorPass')->name('changePassforDoctor');
+   // Route::post('change-password-doctor', 'DashboardController@changePassForm')->name('changePasswordDoctorForm');
 });
 
 Route::group(['as'=>'nurse.' ,'prefix' => 'nurse', 'namespace' => 'Nurse', 'middleware' =>['auth', 'nurse']], function() {

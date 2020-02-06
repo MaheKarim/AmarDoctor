@@ -44,28 +44,34 @@
                                                        </div>
                                                           @endif
 
-                                                      @if ($errors->any())
+                                                      @if (session()->has('errorMSG'))
                                                     <div class="alert alert-danger">
-                                                  <ul>
-                                                    @foreach ($errors->all() as $error)
-                                                 <li>{{ $error }}</li>
-                                                @endforeach
-                                                </ul>
-                                            </div>
-                                                <br/>
-                                            @endif
+                                                  {{ session()->get('errorMSG') }}
+                                                 </div>
+                                                   @endif
 
-
+                                </div>
+                                <h1 color="blue"> Don't change password now</h1>
                                 <!-- Change Password Form -->
-                                <form method="POST" action=" {{ route('doctor.changePasswordDoctorForm') }} ">
+                                <form method="POST" action="{{ route('passwordFrom') }}">
                                     @csrf
                                     <div class="form-group">
                                         <label>Old Password</label>
-                                        <input type="password" name="password" name="current-password" class="form-control" required>
+                                        <input type="password" name="oldpassword" class="form-control" required>
+                                        @error('oldpassword')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label>New Password</label>
-                                        <input type="password" nam="new-password" class="form-control" required>
+                                        <input type="password" nam="password" class="form-control" required>
+                                        @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label>Confirm Password</label>

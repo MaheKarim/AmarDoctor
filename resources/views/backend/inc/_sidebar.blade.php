@@ -89,7 +89,7 @@
                         <div class="collapse" id="base">
                             <ul class="nav nav-collapse">
                                 <li>
-                                    <a href="{{ route('admin.changePass')  }}">
+                                    <a href="#">
                                         <span class="sub-item">Change Password</span>
                                     </a>
                                 </li>

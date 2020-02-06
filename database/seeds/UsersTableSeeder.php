@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class UsersTableSeeder extends Seeder
 {
@@ -12,14 +14,14 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+
         DB::table('users')->insert([
 
             'role_id' => '1',
             'name' => 'MR Admin',
             'username' => 'admin',
             'email' => 'admin@blog.com',
-            'password' => bcrypt('rootadmin'),
+            'password' => Hash::make('rootadmin'),
 
         ]);
         DB::table('users')->insert([
@@ -28,7 +30,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'MR Doctor',
             'username' => 'doctor',
             'email' => 'doctor@blog.com',
-            'password' => bcrypt('rootdoctor'),
+            'password' => Hash::make('rootdoctor'),
 
         ]);
         DB::table('users')->insert([
@@ -37,7 +39,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'MR Nurse',
             'username' => 'nurse',
             'email' => 'nurse@blog.com',
-            'password' => bcrypt('rootnurse'),
+            'password' => Hash::make('rootnurse'),
 
         ]);
         DB::table('users')->insert([
@@ -46,7 +48,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'MR User',
             'username' => 'user',
             'email' => 'user@blog.com',
-            'password' => bcrypt('rootuser'),
+            'password' => Hash::make('rootuser'),
 
         ]);
     }
