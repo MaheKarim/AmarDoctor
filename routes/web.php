@@ -57,6 +57,10 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
    // Route::get('/change/password','DashboardController@changePassForm')->name('changePass');
    // Route::post('/changePassword','DashboardController@changePassword')->name('changePassword');
 
+
+// Review Route Here
+
+
 });
      Route::get('/change-password','CustomAuthController@passwordChange')->name('password.change');
      Route::post('/change-password', 'CustomAuthController@FormPassChange')->name('passwordFrom');
@@ -89,3 +93,7 @@ Route::post('custom-login', 'CustomAuthController@login');
 
 Route::get("doctor/signup", "DoctorController@signUpForm")->name("doctorSignUpForm");
 Route::post("doctor/signup", "DoctorController@signUpFormSubmit")->name("doctorSignUpFormSubmit");
+
+
+Route::get('/review/add','ReviewController@addReview')->name('add.review');
+

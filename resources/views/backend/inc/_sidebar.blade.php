@@ -71,8 +71,15 @@
                             <i class="fa fa-window-restore"></i>
                             <p>Product Sell</p>
                             {{-- <span class="badge badge-success">4</span> --}}
-                        </a>
-                    </li>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('add.review') }}">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Review Section</p>
+                            {{-- <span class="badge badge-success">4</span> --}}
+                    </a>
+                </li>
 
                     <li class="nav-section">
                         <span class="sidebar-mini-icon">

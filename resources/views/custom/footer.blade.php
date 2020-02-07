@@ -46,7 +46,7 @@
 									<h2 class="footer-title">For Patients</h2>
 									<ul>
 										<li><a href="search.php"><i class="fas fa-angle-double-right"></i> Search for Doctors</a></li>
-										<li><a href="login.php"><i class="fas fa-angle-double-right"></i> Login</a></li>
+										<li><a href="{{ route('login') }} "><i class="fas fa-angle-double-right"></i> Login</a></li>
 										<li><a href="register.php"><i class="fas fa-angle-double-right"></i> Register</a></li>
 										<li><a href="booking.php"><i class="fas fa-angle-double-right"></i> Booking</a></li>
 										<li><a href="patient-dashboard.php"><i class="fas fa-angle-double-right"></i> Patient Dashboard</a></li>
@@ -64,8 +64,8 @@
 									<ul>
 										<li><a href="appointments.php"><i class="fas fa-angle-double-right"></i> Appointments</a></li>
 										<li><a href="chat.php"><i class="fas fa-angle-double-right"></i> Chat</a></li>
-										<li><a href="login.php"><i class="fas fa-angle-double-right"></i> Login</a></li>
-										<li><a href="doctor-register.php"><i class="fas fa-angle-double-right"></i> Register</a></li>
+										<li><a href=" {{ route('login') }} "><i class="fas fa-angle-double-right"></i> Login</a></li>
+										<li><a href=" {{ route('doctorSignUpForm') }} "><i class="fas fa-angle-double-right"></i> Register</a></li>
 										<li><a href="doctor-dashboard.php"><i class="fas fa-angle-double-right"></i> Doctor Dashboard</a></li>
 									</ul>
 								</div>
