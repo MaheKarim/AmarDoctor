@@ -2,7 +2,13 @@
     <div class="widget-profile pro-widget-content">
         <div class="profile-info-widget">
             <a href="#" class="booking-doc-img">
-            <img src="{{ asset('storage') }}/{{ \App\User::find(auth()->id())->profile_image }}" alt="User Image">
+                <div class="profile-img">
+                    @if($data->profile_image == "default.png")
+                      <img src=" {{ asset('/') }}default/default.png" alt="Doctor Image">
+                    @else
+                    <img src=" {{ asset('storage') }}/{{ $data->profile_image }}" alt="Doctor auto image">
+                    @endif
+                </div>
             </a>
             <div class="profile-det-info">
                 <h3>{{Auth::user()->name}}</h3>
