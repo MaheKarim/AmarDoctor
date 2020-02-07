@@ -96,4 +96,5 @@ Route::post("doctor/signup", "DoctorController@signUpFormSubmit")->name("doctorS
 
 
 Route::get('/review/add','ReviewController@addReview')->name('add.review');
+Route::post('review-create','ReviewController@createReview')->name('reviewCreate');
 
