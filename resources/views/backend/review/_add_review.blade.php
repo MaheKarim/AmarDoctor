@@ -51,13 +51,12 @@
                             <div class="alert alert-success">
                                 {{ session()->get('success') }}
                             </div>
-                               @endif
+                            @endif
                             <!-- Notification End Here -->
-<<<<<<< HEAD
+
                         <form action="{{route('review')}}" method="POST" enctype="multipart/form-data">
-=======
                         <form action=" {{ route('reviewCreate') }} " method="POST" enctype="multipart/form-data">
->>>>>>> d0893104129efc7d151ed0678ed6f32dccd66713
+
                                  @csrf
                                 <div class="form-group">
                                     <label for="text">Add Reviewer Name</label>

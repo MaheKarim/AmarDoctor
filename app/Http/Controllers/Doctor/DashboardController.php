@@ -10,7 +10,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
-use DB;
 
 
 
@@ -20,7 +19,6 @@ class DashboardController extends Controller
 
     public function index()
     {
-
        return view('backend.multi-dashboard.doctor._home_doctor');
     }
 
@@ -54,53 +52,25 @@ class DashboardController extends Controller
 
     public function profileSettings(Request $request)
     {
-        // Validation Required
-        // Get The User ID
-        $user_id = Auth::user()->id;
 
+        // Validation Rule Will Apply
+        
+        $user_id = Auth::user()->id;
 
         User::where('id', Auth::id())->update([
           'name'=>$request->name,
+          'phn_number'=>$request->phn_number,
         ]);
 
         Doctor::where('user_id', Auth::id())->update([
             'about_me'=>$request->about_me,
             'category_name_id'=>$request->category_name_id,
+            'area_name_id'=>$request->area_name_id,
             'edu_degree' =>$request->edu_degree,
+            'present_address' =>$request->present_address,
         ]);
 
-
-        return back()->with('success', 'Updated!');
+        return back()->with('success', 'Profile Updated Succesfully!');
 
     }
-
-    // Password Change
-
-//     public function changeDoctorPass()
-//     {
-//          return view('backend.multi-dashboard.doctor.change_password');
-//     }
-
-//     public function changePassForm(Request $request)
-//     {
-//         if (!(Hash::check($request->get('current-password'), Auth::user()->password))) {
-//             // The passwords matches
-//             return redirect()->back()->with("error","Your current password does not matches with the password you provided. Please try again.");
-//         }
-//         if(strcmp($request->get('current-password'), $request->get('new-password')) == 0){
-//             //Current password and new password are same
-//             return redirect()->back()->with("error","New Password cannot be same as your current password. Please choose a different password.");
-//         }
-//         $validatedData = $request->validate([
-//             'current-password' => 'required',
-//             'new-password' => 'required|string|min:6|confirmed',
-//         ]);
-//         //Change Password
-//         $user = Auth::user();
-//         $user->password = bcrypt($request->get('new-password'));
-//         $user->save();
-// //        \session()->flash('success','Products Delete Successfully');
-
-//         return redirect()->back()->with("success","Password changed successfully !");
-//     }
 }

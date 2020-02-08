@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
-Use App\User;
-use Illuminate\Http\Request;
 use Auth;
+Use App\User;
+use App\Doctor;
 use AuthenticatesUsers;
-use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\Controller;
+
+
 
 class CustomAuthController extends Controller
 {
@@ -28,7 +31,11 @@ class CustomAuthController extends Controller
     }
     public function passwordChange()
     {
-        return view('backend.multi-dashboard.doctor.change_password');
+        
+        $data = User::find(Auth::id());
+        $details = Doctor::where('user_id', $data->id)->first();
+        $details_user = User::where('id', $data->id)->first();
+        return view('backend.multi-dashboard.doctor.change_password', compact('details_user', 'details' , 'data'));
     }
 
     public function FormPassChange(Request $request)
@@ -37,7 +44,7 @@ class CustomAuthController extends Controller
             'oldpassword' => 'required',
             'password' => 'confirmed'
         ]);
-        
+
         $hashedPassword = Auth::User()->password;
         if(Hash::check($request->oldpassword,$hashedPassword))
         {

@@ -61,7 +61,7 @@
 						</div>
 						<ul class="main-nav">
 							<li class="active">
-								<a href="index.php">Home</a>
+								<a href="{{ url('/')}}">Home</a>
 							</li>
 							<li class="has-submenu">
 								<a href="#">Digonstic</a>
@@ -72,10 +72,11 @@
 							</li>
 
 							<li class="login-link">
-								<a href="{{route('login')}}">Login / Signup</a>
+								<a href="{{route('login')}}">Login</a>
 							</li>
 						</ul>
 					</div>
+          @if(!Auth::User())
 					<ul class="nav header-navbar-rht">
 						<li class="nav-item contact-item">
 							<div class="header-contact-img">
@@ -90,6 +91,7 @@
 							<a class="nav-link header-login" href="{{route('login')}}">Login</a>
 						</li>
 					</ul>
-				</nav>
+         @endif
+      	</nav>
 			</header>
             <!-- /Header -->

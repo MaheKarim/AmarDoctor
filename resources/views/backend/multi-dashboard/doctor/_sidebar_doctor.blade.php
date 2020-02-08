@@ -3,18 +3,18 @@
         <div class="profile-info-widget">
             <a href="#" class="booking-doc-img">
               <div class="profile-img">
-                                            @if($data->profile_image == "default.png")
+                  @if($data->profile_image == "default.png")
                     <img src="{{ asset('/') }}default/default.png" alt="User Image">
-                                                @else
-                                                <img src="{{ asset('storage') }}/{{ $data->profile_image}}" alt="User Image">
-                                            @endif
-              </div>
+                      @else
+                    <img src="{{ asset('storage') }}/{{ $data->profile_image}}" alt="User Image">
+                  @endif
+               </div>
             </a>
             <div class="profile-det-info">
                 <h3>{{Auth::user()->name}}</h3>
 
                 <div class="patient-details">
-                    <h5 class="mb-0">{{$details->edu_degree}}</h5>
+                    <h5 class="mb-0"> {{ $details->edu_degree }} </h5>
                 </div>
             </div>
         </div>
