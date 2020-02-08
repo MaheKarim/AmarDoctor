@@ -95,11 +95,5 @@ Route::get("doctor/signup", "DoctorController@signUpForm")->name("doctorSignUpFo
 Route::post("doctor/signup", "DoctorController@signUpFormSubmit")->name("doctorSignUpFormSubmit");
 
 
-<<<<<<< HEAD
 Route::get('/review/add','ReviewController@addReview')->name('add.review');
 Route::post('/review-add','ReviewController@reviewcreate')->name('review');
-=======
-Route::get('/review/add','ReviewController@addReview')->name('addReviewAdmin');
-Route::post('review-create','ReviewController@createReview')->name('reviewCreate');
-
->>>>>>> d0893104129efc7d151ed0678ed6f32dccd66713
