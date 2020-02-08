@@ -14,7 +14,7 @@
                 <h3>{{Auth::user()->name}}</h3>
 
                 <div class="patient-details">
-                    <h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
+                    <h5 class="mb-0">{{$details->edu_degree}}</h5>
                 </div>
             </div>
         </div>

@@ -28,8 +28,9 @@ class DashboardController extends Controller
     {
         $data = User::find(Auth::id());
         $details = Doctor::where('user_id', $data->id)->first();
+        $details_user = User::where('id', $data->id)->first();
 
-        return view('backend.multi-dashboard.doctor._profile_seetings', compact('data', 'details'));
+        return view('backend.multi-dashboard.doctor._profile_seetings', compact('data', 'details','details_user'));
     }
 
     // update profile picture
@@ -57,6 +58,10 @@ class DashboardController extends Controller
         // Get The User ID
         $user_id = Auth::user()->id;
 
+
+        User::where('id', Auth::id())->update([
+          'name'=>$request->name,
+        ]);
 
         Doctor::where('user_id', Auth::id())->update([
             'about_me'=>$request->about_me,

@@ -71,13 +71,13 @@
                             <form action="{{ route('doctor.upadeteprofileSeetings') }}" method="POST">
                             @csrf;
 
-							<div class="card">
-								<div class="card-body">
+							                   <div class="card">
+							                   	<div class="card-body">
                                     <h4 class="card-title">Biography</h4>
                                      <div class="form-group mb-0">
                                         <div class="form-group">
                                             <label>Full Name <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" name="name" class="form-control" value="{{$details_user->name}}">
                                         </div>
                                     </div>
 									<div class="form-group mb-0">
