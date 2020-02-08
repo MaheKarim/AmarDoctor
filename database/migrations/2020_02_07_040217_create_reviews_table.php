@@ -19,6 +19,7 @@ class CreateReviewsTable extends Migration
             $table->string('reviewer_designation')->nullable();
             $table->string('reviewer_image')->nullable();
             $table->longText('reviewer_review');
+           // $table->integer('review_status')->defaut(1);
             $table->timestamps();
         });
     }

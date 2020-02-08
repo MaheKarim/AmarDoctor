@@ -53,18 +53,22 @@
                             </div>
                                @endif
                             <!-- Notification End Here -->
+<<<<<<< HEAD
                         <form action="{{route('review')}}" method="POST" enctype="multipart/form-data">
+=======
+                        <form action=" {{ route('reviewCreate') }} " method="POST" enctype="multipart/form-data">
+>>>>>>> d0893104129efc7d151ed0678ed6f32dccd66713
                                  @csrf
                                 <div class="form-group">
-                                    <label for="text">Add  Name</label>
+                                    <label for="text">Add Reviewer Name</label>
                                     <input type="text" class="form-control" name="reviewer_name" id="reviewer_designation" placeholder="Enter Product Name">
-                                    <label for="text">Product Sug</label>
+                                    <label for="text">Add Reviewer Designation</label>
                                     <input type="text" class="form-control" name="reviewer_designation" id="reviewer_designation" placeholder="Enter Product Slug">
 
-                                    <label for="text">Add Product Description</label>
+                                    <label for="text">Add Review</label>
                                     <textarea id="description" type="text" class="form-control" name="reviewer_review" id="reviewer_review" placeholder="Product Description"></textarea>
 
-                                    <label for="text">Choose Shop Image</label>
+                                    <label for="text">Add Reviewer Image</label>
                                    <input type="file" class="form-control" name="reviewer_image">
                                 </div>
                                 </div>

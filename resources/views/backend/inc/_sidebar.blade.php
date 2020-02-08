@@ -74,7 +74,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('add.review') }}">
+                    <a href="{{ route('addReviewAdmin') }}">
                             <i class="fas fa-quote-left"></i>
                             <p>Review Section</p>
                             {{-- <span class="badge badge-success">4</span> --}}
