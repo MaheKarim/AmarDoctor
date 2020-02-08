@@ -53,7 +53,7 @@
                             </div>
                                @endif
                             <!-- Notification End Here -->
-                        <form action="#" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('review')}}" method="POST" enctype="multipart/form-data">
                                  @csrf
                                 <div class="form-group">
                                     <label for="text">Add  Name</label>
@@ -88,5 +88,3 @@
 @endsection
 
 {{--  --}}
-
-

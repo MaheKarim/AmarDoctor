@@ -27,7 +27,9 @@ class DashboardController extends Controller
     public function profile_seetings()
     {
         $data = User::find(Auth::id());
-        return view('backend.multi-dashboard.doctor._profile_seetings', compact('data'));
+        $details = Doctor::where('user_id', $data->id)->first();
+
+        return view('backend.multi-dashboard.doctor._profile_seetings', compact('data', 'details'));
     }
 
     // update profile picture
@@ -55,14 +57,14 @@ class DashboardController extends Controller
         // Get The User ID
         $user_id = Auth::user()->id;
 
-        // Now Update
-        // Doctor::find(Auth::id())->update([
-        //     'about_me' =>$request->about_me,
 
-        // ]);
+        Doctor::where('user_id', Auth::id())->update([
+            'about_me'=>$request->about_me,
+            'category_name_id'=>$request->category_name_id,
+            'edu_degree' =>$request->edu_degree,
+        ]);
 
-        // DB::table('doctors')->where('user_id' , $user_id)
-        //                     ->update($request->except('_token'));
+
         return back()->with('success', 'Updated!');
 
     }

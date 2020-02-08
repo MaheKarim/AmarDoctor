@@ -37,7 +37,7 @@ class CustomAuthController extends Controller
             'oldpassword' => 'required',
             'password' => 'confirmed'
         ]);
-
+        
         $hashedPassword = Auth::User()->password;
         if(Hash::check($request->oldpassword,$hashedPassword))
         {
@@ -52,5 +52,3 @@ class CustomAuthController extends Controller
         }
     }
 }
-
-

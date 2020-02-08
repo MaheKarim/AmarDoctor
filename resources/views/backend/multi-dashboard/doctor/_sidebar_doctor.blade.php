@@ -2,25 +2,14 @@
     <div class="widget-profile pro-widget-content">
         <div class="profile-info-widget">
             <a href="#" class="booking-doc-img">
-<<<<<<< HEAD
               <div class="profile-img">
-                    @if($data->profile_image == "default.png")
-                       <img src="{{ asset('/') }}default/default.png" alt="User Image">
-                            @else
-                                <img src="{{ asset('storage') }}/{{ $data->profile_image}}" alt="User Image">
-                                    @endif
+                                            @if($data->profile_image == "default.png")
+                    <img src="{{ asset('/') }}default/default.png" alt="User Image">
+                                                @else
+                                                <img src="{{ asset('storage') }}/{{ $data->profile_image}}" alt="User Image">
+                                            @endif
               </div>
-          </a>
-=======
-                <div class="profile-img">
-                    @if($data->profile_image == "default.png")
-                      <img src=" {{ asset('/') }}default/default.png" alt="Doctor Image">
-                    @else
-                    <img src=" {{ asset('storage') }}/{{ $data->profile_image }}" alt="Doctor auto image">
-                    @endif
-                </div>
             </a>
->>>>>>> 7810539fc6628ac8ecaed0354fcdf8ccd2ce8f0b
             <div class="profile-det-info">
                 <h3>{{Auth::user()->name}}</h3>
 

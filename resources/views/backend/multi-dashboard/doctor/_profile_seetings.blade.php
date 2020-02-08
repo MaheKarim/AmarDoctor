@@ -69,20 +69,20 @@
                             <!-- About Me -->
                             <div class="content">
                             <form action="{{ route('doctor.upadeteprofileSeetings') }}" method="POST">
-                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+                            @csrf;
 
 							<div class="card">
 								<div class="card-body">
                                     <h4 class="card-title">Biography</h4>
-                                    {{-- <div class="form-group mb-0">
+                                     <div class="form-group mb-0">
                                         <div class="form-group">
                                             <label>Full Name <span class="text-danger">*</span></label>
                                             <input type="text" class="form-control">
                                         </div>
-                                    </div> --}}
+                                    </div>
 									<div class="form-group mb-0">
 										<label>About Me</label>
-										<textarea class="form-control" name="about_me" rows="5"></textarea>
+										<textarea class="form-control" name="about_me" rows="5">{{ $details->about_me }}</textarea>
 									</div>
 								</div>
 							</div>
@@ -133,40 +133,31 @@
 									<h4 class="card-title">Services and Specialization</h4>
 									<div class="col-md-6">
 										<label>Specialization </label>
-										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Specialization" name="edu_degree" value="BDS, MDS - Oral & Maxillofacial Surgery" id="edu_degree">
+										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Specialization" name="edu_degree" value="{{$details->edu_degree}}" id="edu_degree">
 										<small class="form-text text-muted">Note : It'll be under your name</small>
                                     </div>
                                     <br>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Select Your Specality</label>
-                                            <select class="form-control select">
+                                            <select name="category_name_id" class="form-control select">
                                                 @php($categories= \App\Category::all())
                                                 @foreach ($categories as $category)
-                                                <option value="{{$category->id}}">{{$category->category_name}}</option>
+                                                <option {{ ( $details->category_name_id == $category->id) ? "Selected" : ""  }} value="{{$category->id}}">{{$category->category_name}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                     </div>
-
-
-								</div>
-							</div>
+																		</div>
+																</div>
 							<!-- /Services and Specialization -->
 							<div class="submit-section submit-btn-bottom">
 								<button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
 							</div>
-                        </div>
-                    </form>
-<!--    ED  ED  -->
+            </div>
+        </form>
 
-
-
-
-
-
-
-                </div>
+            </div>
 					</div>
 				</div>
 			</div>

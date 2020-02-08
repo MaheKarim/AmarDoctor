@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>New Password</label>
-                                        <input type="password" nam="password" class="form-control" required>
+                                        <input type="password" name="password" class="form-control" required>
                                         @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -75,7 +75,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Confirm Password</label>
-                                        <input type="password" class="form-control" name="new-password_confirmation" required>
+                                        <input type="password" class="form-control" name="password_confirmation" required>
                                     </div>
                                     <div class="submit-section">
                                         <button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
