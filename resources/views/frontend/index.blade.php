@@ -56,62 +56,27 @@
             </div>
             <br>
             <div class="row">
+              @foreach($products as $product)
                 <div class="col-sm">
                     <div class="text-center muhin">
-                        <div class="">
-                            <a href="#"> <span class="LazyLoad is-visible">
+                        <div class="image_checkup">
+                            <a href="#">
+                              <span class="LazyLoad is-visible">
                 <img src="{{asset('/')}}frontend/assets/img/pro3.jpg" alt="" class="img-fluid">
-            </span> </a>
+                              </span>
+                            </a>
                         </div>
                         <br>
-                        <h6><a href="#">Comprehensive Young Indian Health Checkup</a></h6> <span>Ideal for male aged 21 to 40 years</span>
+                        <h6><a href="#">{{ $product->product_name }}</a></h6>
+                        <span>Ideal for male aged 21 to 40 years</span>
                         <div class="u-border__top--blue_4 u-margin--10__top"></div>
                         <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
                             <div class="u-d__inline ">24% off</div>
                         </div> <a class="btn btn-dark-green" href="#">Explore</a> </div>
                 </div>
-                <div class="col-sm">
-                    <div class="text-center muhin">
-                        <div class="">
-                            <a href="#"> <span class="LazyLoad is-visible">
-                <img src="{{asset('/')}}frontend/assets/img/pro2.jpg" alt="" class="img-fluid">
-            </span> </a>
-                        </div>
-                        <br>
-                        <h6><a href="#">Comprehensive Young Indian Health Checkup</a></h6> <span>Ideal for male aged 21 to 40 years</span>
-                        <div class="u-border__top--blue_4 u-margin--10__top"></div>
-                        <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
-                            <div class="u-d__inline ">24% off</div>
-                        </div> <a class="btn btn-dark-green" href="#">Explore</a> </div>
-                </div>
-                <div class="col-sm">
-                    <div class="text-center muhin">
-                        <div class="">
-                            <a href="#"> <span class="LazyLoad is-visible">
-                <img src="{{asset('/')}}frontend/assets/img/pro3.jpg" alt="" class="img-fluid">
-            </span> </a>
-                        </div>
-                        <br>
-                        <h6><a href="#">Comprehensive Young Indian Health Checkup</a></h6> <span>Ideal for male aged 21 to 40 years</span>
-                        <div class="u-border__top--blue_4 u-margin--10__top"></div>
-                        <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
-                            <div class="u-d__inline ">24% off</div>
-                        </div> <a class="btn btn-dark-green" href="#">Explore</a> </div>
-                </div>
-                <div class="col-sm">
-                    <div class="text-center muhin">
-                        <div class="">
-                            <a href="#"> <span class="LazyLoad is-visible">
-                <img src="{{asset('/')}}frontend/assets/img/pro2.jpg" alt="" class="img-fluid">
-            </span> </a>
-                        </div>
-                        <br>
-                        <h6><a href="#">Comprehensive Young Indian Health Checkup</a></h6> <span>Ideal for male aged 21 to 40 years</span>
-                        <div class="u-border__top--blue_4 u-margin--10__top"></div>
-                        <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
-                            <div class="u-d__inline ">24% off</div>
-                        </div> <a class="btn btn-dark-green" href="#">Explore</a> </div>
-                </div>
+
+                @endforeach
+
             </div>
         </div>
     </section>
@@ -158,21 +123,21 @@
                         </ol>
                         <!-- Wrapper for carousel items -->
                         <div class="carousel-inner">
-                            <div class="item carousel-item">
-                                <div class="img-box"><img src="{{asset('/')}}frontend/assets/img/testomonial1.jpg" alt=""></div>
-                                <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
-                                <p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
+                          @foreach($reviews as $review)
+                            <div class="col-md-12">
+                              <div class="img-box">
+                                <a href="#">
+                                  <img src="{{asset('storage')}}/{{$review->reviewer_image}}" alt="{{$review->reviewer_name}}" title="{{$review->reviewer_name}}" class="card-img-top">
+                                  <p class="testimonial">
+                                    {!! str_limit($review->reviewer_review, 150) !!} </p>
+                                  <p class="overview">
+                                    <b>{{$review->reviewer_name}}</b>,
+                                    {{ $review->reviewer_designation }}
+                                  </p>
+                                </a>
+                              </div>
                             </div>
-                            <div class="item carousel-item active">
-                                <div class="img-box"><img src="{{asset('/')}}frontend/assets/img/testomonial2.jpg" alt=""></div>
-                                <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
-                                <p class="overview"><b>Antonio Moreno</b>, Web Developer</p>
-                            </div>
-                            <div class="item carousel-item">
-                                <div class="img-box"><img src="{{asset('/')}}frontend/assets/img/testomonial3.jpg" alt=""></div>
-                                <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
-                                <p class="overview"><b>Michael Holz</b>, Seo Analyst</p>
-                            </div>
+                            @endforeach
                         </div>
                         <!-- Carousel controls -->
                         <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev"> <i class="fa fa-angle-left"></i> </a>

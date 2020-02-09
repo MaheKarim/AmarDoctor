@@ -13,11 +13,11 @@
 
 // Suse Symfony\Component\Routing\Annotation\Route;
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
 
-// Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
+Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 
 Auth::routes();
 // Logout Route
@@ -52,15 +52,6 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
 
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
-    // Password Change
-
-   // Route::get('/change/password','DashboardController@changePassForm')->name('changePass');
-   // Route::post('/changePassword','DashboardController@changePassword')->name('changePassword');
-
-
-// Review Route Here
-
-
 });
      Route::get('/change-password','CustomAuthController@passwordChange')->name('password.change');
      Route::post('/change-password', 'CustomAuthController@FormPassChange')->name('passwordFrom');
@@ -73,8 +64,7 @@ Route::group(['as'=>'doctor.', 'prefix' => 'doctor', 'namespace' => 'Doctor', 'm
 
     Route::post('profile/update', 'DashboardController@profileSettings')->name('upadeteprofileSeetings');
 
-   // Route::get('change/doctor/password','DashboardController@changeDoctorPass')->name('changePassforDoctor');
-   // Route::post('change-password-doctor', 'DashboardController@changePassForm')->name('changePasswordDoctorForm');
+
 });
 
 Route::group(['as'=>'nurse.' ,'prefix' => 'nurse', 'namespace' => 'Nurse', 'middleware' =>['auth', 'nurse']], function() {
@@ -96,4 +86,5 @@ Route::post("doctor/signup", "DoctorController@signUpFormSubmit")->name("doctorS
 
 
 Route::get('/review/add','ReviewController@addReview')->name('add.review');
+Route::get('/review/admin/show','ReviewController@showReview')->name('show.review');
 Route::post('/review-add','ReviewController@reviewcreate')->name('review');

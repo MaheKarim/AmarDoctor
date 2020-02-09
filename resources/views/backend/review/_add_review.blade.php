@@ -55,9 +55,7 @@
                             <!-- Notification End Here -->
 
                         <form action="{{route('review')}}" method="POST" enctype="multipart/form-data">
-                        <form action=" {{ route('reviewCreate') }} " method="POST" enctype="multipart/form-data">
-
-                                 @csrf
+                         @csrf
                                 <div class="form-group">
                                     <label for="text">Add Reviewer Name</label>
                                     <input type="text" class="form-control" name="reviewer_name" id="reviewer_designation" placeholder="Enter Product Name">
