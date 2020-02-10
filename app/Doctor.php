@@ -19,4 +19,10 @@ class Doctor extends Model
              return $this->belongsTo('App\Category');
          }
 
+         // relation with user table
+    public function user()
+    {
+        return $this->belongsTo('App\user');
+    }
+
 }

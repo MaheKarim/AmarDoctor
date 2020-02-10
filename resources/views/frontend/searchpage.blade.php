@@ -80,40 +80,42 @@
             </div>
 
             <!-- Search Bar -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="intro-banner-search-form margin-top-95">
+            <form action="{{ route('search.doctorProfile') }}" method="get">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="intro-banner-search-form margin-top-95">
 
-                        <!-- Search Field -->
+                            <!-- Search Field -->
 
 
-                        <!-- Search Field -->
-                        <div class="intro-search-field">
-                            <select class="selectpicker default" title="Select Any Category" name="ärea_name_id">
-                                @php($categories = \App\Category::all())
-                                @foreach($categories as $category)
-                                    <option value="{{$category->id}}">{{$category->category_name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                            <!-- Search Field -->
+                            <div class="intro-search-field">
+                                <select class="selectpicker default" title="Select Any Category" name="category">
+                                    @php($categories = \App\Category::all())
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->id}}">{{$category->category_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
 
-                        <!-- Search Field -->
-                        <div class="intro-search-field">
-                            <select class="selectpicker default"  name="area_name_id" title="All Categories" >
-                                @php($areas = \App\Area::all())
-                                @foreach($areas as $area)
-                                <option value="{{$area->id}}">{{$area->area_name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                            <!-- Search Field -->
+                            <div class="intro-search-field">
+                                <select class="selectpicker default"  name="area" title="All Area" >
+                                    @php($areas = \App\Area::all())
+                                    @foreach($areas as $area)
+                                        <option value="{{$area->id}}">{{$area->area_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
 
-                        <!-- Button -->
-                        <div class="intro-search-button">
-                            <button class="button ripple-effect" onclick="window.location.href='freelancers-grid-layout-full-page.html'">Search</button>
+                            <!-- Button -->
+                            <div class="intro-search-button">
+                                <button type="submit" class="button ripple-effect">Search</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
 
             <!-- Stats -->
             <div class="row">

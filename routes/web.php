@@ -78,4 +78,6 @@ Route::post('/review-add','ReviewController@reviewcreate')->name('review');
 Route::get('profile/{profile}' , 'ProfileController@doctor')->name('doctor.profile');
 
 // Doctor Search
-Route::get('/search/doctor', 'SearchController@search')->name('search.doctor');
+Route::get('/search/your/doctor', 'SearchController@search')->name('search.doctor');
+Route::get('/search/doctor', 'SearchController@search_doctor')->name('search.doctorProfile');
+
