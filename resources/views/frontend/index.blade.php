@@ -62,7 +62,7 @@
                         <div class="image_checkup">
                             <a href="#">
                               <span class="LazyLoad is-visible">
-                <img src="{{asset('/')}}frontend/assets/img/pro3.jpg" alt="" class="img-fluid">
+                <img src="{{asset('storage')}}/{{$product->package_image}}" alt="" class="img-fluid">
                               </span>
                             </a>
                         </div>

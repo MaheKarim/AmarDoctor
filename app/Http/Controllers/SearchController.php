@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Doctor;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SearchController extends Controller
 {
@@ -28,7 +30,8 @@ class SearchController extends Controller
         }
 
         $doctors = Doctor::where($query)->get();
-        // return $doctors;
-        return view('frontend.searchdoctor_profile' , compact('doctors'));
+        $data = User::find(Auth::id());
+
+        return view('frontend.searchdoctor_profile' , compact('doctors', 'data'));
     }
 }
