@@ -145,7 +145,7 @@
                                             <li><i class="far fa-thumbs-up"></i> 98%</li>
                                             <li><i class="far fa-comment"></i> 17 Feedback</li>
                                             <li><i class="fas fa-map-marker-alt"></i> {{$doctor->Area->area_name}}</li>
-                                            <li><i class="far fa-money-bill-alt"></i> ৳500 - ৳1000 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
+                                            <li><i class="far fa-money-bill-alt"></i> ৳500 - ৳1000 <i class="fas fa-info-circle" data-toggle="tooltip" title="Term & Condition Apply!"></i> </li>
                                         </ul>
                                     </div>
                                     <div class="clinic-booking">
@@ -162,7 +162,7 @@
                         <h1>Nothing Found</h1>
                     @endforelse
                         <!-- /Doctor Widget -->
-                    
+
                     <div class="load-more text-center">
                         <a class="btn btn-primary btn-sm" href="javascript:void(0);">Load More</a>
                     </div>
