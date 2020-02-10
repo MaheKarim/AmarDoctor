@@ -22,7 +22,9 @@ class DashboardController extends Controller
       $data = User::find(Auth::id());
       $details = Doctor::where('user_id', $data->id)->first();
       $details_user = User::where('id', $data->id)->first();
-       return view('backend.multi-dashboard.doctor._home_doctor', compact('data','details','details_user'));
+
+
+      return view('backend.multi-dashboard.doctor._home_doctor', compact('data','details','details_user'));
     }
 
     public function profile_seetings()
