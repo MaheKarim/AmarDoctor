@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
 use App\Review;
 use App\Product;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Http\Request;
 
 
 class FrontEndController extends Controller

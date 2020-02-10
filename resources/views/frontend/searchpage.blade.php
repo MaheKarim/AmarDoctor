@@ -99,17 +99,11 @@
 
                         <!-- Search Field -->
                         <div class="intro-search-field">
-                            <select class="selectpicker default" title="All Categories" >
-                                <option>Admin Support</option>
-                                <option>Customer Service</option>
-                                <option>Data Analytics</option>
-                                <option>Design & Creative</option>
-                                <option>Legal</option>
-                                <option>Software Developing</option>
-                                <option>IT & Networking</option>
-                                <option>Writing</option>
-                                <option>Translation</option>
-                                <option>Sales & Marketing</option>
+                            <select class="selectpicker default"  name="area_name_id" title="All Categories" >
+                                @php($areas = \App\Area::all())
+                                @foreach($areas as $area)
+                                <option value="{{$area->id}}">{{$area->area_name}}</option>
+                                @endforeach
                             </select>
                         </div>
 
