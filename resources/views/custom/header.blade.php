@@ -68,7 +68,7 @@
 
 							</li>
 							<li class="has-submenu">
-								<a href="#">Doctor Search</a>
+								<a href="{{route('search.doctor')}}">Doctor Search</a>
 							</li>
 
 							<li class="login-link">

@@ -14,7 +14,6 @@ Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
-
 Route::get('/area/view','AreaController@show')->name('showArea');
 Route::get('/area/add','AreaController@index')->name('addArea');
 Route::post('store-area', 'AreaController@store');
@@ -77,3 +76,6 @@ Route::post('/review-add','ReviewController@reviewcreate')->name('review');
 
 // Profile See
 Route::get('profile/{profile}' , 'ProfileController@doctor')->name('doctor.profile');
+
+// Doctor Search
+Route::get('/search/doctor', 'SearchController@search')->name('search.doctor');

@@ -8,15 +8,19 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    // code ...
+
     /**
      * @param User $profile
      * @return User
      */
-    public function doctor(User $profile)
+    public function doctor(User $profile, Doctor $doctor)
     {
-      // code...
-    //  $profile = User::where('username', $profile)->first();
-      return $profile;
+       // dd($doctor);
+
+       $users =  User::where('username', $profile)->first();
+       $doctors = Doctor::where('user_id', $profile)->first();
+
+       return view('frontend.doctor_profile', compact('users', 'doctors'));
+
     }
 }
