@@ -181,7 +181,7 @@
                                     </div>
                                     <div class="clinic-booking">
                                         <a class="view-pro-btn" href="doctor-profile.php">View Profile</a>
-                                        <a class="apt-btn" href="booking.php">Book Appointment</a>
+                                        <a class="apt-btn" href="{{route('booking.confirmation', $doctor->user->id)}}">Book Appointment</a>
                                     </div>
                                 </div>
                             </div>

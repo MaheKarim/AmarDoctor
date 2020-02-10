@@ -81,3 +81,7 @@ Route::get('profile/{profile}' , 'ProfileController@doctor')->name('doctor.profi
 Route::get('/search/your/doctor', 'SearchController@search')->name('search.doctor');
 Route::get('/search/doctor', 'SearchController@search_doctor')->name('search.doctorProfile');
 
+// Booking Controller
+
+Route::get('booking/confirmation/{id}/done','BookingController@booking_confirmation')->name('booking.confirmation');
+

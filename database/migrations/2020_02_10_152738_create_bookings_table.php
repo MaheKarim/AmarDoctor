@@ -15,6 +15,9 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('user_id');
+            $table->string('doctor_id');
+            $table->integer('status')->default(1);  // 1 = Pending ,  2 = Approved, 3 = Rejected
             $table->timestamps();
         });
     }
