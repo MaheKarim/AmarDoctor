@@ -108,45 +108,7 @@
     <br>
     <br>
     <!-- Start Testimonials -->
-    <section class="testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-center m-auto text-center">
-                    <h2>Testimonials</h2>
-                    <br>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Carousel indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-                            <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-                        </ol>
-                        <!-- Wrapper for carousel items -->
-                        <div class="carousel-inner">
-                          @foreach($reviews as $review)
-                            <div class="col-md-12">
-                              <div class="img-box">
-                                <a href="#">
-                                  <img src="{{asset('storage')}}/{{$review->reviewer_image}}" alt="{{$review->reviewer_name}}" title="{{$review->reviewer_name}}" class="card-img-top">
-                                  <p class="testimonial">
-                                    {!! str_limit($review->reviewer_review, 150) !!} </p>
-                                  <p class="overview">
-                                    <b>{{$review->reviewer_name}}</b>,
-                                    {{ $review->reviewer_designation }}
-                                  </p>
-                                </a>
-                              </div>
-                            </div>
-                            @endforeach
-                        </div>
-                        <!-- Carousel controls -->
-                        <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev"> <i class="fa fa-angle-left"></i> </a>
-                        <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next"> <i class="fa fa-angle-right"></i> </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!-- End Testimonials -->
     <br>
     <br>
