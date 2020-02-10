@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Http\Request;
 
 
-class FrontEndController extends Controller
+class FrontendController extends Controller
 {
     //  start here
     public function indexpage()

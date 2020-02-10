@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 */
 
-Route::get('/install','FrontEndController@install');
+Route::get('/install','FrontendController@install');
 Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 
 Auth::routes();
