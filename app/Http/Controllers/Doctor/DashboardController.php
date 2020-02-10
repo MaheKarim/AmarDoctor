@@ -19,7 +19,10 @@ class DashboardController extends Controller
 
     public function index()
     {
-       return view('backend.multi-dashboard.doctor._home_doctor');
+      $data = User::find(Auth::id());
+      $details = Doctor::where('user_id', $data->id)->first();
+      $details_user = User::where('id', $data->id)->first();
+       return view('backend.multi-dashboard.doctor._home_doctor', compact('data','details','details_user'));
     }
 
     public function profile_seetings()
@@ -54,7 +57,7 @@ class DashboardController extends Controller
     {
 
         // Validation Rule Will Apply
-        
+
         $user_id = Auth::user()->id;
 
         User::where('id', Auth::id())->update([
