@@ -86,8 +86,6 @@
                         <div class="intro-banner-search-form margin-top-95">
 
                             <!-- Search Field -->
-
-
                             <!-- Search Field -->
                             <div class="intro-search-field">
                                 <select class="selectpicker default" title="Select Any Category" name="category">

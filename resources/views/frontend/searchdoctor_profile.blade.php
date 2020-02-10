@@ -8,25 +8,14 @@
                 <div class="col-md-8 col-12">
                     <nav aria-label="breadcrumb" class="page-breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Search</li>
                         </ol>
                     </nav>
-                    <h2 class="breadcrumb-title">2245 matches found for : Dentist In Bangalore</h2>
+                    <h2 class="breadcrumb-title">Your search result here</h2>
                 </div>
                 <div class="col-md-4 col-12 d-md-block d-none">
-                    <div class="sort-by">
-                        <span class="sort-title">Sort by</span>
-                        <span class="sortby-fliter">
-									<select class="select">
-										<option>Select</option>
-										<option class="sorting">Rating</option>
-										<option class="sorting">Popular</option>
-										<option class="sorting">Latest</option>
-										<option class="sorting">Free</option>
-									</select>
-								</span>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -124,13 +113,13 @@
                                 <div class="doc-info-left">
                                     <div class="doctor-img">
                                         <a href="doctor-profile.php">
-                                            <img src="{{asset('/')}}frontend/assets/img/doctors/doctor-thumb-01.jpg" class="img-fluid" alt="User Image">
+                                            <img src="{{asset('storage')}}/{{$doctor->user->profile_image}}" class="img-fluid" alt="User Image">
                                         </a>
                                     </div>
                                     <div class="doc-info-cont">
                                         <h4 class="doc-name"><a href="doctor-profile.php">{{ $doctor->user->name }}</a></h4>
-                                        <p class="doc-speciality">MDS - Periodontology and Oral Implantology, BDS</p>
-                                        <h5 class="doc-department"><img src="{{ asset('/') }}frontend/assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">Dentist</h5>
+                                        <p class="doc-speciality">{{$doctor->edu_degree}}</p>
+                                        <h5 class="doc-department"><img src="{{ asset('/') }}frontend/assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">{{ $doctor->Category->category_name}}</h5>
                                         <div class="rating">
                                             <i class="fas fa-star filled"></i>
                                             <i class="fas fa-star filled"></i>
@@ -140,34 +129,14 @@
                                             <span class="d-inline-block average-rating">(17)</span>
                                         </div>
                                         <div class="clinic-details">
-                                            <p class="doc-location"><i class="fas fa-map-marker-alt"></i> Florida, USA</p>
-                                            <ul class="clinic-gallery">
-                                                <li>
-                                                    <a href="assets/img/features/feature-01.jpg" data-fancybox="gallery">
-                                                        <img src="assets/img/features/feature-01.jpg" alt="Feature">
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="assets/img/features/feature-02.jpg" data-fancybox="gallery">
-                                                        <img  src="assets/img/features/feature-02.jpg" alt="Feature">
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="assets/img/features/feature-03.jpg" data-fancybox="gallery">
-                                                        <img src="assets/img/features/feature-03.jpg" alt="Feature">
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="assets/img/features/feature-04.jpg" data-fancybox="gallery">
-                                                        <img src="assets/img/features/feature-04.jpg" alt="Feature">
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                            <p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{$doctor->Area->area_name}}</p>
+
                                         </div>
-                                        <div class="clinic-services">
-                                            <span>Dental Fillings</span>
-                                            <span> Whitneing</span>
-                                        </div>
+                                        @if (!Auth::user())
+                                            <div class="clinic-services">
+                                                <span>If you are not logged in you can't book a doctor</span>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="doc-info-right">
@@ -175,13 +144,15 @@
                                         <ul>
                                             <li><i class="far fa-thumbs-up"></i> 98%</li>
                                             <li><i class="far fa-comment"></i> 17 Feedback</li>
-                                            <li><i class="fas fa-map-marker-alt"></i> Florida, USA</li>
-                                            <li><i class="far fa-money-bill-alt"></i> $300 - $1000 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
+                                            <li><i class="fas fa-map-marker-alt"></i> {{$doctor->Area->area_name}}</li>
+                                            <li><i class="far fa-money-bill-alt"></i> ৳500 - ৳1000 <i class="fas fa-info-circle" data-toggle="tooltip" title="Lorem Ipsum"></i> </li>
                                         </ul>
                                     </div>
                                     <div class="clinic-booking">
                                         <a class="view-pro-btn" href="doctor-profile.php">View Profile</a>
+                                        @auth
                                         <a class="apt-btn" href="{{route('booking.confirmation', $doctor->user->id)}}">Book Appointment</a>
+                                        @endauth
                                     </div>
                                 </div>
                             </div>
@@ -191,11 +162,7 @@
                         <h1>Nothing Found</h1>
                     @endforelse
                         <!-- /Doctor Widget -->
-
-
-
-
-
+                    
                     <div class="load-more text-center">
                         <a class="btn btn-primary btn-sm" href="javascript:void(0);">Load More</a>
                     </div>

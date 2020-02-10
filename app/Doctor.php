@@ -11,15 +11,14 @@ class Doctor extends Model
     protected  $guarded = [ ];
 
     public function Area()
-         {
-             return $this->belongsTo('App\Area');
-         }
+    {
+        return $this->belongsTo('App\Area', 'area_name_id','id');
+    }
     public function Category()
-         {
-             return $this->belongsTo('App\Category');
-         }
+    {
+        return $this->belongsTo('App\Category' ,'category_name_id' ,'id');
+    }
 
-         // relation with user table
     public function user()
     {
         return $this->belongsTo('App\user');
