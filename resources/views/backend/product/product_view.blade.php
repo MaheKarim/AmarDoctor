@@ -58,9 +58,11 @@
                                 @foreach ($products as $product)
                                     <tr>
                                     <td>{{ $product->product_name }}</td>
-                                    <td>{{ $product->product_slug }}</td>
+                                    <td>
+                            <a>{{ route('product.slug', $product->product_slug) }}</a>
+                              </td>
                                     <td>{!! $product->description !!}</td>
-                                    <td> <img style="width:100%;max-width:400px" src="{{ asset('storage')}}/{{$product->package_image }} " /> </td>
+                                    <td> <img style="width:100%;max-width:300px" src="{{ asset('storage')}}/{{$product->package_image }} " /> </td>
                                     <td> {{ $product->total_rate }} </td>
                                     <td> {{ $product->package_rate }} </td>
                                     <td> {{ $product->phn_number }} </td>

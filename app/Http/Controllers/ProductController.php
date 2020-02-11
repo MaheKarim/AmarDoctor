@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 
 class ProductController extends Controller
@@ -42,7 +43,7 @@ class ProductController extends Controller
         //  data insert
         $products = new Product();
         $products->product_name = $request->product_name;
-        $products->product_slug = $request->product_slug;
+        $products->product_slug = Str::slug($request->product_slug, '-');
         $products->description = $request->description;
         $products->total_rate = $request->total_rate;
         $products->package_rate = $request->package_rate;
@@ -63,5 +64,13 @@ class ProductController extends Controller
 
         session()->flash('success','Category Deleted Successfully!');
         return redirect(route('showProduct'));
+    }
+
+    public function slug($product_slug)
+    {
+      // code...
+      $products = Product::where('product_slug', $product_slug)->first();
+
+     return view('product.product', compact('products'));
     }
 }

@@ -29,6 +29,7 @@ Route::get('/show/product','ProductController@index')->name('showProduct');
 Route::get('/add/product','ProductController@add')->name('addProduct');
 Route::post('store-product', 'ProductController@store')->name('storeProduct');
 Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');
+Route::get('product/{product_slug}', 'ProductController@slug')->name('product.slug');
 
 
 
@@ -84,4 +85,3 @@ Route::get('/search/doctor', 'SearchController@search_doctor')->name('search.doc
 // Booking Controller
 
 Route::get('booking/confirmation/{id}/done','BookingController@booking_confirmation')->name('booking.confirmation');
-
