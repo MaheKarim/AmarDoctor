@@ -23,5 +23,9 @@ class Doctor extends Model
     {
         return $this->belongsTo('App\user');
     }
+    public function Booking()
+    {
+        return $this->belongsTo('App\Booking');
+    }
 
 }

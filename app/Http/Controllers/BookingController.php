@@ -17,4 +17,10 @@ class BookingController extends Controller
         ]);
         return view('frontend.booking_status');
     }
+    public function showbooking()
+    {
+      $bookings = Booking::where('user_id', Auth::id())->get();
+
+      return view('backend.multi-dashboard.user._home_user', compact('$bookings'));
+    }
 }

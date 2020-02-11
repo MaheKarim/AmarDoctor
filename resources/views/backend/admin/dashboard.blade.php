@@ -78,8 +78,8 @@
                         <table id="basic-datatables" class="display table table-striped table-hover" >
                             <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
+                                <th>Patient Name</th>
+                                <th>Doctor Name</th>
                                 <th>Office</th>
                                 <th>Age</th>
                                 <th>Start date</th>
@@ -87,6 +87,8 @@
                             </tr>
                             </thead>
                             <tfoot>
+                              @foreach
+
                             <tr>
                                 <th>Name</th>
                                 <th>Position</th>
@@ -95,6 +97,7 @@
                                 <th>Start date</th>
                                 <th>Salary</th>
                             </tr>
+                              @endforeach
                             </tfoot>
                             <tbody>
                             <tr>

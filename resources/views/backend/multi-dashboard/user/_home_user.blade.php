@@ -13,5 +13,32 @@
     </div>
 </div>
 
+<div class="content">
+  <div class="row">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Patient Name</th>
+      <th scope="col">Doctor Name</th>
+      <th scope="col">Department</th>
+      <th scope="col">Area</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($bookings as $booking)
+    <tr>
+      <th scope="row">{{$booking->User->name}}</th>
+      <th scope="row">{{$booking->User->doctor_id}}</th>
+      <td>doctorProfileSeetings</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+  @endforeach
+
+  </tbody>
+</table>
+  </div>
+</div>
 
 @endsection
