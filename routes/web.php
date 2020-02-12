@@ -76,7 +76,7 @@ Route::group(['as'=>'doctor.', 'prefix' => 'doctor', 'namespace' => 'Doctor', 'm
 
 Route::group(['as'=>'nurse.' ,'prefix' => 'nurse', 'namespace' => 'Nurse', 'middleware' =>['auth', 'nurse']], function() {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-    Route::get('change-password', 'Nurse\NurseAuthController@changePasswordPage')->name('nursePassChange');
+    Route::get('change-password', 'NurseAuthController@changePasswordPage')->name('nursePassChange');
 });
     Route::get('nurse/signup', 'Nurse\NurseAuthController@nurseSignUpForm')->name("nurse.signup");
     Route::post('nurse/signup', 'Nurse\NurseAuthController@registerNurse')->name('nurse.signup_page');
