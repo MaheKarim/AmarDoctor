@@ -15,15 +15,14 @@ class CreateNursesTable extends Migration
     {
         Schema::create('nurses', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('dob')->nullable();
             $table->string('present_address')->nullable();
-            $table->string('passing_year')->nullable();
             $table->string('edu_institute')->nullable();
-            $table->longText('bmdc_registration_number')->nullable();
+            $table->string('passing_year')->nullable();
             $table->string('experience')->nullable();
+            $table->longText('nursing_reg_number')->nullable();
             $table->string('nid_card')->nullable();
             $table->string('reg_card')->nullable();
-            $table->string('nurse_image')->nullable();
+            $table->integer('area_name_id')->nullable();
             $table->timestamps();
         });
     }

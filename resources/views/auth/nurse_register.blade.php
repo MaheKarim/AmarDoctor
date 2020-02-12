@@ -1,23 +1,23 @@
 @include('custom.header')
+
 <!-- Page Content -->
 <div class="content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-
                 <!-- Account Content -->
                 <div class="account-content">
                     <div class="row align-items-center justify-content-center">
                         <div class="col-md-7 col-lg-6 login-left">
-                        <img src="{{ asset('/') }}frontend/assets/img/login-banner.png" class="img-fluid" alt="Login Banner">
+                            <img src="{{ asset('/') }}frontend/assets/img/login-banner.png" class="img-fluid" alt="Login Banner">
                         </div>
                         <div class="col-md-12 col-lg-6 login-right">
                             <div class="login-header">
-                                <h3>Doctor Register <a href="register.php">Not a Doctor?</a></h3>
+                            <h3>Nurse Register <a href="{{ route('register') }}">Not a Nurse?</a></h3>
                             </div>
 
                             <!-- Register Form -->
-                            <form action="{{ route('doctorSignUpFormSubmit') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('nurse.signup_page') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group form-focus">
                                     <input type="text" name="name" class="form-control floating">
@@ -40,19 +40,19 @@
                                     <label class="focus-label">Create Password</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="text" name="bmdc_reg_no" class="form-control floating">
-                                    <label class="focus-label">BMDC Registration Number</label>
+                                    <input type="text" name="nursing_reg_number" class="form-control floating">
+                                    <label class="focus-label">Nursing Registration Number</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="file" name="bmdc_cer" class="form-control floating">
-                                    <label class="focus-label">BMDC Certificate</label>
+                                    <input type="file" name="reg_card" class="form-control floating">
+                                    <label class="focus-label">Reg. Card</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="file" name="nid_pic" class="form-control floating">
+                                    <input type="file" name="nid_card" class="form-control floating">
                                     <label class="focus-label">NID Card</label>
                                 </div>
                                 <div class="text-right">
-                                    <a class="forgot-link" href="login.php">Already have an account?</a>
+                                <a class="forgot-link" href="{{ route('login') }}">Already have an account?</a>
                                 </div>
                                 <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Signup</button>
                                 <div class="login-or">
@@ -69,17 +69,16 @@
                                 </div>
                             </form>
                             <!-- /Register Form -->
-
                         </div>
                     </div>
                 </div>
                 <!-- /Account Content -->
-
             </div>
         </div>
-
     </div>
-
 </div>
 <!-- /Page Content -->
+
+
+
 @include('custom.footer')
