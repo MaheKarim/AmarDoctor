@@ -31,7 +31,7 @@
 
 
                 <li>
-                <a href="#">
+                <a href="{{ route('nurse.nurse_ProfilePage') }}">
                         <i class="fas fa-user-cog"></i>
                         <span>Profile Settings</span>
                     </a>

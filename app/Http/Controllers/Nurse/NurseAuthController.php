@@ -36,7 +36,6 @@ class NurseAuthController extends Controller
 //        if ($request->has('reg_card')){
 //            $bmdc_cer = $request->file('reg_card')->store('nurse','public');
 //        }
-
         Nurse::create([
             'user_id' => $user_id,
 //            'reg_card' => $reg_card,
@@ -52,7 +51,6 @@ class NurseAuthController extends Controller
 
         return "Wel Done Mr/Mrs Nurse"; // error message
     }
-
 
     // Nurse Password Change
     public function changePasswordPage()

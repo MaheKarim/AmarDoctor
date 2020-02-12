@@ -17,7 +17,7 @@
                             </div>
 
                             <!-- Register Form -->
-                            <form action="{{ route('nurse.signup_page') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('nurse.nurse.signup_page') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group form-focus">
                                     <input type="text" name="name" class="form-control floating">
