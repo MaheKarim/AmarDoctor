@@ -15,6 +15,7 @@ class CreateNursesTable extends Migration
     {
         Schema::create('nurses', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
             $table->string('present_address')->nullable();
             $table->string('edu_institute')->nullable();
             $table->string('passing_year')->nullable();

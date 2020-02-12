@@ -17,7 +17,6 @@ class CreateDoctorsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->string('present_address')->nullable();
-        // Edu Point Delete
             $table->string('bmdc_reg_no')->nullable();
             $table->longText('work_exp')->nullable();
             $table->string('edu_degree')->nullable();
@@ -25,7 +24,6 @@ class CreateDoctorsTable extends Migration
             $table->string('bmdc_cer')->nullable();
             $table->string('nid_pic')->nullable();
             $table->integer('status')->default(1);
-        // Relation With Others
             $table->integer('area_name_id')->nullable();
             $table->integer('category_name_id')->nullable();
             $table->timestamps();

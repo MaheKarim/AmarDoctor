@@ -43,14 +43,14 @@
                                     <input type="text" name="nursing_reg_number" class="form-control floating">
                                     <label class="focus-label">Nursing Registration Number</label>
                                 </div>
-                                <div class="form-group form-focus">
-                                    <input type="file" name="reg_card" class="form-control floating">
-                                    <label class="focus-label">Reg. Card</label>
-                                </div>
-                                <div class="form-group form-focus">
-                                    <input type="file" name="nid_card" class="form-control floating">
-                                    <label class="focus-label">NID Card</label>
-                                </div>
+{{--                                <div class="form-group form-focus">--}}
+{{--                                    <input type="file" name="reg_card" class="form-control floating">--}}
+{{--                                    <label class="focus-label">Reg. Card</label>--}}
+{{--                                </div>--}}
+{{--                                <div class="form-group form-focus">--}}
+{{--                                    <input type="file" name="nid_card" class="form-control floating">--}}
+{{--                                    <label class="focus-label">NID Card</label>--}}
+{{--                                </div>--}}
                                 <div class="text-right">
                                 <a class="forgot-link" href="{{ route('login') }}">Already have an account?</a>
                                 </div>

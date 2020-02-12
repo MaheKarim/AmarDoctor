@@ -30,17 +30,17 @@ class NurseAuthController extends Controller
             'phn_number' => $request->phn_number,
             'created_at' => Carbon::now()
         ]);
-        if ($request->has('nid_card')){
-            $nid_pic = $request->file('nid_card')->store('nurse','public');
-        }
-        if ($request->has('reg_card')){
-            $bmdc_cer = $request->file('reg_card')->store('nurse','public');
-        }
+//        if ($request->has('nid_card')){
+//            $nid_pic = $request->file('nid_card')->store('nurse','public');
+//        }
+//        if ($request->has('reg_card')){
+//            $bmdc_cer = $request->file('reg_card')->store('nurse','public');
+//        }
 
         Nurse::create([
             'user_id' => $user_id,
-            'nid_card' => $nid_card,
-            'reg_card' => $reg_card,
+//            'reg_card' => $reg_card,
+//            'nid_card' => $nid_card,
             'nursing_reg_number' => $request->nursing_reg_number,
 
         ]);
@@ -50,6 +50,6 @@ class NurseAuthController extends Controller
             return redirect('/login');
         }
 
-        return "Wel Done Mr Doctor"; // error message
+        return "Wel Done Mr/Mrs Nurse"; // error message
     }
 }
