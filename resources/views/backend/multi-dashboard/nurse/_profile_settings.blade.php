@@ -52,7 +52,7 @@
 
 
                                         <div class="upload-img">
-                                            <form action="{{ route('doctor.update.profile_pic') }}" method="post" enctype="multipart/form-data">
+                                            <form action="{{ route('nurse.nursePicUpdate') }}" method="post" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="change-photo-btn">
                                                     <span><i class="fa fa-upload"></i> Upload Photo</span>
@@ -76,7 +76,7 @@
             @endif
             <!-- About Me -->
                 <div class="content">
-                    <form action="#" method="POST">
+                    <form action="{{route('nurse.profileAllUpdate')}}" method="POST">
                         @csrf
 
                         <div class="card">
@@ -143,6 +143,41 @@
                             </div>
                         </div>
                         <!-- Area Selection End -->
+                        <!-- Edu Selection Start -->
+                        <!-- Education -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Education</h4>
+                                <div class="education-info">
+                                    <div class="row form-row education-cont">
+                                        <div class="col-12 col-md-10 col-lg-11">
+                                            <div class="row form-row">
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label>Degree</label>
+                                                        <input type="text" name="edu_degree" value="{{$details->edu_degree}}" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label>College/Institute</label>
+                                                        <input type="text" name="edu_institute" class="form-control" value="{{$details->edu_institute}}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <div class="form-group">
+                                                        <label>Year of Completion</label>
+                                                        <input type="text" name="passing_year" class="form-control" value="{{$details->passing_year}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Education -->
+                        <!-- EDU Selection End -->
                         <!-- Services and Specialization 2-->
                         <div class="card services-card">
                             <div class="card-body">
@@ -153,7 +188,6 @@
                                     <small class="form-text text-muted">Note : It'll be under your name</small>
                                 </div>
                                 <br>
-
                             </div>
                         </div>
                         <!-- /Services and Specialization -->

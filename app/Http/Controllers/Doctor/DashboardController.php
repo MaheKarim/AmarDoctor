@@ -75,7 +75,7 @@ class DashboardController extends Controller
             'present_address' =>$request->present_address,
         ]);
 
-        return back()->with('success', 'Profile Updated Succesfully!');
+        return back()->with('success', 'Profile Updated Successfully!');
 
     }
 }
