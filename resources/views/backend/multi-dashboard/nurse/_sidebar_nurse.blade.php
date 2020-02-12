@@ -1,71 +1,55 @@
-<div class="sidebar sidebar-style-2">
-    <div class="sidebar-wrapper scrollbar scrollbar-inner">
-        <div class="sidebar-content">
-            <div class="user">
-                <div class="avatar-sm float-left mr-2">
-                    <img src="../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
-                </div>
-                <div class="info">
-                    <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-                        <span>
-                            {{ Auth::user()->name }}
-                            <span class="user-level"> {{ Auth::user()->role->name }} </span>
-                            <span class="caret"></span>
-                        </span>
-                    </a>
-                    <div class="clearfix"></div>
+<div class="profile-sidebar">
+    <div class="widget-profile pro-widget-content">
+        <div class="profile-info-widget">
+            <a href="#" class="booking-doc-img">
+              <div class="profile-img">
+                  @if($data->profile_image == "default.png")
+                    <img src="{{ asset('/') }}default/default.png" alt="User Image">
+                      @else
+                    <img src="{{ asset('storage') }}/{{ $data->profile_image}}" alt="User Image">
+                  @endif
+               </div>
+            </a>
+            <div class="profile-det-info">
+                <h3>{{Auth::user()->name}}</h3>
 
-                    <div class="collapse in" id="collapseExample">
-                        <ul class="nav">
-                            <li>
-                                <a href="#profile">
-                                    <span class="link-collapse">My Profile</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#settings">
-                                    <span class="link-collapse">Settings</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="patient-details">
+                    <h5 class="mb-0"> EDU Degree </h5>
                 </div>
             </div>
-            <ul class="nav nav-primary">
-
-                <li class="nav-section">
-                    <span class="sidebar-mini-icon">
-                        <i class="fa fa-ellipsis-h"></i>
-                    </span>
-                    <h4 class="text-section">Internal Settings</h4>
-                </li>
-                <li class="nav-item">
-                    <a data-toggle="collapse" href="#base">
-                        <i class="fas fa-layer-group"></i>
-                        <p>Base</p>
-                        <span class="caret"></span>
-                    </a>
-                    <div class="collapse" id="base">
-                        <ul class="nav nav-collapse">
-                            <li>
-                                <a href="components/avatars.html">
-                                    <span class="sub-item">Avatars</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
-
-                {{-- <li class="nav-item">
-                <a href="{{ route('showArea') }}">
-                        <i class="fas fa-desktop"></i>
-                        <p>Area Create / Show</p>
-                    </a>
-                </li> --}}
-
-            </ul>
         </div>
+    </div>
+    <div class="dashboard-widget">
+        <nav class="dashboard-menu">
+            <ul>
+                <li class="active">
+                    <a href="#">
+                        <i class="fas fa-columns"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+
+                <li>
+                <a href="#">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href=" {{ route('nurse.nursePassChange') }} ">
+                        <i class="fas fa-lock"></i>
+                        <span>Change Password</span>
+                    </a>
+                </li>
+                <li>
+                <a href="{{ route('logout') }}">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </div>

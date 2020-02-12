@@ -52,4 +52,11 @@ class NurseAuthController extends Controller
 
         return "Wel Done Mr/Mrs Nurse"; // error message
     }
+
+
+    // Nurse Password Change
+    public function changePasswordPage()
+    {
+        return view('backend.multi-dashboard.nurse.change_password_nurse');
+    }
 }
