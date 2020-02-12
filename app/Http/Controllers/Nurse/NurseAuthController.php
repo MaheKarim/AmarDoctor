@@ -60,4 +60,25 @@ class NurseAuthController extends Controller
         $data = User::find(Auth::id())->first();
         return view('backend.multi-dashboard.nurse.change_password_nurse', compact('data'));
     }
+
+    public function changePasswordAction(Request $request)
+    {
+        $this->validate($request,[
+            'oldpassword' => 'required',
+            'password' => 'required|confirmed'
+        ]);
+
+        $hashedPassword = Auth::User()->password;
+        if(Hash::check($request->oldpassword,$hashedPassword))
+        {
+            $user = User::find(Auth::id());
+            $user->password = Hash::make($request->password);
+            $user->save();
+            Auth::logout();
+
+            return redirect()->route('login')->with('success','Password Change Succesfully!');
+        } else {
+            return redirect()->back()->with('errorMSG' ,  'Current Password Invalid!');
+        }
+    }
 }
