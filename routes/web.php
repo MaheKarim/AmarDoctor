@@ -89,10 +89,6 @@ Route::group(['as'=>'nurse.' ,'prefix' => 'nurse', 'namespace' => 'Nurse', 'midd
 });
 
 
-
-
-
-
 /*
 |--------------------------------------------------------------------------
 |                               User Routes

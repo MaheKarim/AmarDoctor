@@ -24,7 +24,7 @@ class NurseProfileController extends Controller
     {
         if($request->has('profile_pic')){
             // upload new image
-            $image = $request->file('profile_pic')->store('doctor', 'public');
+            $image = $request->file('profile_pic')->store('nurse', 'public');
 
             // delete previous image
             Storage::delete('public/'.User::find(Auth::id())->profile_image);
@@ -39,8 +39,14 @@ class NurseProfileController extends Controller
 
     public function profile_update(Request $request)
     {
-        $user_id = Auth::user()->id;
+//        if($request->has('nid_card')){
+            // upload new image
+//            $image = $request->file('nid_card')->store('nid_chobi', 'public');
 
+            // delete previous image
+//            Storage::delete('public/'.User::find(Auth::id())->nid_card);
+//        }
+        $user_id = Auth::user()->id;
         User::where('id', Auth::id())->update([
             'name'=>$request->name,
             'phn_number'=>$request->phn_number,
@@ -55,6 +61,7 @@ class NurseProfileController extends Controller
             'nursing_reg_number'=>$request->nursing_reg_number,
             'about_me'=>$request->about_me,
             'edu_degree' =>$request->edu_degree,
+//            'nid_card' =>$image,
         ]);
 
         return back()->with('success', 'Profile Updated Successfully!');

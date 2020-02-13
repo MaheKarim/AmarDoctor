@@ -41,7 +41,6 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <div class="change-avatar">
-
                                         <div class="profile-img">
                                             @if($data->profile_image == "default.png")
                                                 <img src="{{ asset('/') }}default/default.png" alt="User Image">
@@ -49,8 +48,6 @@
                                                 <img src="{{ asset('storage') }}/{{ $data->profile_image}}" alt="User Image">
                                             @endif
                                         </div>
-
-
                                         <div class="upload-img">
                                             <form action="{{ route('nurse.nursePicUpdate') }}" method="post" enctype="multipart/form-data">
                                                 @csrf
@@ -73,12 +70,11 @@
                     <div class="alert alert-success">
                         {{ session()->get('success') }}
                     </div>
-            @endif
+                @endif
             <!-- About Me -->
                 <div class="content">
-                    <form action="{{route('nurse.profileAllUpdate')}}" method="POST">
+                    <form action="{{route('nurse.profileAllUpdate')}}" method="POST" enctype="multipart/form-data">
                         @csrf
-
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Biography</h4>
@@ -179,17 +175,58 @@
                         <!-- /Education -->
                         <!-- EDU Selection End -->
                         <!-- Services and Specialization 2-->
-                        <div class="card services-card">
+                        <div class="card contact-card">
                             <div class="card-body">
-                                <h4 class="card-title">Services and Specialization</h4>
-                                <div class="col-md-6">
-                                    <label>Specialization </label>
-                                    <input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Specialization" name="edu_degree" value="{{$details->edu_degree}}"  id="edu_degree">
-                                    <small class="form-text text-muted">Note : It'll be under your name</small>
+                                <h4 class="card-title">Nursing Council Number & Experience Year</h4>
+                                <div class="row form-row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Nursing Council Registration Number</label>
+                                            <input type="text" class="form-control" name="nursing_reg_number" value="{{$details->nursing_reg_number }}">
+                                        </div>
+                                    </div>
+                                    <!-- Experience  -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Experience of Your Working Life</label>
+                                            <input type="text" class="form-control" name="experience" value="{{$details->experience}}">
+                                        </div>
+                                    </div>
+                                    <!-- Experience -->
                                 </div>
-                                <br>
                             </div>
                         </div>
+                        <!-- NID Card Update -->
+                        <!-- Basic Information NID -->
+{{--                        <div class="card">--}}
+{{--                            <div class="card-body">--}}
+{{--                                <h4 class="card-title">NID Information</h4>--}}
+{{--                                <div class="row form-row">--}}
+{{--                                    <div class="col-md-12">--}}
+{{--                                        <div class="form-group">--}}
+{{--                                            <div class="change-avatar">--}}
+{{--                                                <div class="profile-img">--}}
+{{--                                                    @if($data->nid_card == "default.png")--}}
+{{--                                                        <img src="{{ asset('/') }}default/default.png" alt="User Image">--}}
+{{--                                                    @else--}}
+{{--                                                        <img src="{{ asset('storage') }}/{{ $details->nid_card}}" alt="NID Image">--}}
+{{--                                                    @endif--}}
+{{--                                                </div>--}}
+{{--                                                <div class="upload-img">--}}
+{{--                                                        <div class="change-photo-btn">--}}
+{{--                                                            <span><i class="fa fa-upload"></i> Upload Photo</span>--}}
+{{--                                                            <input type="file" name="nid_card" class="upload">--}}
+{{--                                                        </div>--}}
+{{--                                                    <small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of 2MB</small>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+                        <!-- /Basic Information NID Card -->
+                        <!-- NID Card Update End -->
                         <!-- /Services and Specialization -->
                         <div class="submit-section submit-btn-bottom">
                             <button type="submit" class="btn btn-primary submit-btn">Save Changes</button>
