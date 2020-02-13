@@ -59,7 +59,8 @@ class NurseAuthController extends Controller
     // Nurse Password Change
     public function changePasswordPage()
     {
-        $data = User::find(Auth::id())->first();
+
+        $data = User::find(Auth::id());
         return view('backend.multi-dashboard.nurse.change_password_nurse', compact('data'));
     }
 
