@@ -87,7 +87,7 @@
                             </tr>
                             </thead>
                             <tfoot>
-                              @foreach
+
 
                             <tr>
                                 <th>Name</th>
@@ -97,7 +97,7 @@
                                 <th>Start date</th>
                                 <th>Salary</th>
                             </tr>
-                              @endforeach
+
                             </tfoot>
                             <tbody>
                             <tr>
