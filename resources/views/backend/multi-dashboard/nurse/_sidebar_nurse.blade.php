@@ -13,9 +13,11 @@
             <div class="profile-det-info">
                 <h3>{{Auth::user()->name}}</h3>
 
-                <div class="patient-details">
-                    <h5 class="mb-0">{{$details->edu_degree}}</h5>
-                </div>
+                {{--<div class="patient-details">--}}
+
+                    {{--<h5 class="mb-0">{{$details->edu_degree}}</h5>--}}
+
+                {{--</div>--}}
             </div>
         </div>
     </div>
@@ -23,7 +25,7 @@
         <nav class="dashboard-menu">
             <ul>
                 <li class="active">
-                    <a href="#">
+                    <a href="{{route('nurse.dashboard')}}">
                         <i class="fas fa-columns"></i>
                         <span>Dashboard</span>
                     </a>

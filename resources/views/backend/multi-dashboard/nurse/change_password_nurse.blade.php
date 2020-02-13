@@ -7,7 +7,7 @@
             <div class="col-md-12 col-12">
                 <nav aria-label="breadcrumb" class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('nurse.dashboard')}}">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Change Password</li>
                     </ol>
                 </nav>
@@ -25,8 +25,8 @@
             <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 
                 <!-- Profile Sidebar -->
-               @include('backend.multi-dashboard.nurse._sidebar_nurse')
-                <!-- /Profile Sidebar -->
+            @include('backend.multi-dashboard.nurse._sidebar_nurse')
+            <!-- /Profile Sidebar -->
 
             </div>
             <div class="col-md-7 col-lg-8 col-xl-9">
@@ -51,9 +51,9 @@
                                                    @endif
 
                                 </div>
-                                <h1 color="blue"> Don't change password now</h1>
+
                                 <!-- Change Password Form -->
-                                <form method="POST" action="#">
+                                <form method="POST" action="{{route('nurse.nursePassChangeAction')}}">
                                     @csrf
                                     <div class="form-group">
                                         <label>Old Password</label>

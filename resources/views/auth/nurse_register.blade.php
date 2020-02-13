@@ -17,7 +17,7 @@
                             </div>
 
                             <!-- Register Form -->
-                            <form action="{{ route('nurse.nurse.signup_page') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('nurse.signup_page') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group form-focus">
                                     <input type="text" name="name" class="form-control floating">
@@ -42,6 +42,10 @@
                                 <div class="form-group form-focus">
                                     <input type="text" name="nursing_reg_number" class="form-control floating">
                                     <label class="focus-label">Nursing Registration Number</label>
+                                </div>
+                                <div class="form-group form-focus">
+                                    <input type="text" name="edu_degree" class="form-control floating">
+                                    <label class="focus-label">Edu Degree</label>
                                 </div>
 {{--                                <div class="form-group form-focus">--}}
 {{--                                    <input type="file" name="reg_card" class="form-control floating">--}}

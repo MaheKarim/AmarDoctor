@@ -17,6 +17,7 @@ class NurseAuthController extends Controller
     //  code start here
     public function nurseSignUpForm()
     {
+
         return view('auth.nurse_register');
     }
 
@@ -40,6 +41,7 @@ class NurseAuthController extends Controller
 //        }
         Nurse::create([
             'user_id' => $user_id,
+            'edu_degree' => $request->edu_degree,
 //            'reg_card' => $reg_card,
 //            'nid_card' => $nid_card,
             'nursing_reg_number' => $request->nursing_reg_number,
@@ -51,7 +53,7 @@ class NurseAuthController extends Controller
             return redirect('/login');
         }
 
-        return "Wel Done Mr/Mrs Nurse"; // error message
+        return "Try Again! Mr/Mrs Nurse"; // error message
     }
 
     // Nurse Password Change
@@ -76,7 +78,7 @@ class NurseAuthController extends Controller
             $user->save();
             Auth::logout();
 
-            return redirect()->route('login')->with('success','Password Change Succesfully!');
+            return redirect()->route('login')->with('success','Password Change Successfully!');
         } else {
             return redirect()->back()->with('errorMSG' ,  'Current Password Invalid!');
         }

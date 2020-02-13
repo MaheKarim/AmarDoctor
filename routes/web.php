@@ -80,14 +80,14 @@ Route::group(['as'=>'nurse.' ,'prefix' => 'nurse', 'namespace' => 'Nurse', 'midd
     // Nurse Auth Controller
     Route::get('change-password',   'NurseAuthController@changePasswordPage')->name('nursePassChange');
     Route::post('change-password',  'NurseAuthController@changePasswordAction')->name('nursePassChangeAction');
-    Route::get('nurse/signup',      'NurseAuthController@nurseSignUpForm')->name("nurse.signup");
-    Route::post('nurse/signup',     'NurseAuthController@registerNurse')->name('nurse.signup_page');
+
     // Profile Picture & Settings Update
     Route::post('profile_pic/upload',  'NurseProfileController@nurse_picUpdate')->name('nursePicUpdate');
     Route::get('/profile/settings',    'NurseProfileController@settings_page')->name('nurse_ProfilePage');
     Route::post('/profile/update',     'NurseProfileController@profile_update')->name('profileAllUpdate');
 });
-
+Route::get('nurse/signup',      'Nurse\NurseAuthController@nurseSignUpForm')->name("nurse.signup");
+Route::post('nurse/signup',     'Nurse\NurseAuthController@registerNurse')->name('nurse.signup_page');
 
 /*
 |--------------------------------------------------------------------------
