@@ -107,13 +107,13 @@
                                 <td>{{$booking_datum->User->name}}</td>
 
 
-                                <td>{{$booking_datum->doctor->username }}</td>
+                                <td>{{$booking_datum->doctor->name }}</td>
 
-
-                                <td>63</td>
+                                <td>2010/01/04</td>
+                                <td>XXXX-XXXX-XXXX</td>
                                 <td>2010/01/04</td>
                                 <td>$125,250</td>
-                                <td>$125,250</td>
+                                <td>Edit | DELETE</td>
 
                             </tr>
                                 @endforeach

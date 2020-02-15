@@ -21,4 +21,6 @@ class Booking extends Model
         return $this->belongsTo('App\Status');
     }
 
+    
+
 }
