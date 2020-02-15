@@ -34,17 +34,28 @@
                                     <input type="text" name="phn_number" class="form-control floating">
                                     <label class="focus-label">Mobile Number</label>
                                 </div>
-                                <!-- Area start -->
+                                <!-- Area Start -->
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Select Your Area</label>
                                     <select name="area_name_id" class="form-control select">
                                         @php($areas= \App\Area::all())
                                         @foreach ($areas as $area)
-                                            <option {{ $area->id }}>{{$area->area_name}}</option>
+                                            <option value="{{ $area->id }}">{{$area->area_name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <!-- Area END -->
+                                <!-- Category Start -->
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">Select Your Category</label>
+                                    <select name="category_name_id" class="form-control select">
+                                        @php($categories= \App\Category::all())
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <!-- Category END -->
                                 <div class="form-group form-focus">
                                     <input type="password" name="password" class="form-control floating">
                                     <label class="focus-label">Create Password</label>

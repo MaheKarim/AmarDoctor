@@ -27,7 +27,7 @@ class DoctorController extends Controller
 
         // have to validate don't miss it
 
-        // inserting data to user table
+       //   inserting data to user table
         $user_id = User::insertGetId([
             'role_id' => 2,
             'name' => $request->name,
@@ -37,6 +37,8 @@ class DoctorController extends Controller
             'phn_number' => $request->phn_number,
             'created_at' => Carbon::now()
         ]);
+
+
         if ($request->has('bmdc_cer')){
             $bmdc_cer = $request->file('bmdc_cer')->store('doctor','public');
         }
@@ -49,7 +51,8 @@ class DoctorController extends Controller
             'nid_pic' => $nid_pic,
             'bmdc_cer' => $bmdc_cer,
             'bmdc_reg_no' => $request->bmdc_reg_no,
-            'area_name_id' => $request->area_name_id
+            'area_name_id' => $request->area_name_id,
+            'category_name_id' => $request->category_name_id,
         ]);
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password]))
