@@ -2,10 +2,9 @@
 
 namespace App\Providers;
 
-use App\Role;
+
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Blade;
 
 class AppServiceProvider extends ServiceProvider
@@ -28,6 +27,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //  custom blade directive
+        Schema::defaultStringLength(191);
+
+        // Blade Function
         Blade::if('admin', function () {
         return auth()->check() && auth()->user()->role == 1;
         });

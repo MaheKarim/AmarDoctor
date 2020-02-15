@@ -29,7 +29,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function() {
 
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-    Route::get('/password/change','ProfileController@passChange')->name('');
+    Route::get('/password/change','ProfileController@passChange')->name('change.password');
 
 });
 

@@ -76,7 +76,7 @@
                 <li class="nav-item">
                     <a href="#">
                             <i class="fas fa-quote-left"></i>
-                            <p>Review Section</p>
+                            <p>Review / Testimonial</p>
                             <span class="badge badge-success">4</span>
                     </a>
                 </li>
@@ -96,7 +96,7 @@
                         <div class="collapse" id="base">
                             <ul class="nav nav-collapse">
                                 <li>
-                                    <a href="#">
+                                    <a href="{{route('admin.change.password')}}">
                                         <span class="sub-item">Change Password</span>
                                     </a>
                                 </li>
@@ -104,7 +104,6 @@
                             </ul>
                         </div>
                     </li>
-
             </ul>
         </div>
     </div>

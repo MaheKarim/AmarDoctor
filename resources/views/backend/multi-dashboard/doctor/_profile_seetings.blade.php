@@ -49,8 +49,7 @@
                               @endif
 													 </div>
 
-
-								         <div class="upload-img">
+                                                    <div class="upload-img">
                           <form action="{{ route('doctor.update.profile_pic') }}" method="post" enctype="multipart/form-data">
                               @csrf
                                <div class="change-photo-btn">

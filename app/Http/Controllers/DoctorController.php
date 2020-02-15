@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\User;
+use App\Area;
 use App\Doctor;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -47,7 +48,8 @@ class DoctorController extends Controller
             'user_id' => $user_id,
             'nid_pic' => $nid_pic,
             'bmdc_cer' => $bmdc_cer,
-            'bmdc_reg_no' => $request->bmdc_reg_no
+            'bmdc_reg_no' => $request->bmdc_reg_no,
+            'area_name_id' => $request->area_name_id
         ]);
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password]))

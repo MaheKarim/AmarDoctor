@@ -5,7 +5,7 @@
               <div class="profile-img">
                   @if($data->profile_image == "default.png")
                     <img src="{{ asset('/') }}default/default.png" alt="User Image">
-                      @else
+                       @else
                     <img src="{{ asset('storage') }}/{{ $data->profile_image}}" alt="User Image">
                   @endif
                </div>

@@ -60,14 +60,10 @@
 									<span class="span-or">or</span>
 								</div>
 
-								<!-- Social Login -->
-								<div class="social-login">
-									<span>Login with</span>
-									<a href="#" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" class="google"><i class="fa fa-google"></i></a>
-								</div>
-								<!-- /Social Login -->
 
-								<div class="text-center dont-have">Don’t have an account? <a href="register.php">Register</a></div>
+
+								<div class="text-center dont-have">Are You Doctor ? Don’t have an account? <a href="{{route('doctorSignUpForm')}}">Register</a></div>
+								<div class="text-center dont-have">Are You Nurse  ? Don’t have an account? <a href="{{route('nurse.signup')}}">Register</a></div>
 							</div>
                         </div>
                     </div>

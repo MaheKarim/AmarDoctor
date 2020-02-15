@@ -9,6 +9,7 @@ class Doctor extends Model
 {
     //
     protected  $guarded = [ ];
+   // protected  $primaryKey = 'area_name_id';
 
     public function Area()
     {

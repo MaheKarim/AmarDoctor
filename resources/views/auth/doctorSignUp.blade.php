@@ -4,7 +4,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-
                 <!-- Account Content -->
                 <div class="account-content">
                     <div class="row align-items-center justify-content-center">
@@ -35,6 +34,17 @@
                                     <input type="text" name="phn_number" class="form-control floating">
                                     <label class="focus-label">Mobile Number</label>
                                 </div>
+                                <!-- Area start -->
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">Select Your Area</label>
+                                    <select name="area_name_id" class="form-control select">
+                                        @php($areas= \App\Area::all())
+                                        @foreach ($areas as $area)
+                                            <option {{ $area->id }}>{{$area->area_name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <!-- Area END -->
                                 <div class="form-group form-focus">
                                     <input type="password" name="password" class="form-control floating">
                                     <label class="focus-label">Create Password</label>
@@ -51,35 +61,34 @@
                                     <input type="file" name="nid_pic" class="form-control floating">
                                     <label class="focus-label">NID Card</label>
                                 </div>
+                                <!-- Area start -->
+{{--                                <div class="form-group form-focus">--}}
+{{--                                    <label>Select Your Area</label>--}}
+{{--                                    <select name="area_name_id" class="form-control select">--}}
+{{--                                        @php($areas= \App\Area::all())--}}
+{{--                                        @foreach ($areas as $area)--}}
+{{--                                            <option {{ $area->id }}>{{$area->area_name}}</option>--}}
+{{--                                        @endforeach--}}
+{{--                                    </select>--}}
+{{--                                </div>--}}
+                                <!-- Area END -->
                                 <div class="text-right">
-                                    <a class="forgot-link" href="login.php">Already have an account?</a>
+                                    <a class="forgot-link" href="{{route('login')}}">Already have an account?</a>
                                 </div>
                                 <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Signup</button>
                                 <div class="login-or">
                                     <span class="or-line"></span>
                                     <span class="span-or">or</span>
                                 </div>
-                                <div class="row form-row social-login">
-                                    <div class="col-6">
-                                        <a href="#" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f mr-1"></i> Login</a>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="#" class="btn btn-google btn-block"><i class="fab fa-google mr-1"></i> Login</a>
-                                    </div>
-                                </div>
                             </form>
                             <!-- /Register Form -->
-
                         </div>
                     </div>
                 </div>
                 <!-- /Account Content -->
-
             </div>
         </div>
-
     </div>
-
 </div>
 <!-- /Page Content -->
 @include('custom.footer')

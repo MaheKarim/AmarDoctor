@@ -63,17 +63,16 @@
 							<li class="active">
 								<a href="{{ url('/')}}">Home</a>
 							</li>
+
 							<li class="has-submenu">
 								<a href="#">Digonstic</a>
-
 							</li>
+
 							<li class="has-submenu">
 								<a href="{{route('search.doctor')}}">Doctor Search</a>
 							</li>
 
-							<li class="login-link">
-								<a href="{{route('login')}}">Login</a>
-							</li>
+
 						</ul>
 					</div>
           @if(!Auth::User())
