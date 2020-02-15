@@ -30,6 +30,7 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
 
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('/password/change','ProfileController@passChange')->name('change.password');
+    Route::post('password/change','ProfileController@passChangeReq')->name('changepaswword');
 
 });
 
@@ -47,9 +48,9 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::get('/add/product','ProductController@add')->name('addProduct');
     Route::post('store-product', 'ProductController@store')->name('storeProduct');
     Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');
-    Route::get('product/{product_slug}', 'ProductController@slug')->name('product.slug');
+  //  Route::get('product/{product_slug}', 'ProductController@slug')->name('product.slug');
     Route::get('/all_product','ProductController@allproduct')->name('allProduct');
-  //  Route::get('/product/{product_slug}', 'ProductController@productSee');
+    Route::get('/product/single', 'ProductController@productSee');
 
 
 /*
