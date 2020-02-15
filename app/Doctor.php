@@ -7,6 +7,7 @@ use App\Area;
 
 class Doctor extends Model
 {
+    protected  $table=['doctors'];
     //
     protected  $guarded = [ ];
    // protected  $primaryKey = 'area_name_id';

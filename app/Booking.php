@@ -8,9 +8,9 @@ class Booking extends Model
 {
     protected  $guarded = [  ];
 
-    public function Doctor()
+    public function doctor()
     {
-        return $this->belongsTo('App\Doctor');
+        return $this->belongsTo('App\User','doctor_id', 'id');
     }
     public function User()
     {

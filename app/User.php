@@ -51,4 +51,8 @@ class User extends Authenticatable
     {
       return 'username';
     }
+    public function docinfo(){
+        return $this->hasOne('Doctor::class','id','userIdid');
+
+    }
 }

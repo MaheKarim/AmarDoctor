@@ -14,6 +14,7 @@ class DashboardController extends Controller
     public function index()
     {
         $data = User::find(Auth::id());
+
        return view('backend.multi-dashboard.nurse._home_nurse', compact('data'));
     }
 }
