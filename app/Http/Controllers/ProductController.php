@@ -72,4 +72,11 @@ class ProductController extends Controller
 
      return view('product.product', compact('products'));
     }
+
+    public function allproduct()
+    {
+        $data = [ ];
+        $data['products'] = Product::paginate(3);
+        return view('frontend.allproduct', $data);
+    }
 }

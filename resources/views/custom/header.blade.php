@@ -65,7 +65,7 @@
 							</li>
 
 							<li class="has-submenu">
-								<a href="#">Digonstic</a>
+								<a href="{{route('allProduct')}}">Diagnostic Product</a>
 							</li>
 
 							<li class="has-submenu">
