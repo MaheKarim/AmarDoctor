@@ -19,6 +19,18 @@ class AreaTableSeeder extends Seeder
         DB::table('areas')->insert([
             'area_name' => 'Mirpur',
         ]);
+        DB::table('areas')->insert([
+            'area_name' => 'Mugda',
+        ]);
+        DB::table('areas')->insert([
+            'area_name' => 'Shamoly',
+        ]);
+        DB::table('areas')->insert([
+            'area_name' => 'Basundhara',
+        ]);
+        DB::table('areas')->insert([
+            'area_name' => 'Farmgate',
+        ]);
 
 //        factory(App\User::class, 50)->create()->each(function ($user) {
 //            $user->posts()->save(factory(App\Post::class)->make());

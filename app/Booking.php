@@ -16,5 +16,9 @@ class Booking extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public function Status()
+    {
+        return $this->belongsTo('App\Status');
+    }
 
 }

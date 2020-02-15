@@ -49,6 +49,7 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::get('/product/delete/{id}', 'ProductController@delete')->name('deleteProduct');
     Route::get('product/{product_slug}', 'ProductController@slug')->name('product.slug');
     Route::get('/all_product','ProductController@allproduct')->name('allProduct');
+  //  Route::get('/product/{product_slug}', 'ProductController@productSee');
 
 
 /*

@@ -63,7 +63,7 @@
                     <div class="">
                         <a href="#">
                             <span class="LazyLoad is-visible">
-                                  <img src="{{ asset('storage') }}/{{$product->package_image}}" alt="" class="img-fluid" width="360px" height="239px">
+                                  <img src="{{ asset('storage') }}/{{$product->package_image}}" alt="" class="img-fluid" style="width:100%;max-width:360px">
                             </span>
                         </a>
                     </div>

@@ -79,4 +79,11 @@ class ProductController extends Controller
         $data['products'] = Product::paginate(3);
         return view('frontend.allproduct', $data);
     }
+
+    public function productSee ($product_slug)
+    {
+        $data = [' '];
+        $data['productDetails'] = Product::where('product_slug', $product_slug)->first();
+       // return view('frontend.');
+    }
 }
