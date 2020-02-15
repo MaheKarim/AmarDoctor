@@ -65,13 +65,13 @@ class ProductController extends Controller
         return redirect(route('showProduct'));
     }
 
-    public function slug($product_slug)
-    {
-      // code...
-      $products = Product::where('product_slug', $product_slug)->first();
-
-     return view('product.product', compact('products'));
-    }
+//    public function slug($product_slug)
+//    {
+//      // code...
+//      $products = Product::where('product_slug', $product_slug)->first();
+//
+//     return view('product.product', compact('products'));
+//    }
 
     public function allproduct()
     {
@@ -80,10 +80,8 @@ class ProductController extends Controller
         return view('frontend.allproduct', $data);
     }
 
-    public function productSee ($product_slug)
+    public function productSee ()
     {
-        $data = [' '];
-        $data['productDetails'] = Product::where('product_slug', $product_slug)->first();
-       // return view('frontend.');
+        return view('frontend.single_product');
     }
 }

@@ -2,7 +2,7 @@
     <!-- Logo Header -->
     <div class="logo-header" data-background-color="blue">
 
-        <a href="index.html" class="logo">
+        <a href="{{ url('/dashboard') }}" class="logo">
             <img src="{{ asset('/')}}assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -166,7 +166,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">My Profile</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Account Setting</a>
+                                <a class="dropdown-item" href="{{route('admin.change.password')}}">Password Change</a>
                                 <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
                             </li>

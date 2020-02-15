@@ -8,7 +8,7 @@
         </h4>
         <ul class="breadcrumbs">
             <li class="nav-home">
-            <a href="{{ url('/home') }}">
+            <a href="{{ route('admin.dashboard') }}">
                     <i class="flaticon-home"></i>
                 </a>
             </li>
@@ -61,17 +61,12 @@
                                 <label for="text">Add Area Name</label>
                                 <input type="text" class="form-control" name="area_name" id="text" placeholder="Enter Area Name">
                             </div>
-                            {{-- <div class="form-group">
-                                <label for="text">Add Category Description</label>
-                                <input type="text" class="form-control" name="area_description" id="text" placeholder="Enter Category Description">
-                            </div> --}}
-                         
-                        </div>
+                           </div>
                     </div>
                     <div class="card-action">
                             <button class="btn btn-success">Submit</button>
                     <a href="{{ route('showArea') }}" class="btn btn-danger">Cancel</a>
-                    </div> 
+                    </div>
                    </form>
                 </div>
             </div>
