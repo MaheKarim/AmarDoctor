@@ -69,7 +69,7 @@
                     </div>
                     <br>
                     <h6><a href="#">{{ $product->product_name }}</a></h6>
-                    <span>Ideal for male aged 21 to 40 years</span>
+                    <span>{!! Str::limit($product ->description, 100,  ' .....') !!}</span>
                     <div class="u-border__top--blue_4 u-margin--10__top"></div>
                     <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
                         <div class="u-d__inline ">24% off</div>
@@ -78,8 +78,8 @@
             </div>
             @endforeach
 
-                {{ $products->links() }}
         </div>
+                {{ $products->links() }}
     </div>
 </section>
 <!-- End sell products -->
