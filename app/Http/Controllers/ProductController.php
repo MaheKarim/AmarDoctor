@@ -48,7 +48,6 @@ class ProductController extends Controller
         $products->total_rate = $request->total_rate;
         $products->package_rate = $request->package_rate;
         $products->phn_number = $request->phn_number;
-        // $dokans->user_id = Auth::id();
         $products->package_image = $image;
         $products->save();
         // flash message

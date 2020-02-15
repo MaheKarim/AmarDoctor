@@ -16,7 +16,7 @@ class FrontendController extends Controller
     {
       //  $data = [ ];
         $reviews = Review::all();
-        $products = Product::all();
+        $products = Product::paginate(2);;
         return view('frontend.index', compact('reviews', 'products'));
     }
 
