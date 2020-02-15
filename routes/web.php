@@ -43,6 +43,8 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
 
     Route::get('/category/view', 'CategoryController@view')->name('showCategory');
     Route::get('/category/delete/{id}', 'CategoryController@delete')->name('deleteCategory');
+    Route::get('/category/add','CategoryController@index')->name('addCategory');
+    Route::post('store-category', 'CategoryController@store');
 
     Route::get('/show/product','ProductController@index')->name('showProduct');
     Route::get('/add/product','ProductController@add')->name('addProduct');

@@ -2,11 +2,7 @@
     <div class="container-fluid">
         <nav class="pull-left">
             <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.themekita.com">
-                        ThemeKita
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         Help
@@ -14,13 +10,13 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        Licenses
+                     MIT   Licenses
                     </a>
                 </li>
             </ul>
         </nav>
         <div class="copyright ml-auto">
-            2020, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.themekita.com">ThemeKita</a>
-        </div>				
+            2020 | Made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.about.me/mahekarim">Mahe Karim</a>
+        </div>
     </div>
 </footer>

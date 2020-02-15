@@ -14,7 +14,7 @@
                     <div class="card-header">
                         <div class="d-flex align-items-center">
 
-                            <a href="#" class="btn btn-primary btn-round ml-auto">
+                            <a href="{{route('addCategory')}}" class="btn btn-primary btn-round ml-auto">
                                 <i class="fa fa-plus"></i>
                                 Add Cat
                             </a>
