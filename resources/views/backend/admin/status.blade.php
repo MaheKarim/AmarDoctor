@@ -5,7 +5,7 @@
     <div class="page-inner">
         <div class="page-header">
             <h4 class="page-title">
-                @yield('title','Category ')
+                @yield('title','Change Status')
             </h4>
             <ul class="breadcrumbs">
                 <li class="nav-home">
@@ -31,7 +31,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header text-center">
-                        <div class="card-title">Add Category Here</div>
+                        <div class="card-title">Change status</div>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -53,15 +53,19 @@
                                     <div class="alert alert-success">
                                         {{ session()->get('success') }}
                                     </div>
-                                @endif
+                            @endif
                             <!-- Notification End Here -->
-                                <form action="{{ url('store-category') }}" method="POST">
+                                <form action="{{ route('admin.status.only') }}" method="POST">
                                     <!--  -->
                                     @csrf
                                     <div class="form-group">
-                                        <label for="text">Add Category Name</label>
-                                        <input type="text" class="form-control" name="category_name" id="text" placeholder="Enter Category Name">
-                                    </div>
+                                        <label class="focus-label">Select Your Status</label>
+                                        <select name="status" class="form-control select">
+                                            @php($statuses= \App\Status::all())
+                                            @foreach ($statuses as $status)
+                                                <option value="{{ $status->id }}">{{ $status->status_name }}</option>
+                                            @endforeach
+                                        </select> </div>
                             </div>
                         </div>
                         <div class="card-action">

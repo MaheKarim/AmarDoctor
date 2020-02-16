@@ -29,6 +29,8 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function() {
 
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/status-change/{id}','DashboardController@status_change')->name('status.change');
+    Route::post('status-change','DashboardController@status_only')->name('status.only');
     Route::get('/password/change','ProfileController@passChange')->name('change.password');
     Route::post('password/change','ProfileController@passChangeReq')->name('changepaswword');
     Route::get('/settings','SiteSettingsController@index')->name('settings');

@@ -29,10 +29,10 @@
     @foreach($bookings as $booking)
     <tr>
       <th scope="row">{{$booking->User->name}}</th>
-      <th scope="row">{{$booking->User->doctor_id}}</th>
-      <td>doctorProfileSeetings</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">{{$booking->get_doctor_info->name }}</th>
+      <td>{{ $booking->get_doctor_details->Category->category_name }}</td>
+      <td>{{ $booking->get_doctor_details->Area->area_name }}</td>
+      <td>{!! $booking->Status->status_name !!}</td>
     </tr>
   @endforeach
 

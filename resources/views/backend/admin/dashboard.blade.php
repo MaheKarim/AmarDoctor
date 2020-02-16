@@ -81,7 +81,6 @@
                             <tfoot>
                             <tr>
                                 <th>Patient Name</th>
-
                                 <th>Doctor Name</th>
                                 <th>Category</th>
                                 <th>Appointment date</th>
@@ -95,12 +94,14 @@
                 @foreach($booking_all  as $booking)
                             <tr>
                                 <td>{{ $booking->User->name }}</td>
-                                <td>Mahe karim</td>
-                                <td>63</td>
-                                <td>2010/01/04</td>
-                                <td>$125,250</td>
-                                <td>,250</td>
-                                <td>,250</td>
+                                <td>{{ $booking->get_doctor_info->name }}</td>
+                                <td>{{ $booking->get_doctor_details->Category->category_name }}</td>
+                                <td>{{ $booking->created_at }}</td>
+                                <td>{{ $booking->User->phn_number }}</td>
+                                <td>{!! $booking->Status->status_name !!}</td>
+                                <td>
+                                    <a href="{{ route('admin.status.change', $booking->id )}}" type="button" class="btn btn-warning">Edit</a>
+                                </td>
                             </tr>
                 @endforeach
                             </tbody>
