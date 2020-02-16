@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Booking;
+use App\Doctor;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -24,5 +27,22 @@ class DashboardController extends Controller
     public function status_only(Request $request)
     {
 
+    }
+
+    public function showDoctorAll()
+    {
+        $data = User::where('role_id', 2)->first();
+        $details = Doctor::where('user_id', $data->id)->first();
+
+
+
+        return view('backend.admin.alldoctors', compact('data','details'));
+    }
+
+    public function showAllUser()
+    {
+        $details_user = User::where('role_id',4)->get();
+
+        return view('backend.admin.alluser',compact('details_user'));
     }
 }
