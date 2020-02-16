@@ -81,20 +81,19 @@
                             <tfoot>
                             <tr>
                                 <th>Patient Name</th>
-
                                 <th>Doctor Name</th>
                                 <th>Category</th>
                                 <th>Appointment date</th>
                                 <th>User PHN No</th>
                                 <th>Status</th>
                                 <th>Action</th>
-
                             </tr>
                             </tfoot>
                             <tbody>
-                            @foreach($booking_data as $booking_datum)
 
+                @foreach($booking_all  as $booking)
                             <tr>
+<<<<<<< HEAD
                                 <td>{{$booking_datum->User->name}}</td>
 
 
@@ -106,8 +105,19 @@
                                 <td>$125,250</td>
                                 <td>Edit | DELETE</td>
 
+=======
+                                <td>{{ $booking->User->name }}</td>
+                                <td>{{ $booking->get_doctor_info->name }}</td>
+                                <td>{{ $booking->get_doctor_details->Category->category_name }}</td>
+                                <td>{{ $booking->created_at }}</td>
+                                <td>{{ $booking->User->phn_number }}</td>
+                                <td>{!! $booking->Status->status_name !!}</td>
+                                <td>
+                                    <a href="{{ route('admin.status.change', $booking->id )}}" type="button" class="btn btn-warning">Edit</a>
+                                </td>
+>>>>>>> 1c17c165eed27cbc358137a802e93fa899745ad9
                             </tr>
-                                @endforeach
+                @endforeach
                             </tbody>
                         </table>
                     </div>
