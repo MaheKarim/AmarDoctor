@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\SiteSettings;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\User;
@@ -15,19 +16,14 @@ class DoctorController extends Controller
     // doctor sign up form view
     public function signUpForm()
     {
-        return view("auth.doctorSignUp");
+        $settings = SiteSettings::find(1);
+        return view("auth.doctorSignUp", compact('settings'));
     }
 
     // doctor sign up form submit
     public function signUpFormSubmit(Request $request)
     {
-        // status 1 = pending
-        // status 2 = approve
-        // status 3 = disabled
 
-        // have to validate don't miss it
-
-       //   inserting data to user table
         $user_id = User::insertGetId([
             'role_id' => 2,
             'name' => $request->name,
