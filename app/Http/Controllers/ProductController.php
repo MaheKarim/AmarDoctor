@@ -103,7 +103,10 @@ class ProductController extends Controller
     public function allproduct()
     {
         $data = [ ];
+        $data['settings'] = SiteSettings::find(1);
+
         $data['products'] = Product::paginate(3);
+
         return view('frontend.allproduct', $data);
     }
 

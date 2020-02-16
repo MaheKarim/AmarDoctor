@@ -25,7 +25,7 @@
                 <img style="width:100%;margin-bottom: 1%;" src="{{ asset('storage') }}/{{$product->package_image}}">
             </div>
             <div class="col-md-4 col-xs-12">
-                <h3>Comprehensive Young Indian Health Checkup</h3>
+                <h3>{{ $product->product_name }}</h3>
                 <p>Ideal for individuals aged <span style="font-weight:bold;">21-40 years</span>
                     Includes <span style="font-weight:bold;">106 tests</span></p>
                 <h4>What preparation is needed for this Checkup?
