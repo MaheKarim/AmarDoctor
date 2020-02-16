@@ -12,8 +12,9 @@ class DashboardController extends Controller
     public function index()
     {
         $data = [ ];
-        $data['booking_data']= Booking::with('doctor')->latest()->get();
+       // $data['booking_data']= Booking::with('doctor')->latest()->get();
        // dd($data['booking_data']);
+        $data['booking_all'] = Booking::all();
        return view('backend.admin.dashboard', $data);
     }
 

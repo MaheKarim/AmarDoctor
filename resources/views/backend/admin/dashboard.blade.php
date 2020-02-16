@@ -88,26 +88,21 @@
                                 <th>User PHN No</th>
                                 <th>Status</th>
                                 <th>Action</th>
-
                             </tr>
                             </tfoot>
                             <tbody>
-                            @foreach($booking_data as $booking_datum)
 
+                @foreach($booking_all  as $booking)
                             <tr>
-                                <td>{{$booking_datum->User->name}}</td>
-
-
-                                <td>{{$booking_datum->doctor->username }}</td>
-
-
+                                <td>{{ $booking->User->name }}</td>
+                                <td>Mahe karim</td>
                                 <td>63</td>
                                 <td>2010/01/04</td>
                                 <td>$125,250</td>
-                                <td>$125,250</td>
-
+                                <td>,250</td>
+                                <td>,250</td>
                             </tr>
-                                @endforeach
+                @endforeach
                             </tbody>
                         </table>
                     </div>

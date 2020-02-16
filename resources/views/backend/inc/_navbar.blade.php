@@ -2,7 +2,7 @@
     <!-- Logo Header -->
     <div class="logo-header" data-background-color="blue">
 
-        <a href="{{ url('/dashboard') }}" class="logo">
+        <a href="{{ url('/admin/dashboard') }}" class="logo">
             <img src="{{ asset('/')}}assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,19 +80,7 @@
                                         </div>
                                     </a>
 
-                                    <a href="#">
-                                        <div class="notif-img">
-                                            <img src="../assets/img/talha.jpg" alt="Img Profile">
-                                        </div>
-                                        <div class="notif-content">
-                                            <span class="subject">Talha</span>
-                                            <span class="block">
-                                                Hi, Apa Kabar ?
-                                            </span>
-                                            <span class="time">17 minutes ago</span>
-                                        </div>
 
-                                    </a>
                                 </div>
                             </div>
                         </li>
