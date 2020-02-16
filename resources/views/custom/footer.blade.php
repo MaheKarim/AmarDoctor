@@ -41,11 +41,11 @@
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Patients</h2>
 									<ul>
-										<li><a href="search.php"><i class="fas fa-angle-double-right"></i> Search for Doctors</a></li>
+										<li><a href="{{ route('search.doctor') }}"><i class="fas fa-angle-double-right"></i> Search for Doctors</a></li>
 										<li><a href="{{ route('login') }} "><i class="fas fa-angle-double-right"></i> Login</a></li>
-										<li><a href="register.php"><i class="fas fa-angle-double-right"></i> Register</a></li>
-										<li><a href="booking.php"><i class="fas fa-angle-double-right"></i> Booking</a></li>
-										<li><a href="patient-dashboard.php"><i class="fas fa-angle-double-right"></i> Patient Dashboard</a></li>
+										<li><a href="{{ route('register') }}"><i class="fas fa-angle-double-right"></i> Register</a></li>
+
+										<li><a href="{{ route('user.dashboard') }}"><i class="fas fa-angle-double-right"></i> Patient Dashboard</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->

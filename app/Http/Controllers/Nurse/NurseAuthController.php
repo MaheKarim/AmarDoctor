@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Nurse;
 
-use App\Doctor;
+
+use App\SiteSettings;
 use App\User;
 use App\Nurse;
 use Carbon\Carbon;
@@ -17,8 +18,8 @@ class NurseAuthController extends Controller
     //  code start here
     public function nurseSignUpForm()
     {
-
-        return view('auth.nurse_register');
+        $settings = SiteSettings::find(1);
+        return view('auth.nurse_register', compact('settings'));
     }
 
     public function registerNurse(Request $request)
@@ -61,7 +62,8 @@ class NurseAuthController extends Controller
     {
 
         $data = User::find(Auth::id());
-        return view('backend.multi-dashboard.nurse.change_password_nurse', compact('data'));
+        $settings = SiteSettings::find(1);
+        return view('backend.multi-dashboard.nurse.change_password_nurse', compact('data','settings'));
     }
 
     public function changePasswordAction(Request $request)

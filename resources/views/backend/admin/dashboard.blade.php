@@ -62,7 +62,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Basic</h4>
+                    <h4 class="card-title">Appointment List</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -96,7 +96,7 @@
                                 <td>{{ $booking->User->name }}</td>
                                 <td>{{ $booking->get_doctor_info->name }}</td>
                                 <td>{{ $booking->get_doctor_details->Category->category_name }}</td>
-                                <td>{{ $booking->created_at }}</td>
+                                <td>{{ $booking->created_at->format('jS F Y') }}</td>
                                 <td>{{ $booking->User->phn_number }}</td>
                                 <td>{!! $booking->Status->status_name !!}</td>
                                 <td>

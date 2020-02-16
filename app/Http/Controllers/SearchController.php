@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Doctor;
+use App\SiteSettings;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,7 +32,8 @@ class SearchController extends Controller
 
         $doctors = Doctor::where($query)->get();
         $data = User::find(Auth::id());
+        $settings = SiteSettings::find(1);
 
-        return view('frontend.searchdoctor_profile' , compact('doctors', 'data'));
+        return view('frontend.searchdoctor_profile' , compact('doctors', 'data','settings'));
     }
 }

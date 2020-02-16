@@ -20,7 +20,8 @@ class BookingController extends Controller
     public function showbooking()
     {
       $bookings = Booking::where('user_id', Auth::id())->get();
+      $settings = SiteSettings::find(1);
 
-      return view('backend.multi-dashboard.user._home_user', compact('$bookings'));
+      return view('backend.multi-dashboard.user._home_user', compact('bookings','settings'));
     }
 }
