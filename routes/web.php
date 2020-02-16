@@ -31,6 +31,8 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('/password/change','ProfileController@passChange')->name('change.password');
     Route::post('password/change','ProfileController@passChangeReq')->name('changepaswword');
+    Route::get('/settings','SiteSettingsController@index')->name('settings');
+    Route::post('settings-update','SiteSettingsController@store')->name('settings.store');
 
 });
 

@@ -96,8 +96,8 @@
                         <div class="collapse" id="base">
                             <ul class="nav nav-collapse">
                                 <li>
-                                    <a href="#">
-                                        <span class="sub-item">WebSite Settings</span>
+                                    <a href="{{ route('admin.settings') }}">
+                                        <span class="sub-item">Control Panel</span>
                                     </a>
                                 </li>
 
