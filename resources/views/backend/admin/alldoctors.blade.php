@@ -38,11 +38,11 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($details as $detail)
+                                @foreach ($data as $detail)
                                     <tr>
                                         <td>{{ $detail->name }}</td>
                                         <td>{{ $detail->phn_number }}</td>
-                                        <td>{{ $detail->Doctor->edu_degree }}</td>
+
 
 
                                         <td>

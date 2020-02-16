@@ -59,7 +59,7 @@
                                     <tr>
                                     <td>{{ $product->product_name }}</td>
                                     <td>
-                            <a>{{ route('product.slug', $product->product_slug) }}</a>
+                            <a>{{ $product->product_slug }}</a>
                               </td>
                                     <td>{!! Str::limit($product ->description, 50,  ' .....') !!}</td>
 

@@ -34,7 +34,7 @@
 
 <!-- Atlantis JS -->
 <script src="asset('assets/js/atlantis.min.js')"></script>
-
+<script src="{{asset('assets/js/url-generator.js')}}"></script>
 
 <script>
 	Circles.create({

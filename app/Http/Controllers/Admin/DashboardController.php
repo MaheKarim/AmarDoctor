@@ -31,12 +31,11 @@ class DashboardController extends Controller
 
     public function showDoctorAll()
     {
-        $data = User::where('role_id', 2)->first();
-        $details = Doctor::where('user_id', $data->id)->first();
+        $data = User::where('role_id', 2)->get();
+       // $details = Doctor::where('user_id', $data->id)->first();
 
 
-
-        return view('backend.admin.alldoctors', compact('data','details'));
+        return view('backend.admin.alldoctors', compact('data'));
     }
 
     public function showAllUser()

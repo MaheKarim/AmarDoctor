@@ -57,9 +57,9 @@
                                  @csrf
                                 <div class="form-group">
                                     <label for="text">Add Shop Name</label>
-                                    <input type="text" class="form-control" name="product_name" id="text" placeholder="Enter Product Name">
+                                    <input type="text" class="form-control" name="product_name" id="title" onkeyup="urlGen()" placeholder="Enter Product Name">
                                     <label for="text">Product Sug</label>
-                                    <input type="text" class="form-control" name="product_slug" id="text" placeholder="Enter Product Slug">
+                                    <input type="text" class="form-control" name="product_slug" id="url"  placeholder="Enter Product Slug">
 
                                     <label for="text">Add Product Description</label>
                                     <textarea id="description" type="text" class="form-control" name="description" id="text" placeholder="Product Description"></textarea>
