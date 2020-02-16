@@ -93,19 +93,6 @@
 
                 @foreach($booking_all  as $booking)
                             <tr>
-<<<<<<< HEAD
-                                <td>{{$booking_datum->User->name}}</td>
-
-
-                                <td>{{$booking_datum->doctor->name }}</td>
-
-                                <td>2010/01/04</td>
-                                <td>XXXX-XXXX-XXXX</td>
-                                <td>2010/01/04</td>
-                                <td>$125,250</td>
-                                <td>Edit | DELETE</td>
-
-=======
                                 <td>{{ $booking->User->name }}</td>
                                 <td>{{ $booking->get_doctor_info->name }}</td>
                                 <td>{{ $booking->get_doctor_details->Category->category_name }}</td>
@@ -115,7 +102,6 @@
                                 <td>
                                     <a href="{{ route('admin.status.change', $booking->id )}}" type="button" class="btn btn-warning">Edit</a>
                                 </td>
->>>>>>> 1c17c165eed27cbc358137a802e93fa899745ad9
                             </tr>
                 @endforeach
                             </tbody>
