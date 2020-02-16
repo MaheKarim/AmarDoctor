@@ -20,7 +20,8 @@ class CreateProductsTable extends Migration
             $table->string('product_slug')->nullable();
             $table->string('total_rate');
             $table->string('package_rate');
-            $table->string('package_image');
+            $table->string('package_image')->nullable();
+            $table->string('thumbnail_medium')->nullable();
             $table->integer('phn_number');
             $table->timestamps();
         });

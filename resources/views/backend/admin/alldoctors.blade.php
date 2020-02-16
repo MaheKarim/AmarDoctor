@@ -34,14 +34,17 @@
                                     <th>Doctor PHN NUMBER</th>
 
                                     <th>Area Created At</th>
+                                    <th>Area Created At</th>
 
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($data as $detail)
+                                @foreach ($doctors as $doctor)
                                     <tr>
-                                        <td>{{ $detail->name }}</td>
-                                        <td>{{ $detail->phn_number }}</td>
+                                        <td>{{ $doctor->User->name }}</td>
+                                        <td>{{ $doctor->User->phn_number }}</td>
+                                        <td>{{ $doctor->edu_degree }}</td>
+                                        <td>{{ $doctor->about_me }}</td>
 
 
 

@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 col-xs-12">
-                <img style="width:100%;margin-bottom: 1%;" src="assets/img/img-04.jpg">
+                <img style="width:100%;margin-bottom: 1%;" src="{{ asset('storage') }}/{{$product->package_image}}">
             </div>
             <div class="col-md-4 col-xs-12">
                 <h3>Comprehensive Young Indian Health Checkup</h3>
