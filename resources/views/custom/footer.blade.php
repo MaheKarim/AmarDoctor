@@ -1,6 +1,7 @@
  			<!-- Footer -->
              <footer class="footer">
 
+
 				<!-- Footer Top -->
 				<div class="footer-top">
 					<div class="container-fluid">
@@ -13,24 +14,19 @@
 										<img src="{{ asset('/') }}frontend/assets/img/footer-logo.png" alt="logo">
 									</div>
 									<div class="footer-about-content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										<p>{{ $settings->site_shortDescription }}</p>
 										<div class="social-icon">
 											<ul>
 												<li>
-													<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+													<a href="{{ $settings->site_fbLink }}" target="_blank"><i class="fab fa-facebook-f"></i> </a>
 												</li>
 												<li>
-													<a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+													<a href="{{ $settings->site_ytLink }}" target="_blank"><i class="fab fa-twitter"></i> </a>
 												</li>
 												<li>
-													<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+													<a href="{{ $settings->site_twitterLink }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 												</li>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-												</li>
-												<li>
-													<a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
-												</li>
+
 											</ul>
 										</div>
 									</div>
@@ -81,15 +77,15 @@
 									<div class="footer-contact-info">
 										<div class="footer-address">
 											<span><i class="fas fa-map-marker-alt"></i></span>
-											<p> 3556  Beech Street, San Francisco,<br> California, CA 94108 </p>
+											<p> {{ $settings->site_address }} </p>
 										</div>
 										<p>
 											<i class="fas fa-phone-alt"></i>
-											+1 315 369 5943
+                                            {{ $settings->site_phnNumber }}
 										</p>
 										<p class="mb-0">
 											<i class="fas fa-envelope"></i>
-											AmarDoctor@example.com
+                                            {{ $settings->site_mail }}
 										</p>
 									</div>
 								</div>
@@ -111,7 +107,7 @@
 							<div class="row">
 								<div class="col-md-6 col-lg-6">
 									<div class="copyright-text">
-										<p class="mb-0">&copy; 2019 AmarDoctor. All rights reserved.</p>
+										<p class="mb-0">&copy; 2020 AmarDoctor. All rights reserved.</p>
 									</div>
 								</div>
 								<div class="col-md-6 col-lg-6">

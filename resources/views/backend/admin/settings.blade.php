@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="text">Add Site Mail</label>
-                                        <input type="text" class="form-control" name="site_mail" id="text" placeholder="Enter Site Mail" value="{{$site_data->site_mail}}">
+                                        <input type="email" class="form-control" name="site_mail" id="text" placeholder="Enter Site Mail" value="{{$site_data->site_mail}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="text">Add Site Address</label>
@@ -70,20 +70,20 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="text">Add Site Short Description</label>
-                                        <textarea type="text" class="form-control" name="site_shortDescription" id="text" placeholder="Enter Short Description">
+                                        <textarea type="text" class="form-control" name="site_shortDescription" id="text" placeholder="Enter Short Description">{{$site_data->site_shortDescription}}
                                         </textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="text">Add Facebook Page</label>
-                                        <input type="text" class="form-control" name="site_fbLink" id="text" placeholder="Enter Facebook Link">
+                                        <input type="text" class="form-control" name="site_fbLink" id="text" placeholder="Enter Facebook Link" value="{{$site_data->site_fbLink}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="text">Add Youtube Link</label>
-                                        <input type="text" class="form-control" name="site_ytLink" id="text" placeholder="Enter Youtube Link">
+                                        <input type="text" class="form-control" name="site_ytLink" id="text" placeholder="Enter Youtube Link" value="{{$site_data->site_ytLink}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="text">Add Twitter Link</label>
-                                        <input type="text" class="form-control" name="site_twitterLink" id="text" placeholder="Enter Twitter Link">
+                                        <input type="text" class="form-control" name="site_twitterLink" id="text" placeholder="Enter Twitter Link" value="{{$site_data->site_twitterLink}}">
                                     </div>
                             </div>
                         </div>

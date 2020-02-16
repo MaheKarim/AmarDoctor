@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
-    //
+    // Code Start From Here
     public function index()
     {
         $data = [ ];

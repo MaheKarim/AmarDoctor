@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Review;
 use App\Product;
+use App\SiteSettings;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class FrontendController extends Controller
       //  $data = [ ];
         $reviews = Review::all();
         $products = Product::paginate(4);;
-        return view('frontend.index', compact('reviews', 'products'));
+        $settings = SiteSettings::find(1);
+        return view('frontend.index', compact('reviews', 'products','settings'));
     }
 
     public function install ()
