@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Doctor;
 
 
+use App\SiteSettings;
 use App\User;
 use App\Doctor;
 use Illuminate\Http\Request;
@@ -32,8 +33,8 @@ class DashboardController extends Controller
         $data = User::find(Auth::id());
         $details = Doctor::where('user_id', $data->id)->first();
         $details_user = User::where('id', $data->id)->first();
-
-        return view('backend.multi-dashboard.doctor._profile_seetings', compact('data', 'details','details_user'));
+        $settings = SiteSettings::find(1);
+        return view('backend.multi-dashboard.doctor._profile_seetings', compact('data', 'details','details_user','settings'));
     }
 
     // update profile picture
