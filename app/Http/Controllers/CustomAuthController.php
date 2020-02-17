@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\SiteSettings;
 use Auth;
 Use App\User;
 use App\Doctor;
@@ -35,7 +36,8 @@ class CustomAuthController extends Controller
         $data = User::find(Auth::id());
         $details = Doctor::where('user_id', $data->id)->first();
         $details_user = User::where('id', $data->id)->first();
-        return view('backend.multi-dashboard.doctor.change_password', compact('details_user', 'details' , 'data'));
+        $settings = SiteSettings::find(1);
+        return view('backend.multi-dashboard.doctor.change_password', compact('details_user', 'details' , 'data', 'settings'));
     }
 
     public function FormPassChange(Request $request)

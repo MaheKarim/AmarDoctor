@@ -34,18 +34,6 @@
                         <span>Appointments</span>
                     </a>
                 </li>
-                <li>
-                    <a href="my-patients.php">
-                        <i class="fas fa-user-injured"></i>
-                        <span>My Patients</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="schedule-timings.php">
-                        <i class="fas fa-hourglass-start"></i>
-                        <span>Schedule Timings</span>
-                    </a>
-                </li>
 
                 <li>
                 <a href="{{ route('doctor.doctorProfileSeetings') }}">
