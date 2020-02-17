@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Nurse;
 
 use App\Nurse;
+use App\SiteSettings;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -17,7 +18,8 @@ class NurseProfileController extends Controller
         $data = User::find(Auth::id());
         $details = Nurse::where('user_id', $data->id)->first();
         $details_user = User::where('id', $data->id)->first();
-        return view('backend.multi-dashboard.nurse._profile_settings', compact('data', 'details', 'details_user'));
+        $settings = SiteSettings::find(1);
+        return view('backend.multi-dashboard.nurse._profile_settings', compact('data', 'details', 'details_user', 'settings'));
     }
 
     public function nurse_picUpdate(Request $request)
