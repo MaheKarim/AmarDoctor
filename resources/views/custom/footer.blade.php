@@ -45,7 +45,7 @@
 										<li><a href="{{ route('login') }} "><i class="fas fa-angle-double-right"></i> Login</a></li>
 										<li><a href="{{ route('register') }}"><i class="fas fa-angle-double-right"></i> Register</a></li>
 
-										<li><a href="{{ route('user.dashboard') }}"><i class="fas fa-angle-double-right"></i> Patient Dashboard</a></li>
+										<li><a href="{{ route('user.dashboard') }}"><i class="fas fa-angle-double-right"></i>Your Dashboard</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\SiteSettings;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Auth;
@@ -27,7 +28,6 @@ class LoginController extends Controller
 
 
     public function __construct()
-
     {
         if (Auth::check() && Auth::user()->role->id == 1 )
         {
@@ -41,10 +41,13 @@ class LoginController extends Controller
         {
             $this->redirectTo = route('nurse.dashboard');
 
-        } else {
+        } elseif (Auth::check() && Auth::user()->role->id == 4)
+        {
             $this->redirectTo = route('search.doctor');
         }
-
+        else {
+            $this->redirectTo = url('/');
+        }
          $this->middleware('guest')->except('logout');
 
     }
@@ -54,6 +57,14 @@ class LoginController extends Controller
     {
         Auth::logout();
         return redirect('/login');
-      }
+    }
+
+    public function showLoginForm()
+    {
+        $settings = SiteSettings::find(1);
+
+        return view('auth.login', compact('settings'));
+    }
+
 
 }
