@@ -58,11 +58,11 @@
 								<div class="footer-widget footer-menu">
 									<h2 class="footer-title">For Doctors / Nurse</h2>
 									<ul>
-										<li><a href="appointments.php"><i class="fas fa-angle-double-right"></i> Appointments</a></li>
-										<li><a href="chat.php"><i class="fas fa-angle-double-right"></i> Chat</a></li>
+
 										<li><a href=" {{ route('login') }} "><i class="fas fa-angle-double-right"></i> Login</a></li>
-										<li><a href=" {{ route('doctorSignUpForm') }} "><i class="fas fa-angle-double-right"></i> Register</a></li>
+										<li><a href=" {{ route('doctorSignUpForm') }} "><i class="fas fa-angle-double-right"></i>Doctor Sign Up</a></li>
 										<li><a href=" {{route('nurse.signup')}} "><i class="fas fa-angle-double-right"></i> Nurse SignUp</a></li>
+										<li><a href=" {{route('login')}} "><i class="fas fa-angle-double-right"></i> Nurse Login</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->

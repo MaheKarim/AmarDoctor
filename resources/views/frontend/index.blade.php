@@ -59,25 +59,24 @@
         <div class="row">
             @foreach($products as $product)
             <div class="col-sm">
-                <div class="text-center muhin">
-                    <div class="">
-                        <a href="#">
+                    <div class="text-center muhin">
+                        <div class="">
+                            <a href="#">
                             <span class="LazyLoad is-visible">
                                   <img src="{{ asset('storage') }}/{{$product->thumbnail_medium}}" alt="" class="img-fluid">
                             </span>
-                        </a>
-                    </div>
-                    <br>
-                    <h6><a href="{{route('productSee', $product->product_slug)}}">{{ $product->product_name }}</a></h6>
-                    <span>{!! Str::limit($product ->description, 100,  ' .....') !!}</span>
-                    <div class="u-border__top--blue_4 u-margin--10__top"></div>
-                    <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
-                        <div class="u-d__inline ">24% off</div>
-                    </div> <a class="btn btn-dark-green" href="#">Explore</a>
-                </div>
-            </div>
-            @endforeach
+                            </a>
+                        </div>
+                        <br>
+                        <h6><a href="{{route('productSee', $product->product_slug)}}">{{ $product->product_name }}</a></h6>
+                        <span>{!! Str::limit($product ->description, 100,  ' .....') !!}</span>
+                        <div class="u-border__top--blue_4 u-margin--10__top"></div>
+                        <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
 
+                        </div> <a class="btn btn-info" href="{{route('productSee', $product->product_slug)}}">Explore</a>
+                    </div>
+                    </div>
+                    @endforeach
         </div>
                 {{ $products->links() }}
     </div>
