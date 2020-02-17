@@ -46,14 +46,14 @@
                 </li>
                  <li class="nav-item">
                     <a href="{{ route('admin.showAllDoctor') }}">
-                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-user-md"></i>
                         <p>Show All Doctor</p>
                             {{-- <span class="badge badge-success">4</span> --}}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.showAllUser') }}">
-                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-user-shield"></i>
                         <p>Show All User</p>
                             {{-- <span class="badge badge-success">4</span> --}}
                     </a>

@@ -31,9 +31,8 @@ class SearchController extends Controller
         }
 
         $doctors = Doctor::where($query)->get();
-        $data = User::find(Auth::id());
         $settings = SiteSettings::find(1);
-
-        return view('frontend.searchdoctor_profile' , compact('doctors', 'data','settings'));
+// Eikhane
+        return view('frontend.searchdoctor_profile' , compact('doctors','settings'));
     }
 }

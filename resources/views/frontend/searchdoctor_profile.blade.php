@@ -114,13 +114,13 @@
                                     <div class="doctor-img">
                                         <a href="doctor-profile.php">
                                             <div class="profile-img">
-                                                @if($data->profile_image == "default.png")
+                                                @if($doctor->user->profile_image == "default.png")
                                                     <img src="{{ asset('/') }}default/default.png" alt="User Image">
                                                 @else
-
+                                                    <img src="{{asset('storage')}}/{{$doctor->user->profile_image}}" class="img-fluid" alt="User Image">
                                                 @endif
                                             </div>
-{{--                                            <img src="{{asset('storage')}}/{{$doctor->user->profile_image}}" class="img-fluid" alt="User Image">--}}
+
                                         </a>
                                     </div>
                                     <div class="doc-info-cont">
