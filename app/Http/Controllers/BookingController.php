@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\SiteSettings;
 use App\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +16,9 @@ class BookingController extends Controller
             'user_id' => Auth::id(),
             'doctor_id'=> $id,
         ]);
-        return view('frontend.booking_status');
+        $settings = SiteSettings::find(1);
+
+        return view('frontend.booking_status',compact('settings'));
     }
     public function showbooking()
     {

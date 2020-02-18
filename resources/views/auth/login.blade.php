@@ -34,9 +34,8 @@
                                     <span class="span-or">or</span>
                                 </div>
 
-                                <div class="text-center dont-have">Don’t have an account? <a href="register.php">Register</a></div>
-                                <div class="text-center dont-have">Don’t have an account? <a href="#">Register</a></div>
-                                <div class="text-center dont-have">Don’t have an account? <a href="register.php">Register</a></div>
+                                <div class="text-center dont-have">Are You Doctor ? Don’t have an account? <a href="{{ route('doctorSignUpForm') }}">Register</a></div>
+                                <div class="text-center dont-have">Are You Nurse ? Don’t have an account? <a href="{{ route('nurse.signup_page') }}">Register</a></div>
                             </form>
                         </div>
                     </div>

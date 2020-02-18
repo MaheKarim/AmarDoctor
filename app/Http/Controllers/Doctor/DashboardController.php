@@ -34,11 +34,9 @@ class DashboardController extends Controller
         $details = Doctor::where('user_id', $data->id)->first();
         $details_user = User::where('id', $data->id)->first();
         $settings = SiteSettings::find(1);
-<<<<<<< HEAD
-        return view('backend.multi-dashboard.doctor._profile_seetings', compact('data', 'details','details_user','settings'));
-=======
-        return view('backend.multi-dashboard.doctor._profile_seetings', compact('data', 'details','details_user', 'settings'));
->>>>>>> 8e020b3350ba9b40c58a1115a2ec32ec3229cd6e
+
+        return view('backend.multi-dashboard.doctor._profile_settings', compact('data', 'details','details_user','settings'));
+
     }
 
     // update profile picture

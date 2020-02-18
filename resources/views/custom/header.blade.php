@@ -71,8 +71,11 @@
 							<li class="has-submenu">
 								<a href="{{route('search.doctor')}}">Doctor Search</a>
 							</li>
-
-
+                            @auth
+                            <li class="has-submenu">
+                                <a href="{{ route('user.dashboard') }}">Your Dashboard</a>
+                            </li>
+                            @endauth
 						</ul>
 					</div>
           @if(!Auth::User())

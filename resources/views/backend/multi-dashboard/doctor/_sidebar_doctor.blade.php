@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="appointments.php">
+                    <a href="#">
                         <i class="fas fa-calendar-check"></i>
                         <span>Appointments</span>
                     </a>

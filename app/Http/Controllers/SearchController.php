@@ -33,6 +33,6 @@ class SearchController extends Controller
         $doctors = Doctor::where($query)->get();
         $settings = SiteSettings::find(1);
 
-        return view('frontend.searchdoctor_profile' , compact('doctors','settings'));
+        return view('frontend.search_doctor_profile' , compact('doctors','settings'));
     }
 }

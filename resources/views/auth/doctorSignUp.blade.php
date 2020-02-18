@@ -72,25 +72,12 @@
                                     <input type="file" name="nid_pic" class="form-control floating">
                                     <label class="focus-label">NID Card</label>
                                 </div>
-                                <!-- Area start -->
-{{--                                <div class="form-group form-focus">--}}
-{{--                                    <label>Select Your Area</label>--}}
-{{--                                    <select name="area_name_id" class="form-control select">--}}
-{{--                                        @php($areas= \App\Area::all())--}}
-{{--                                        @foreach ($areas as $area)--}}
-{{--                                            <option {{ $area->id }}>{{$area->area_name}}</option>--}}
-{{--                                        @endforeach--}}
-{{--                                    </select>--}}
-{{--                                </div>--}}
-                                <!-- Area END -->
+
                                 <div class="text-right">
                                     <a class="forgot-link" href="{{route('login')}}">Already have an account?</a>
                                 </div>
                                 <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Signup</button>
-                                <div class="login-or">
-                                    <span class="or-line"></span>
-                                    <span class="span-or">or</span>
-                                </div>
+
                             </form>
                             <!-- /Register Form -->
                         </div>

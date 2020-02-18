@@ -30,75 +30,7 @@
                 <div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
 
                     <!-- Search Filter -->
-                    <div class="card search-filter">
-                        <div class="card-header">
-                            <h4 class="card-title mb-0">Search Filter</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="filter-widget">
-                                <div class="cal-icon">
-                                    <input type="text" class="form-control datetimepicker" placeholder="Select Date">
-                                </div>
-                            </div>
-                            <div class="filter-widget">
-                                <h4>Gender</h4>
-                                <div>
-                                    <label class="custom_check">
-                                        <input type="checkbox" name="gender_type" checked>
-                                        <span class="checkmark"></span> Male Doctor
-                                    </label>
-                                </div>
-                                <div>
-                                    <label class="custom_check">
-                                        <input type="checkbox" name="gender_type">
-                                        <span class="checkmark"></span> Female Doctor
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="filter-widget">
-                                <h4>Select Specialist</h4>
-                                <div>
-                                    <label class="custom_check">
-                                        <input type="checkbox" name="select_specialist" checked>
-                                        <span class="checkmark"></span> Urology
-                                    </label>
-                                </div>
-                                <div>
-                                    <label class="custom_check">
-                                        <input type="checkbox" name="select_specialist" checked>
-                                        <span class="checkmark"></span> Neurology
-                                    </label>
-                                </div>
-                                <div>
-                                    <label class="custom_check">
-                                        <input type="checkbox" name="select_specialist">
-                                        <span class="checkmark"></span> Dentist
-                                    </label>
-                                </div>
-                                <div>
-                                    <label class="custom_check">
-                                        <input type="checkbox" name="select_specialist">
-                                        <span class="checkmark"></span> Orthopedic
-                                    </label>
-                                </div>
-                                <div>
-                                    <label class="custom_check">
-                                        <input type="checkbox" name="select_specialist">
-                                        <span class="checkmark"></span> Cardiologist
-                                    </label>
-                                </div>
-                                <div>
-                                    <label class="custom_check">
-                                        <input type="checkbox" name="select_specialist">
-                                        <span class="checkmark"></span> Cardiologist
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="btn-search">
-                                <button type="button" class="btn btn-block">Search</button>
-                            </div>
-                        </div>
-                    </div>
+
                     <!-- /Search Filter -->
 
                 </div>
@@ -150,13 +82,13 @@
                                     <div class="clini-infos">
                                         <ul>
                                             <li><i class="far fa-thumbs-up"></i> 98%</li>
-                                            <li><i class="far fa-comment"></i> 17 Feedback</li>
+{{--                                            <li><i class="far fa-comment"></i> 17 Feedback</li>--}}
                                             <li><i class="fas fa-map-marker-alt"></i> {{$doctor->Area->area_name}}</li>
                                             <li><i class="far fa-money-bill-alt"></i> ৳500 - ৳1000 <i class="fas fa-info-circle" data-toggle="tooltip" title="Term & Condition Apply!"></i> </li>
                                         </ul>
                                     </div>
                                     <div class="clinic-booking">
-                                        <a class="view-pro-btn" href="doctor-profile.php">View Profile</a>
+{{--                                        <a class="view-pro-btn" href="doctor-profile.php">View Profile</a>--}}
                                         @auth
                                         <a class="apt-btn" href="{{route('booking.confirmation', $doctor->user->id)}}">Book Appointment</a>
                                         @endauth
@@ -165,14 +97,16 @@
                             </div>
                         </div>
                     </div>
+                        <div class="load-more text-center">
+                            <a class="btn btn-primary btn-sm" href="javascript:void(0);">Load More</a>
+                        </div>
                         @empty
-                        <h1>Nothing Found</h1>
+                        <h1>Sorry! No Doctor Found on Your Criteria</h1>
+                        <a type="button" class="btn btn-facebook" href="{{ route('search.doctor') }}" style="color: honeydew"> Search Again</a>
                     @endforelse
                         <!-- /Doctor Widget -->
 
-                    <div class="load-more text-center">
-                        <a class="btn btn-primary btn-sm" href="javascript:void(0);">Load More</a>
-                    </div>
+
                 </div>
             </div>
 

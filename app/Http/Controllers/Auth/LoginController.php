@@ -29,38 +29,27 @@ class LoginController extends Controller
 
     public function __construct()
     {
-        if (Auth::check() && Auth::user()->role->id == 1 )
-        {
+        if (Auth::check() && Auth::user()->role->id == 1 ) {
            $this->redirectTo = route('admin.dashboard');
 
-        } elseif(Auth::check() && Auth::user()->role->id == 2 )
-        {
+        } elseif(Auth::check() && Auth::user()->role->id == 2 ) {
             $this->redirectTo = route('doctor.dashboard');
 
-        } elseif(Auth::check() && Auth::user()->role->id == 3 )
-        {
+        } elseif(Auth::check() && Auth::user()->role->id == 3 ) {
             $this->redirectTo = route('nurse.dashboard');
 
-<<<<<<< HEAD
         } else {
             $this->redirectTo = route('search.doctor');
-=======
-        } elseif (Auth::check() && Auth::user()->role->id == 4)
-        {
-            $this->redirectTo = route('search.doctor');
         }
-        else {
-            $this->redirectTo = url('/');
->>>>>>> 6ecc749e3fa73c2f636720ade1afe531038cb94a
-        }
+
+        // else {
+        //     $this->redirectTo = route('search.doctor');
+
+        // }
          $this->middleware('guest')->except('logout');
 
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ecc749e3fa73c2f636720ade1afe531038cb94a
 
     public function logout(Request $request)
     {

@@ -9,6 +9,9 @@
 Route::get('/install','FrontendController@install');
 Route::get('/clear','FrontendController@clear');
 Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
+Route::get('/dashboard', function () { return redirect (route('user.dashboard')); });
+Route::get('/home', function () { return redirect (route('user.dashboard')); });
+
 
 
 /*
@@ -118,5 +121,5 @@ Route::get('/search/doctor', 'SearchController@search_doctor')->name('search.doc
 
 // Booking Controller
 Route::get('booking/confirmation/{id}/done','BookingController@booking_confirmation')->name('booking.confirmation');
-Route::get('/bookig-show','BookingController@showbooking')->name('bookingShow');
- 
+Route::get('/booking-show','BookingController@showbooking')->name('bookingShow');
+
