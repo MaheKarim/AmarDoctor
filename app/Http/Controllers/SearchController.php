@@ -32,7 +32,7 @@ class SearchController extends Controller
 
         $doctors = Doctor::where($query)->get();
         $settings = SiteSettings::find(1);
-// Eikhane
+
         return view('frontend.searchdoctor_profile' , compact('doctors','settings'));
     }
 }

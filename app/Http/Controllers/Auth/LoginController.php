@@ -72,14 +72,14 @@ class LoginController extends Controller
             $this->redirectTo = route('nurse.dashboard');
 
         } else {
-            $this->redirectTo = route('user.dashboard');
+            $this->redirectTo = route('search.doctor');
         }
 
          $this->middleware('guest')->except('logout');
         // $this->phn_number = $this->findPhnNnumber();
     }
 
-   
+
 
     public function logout(Request $request) {
         Auth::logout();
