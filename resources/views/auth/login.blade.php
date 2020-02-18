@@ -1,88 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+@include('custom.header')
 
+<!-- Page Content -->
+<div class="content">
+    <div class="container-fluid">
 
-<head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <title>Doccure - Login</title>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
 
-		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/') }}frontend/admin/assets/img/favicon.png">
-
-		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="{{ asset('/') }}frontend/admin/assets/css/bootstrap.min.css">
-
-		<!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="{{ asset('/') }}frontend/admin/assets/css/font-awesome.min.css">
-
-		<!-- Main CSS -->
-        <link rel="stylesheet" href="{{ asset('/') }}frontend/admin/assets/css/style.css">
-
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
-    </head>
-    <body>
-
-		<!-- Main Wrapper -->
-        <div class="main-wrapper login-body">
-            <div class="login-wrapper">
-            	<div class="container">
-                	<div class="loginbox">
-                    	<div class="login-left">
-							<img class="img-fluid" src="{{ asset('/') }}frontend/admin/assets/img/logo-white.png" alt="Logo">
+                <!-- Login Tab Content -->
+                <div class="account-content">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-7 col-lg-6 login-left">
+                            <img src="{{ asset('') }}frontend/assets/img/login-banner.png" class="img-fluid" alt="AmarDoctor Login">
                         </div>
-                        <div class="login-right">
-							<div class="login-right-wrap">
-								<h1>Login</h1>
-								<p class="account-subtitle">Access to our dashboard</p>
-
-								<!-- Form -->
+                        <div class="col-md-12 col-lg-6 login-right">
+                            <div class="login-header">
+                                <h3>Login <span>AmarDoctor</span></h3>
+                            </div>
                             <form action="{{ route('login') }}" method="POST">
                                 @csrf
-									<div class="form-group">
-                                    <input id="email" class="form-control" name="email" type="email" value="{{ old('email')}}" placeholder="Email or Phone Number" required autofocus>
-									</div>
-									<div class="form-group">
-										<input class="form-control" type="password" name="password" placeholder="Password">
-									</div>
-									<div class="form-group">
-										<button class="btn btn-primary btn-block" type="submit">Login</button>
-									</div>
-								</form>
-								<!-- /Form -->
+                                <div class="form-group form-focus">
+                                    <input type="email" name="email" class="form-control floating">
+                                    <label class="focus-label">Email</label>
+                                </div>
+                                <div class="form-group form-focus">
+                                    <input type="password" name="password" class="form-control floating">
+                                    <label class="focus-label">Password</label>
+                                </div>
 
-								<div class="text-center forgotpass"><a href="forgot-password.php">Forgot Password?</a></div>
-								<div class="login-or">
-									<span class="or-line"></span>
-									<span class="span-or">or</span>
-								</div>
+                                <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Login</button>
+                                <div class="login-or">
+                                    <span class="or-line"></span>
+                                    <span class="span-or">or</span>
+                                </div>
 
-
-
-								<div class="text-center dont-have">Are You Doctor ? Don’t have an account? <a href="{{route('doctorSignUpForm')}}">Register</a></div>
-								<div class="text-center dont-have">Are You Nurse  ? Don’t have an account? <a href="{{route('nurse.signup')}}">Register</a></div>
-							</div>
+                                <div class="text-center dont-have">Don’t have an account? <a href="register.php">Register</a></div>
+                                <div class="text-center dont-have">Don’t have an account? <a href="#">Register</a></div>
+                                <div class="text-center dont-have">Don’t have an account? <a href="register.php">Register</a></div>
+                            </form>
                         </div>
                     </div>
                 </div>
+                <!-- /Login Tab Content -->
+
             </div>
         </div>
-		<!-- /Main Wrapper -->
 
-		<!-- jQuery -->
-        <script src="{{ asset('/') }}frontend/admin/assets/js/jquery-3.2.1.min.js"></script>
+    </div>
 
-		<!-- Bootstrap Core JS -->
-        <script src="{{ asset('/') }}frontend/admin/assets/js/popper.min.js"></script>
-        <script src="{{ asset('/') }}frontend/admin/assets/js/bootstrap.min.js"></script>
+</div>
+<!-- /Page Content -->
 
-		<!-- Custom JS -->
-		<script src="{{ asset('/') }}frontend/admin/assets/js/script.js"></script>
-
-    </body>
-
-
-</html>
+@include('custom.footer')

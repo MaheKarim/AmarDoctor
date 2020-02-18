@@ -55,7 +55,7 @@ class CustomAuthController extends Controller
             $user->save();
             Auth::logout();
 
-            return redirect()->route('login')->with('success','Password Change Succesfully!');
+            return redirect()->route('login')->with('success','Password Change Successfully!');
         } else {
             return redirect()->back()->with('errorMSG' ,  'Current Password Invalid!');
         }

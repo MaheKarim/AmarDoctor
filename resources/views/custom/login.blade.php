@@ -1,5 +1,5 @@
   @include('custom.header')
-    <!-- Page Content -->
+    		<!-- Page Content -->
 			<div class="content">
 				<div class="container-fluid">
 

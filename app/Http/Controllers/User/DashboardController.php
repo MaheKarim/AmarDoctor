@@ -12,7 +12,7 @@ class DashboardController extends Controller
     //
     public function index()
     {
-      $bookings = Booking::where('user_id', Auth::id())->get();
+       $bookings = Booking::where('user_id', Auth::id())->get();
        return view('backend.multi-dashboard.user._home_user', compact('bookings'));
     }
 }

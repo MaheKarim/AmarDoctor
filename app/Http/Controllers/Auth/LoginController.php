@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\SiteSettings;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Auth;
@@ -22,42 +23,11 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
     protected $redirectTo ;
 
-  //  protected $phn_number;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-
-
-    // public function findPhnNnumber()
-    // {
-    //     $login = request()->input('login');
-    //     $fieldType = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'phn_number';
-    //     request()->merge([$fieldType=>$login]);
-    //     return $fieldType;
-    // }
-
-
-    // public function phn_number()
-    // {
-    //    // return $this->phn_number;
-    //    $loginType = request()->input('phn_number');
-    //    $this->phn_number = filter_var($loginType, FILTER_VALIDATE_EMAIL) ? 'email' : 'phn_number';
-    //    request()->merge([$this->phn_number => $loginType]);
-    //    return property_exists($this, 'phn_number') ? $this->phn_number : 'email';
-    // }
 
     public function __construct()
-
     {
         if (Auth::check() && Auth::user()->role->id == 1 )
         {
@@ -71,23 +41,39 @@ class LoginController extends Controller
         {
             $this->redirectTo = route('nurse.dashboard');
 
+<<<<<<< HEAD
         } else {
             $this->redirectTo = route('search.doctor');
+=======
+        } elseif (Auth::check() && Auth::user()->role->id == 4)
+        {
+            $this->redirectTo = route('search.doctor');
         }
-
+        else {
+            $this->redirectTo = url('/');
+>>>>>>> 6ecc749e3fa73c2f636720ade1afe531038cb94a
+        }
          $this->middleware('guest')->except('logout');
-        // $this->phn_number = $this->findPhnNnumber();
+
+    }
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6ecc749e3fa73c2f636720ade1afe531038cb94a
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect('/login');
+    }
+
+    public function showLoginForm()
+    {
+        $settings = SiteSettings::find(1);
+
+        return view('auth.login', compact('settings'));
     }
 
 
-
-    public function logout(Request $request) {
-        Auth::logout();
-        return redirect('/login');
-      }
-
-    //   public function username()
-    //   {
-    //       return 'username';
-    //   }
 }
