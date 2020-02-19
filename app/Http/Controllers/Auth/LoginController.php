@@ -64,5 +64,11 @@ class LoginController extends Controller
         return view('auth.login', compact('settings'));
     }
 
+    public function showRegisterForm()
+    {
+        $settings = SiteSettings::find(1);
+
+        return view('auth.register', compact('settings'));
+    }
 
 }

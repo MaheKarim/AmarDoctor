@@ -12,7 +12,7 @@
                         </div>
                         <div class="col-md-12 col-lg-6 login-right">
                             <div class="login-header">
-                                <h3>Doctor Register <a href="register.php">Not a Doctor?</a></h3>
+                                <h3>Doctor Register <a href="{{ route('register') }}">Not a Doctor? Are You User ?</a></h3>
                             </div>
 
                             <!-- Register Form -->

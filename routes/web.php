@@ -122,4 +122,4 @@ Route::get('/search/doctor', 'SearchController@search_doctor')->name('search.doc
 // Booking Controller
 Route::get('booking/confirmation/{id}/done','BookingController@booking_confirmation')->name('booking.confirmation');
 Route::get('/booking-show','BookingController@showbooking')->name('bookingShow');
-
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');

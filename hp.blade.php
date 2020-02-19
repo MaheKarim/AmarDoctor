@@ -11,11 +11,11 @@
 							<div class="account-content">
 								<div class="row align-items-center justify-content-center">
 									<div class="col-md-7 col-lg-6 login-left">
-										<img src="{{ asset('/') }}frontend/assets/img/login-banner.png" class="img-fluid" alt="Doccure Register">
+										<img src="assets/img/login-banner.png" class="img-fluid" alt="Doccure Register">
 									</div>
 									<div class="col-md-12 col-lg-6 login-right">
 										<div class="login-header">
-											<h3>Patient Register <a href="{{ route('doctorSignUpForm') }}">Are you a Doctor?</a></h3>
+											<h3>Patient Register <a href="doctor-register.php">Are you a Doctor?</a></h3>
 										</div>
 
 										<!-- Register Form -->
@@ -23,7 +23,7 @@
                                         @csrf
 											<div class="form-group form-focus">
 												<input type="text" name="name" class="form-control floating">
-                                                <label class="focus-label">Name</label>
+												<label class="focus-label">Name</label>
 											</div>
 											<div class="form-group form-focus">
 												<input type="email" name="email" class="form-control floating">

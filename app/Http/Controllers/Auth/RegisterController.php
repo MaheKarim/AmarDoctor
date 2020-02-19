@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\SiteSettings;
 use App\User;
 use Auth;
 use App\Http\Controllers\Controller;
@@ -87,7 +88,14 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'phn_number' => $data['phn_number'],
+
            //'username' => $data['username'],
         ]);
+    }
+
+    public function showRegistrationForm()
+    {
+        $settings = SiteSettings::find(1);
+        return view('auth.register', compact('settings'));
     }
 }
