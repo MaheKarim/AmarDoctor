@@ -6,6 +6,7 @@
 |--------------------------------------------------------------------------
 */
 
+Route::get('/key','FrontendController@key');
 Route::get('/install','FrontendController@install');
 Route::get('/clear','FrontendController@clear');
 Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
