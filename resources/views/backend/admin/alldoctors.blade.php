@@ -30,11 +30,12 @@
                             <table id="add-row" class="display table table-striped table-hover" >
                                 <thead>
                                 <tr>
-                                    <th>user Name</th>
-                                    <th>Doctor PHN NUMBER</th>
-
-                                    <th>Area Created At</th>
-                                    <th>Area Created At</th>
+                                    <th>Doctor Name</th>
+                                    <th>Doctor Email</th>
+                                    <th>Doctor PHN Number</th>
+                                    <th>Doctor Edu Degree</th>
+                                    <th>Doctor BMDC Certificate</th>
+                                    <th>Category</th>
 
                                 </tr>
                                 </thead>
@@ -42,9 +43,13 @@
                                 @foreach ($doctors as $doctor)
                                     <tr>
                                         <td>{{ $doctor->User->name }}</td>
+                                        <td>{{ $doctor->User->email }}</td>
                                         <td>{{ $doctor->User->phn_number }}</td>
                                         <td>{{ $doctor->edu_degree }}</td>
-                                        <td>{{ $doctor->about_me }}</td>
+                                        <td>
+                                            <img style="width: 50px; max-width: auto;" src="{{ asset('storage') }}/{{ $doctor->bmdc_cer}}">
+                                        </td>
+                                        <td>{{ $doctor->Category->category_name}}</td>
 
 
 

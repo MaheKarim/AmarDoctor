@@ -10,10 +10,6 @@
                 </h2>
                 <h4 class="text-white op-12 mb-2">You are authenticated as <b> {{   Auth::user()->role->name }} </b> </h4>
             </div>
-{{--            <div class="ml-md-auto py-2 py-md-0">--}}
-{{--                <a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>--}}
-{{--                <a href="#" class="btn btn-secondary btn-round">Add Customer</a>--}}
-{{--            </div>--}}
         </div>
     </div>
 </div>
@@ -21,7 +17,6 @@
     <div class="row mt--2">
 
    <!--  End Star -->
-
         <div class="col-md-4">
             <div class="card card-secondary">
                 <div class="card-body skew-shadow">
@@ -55,7 +50,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 <!--   Data Table Add -->
     <div class="row">

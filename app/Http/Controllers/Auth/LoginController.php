@@ -39,7 +39,7 @@ class LoginController extends Controller
             $this->redirectTo = route('nurse.dashboard');
 
         } else {
-            $this->redirectTo = route('search.doctor');
+            $this->redirectTo = route('user.dashboard');
         }
 
         // else {
@@ -62,13 +62,6 @@ class LoginController extends Controller
         $settings = SiteSettings::find(1);
 
         return view('auth.login', compact('settings'));
-    }
-
-    public function showRegisterForm()
-    {
-        $settings = SiteSettings::find(1);
-
-        return view('auth.register', compact('settings'));
     }
 
 }

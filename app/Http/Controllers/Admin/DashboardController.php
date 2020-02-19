@@ -24,24 +24,15 @@ class DashboardController extends Controller
         return view('backend.admin.status');
     }
 
-    public function status_only(Request $request)
-    {
-
-    }
-
     public function showDoctorAll()
     {
-        // $data = User::where('role_id', 2)->get();
         $doctors = Doctor::all();
-
-
         return view('backend.admin.alldoctors', compact('doctors'));
     }
 
     public function showAllUser()
     {
         $details_user = User::where('role_id',4)->get();
-
         return view('backend.admin.alluser',compact('details_user'));
     }
 }
