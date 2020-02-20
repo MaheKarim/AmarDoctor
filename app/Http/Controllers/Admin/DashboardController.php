@@ -16,7 +16,7 @@ class DashboardController extends Controller
     {
         $data = [ ];
         $data['booking_all'] = Booking::orderBy('created_at', 'desc')->get();
-       return view('backend.admin.dashboard', $data);
+        return view('backend.admin.dashboard', $data);
     }
 
     public function status_change($id)
