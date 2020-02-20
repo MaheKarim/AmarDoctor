@@ -27,6 +27,28 @@ class ProductController extends Controller
         return view('backend.product.product_add', $data);
     }
 
+    public function edit ($productID)
+    {
+        $data = [ ];
+        $data['products'] = Product::find($productID);
+        return view('backend.product.edit_product', $data);
+    }
+
+    public function update (Request $request)
+    {
+        $products = Product::findOrfail($request)->first();
+        $products->product_name = $request->product_name;
+        $products->description = $request->description;
+        $products->total_rate = $request->total_rate;
+        $products->package_rate = $request->package_rate;
+        $products->phn_number = $request->phn_number;
+        $products->product_slug = $request->product_slug;
+        $products->save();
+
+        session()->flash('success','Successfully Updated!');
+        return redirect(route('showProduct'));
+    }
+
     public function store(Request $request){
 
         $request->validate([
@@ -116,4 +138,6 @@ class ProductController extends Controller
         $product = Product::where('product_slug', $request->productUrl)->firstOrFail();
         return view('frontend.single_product', compact('product','settings'));
     }
+
+
 }

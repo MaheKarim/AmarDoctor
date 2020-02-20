@@ -70,7 +70,7 @@
                                         <td>
                                             <div class="form-button-action">
 
-                                             <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+                                             <a href="{{ route('editProduct', $product->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
                                             <a href="{{ route('deleteProduct', $product->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
