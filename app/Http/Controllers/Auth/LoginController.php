@@ -39,7 +39,7 @@ class LoginController extends Controller
             $this->redirectTo = route('nurse.dashboard');
 
         } else {
-            $this->redirectTo = route('user.dashboard');
+            $this->redirectTo = url('/');
         }
 
          $this->middleware('guest')->except('logout');

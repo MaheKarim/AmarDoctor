@@ -25,6 +25,14 @@ class NurseAuthController extends Controller
     public function registerNurse(Request $request)
     {
         // Validation Need
+        $request->validate([
+            'name' => 'required|max:255|min:6',
+            'username' => 'required|unique:users|min:4',
+            'phn_number' => 'required|unique:users|min:11',
+            'email' => 'unique:users|required',
+
+        ]);
+
         $user_id = User::insertGetId([
             'role_id' => 3,
             'name' => $request->name,

@@ -14,6 +14,15 @@
                         <div class="col-md-12 col-lg-6 login-right">
                             <div class="login-header">
                             <h3>Nurse Register <a href="{{ route('register') }}">Not a Nurse?</a></h3>
+
+                                @if (count($errors)>0)
+                                    <ul>
+                                        @foreach($errors->all() as $error)
+                                            <li class="alert alert-danger">{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+
                             </div>
 
                             <!-- Register Form -->

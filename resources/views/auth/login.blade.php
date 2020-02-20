@@ -16,6 +16,13 @@
                         <div class="col-md-12 col-lg-6 login-right">
                             <div class="login-header">
                                 <h3>Login <span>AmarDoctor</span></h3>
+                                @if (count($errors)>0)
+                                    <ul>
+                                        @foreach($errors->all() as $error)
+                                            <li class="alert alert-danger">{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
                             </div>
                             <form action="{{ route('login') }}" method="POST">
                                 @csrf

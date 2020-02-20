@@ -16,6 +16,14 @@
 									<div class="col-md-12 col-lg-6 login-right">
 										<div class="login-header">
 											<h3>Patient Register <a href="{{ route('doctorSignUpForm') }}">Are you a Doctor?</a></h3>
+
+                                         @if (count($errors)>0)
+                                             <ul>
+                                                 @foreach($errors->all() as $error)
+                                                     <li class="alert alert-danger">{{ $error }}</li>
+                                                     @endforeach
+                                             </ul>
+                                         @endif
 										</div>
 
 										<!-- Register Form -->
@@ -46,7 +54,7 @@
 												<label class="focus-label">Confirm Password</label>
 											</div>
 											<div class="text-right">
-												<a class="forgot-link" href="login.php">Already have an account?</a>
+												<a class="forgot-link" href="{{ url('/login') }}">Already have an account?</a>
 											</div>
 											<button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Signup</button>
 
