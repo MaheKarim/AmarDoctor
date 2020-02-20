@@ -33,6 +33,10 @@
 												<input type="text" name="phn_number" class="form-control floating">
 												<label class="focus-label">PHN Number</label>
 											</div>
+										    <div class="form-group form-focus">
+												<input type="text" name="username" class="form-control floating">
+												<label class="focus-label">Username</label>
+											</div>
 											<div class="form-group form-focus">
 												<input type="password" name="password" class="form-control floating">
 												<label class="focus-label">Create Password</label>
