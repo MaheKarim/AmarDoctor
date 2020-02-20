@@ -5,7 +5,7 @@
     <div class="page-inner">
         <div class="page-header">
             <h4 class="page-title">
-                @yield('title','Show Doctor')
+                @yield('title','Show Nurse')
             </h4>
         </div>
         <div class="row">
@@ -30,12 +30,12 @@
                             <table id="add-row" class="display table table-striped table-hover" >
                                 <thead>
                                 <tr>
-                                    <th>Patient Name</th>
-                                    <th>Patient Mail</th>
-                                    <th>Patient PHN NUMBER</th>
-                                    <th>Patient Username</th>
-                                    <th>Patient ID Created</th>
-
+                                    <th>Nurse Name</th>
+                                    <th>Nurse Mail</th>
+                                    <th>Nurse PHN Number</th>
+                                    <th>Nurse Username</th>
+                                    <th>Nurse Reg No</th>
+                                    <th>Nurse ID Created</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -45,6 +45,7 @@
                                         <td>{{ $detail->email }}</td>
                                         <td>{{ $detail->phn_number }}</td>
                                         <td>{{ $detail->username }}</td>
+                                        <td>{{ $detail->nursing_reg_number }}</td>
                                         <td>{{ $detail->created_at }}</td>
 
                                         <td>

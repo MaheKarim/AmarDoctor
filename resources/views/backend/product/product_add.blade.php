@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Add Dokan
+    Add Products
 @endsection
 @section('content')
 <div class="page-inner">

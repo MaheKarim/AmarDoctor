@@ -89,7 +89,7 @@
                             <tr>
                                 <td>{{ $booking->User->name }}</td>
                                 <td>{{ $booking->get_doctor_info->name }}</td>
-                                <td>{{ $booking->get_doctor_details->Category->category_name }}</td>
+                               <td>{{ $booking->get_doctor_details->Category->category_name }}</td>
                                 <td>{{ $booking->created_at->format('jS F Y') }}</td>
                                 <td>{{ $booking->User->phn_number }}</td>
                                 <td>{!! $booking->Status->status_name !!}</td>
