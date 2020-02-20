@@ -19,4 +19,9 @@ class Nurse extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function Category()
+    {
+        return $this->belongsTo('App\Category' ,'category_name_id' ,'id');
+    }
 }

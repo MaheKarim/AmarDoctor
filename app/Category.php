@@ -12,4 +12,8 @@ class Category extends Model
     {
         return $this->hasMany('App\Doctor');
     }
+    public function Nurse()
+    {
+        return $this->hasMany('App\Nurse');
+    }
 }
