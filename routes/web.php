@@ -6,13 +6,22 @@
 |--------------------------------------------------------------------------
 */
 
+use Illuminate\Support\Facades\Artisan;
+
 Route::get('/install','FrontendController@install');
-Route::get('/clear','FrontendController@clear');
+
+Route::get('/clear', function () {
+    Artisan::call('route:clear');
+    Artisan::call('route:cache');
+    Artisan::call('view:clear');
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+    return 'Clear and Cache';
+});
+
 Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 Route::get('/dashboard', function () { return redirect (route('user.dashboard')); });
 Route::get('/home', function () { return redirect (route('user.dashboard')); });
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +41,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function() {
 
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-    Route::get('/status-change/{id}','DashboardController@status_change')->name('status.change');
+  //  Route::get('/status-change/{id}','DashboardController@status_change')->name('status.change');
     Route::post('status-change','DashboardController@status_only')->name('status.only');
     Route::get('/password/change','ProfileController@passChange')->name('change.password');
     Route::post('password/change','ProfileController@passChangeReq')->name('changepaswword');
@@ -44,7 +53,10 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::get('show/all_nurse','DashboardController@showAllNurse')->name('showAllNurse');
 
 
+
 });
+Route::get('/status-change/{id}','BookingController@statusChangeForBooking')->name('statusChangePage');
+Route::post('status_change','BookingController@bookingStatusStore')->name('statusChangeOpt');
 
     Route::get('/area/view','AreaController@show')->name('showArea');
     Route::get('/area/add','AreaController@index')->name('addArea');
@@ -126,4 +138,6 @@ Route::get('/search/doctor', 'SearchController@search_doctor')->name('search.doc
 // Booking Controller
 Route::get('booking/confirmation/{id}/done','BookingController@booking_confirmation')->name('booking.confirmation');
 Route::get('/booking-show','BookingController@showbooking')->name('bookingShow');
+
+
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');

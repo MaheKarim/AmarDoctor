@@ -31,11 +31,4 @@ class FrontendController extends Controller
         return 'Migrate, Storage:Link, DB Seed Done!';
     }
 
-    public function clear ()
-    {
-        Artisan::call('route:clear');
-        Artisan::call('view:clear');
-        Artisan::call('config:clear');
-        Artisan::call('cache:clear');
-    }
 }

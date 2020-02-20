@@ -94,7 +94,7 @@
                                 <td>{{ $booking->User->phn_number }}</td>
                                 <td>{!! $booking->Status->status_name !!}</td>
                                 <td>
-                                    <a href="{{ route('admin.status.change', $booking->id )}}" type="button" class="btn btn-warning">Edit</a>
+                                    <a href="{{ route('statusChangePage', $booking->id )}}" type="button" class="btn btn-warning">Edit</a>
                                 </td>
                             </tr>
                 @endforeach

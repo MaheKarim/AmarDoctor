@@ -27,4 +27,22 @@ class BookingController extends Controller
 
       return view('backend.multi-dashboard.user._home_user', compact('bookings','settings'));
     }
+
+    public function statusChangeForBooking($id)
+    {
+        $data = [ ];
+        $data['bookings'] = Booking::find($id);
+        return view('backend.booking.change_status', $data);
+    }
+
+    public function bookingStatusStore(Request $request)
+    {
+        // Validation Will Here
+        $bookings = Booking::findOrfail($request)->first();
+        $bookings->status = $request->status;
+        $bookings->save();
+
+        session()->flash('success','Successfully Updated!');
+        return redirect(route('admin.dashboard'));
+    }
 }
