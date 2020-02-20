@@ -15,7 +15,7 @@ class DashboardController extends Controller
     public function index()
     {
         $data = [ ];
-        $data['booking_all'] = Booking::all();
+        $data['booking_all'] = Booking::orderBy('created_at', 'desc')->get();
        return view('backend.admin.dashboard', $data);
     }
 

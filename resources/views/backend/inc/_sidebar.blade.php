@@ -60,7 +60,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.showAllNurse') }}">
-                        <i class="fa fa-user-circle-o"></i>
+                        <i class="fa fa-ambulance" aria-hidden="true"></i>
                         <p>Show All Nurse</p>
                             {{-- <span class="badge badge-success">4</span> --}}
                     </a>
@@ -94,13 +94,13 @@
                             {{-- <span class="badge badge-success">4</span> --}}
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Review / Testimonial</p>
-                            <span class="badge badge-success">4</span>
-                    </a>
-                </li>
+                {{--<li class="nav-item">--}}
+                    {{--<a href="#">--}}
+                            {{--<i class="fas fa-quote-left"></i>--}}
+                            {{--<p>Review / Testimonial</p>--}}
+                            {{--<span class="badge badge-success">4</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
 
                     <li class="nav-section">
                         <span class="sidebar-mini-icon">
