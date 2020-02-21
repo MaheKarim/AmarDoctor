@@ -16,7 +16,7 @@
 
                             <a href="{{route('addCategory')}}" class="btn btn-primary btn-round ml-auto">
                                 <i class="fa fa-plus"></i>
-                                Add Cat
+                                Add Category
                             </a>
                         </div>
                     </div>
@@ -28,17 +28,16 @@
                             <div class="alert alert-success">
                                 {{ session()->get('success') }}
                             </div>
-                    @endif
-                    <!-- Notification End Here -->
+                        @endif
+                        <!-- Notification End Here -->
 
                         <div class="table-responsive">
                             <table id="add-row" class="display table table-striped table-hover" >
                                 <thead>
                                 <tr>
-                                    <th>Area Name</th>
+                                    <th>Category Name</th>
+                                    <th>Category Created At</th>
 
-                                    <th>Area Created At</th>
-                                    <th>Area Updated At</th>
                                     <th style="width: 10%">Action</th>
                                 </tr>
                                 </thead>
@@ -48,7 +47,7 @@
                                         <td>{{ $category->category_name }}</td>
 
                                         <td>{{ $category->created_at }}</td>
-                                        <td>{{ $category->updated_at }}</td>
+
                                         <td>
                                             <div class="form-button-action">
                                                 <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">

@@ -54,6 +54,13 @@
 <!--   Data Table Add -->
     <div class="row">
         <div class="col-md-12">
+            <!-- Notification Start Here -->
+            @if (session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+        @endif
+        <!-- Notification End Here -->
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Appointment List</h4>
@@ -70,6 +77,8 @@
                                 <th>User PHN No</th>
                                 <th>Status</th>
                                 <th>Action</th>
+                                <th>Delete</th>
+
                             </tr>
                             </thead>
                             <tfoot>
@@ -81,6 +90,8 @@
                                 <th>User PHN No</th>
                                 <th>Status</th>
                                 <th>Action</th>
+                                <th>Delete</th>
+
                             </tr>
                             </tfoot>
                             <tbody>
@@ -95,7 +106,12 @@
                                 <td>{!! $booking->Status->status_name !!}</td>
                                 <td>
                                     <a href="{{ route('statusChangePage', $booking->id )}}" type="button" class="btn btn-warning">Edit</a>
+
                                 </td>
+                                <td>
+                                    <a href="{{ route('bookingDelete', $booking->id )}}" type="button" class="btn btn-danger">Delete</a>
+                                </td>
+
                             </tr>
                 @endforeach
                             </tbody>

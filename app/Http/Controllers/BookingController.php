@@ -45,4 +45,13 @@ class BookingController extends Controller
         session()->flash('success','Successfully Updated!');
         return redirect(route('admin.dashboard'));
     }
+
+    public function delete($id)
+    {
+        $data = [ ];
+        $data['bookings'] = Booking::find($id);
+        $data['bookings']->delete();
+        session()->flash('success','Booking Deleted Successfully!');
+        return redirect(route('admin.dashboard'));
+    }
 }
