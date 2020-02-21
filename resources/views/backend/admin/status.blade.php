@@ -58,19 +58,21 @@
                                 <form action="{{ route('admin.status.only') }}" method="POST">
                                     <!--  -->
                                     @csrf
+                                    {{--@php($statuses= \App\Status::all()) --}}
                                     <div class="form-group">
                                         <label class="focus-label">Select Your Status</label>
                                         <select name="status" class="form-control select">
-                                            @php($statuses= \App\Status::all())
+
                                             @foreach ($statuses as $status)
-                                                <option value="{{ $status->id }}">{{ $status->status_name }}</option>
+                                                <option value="{{ $bookings->id }}">{{ $status->status_name }}</option>
                                             @endforeach
-                                        </select> </div>
+                                        </select>
+                                    </div>
                             </div>
                         </div>
                         <div class="card-action">
                             <button class="btn btn-success">Submit</button>
-                            <a href="{{ route('showCategory') }}" class="btn btn-danger">Cancel</a>
+                            <a href="{{ route('admin.dashboard') }}" class="btn btn-danger">Cancel</a>
                         </div>
                         </form>
                     </div>

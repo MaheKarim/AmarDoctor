@@ -20,7 +20,7 @@
                          <li class="breadcrumb-item active" aria-current="page">Doctor Profile</li>
                      </ol>
                  </nav>
-                 <h2 class="breadcrumb-title">Doctor Profile</h2>
+                 <h2 class="breadcrumb-title">Doctor {{ $user->name }} Profile</h2>
              </div>
          </div>
      </div>
@@ -36,12 +36,16 @@
                  <div class="doctor-widget">
                      <div class="doc-info-left">
                          <div class="doctor-img">
-                             <img src="{{ asset('storage') }}/{{ $user->profile_image }}" class="img-fluid" alt="User Image">
+                             @if ($user->profile_image == "default.png")
+                                 <img src="{{ asset('/') }}default/default.png" alt="User Image" style="width: 150px; max-width: 100%">
+                                 @else
+                                 <img src="{{ asset('storage') }}/{{ $user->profile_image }}" class="img-fluid" alt="User Image">
+                             @endif
                          </div>
                          <div class="doc-info-cont">
                              <h4 class="doc-name">{{ $user->name }}</h4>
-                             <p class="doc-speciality">BDS, MDS - Oral & Maxillofacial Surgery</p>
-                             <p class="doc-department"><img src="{{ asset('/') }}frontend/assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">Dentist</p>
+                             <p class="doc-speciality">{{ $user->Doctor->edu_degree }}</p>
+                             <p class="doc-department"><img src="{{ asset('/') }}frontend/assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">{{ $user->Doctor->Category->category_name }}</p>
                              <div class="rating">
                                  <i class="fas fa-star filled"></i>
                                  <i class="fas fa-star filled"></i>
@@ -51,40 +55,27 @@
                                  <span class="d-inline-block average-rating">(35)</span>
                              </div>
                              <div class="clinic-details">
-                                 <p class="doc-location"><i class="fas fa-map-marker-alt"></i> Newyork, USA - <a href="javascript:void(0);">Get Directions</a></p>
+                                 <p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{ $user->Doctor->Area->area_name }} - <a href="javascript:void(0);">Get Directions</a></p>
 
                              </div>
-                             <div class="clinic-services">
-                                 <span>Dental Fillings</span>
-                                 <span>Teeth Whitneing</span>
-                             </div>
+                             {{--<div class="clinic-services">--}}
+                                 {{--<span>Dental Fillings</span>--}}
+                                 {{--<span>Teeth Whitneing</span>--}}
+                             {{--</div>--}}
                          </div>
                      </div>
                      <div class="doc-info-right">
                          <div class="clini-infos">
                              <ul>
                                  <li><i class="far fa-thumbs-up"></i> 99%</li>
-                                 <li><i class="far fa-comment"></i> 35 Feedback</li>
-                                 <li><i class="fas fa-map-marker-alt"></i> Newyork, USA</li>
-                                 <li><i class="far fa-money-bill-alt"></i> $100 per hour </li>
+
+                                 <li><i class="fas fa-map-marker-alt"></i> {{ $user->Doctor->Area->area_name }}</li>
+                                 <li><i class="far fa-money-bill-alt"></i> ৳500-1000 per visit </li>
                              </ul>
                          </div>
-                         <div class="doctor-action">
-                             <a href="javascript:void(0)" class="btn btn-white fav-btn">
-                                 <i class="far fa-bookmark"></i>
-                             </a>
-                             <a href="chat.php" class="btn btn-white msg-btn">
-                                 <i class="far fa-comment-alt"></i>
-                             </a>
-                             <a href="javascript:void(0)" class="btn btn-white call-btn" data-toggle="modal" data-target="#voice_call">
-                                 <i class="fas fa-phone"></i>
-                             </a>
-                             <a href="javascript:void(0)" class="btn btn-white call-btn" data-toggle="modal" data-target="#video_call">
-                                 <i class="fas fa-video"></i>
-                             </a>
-                         </div>
+
                          <div class="clinic-booking">
-                             <a class="apt-btn" href="booking.php">Book Appointment</a>
+                             <a class="apt-btn" href="{{ route('booking.confirmation' , $user->id) }}">Book For Appointment</a>
                          </div>
                      </div>
                  </div>
@@ -118,42 +109,42 @@
                                  <!-- About Details -->
                                  <div class="widget about-widget">
                                      <h4 class="widget-title">About Me</h4>
-                                     <p> }}.</p>
+                                     <p> {{ $user->Doctor->about_me }}</p>
                                  </div>
                                  <!-- /About Details -->
 
                                  <!-- Education Details -->
-                                 <div class="widget education-widget">
-                                     <h4 class="widget-title">Education</h4>
-                                     <div class="experience-box">
-                                         <ul class="experience-list">
-                                             <li>
-                                                 <div class="experience-user">
-                                                     <div class="before-circle"></div>
-                                                 </div>
-                                                 <div class="experience-content">
-                                                     <div class="timeline-content">
-                                                         <a href="#/" class="name">American Dental Medical University</a>
-                                                         <div>BDS</div>
-                                                         <span class="time">1998 - 2003</span>
-                                                     </div>
-                                                 </div>
-                                             </li>
-                                             <li>
-                                                 <div class="experience-user">
-                                                     <div class="before-circle"></div>
-                                                 </div>
-                                                 <div class="experience-content">
-                                                     <div class="timeline-content">
-                                                         <a href="#/" class="name">American Dental Medical University</a>
-                                                         <div>MDS</div>
-                                                         <span class="time">2003 - 2005</span>
-                                                     </div>
-                                                 </div>
-                                             </li>
-                                         </ul>
-                                     </div>
-                                 </div>
+                                 {{--<div class="widget education-widget">--}}
+                                     {{--<h4 class="widget-title">Education</h4>--}}
+                                     {{--<div class="experience-box">--}}
+                                         {{--<ul class="experience-list">--}}
+                                             {{--<li>--}}
+                                                 {{--<div class="experience-user">--}}
+                                                     {{--<div class="before-circle"></div>--}}
+                                                 {{--</div>--}}
+                                                 {{--<div class="experience-content">--}}
+                                                     {{--<div class="timeline-content">--}}
+                                                         {{--<a href="#/" class="name">American Dental Medical University</a>--}}
+                                                         {{--<div>BDS</div>--}}
+                                                         {{--<span class="time">1998 - 2003</span>--}}
+                                                     {{--</div>--}}
+                                                 {{--</div>--}}
+                                             {{--</li>--}}
+                                             {{--<li>--}}
+                                                 {{--<div class="experience-user">--}}
+                                                     {{--<div class="before-circle"></div>--}}
+                                                 {{--</div>--}}
+                                                 {{--<div class="experience-content">--}}
+                                                     {{--<div class="timeline-content">--}}
+                                                         {{--<a href="#/" class="name">American Dental Medical University</a>--}}
+                                                         {{--<div>MDS</div>--}}
+                                                         {{--<span class="time">2003 - 2005</span>--}}
+                                                     {{--</div>--}}
+                                                 {{--</div>--}}
+                                             {{--</li>--}}
+                                         {{--</ul>--}}
+                                     {{--</div>--}}
+                                 {{--</div>--}}
                                  <!-- /Education Details -->
 
                                  <!-- Experience Details -->

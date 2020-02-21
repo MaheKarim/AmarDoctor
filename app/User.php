@@ -47,9 +47,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Booking');
     }
-    public function getRouteKeyName()
+
+    public function Doctor()
     {
-      return 'username';
-    }
+        return $this->hasOne('App\Doctor', 'user_id', 'id');
+   }
 
 }

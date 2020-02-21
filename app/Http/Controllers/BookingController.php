@@ -38,9 +38,9 @@ class BookingController extends Controller
     public function bookingStatusStore(Request $request)
     {
         // Validation Will Here
-        $bookings = Booking::findOrfail($request)->first();
-        $bookings->status = $request->status;
-        $bookings->save();
+        $bookings = Booking::findOrfail($request->id)->update([
+            'status' => $request->status
+        ]);
 
         session()->flash('success','Successfully Updated!');
         return redirect(route('admin.dashboard'));

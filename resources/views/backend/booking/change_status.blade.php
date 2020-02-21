@@ -26,11 +26,12 @@
 
                                     <!--- Booking & Status -->
                                     <div class="form-group">
+                                        <input type="hidden" name="id" value="{{ $bookings->id }}">
                                         <label>Update Status</label>
                                         <select name="status" class="form-control select">
                                             @php($statuss= \App\Status::all())
                                             @foreach ($statuss as $status)
-                                                <option {{ ( $bookings->status == $status->id) }} value="{{ $bookings->id }}">{{$bookings->status}}</option>
+                                                <option {{ ($bookings->status == $status->id) ? 'selected' : '' }} value="{{ $status->id }}">{{$status->status_name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
