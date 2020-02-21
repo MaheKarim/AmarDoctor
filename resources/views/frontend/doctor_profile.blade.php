@@ -36,12 +36,12 @@
                  <div class="doctor-widget">
                      <div class="doc-info-left">
                          <div class="doctor-img">
-                             <img src="assets/img/doctors/doctor-thumb-02.jpg" class="img-fluid" alt="User Image">
+                             <img src="{{ asset('storage') }}/{{ $user->profile_image }}" class="img-fluid" alt="User Image">
                          </div>
                          <div class="doc-info-cont">
-                             <h4 class="doc-name">Dr. Darren Elder</h4>
+                             <h4 class="doc-name">{{ $user->name }}</h4>
                              <p class="doc-speciality">BDS, MDS - Oral & Maxillofacial Surgery</p>
-                             <p class="doc-department"><img src="assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">Dentist</p>
+                             <p class="doc-department"><img src="{{ asset('/') }}frontend/assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">Dentist</p>
                              <div class="rating">
                                  <i class="fas fa-star filled"></i>
                                  <i class="fas fa-star filled"></i>
@@ -52,28 +52,7 @@
                              </div>
                              <div class="clinic-details">
                                  <p class="doc-location"><i class="fas fa-map-marker-alt"></i> Newyork, USA - <a href="javascript:void(0);">Get Directions</a></p>
-                                 <ul class="clinic-gallery">
-                                     <li>
-                                         <a href="assets/img/features/feature-01.jpg" data-fancybox="gallery">
-                                             <img src="assets/img/features/feature-01.jpg" alt="Feature">
-                                         </a>
-                                     </li>
-                                     <li>
-                                         <a href="assets/img/features/feature-02.jpg" data-fancybox="gallery">
-                                             <img  src="assets/img/features/feature-02.jpg" alt="Feature Image">
-                                         </a>
-                                     </li>
-                                     <li>
-                                         <a href="assets/img/features/feature-03.jpg" data-fancybox="gallery">
-                                             <img src="assets/img/features/feature-03.jpg" alt="Feature">
-                                         </a>
-                                     </li>
-                                     <li>
-                                         <a href="assets/img/features/feature-04.jpg" data-fancybox="gallery">
-                                             <img src="assets/img/features/feature-04.jpg" alt="Feature">
-                                         </a>
-                                     </li>
-                                 </ul>
+
                              </div>
                              <div class="clinic-services">
                                  <span>Dental Fillings</span>
@@ -123,15 +102,7 @@
                          <li class="nav-item">
                              <a class="nav-link active" href="#doc_overview" data-toggle="tab">Overview</a>
                          </li>
-                         {{--<li class="nav-item">--}}
-                             {{--<a class="nav-link" href="#doc_locations" data-toggle="tab">Locations</a>--}}
-                         {{--</li>--}}
-                         {{--<li class="nav-item">--}}
-                             {{--<a class="nav-link" href="#doc_reviews" data-toggle="tab">Reviews</a>--}}
-                         {{--</li>--}}
-                         {{--<li class="nav-item">--}}
-                             {{--<a class="nav-link" href="#doc_business_hours" data-toggle="tab">Business Hours</a>--}}
-                         {{--</li>--}}
+
                      </ul>
                  </nav>
                  <!-- /Tab Menu -->
@@ -147,7 +118,7 @@
                                  <!-- About Details -->
                                  <div class="widget about-widget">
                                      <h4 class="widget-title">About Me</h4>
-                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                     <p> }}.</p>
                                  </div>
                                  <!-- /About Details -->
 

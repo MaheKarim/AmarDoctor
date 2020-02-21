@@ -29,7 +29,6 @@ Route::get('/home', function () { return redirect (route('user.dashboard')); });
 |--------------------------------------------------------------------------
 */
 Auth::routes();
-
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 /*
@@ -129,7 +128,7 @@ Route::group(['as'=>'user.' ,'prefix' => 'user', 'namespace' => 'User', 'middlew
 });
 
 // Profile See  {Don't Work}
-Route::get('profile/{profile}' , 'ProfileController@doctor')->name('doctor.profile');
+Route::get('profile/{username}' , 'ProfileController@show')->name('profile.show');
 
 // Doctor Search
 Route::get('/search/your/doctor', 'SearchController@search')->name('search.doctor');

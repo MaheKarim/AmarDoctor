@@ -49,14 +49,14 @@
                                                 @if($doctor->user->profile_image == "default.png")
                                                     <img src="{{ asset('/') }}default/default.png" alt="User Image">
                                                 @else
-                                                    <img src="{{asset('storage')}}/{{$doctor->user->profile_image}}" class="img-fluid" alt="User Image">
+                                                    <img src="{{asset('storage')}}/{{$doctor->User->profile_image}}" class="img-fluid" alt="User Image">
                                                 @endif
                                             </div>
 
                                         </a>
                                     </div>
                                     <div class="doc-info-cont">
-                                        <h4 class="doc-name"><a href="doctor-profile.php">{{ $doctor->user->name }}</a></h4>
+                                        <h4 class="doc-name"><a href="">{{ $doctor->user->name }}</a></h4>
                                         <p class="doc-speciality">{{$doctor->edu_degree}}</p>
                                         <h5 class="doc-department"><img src="{{ asset('/') }}frontend/assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">{{ $doctor->Category->category_name}}</h5>
                                         <div class="rating">
