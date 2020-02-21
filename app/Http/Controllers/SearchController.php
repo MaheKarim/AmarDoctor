@@ -14,8 +14,8 @@ class SearchController extends Controller
 
     public function search ()
     {
-
-        return view('frontend.searchpage');
+        $settings = SiteSettings::find(1);
+        return view('frontend.searchpage', compact('settings'));
     }
 
     public function search_doctor(Request $request)
@@ -32,7 +32,6 @@ class SearchController extends Controller
 
         $doctors = Doctor::where($query)->get();
         $settings = SiteSettings::find(1);
-
         return view('frontend.search_doctor_profile' , compact('doctors','settings'));
     }
 }
