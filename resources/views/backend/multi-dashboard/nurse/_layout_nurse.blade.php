@@ -46,9 +46,9 @@
 															</div>
 														</div>
 														<div class="dash-widget-info">
-															<h6>Account Created</h6>
-															<h3> {{Auth::User()->created_at->format('jS F Y') }} </h3>
-															<p class="text-muted">Till Today</p>
+															<h6>Your Username</h6>
+															<h3> {{Auth::User()->username }} </h3>
+
 														</div>
 													</div>
 												</div>
@@ -61,9 +61,9 @@
 															</div>
 														</div>
 														<div class="dash-widget-info">
-															<h6>Today Patient</h6>
-															<h3>160</h3>
-															<p class="text-muted">06, Nov 2019</p>
+															<h6>Your Email</h6>
+															<h3>{{ Auth::user()->email }}</h3>
+
 														</div>
 													</div>
 												</div>
@@ -76,9 +76,9 @@
 															</div>
 														</div>
 														<div class="dash-widget-info">
-															<h6>Appoinments</h6>
-															<h3>85</h3>
-															<p class="text-muted">06, Apr 2019</p>
+															<h6>Account Created</h6>
+															<h3>{{ Auth::user()->created_at->format('jS F Y') }}</h3>
+
 														</div>
 													</div>
 												</div>

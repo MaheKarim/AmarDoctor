@@ -9,7 +9,7 @@
                     <a href="#" >
                         <span>
                             {{ Auth::user()->name }}
-                            <span class="user-level"> {{ Auth::user()->role->name }} </span>
+                            <span class="user-level"> {{ Auth::user()->username }} </span>
                             <span class="caret"></span>
                         </span>
                     </a>

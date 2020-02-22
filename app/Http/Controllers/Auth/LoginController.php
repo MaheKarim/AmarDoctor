@@ -24,7 +24,7 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    protected function authenticated (Request $request, $user)
+    public function authenticated (Request $request, $user)
     {
         if (Auth::check() && Auth::user()->role->id == 1 ) {
             $this->redirectTo = route('admin.dashboard');
@@ -57,6 +57,27 @@ class LoginController extends Controller
     {
         $settings = SiteSettings::find(1);
         return view('auth.login', compact('settings'));
+    }
+
+
+    public function field()
+    {
+        if (filter_var(request()->phn_number,FILTER_VALIDATE_EMAIL)){
+            return 'email';
+        }else{
+            return 'phn_number';
+        }
+    }
+    public function login()
+    {
+        // Check Right Position
+      //  return $this->field();
+        if (Auth::attempt([$this->field()=>request()->phn_number, 'password' => \request()->password ])){
+           // Wanna Return Authenticated function
+            return redirect()->intended('/');
+        }else{
+            return redirect()->back()->withInput('phn_number');
+        }
     }
 
 }

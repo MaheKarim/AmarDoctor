@@ -27,8 +27,8 @@
                             <form action="{{ route('login') }}" method="POST">
                                 @csrf
                                 <div class="form-group form-focus">
-                                    <input type="email" name="email" class="form-control floating">
-                                    <label class="focus-label">Email</label>
+                                    <input type="text" name="phn_number" class="form-control floating">
+                                    <label class="focus-label">Email Or PHN Number</label>
                                 </div>
                                 <div class="form-group form-focus">
                                     <input type="password" name="password" class="form-control floating">
