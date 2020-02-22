@@ -46,9 +46,16 @@
                     <div class="col-md-4 col-3"><h6 style="font-weight:bold;"> +880{{ $product->phn_number }}</h6></div>
                 </div>
                 <hr>
+                @auth
                 <div class="btn-search">
                     <a href="{{ route('productBooking', $product->id) }}" class="btn btn-block"> Book Now </a>
                 </div>
+                @endauth
+                @if (!Auth::check())
+
+                <span style="background-color: aqua">For Buy This Product, You Have To Login!</span>
+
+            @endif
                 <!-- Modal Start Here -->
 
                 <!-- Button trigger modal -->

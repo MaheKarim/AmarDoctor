@@ -46,14 +46,7 @@
                              <h4 class="doc-name">{{ $user->name }}</h4>
                              <p class="doc-speciality">{{ $user->Doctor->edu_degree }}</p>
                              <p class="doc-department"><img src="{{ asset('/') }}frontend/assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">{{ $user->Doctor->Category->category_name }}</p>
-                             <div class="rating">
-                                 <i class="fas fa-star filled"></i>
-                                 <i class="fas fa-star filled"></i>
-                                 <i class="fas fa-star filled"></i>
-                                 <i class="fas fa-star filled"></i>
-                                 <i class="fas fa-star"></i>
-                                 <span class="d-inline-block average-rating">(35)</span>
-                             </div>
+
                              <div class="clinic-details">
                                  <p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{ $user->Doctor->Area->area_name }} - <a href="javascript:void(0);">Get Directions</a></p>
 
@@ -73,10 +66,11 @@
                                  <li><i class="far fa-money-bill-alt"></i> ৳500-1000 per visit </li>
                              </ul>
                          </div>
-
+                         @auth
                          <div class="clinic-booking">
                              <a class="apt-btn" href="{{ route('booking.confirmation' , $user->id) }}">Book For Appointment</a>
                          </div>
+                         @endauth
                      </div>
                  </div>
              </div>
@@ -148,51 +142,51 @@
                                  <!-- /Education Details -->
 
                                  <!-- Experience Details -->
-                                 <div class="widget experience-widget">
-                                     <h4 class="widget-title">Work & Experience</h4>
-                                     <div class="experience-box">
-                                         <ul class="experience-list">
-                                             <li>
-                                                 <div class="experience-user">
-                                                     <div class="before-circle"></div>
-                                                 </div>
-                                                 <div class="experience-content">
-                                                     <div class="timeline-content">
-                                                         <a href="#/" class="name">Glowing Smiles Family Dental Clinic</a>
-                                                         <span class="time">2010 - Present (5 years)</span>
-                                                     </div>
-                                                 </div>
-                                             </li>
-                                             <li>
-                                                 <div class="experience-user">
-                                                     <div class="before-circle"></div>
-                                                 </div>
-                                                 <div class="experience-content">
-                                                     <div class="timeline-content">
-                                                         <a href="#/" class="name">Comfort Care Dental Clinic</a>
-                                                         <span class="time">2007 - 2010 (3 years)</span>
-                                                     </div>
-                                                 </div>
-                                             </li>
-                                             <li>
-                                                 <div class="experience-user">
-                                                     <div class="before-circle"></div>
-                                                 </div>
-                                                 <div class="experience-content">
-                                                     <div class="timeline-content">
-                                                         <a href="#/" class="name">Dream Smile Dental Practice</a>
-                                                         <span class="time">2005 - 2007 (2 years)</span>
-                                                     </div>
-                                                 </div>
-                                             </li>
-                                         </ul>
-                                     </div>
-                                 </div>
+                                 {{--<div class="widget experience-widget">--}}
+                                     {{--<h4 class="widget-title">Work & Experience</h4>--}}
+                                     {{--<div class="experience-box">--}}
+                                         {{--<ul class="experience-list">--}}
+                                             {{--<li>--}}
+                                                 {{--<div class="experience-user">--}}
+                                                     {{--<div class="before-circle"></div>--}}
+                                                 {{--</div>--}}
+                                                 {{--<div class="experience-content">--}}
+                                                     {{--<div class="timeline-content">--}}
+                                                         {{--<a href="#/" class="name">Glowing Smiles Family Dental Clinic</a>--}}
+                                                         {{--<span class="time">2010 - Present (5 years)</span>--}}
+                                                     {{--</div>--}}
+                                                 {{--</div>--}}
+                                             {{--</li>--}}
+                                             {{--<li>--}}
+                                                 {{--<div class="experience-user">--}}
+                                                     {{--<div class="before-circle"></div>--}}
+                                                 {{--</div>--}}
+                                                 {{--<div class="experience-content">--}}
+                                                     {{--<div class="timeline-content">--}}
+                                                         {{--<a href="#/" class="name">Comfort Care Dental Clinic</a>--}}
+                                                         {{--<span class="time">2007 - 2010 (3 years)</span>--}}
+                                                     {{--</div>--}}
+                                                 {{--</div>--}}
+                                             {{--</li>--}}
+                                             {{--<li>--}}
+                                                 {{--<div class="experience-user">--}}
+                                                     {{--<div class="before-circle"></div>--}}
+                                                 {{--</div>--}}
+                                                 {{--<div class="experience-content">--}}
+                                                     {{--<div class="timeline-content">--}}
+                                                         {{--<a href="#/" class="name">Dream Smile Dental Practice</a>--}}
+                                                         {{--<span class="time">2005 - 2007 (2 years)</span>--}}
+                                                     {{--</div>--}}
+                                                 {{--</div>--}}
+                                             {{--</li>--}}
+                                         {{--</ul>--}}
+                                     {{--</div>--}}
+                                 {{--</div>--}}
                                  <!-- /Experience Details -->
 
                                  <!-- Awards Details -->
                                  <div class="widget awards-widget">
-                                     <h4 class="widget-title">Awards</h4>
+                                     <h4 class="widget-title">Address</h4>
                                      <div class="experience-box">
                                          <ul class="experience-list">
                                              <li>
@@ -201,67 +195,44 @@
                                                  </div>
                                                  <div class="experience-content">
                                                      <div class="timeline-content">
-                                                         <p class="exp-year">July 2019</p>
-                                                         <h4 class="exp-title">Humanitarian Award</h4>
-                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+
+                                                         <h4 class="exp-title">{{ $user->Doctor->present_address }}</h4>
+
                                                      </div>
                                                  </div>
                                              </li>
-                                             <li>
-                                                 <div class="experience-user">
-                                                     <div class="before-circle"></div>
-                                                 </div>
-                                                 <div class="experience-content">
-                                                     <div class="timeline-content">
-                                                         <p class="exp-year">March 2011</p>
-                                                         <h4 class="exp-title">Certificate for International Volunteer Service</h4>
-                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                                     </div>
-                                                 </div>
-                                             </li>
-                                             <li>
-                                                 <div class="experience-user">
-                                                     <div class="before-circle"></div>
-                                                 </div>
-                                                 <div class="experience-content">
-                                                     <div class="timeline-content">
-                                                         <p class="exp-year">May 2008</p>
-                                                         <h4 class="exp-title">The Dental Professional of The Year Award</h4>
-                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                                     </div>
-                                                 </div>
-                                             </li>
+
                                          </ul>
                                      </div>
                                  </div>
                                  <!-- /Awards Details -->
 
                                  <!-- Services List -->
-                                 <div class="service-list">
-                                     <h4>Services</h4>
-                                     <ul class="clearfix">
-                                         <li>Tooth cleaning </li>
-                                         <li>Root Canal Therapy</li>
-                                         <li>Implants</li>
-                                         <li>Composite Bonding</li>
-                                         <li>Fissure Sealants</li>
-                                         <li>Surgical Extractions</li>
-                                     </ul>
-                                 </div>
+                                 {{--<div class="service-list">--}}
+                                     {{--<h4>Services</h4>--}}
+                                     {{--<ul class="clearfix">--}}
+                                         {{--<li>Tooth cleaning </li>--}}
+                                         {{--<li>Root Canal Therapy</li>--}}
+                                         {{--<li>Implants</li>--}}
+                                         {{--<li>Composite Bonding</li>--}}
+                                         {{--<li>Fissure Sealants</li>--}}
+                                         {{--<li>Surgical Extractions</li>--}}
+                                     {{--</ul>--}}
+                                 {{--</div>--}}
                                  <!-- /Services List -->
 
                                  <!-- Specializations List -->
-                                 <div class="service-list">
-                                     <h4>Specializations</h4>
-                                     <ul class="clearfix">
-                                         <li>Children Care</li>
-                                         <li>Dental Care</li>
-                                         <li>Oral and Maxillofacial Surgery </li>
-                                         <li>Orthodontist</li>
-                                         <li>Periodontist</li>
-                                         <li>Prosthodontics</li>
-                                     </ul>
-                                 </div>
+                                 {{--<div class="service-list">--}}
+                                     {{--<h4>Specializations</h4>--}}
+                                     {{--<ul class="clearfix">--}}
+                                         {{--<li>Children Care</li>--}}
+                                         {{--<li>Dental Care</li>--}}
+                                         {{--<li>Oral and Maxillofacial Surgery </li>--}}
+                                         {{--<li>Orthodontist</li>--}}
+                                         {{--<li>Periodontist</li>--}}
+                                         {{--<li>Prosthodontics</li>--}}
+                                     {{--</ul>--}}
+                                 {{--</div>--}}
                                  <!-- /Specializations List -->
 
                              </div>

@@ -88,7 +88,7 @@
                                         </ul>
                                     </div>
                                     <div class="clinic-booking">
-{{--                                        <a class="view-pro-btn" href="doctor-profile.php">View Profile</a>--}}
+                                        <a class="view-pro-btn" href="{{ route('profile.show' , $doctor->user->username) }}">View Profile</a>
                                         @auth
                                         <a class="apt-btn" href="{{route('booking.confirmation', $doctor->user->id)}}">Book Appointment</a>
                                         @endauth
