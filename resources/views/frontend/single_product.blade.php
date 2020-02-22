@@ -47,7 +47,7 @@
                 </div>
                 <hr>
                 <div class="btn-search">
-                    <a href="{{ route('productBooking', $product->user->id) }}" class="btn btn-block"> Book Now </a>
+                    <a href="{{ route('productBooking', $product->id) }}" class="btn btn-block"> Book Now </a>
                 </div>
                 <!-- Modal Start Here -->
 

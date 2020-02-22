@@ -16,8 +16,8 @@ class CreateProductBookingsTable extends Migration
         Schema::create('product_bookings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
-            $table->integer('product_id');
-            $table->integer('status_name_id')->default(1);
+            $table->integer('product_id')->nullable();
+            $table->integer('status_name_id')->default(1)->nullable();
             $table->timestamps();
         });
     }

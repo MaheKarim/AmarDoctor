@@ -9,7 +9,7 @@ class Product extends Model
     //
     protected $guarded = [ ];
 
-    public function user_info ()
+    public function User ()
     {
         return $this->belongsTo('App\User');
     }
@@ -18,4 +18,5 @@ class Product extends Model
     {
         return $this->belongsTo('App\ProductBooking');
     }
+
 }

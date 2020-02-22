@@ -53,7 +53,7 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
 
 
 });
-Route::get('/product/booking/id_{id}','ProductBookingController@productBooking')->name('productBooking');
+Route::get('/product/booking/{id}','ProductBookingController@productBooking')->name('productBooking');
     Route::get('/status-change/{id}','BookingController@statusChangeForBooking')->name('statusChangePage');
     Route::post('status_change','BookingController@bookingStatusStore')->name('statusChangeOpt');
     Route::get('/booking/delete/{id}', 'BookingController@delete')->name('bookingDelete');
