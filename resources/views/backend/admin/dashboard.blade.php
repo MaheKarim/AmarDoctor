@@ -163,9 +163,9 @@
                                     <td>{{ $productbooking->created_at->format('jS F') }}</td>
                                     <td>{!! $productbooking->Status->status_name !!}</td>
                                     <td>
-                                        <a href="#" type="button" class="btn btn-sm btn-warning">Edit</a> |  <a href="#" type="button" class="btn btn-sm btn-danger">Delete</a>
+                                        <a href="{{ route('editStatus.productBooking', $productbooking->id) }}" type="button" class="btn btn-sm btn-info">Edit</a>
                                     </td>
-                                   <td>JJ</td>
+                                   <td><a href="{{ route('deleteProductBooking' , $productbooking->id) }}" type="button" class="btn btn-sm btn-danger">Delete</a></td>
                                 </tr>
                             @endforeach
                             </tbody>
