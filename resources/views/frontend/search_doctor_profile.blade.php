@@ -47,7 +47,7 @@
                                         <a href="doctor-profile.php">
                                             <div class="profile-img">
                                                 @if($doctor->user->profile_image == "default.png")
-                                                    <img src="{{ asset('/') }}default/default.png" alt="User Image">
+                                                    <img src="{{ asset('/') }}default/default.png" alt="User Image" style="width: 150px; max-width: 100%">
                                                 @else
                                                     <img src="{{asset('storage')}}/{{$doctor->User->profile_image}}" class="img-fluid" alt="User Image">
                                                 @endif
@@ -97,14 +97,14 @@
                             </div>
                         </div>
                     </div>
-                        <div class="load-more text-center">
-                            <a class="btn btn-primary btn-sm" href="javascript:void(0);">Load More</a>
-                        </div>
-                        @empty
+                    @empty
                         <h1>Sorry! No Doctor Found on Your Criteria</h1>
                         <a type="button" class="btn btn-facebook" href="{{ route('search.doctor') }}" style="color: honeydew"> Search Again</a>
-                    @endforelse
-                        <!-- /Doctor Widget -->
+                @endforelse
+                    <!-- /Doctor Widget -->
+                    <div class="load-more text-center">
+                        <a class="btn btn-primary btn-sm" href="javascript:void(0);">Load More</a>
+                    </div>
 
 
                 </div>

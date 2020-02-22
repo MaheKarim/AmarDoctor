@@ -51,6 +51,12 @@ class User extends Authenticatable
     public function Doctor()
     {
         return $this->hasOne('App\Doctor', 'user_id', 'id');
-   }
+    }
+
+    public function Product ()
+    {
+        return $this->belongsTo('App\Product');
+    }
+
 
 }

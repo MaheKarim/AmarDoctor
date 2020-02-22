@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-<!--   Data Table Add -->
+   <!--   Data Table Add -->
     <div class="row">
         <div class="col-md-12">
             <!-- Notification Start Here -->
@@ -59,7 +59,7 @@
                 <div class="alert alert-success">
                     {{ session()->get('success') }}
                 </div>
-        @endif
+            @endif
         <!-- Notification End Here -->
             <div class="card">
                 <div class="card-header">
@@ -121,5 +121,58 @@
             </div>
         </div>
     </div>
+    <!-- Doctor Booking Table  -->
+    <!-- Product Booking Start -->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Notification Start Here -->
+            @if (session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+        @endif
+        <!-- Notification End Here -->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Product Buying Request</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="basic-datatables" class="display table table-striped table-hover" >
+                            <thead>
+                            <tr>
+                                <th>Buyer Name</th>
+                                <th>Buyer Phn</th>
+                                <th>Buyer Email</th>
+                                <th>Product Name</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PP</td>
+                                    <td>UU</td>
+                                    <td>OO</td>
+                                    <td>LL</td>
+                                    <td>YY</td>
+                                    <td>BB</td>
+                                    <td>
+                                        <a href="#" type="button" class="btn btn-warning">Edit</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" type="button" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Booking End -->
 </div>
 @endsection

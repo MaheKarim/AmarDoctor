@@ -30,6 +30,8 @@ Route::get('/home', function () { return redirect (route('user.dashboard')); });
 */
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,8 +42,6 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>['auth', 'admin']], function() {
 
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-  //  Route::get('/status-change/{id}','DashboardController@status_change')->name('status.change');
-    Route::post('status-change','DashboardController@status_only')->name('status.only');
     Route::get('/password/change','ProfileController@passChange')->name('change.password');
     Route::post('password/change','ProfileController@passChangeReq')->name('changepaswword');
     Route::get('/settings','SiteSettingsController@index')->name('settings');
@@ -52,8 +52,8 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::get('show/all_nurse','DashboardController@showAllNurse')->name('showAllNurse');
 
 
-
 });
+Route::get('/product/booking/id_{id}','ProductBookingController@productBooking')->name('productBooking');
     Route::get('/status-change/{id}','BookingController@statusChangeForBooking')->name('statusChangePage');
     Route::post('status_change','BookingController@bookingStatusStore')->name('statusChangeOpt');
     Route::get('/booking/delete/{id}', 'BookingController@delete')->name('bookingDelete');
@@ -100,6 +100,9 @@ Route::group(['as'=>'doctor.', 'prefix' => 'doctor', 'namespace' => 'Doctor', 'm
     Route::get("doctor/signup", "DoctorController@signUpForm")->name("doctorSignUpForm");
     Route::post("doctor/signup", "DoctorController@signUpFormSubmit")->name("doctorSignUpFormSubmit");
 
+    Route::get('profile/{username}' , 'ProfileController@show')->name('profile.show');
+
+
 /*
 |--------------------------------------------------------------------------
 |                               Nurse Routes
@@ -128,16 +131,15 @@ Route::group(['as'=>'user.' ,'prefix' => 'user', 'namespace' => 'User', 'middlew
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 });
 
-// Profile See  {Don't Work}
-Route::get('profile/{username}' , 'ProfileController@show')->name('profile.show');
-
-// Doctor Search
+/*
+|--------------------------------------------------------------------------
+|                            Search & Booking
+|--------------------------------------------------------------------------
+*/
 Route::get('/search/your/doctor', 'SearchController@search')->name('search.doctor');
 Route::get('/search/doctor', 'SearchController@search_doctor')->name('search.doctorProfile');
 
-// Booking Controller
 Route::get('booking/confirmation/{id}/done','BookingController@booking_confirmation')->name('booking.confirmation');
 Route::get('/booking-show','BookingController@showbooking')->name('bookingShow');
 
 
-Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');

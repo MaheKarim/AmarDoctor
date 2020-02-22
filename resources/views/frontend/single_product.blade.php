@@ -6,8 +6,7 @@
             <div class="col-md-12 col-12">
                 <nav aria-label="breadcrumb" class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php">product /</a></li>
-
+                        <li class="breadcrumb-item"><a href="index.php">Home  /  Product /</a></li>
                     </ol>
                 </nav>
                 <h5 style="color:#fff;">{{ $product->product_name }}</h5>
@@ -42,8 +41,13 @@
                     <div class="col-md-4 col-3"><h6 style="font-weight:bold;">&#2547; {{ $product->package_rate }}</h6></div>
                 </div>
                 <hr>
+                <div class="row">
+                    <div class="col-md-8 col-9"><h6>Call Us : </h6></div>
+                    <div class="col-md-4 col-3"><h6 style="font-weight:bold;"> +880{{ $product->phn_number }}</h6></div>
+                </div>
+                <hr>
                 <div class="btn-search">
-                    <button type="button" class="btn btn-block" data-toggle="modal" >+880{{ $product->phn_number }}</button>
+                    <a href="{{ route('productBooking', $product->user->id) }}" class="btn btn-block"> Book Now </a>
                 </div>
                 <!-- Modal Start Here -->
 
