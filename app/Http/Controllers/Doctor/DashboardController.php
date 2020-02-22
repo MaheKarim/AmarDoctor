@@ -76,6 +76,7 @@ class DashboardController extends Controller
             'area_name_id'=>$request->area_name_id,
             'edu_degree' =>$request->edu_degree,
             'present_address' =>$request->present_address,
+            'work_exp' =>$request->work_exp,
         ]);
 
         return back()->with('success', 'Profile Updated Successfully!');

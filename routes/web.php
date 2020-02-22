@@ -10,14 +10,7 @@ use Illuminate\Support\Facades\Artisan;
 
 Route::get('/install','FrontendController@install');
 
-Route::get('/clear', function () {
-    Artisan::call('route:clear');
-    Artisan::call('route:cache');
-    Artisan::call('view:clear');
-    Artisan::call('config:clear');
-    Artisan::call('cache:clear');
-    return 'Clear and Cache';
-});
+Route::get('/clear', 'FrontendController@clear');
 
 Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 Route::get('/dashboard', function () { return redirect (route('user.dashboard')); });

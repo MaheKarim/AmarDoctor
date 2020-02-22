@@ -29,9 +29,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('profile.show', $data->username) }}">
                         <i class="fas fa-calendar-check"></i>
-                        <span>Appointments</span>
+                        <span>My Profile</span>
                     </a>
                 </li>
 

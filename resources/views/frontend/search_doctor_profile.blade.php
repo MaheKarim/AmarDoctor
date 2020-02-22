@@ -59,14 +59,7 @@
                                         <h4 class="doc-name"><a href="">{{ $doctor->user->name }}</a></h4>
                                         <p class="doc-speciality">{{$doctor->edu_degree}}</p>
                                         <h5 class="doc-department"><img src="{{ asset('/') }}frontend/assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">{{ $doctor->Category->category_name}}</h5>
-                                        <div class="rating">
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star filled"></i>
-                                            <i class="fas fa-star"></i>
-                                            <span class="d-inline-block average-rating">(17)</span>
-                                        </div>
+
                                         <div class="clinic-details">
                                             <p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{$doctor->Area->area_name}}</p>
 
@@ -81,7 +74,7 @@
                                 <div class="doc-info-right">
                                     <div class="clini-infos">
                                         <ul>
-                                            <li><i class="far fa-thumbs-up"></i> 98%</li>
+                                            <li><i class="far fa-thumbs-up"></i> {{ $doctor->work_exp }} Year Experience</li>
 {{--                                            <li><i class="far fa-comment"></i> 17 Feedback</li>--}}
                                             <li><i class="fas fa-map-marker-alt"></i> {{$doctor->Area->area_name}}</li>
                                             <li><i class="far fa-money-bill-alt"></i> ৳500 - ৳1000 <i class="fas fa-info-circle" data-toggle="tooltip" title="Term & Condition Apply!"></i> </li>

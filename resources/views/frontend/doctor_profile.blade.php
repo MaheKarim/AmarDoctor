@@ -60,7 +60,7 @@
                      <div class="doc-info-right">
                          <div class="clini-infos">
                              <ul>
-                                 <li><i class="far fa-thumbs-up"></i> 99%</li>
+                                 <li><i class="far fa-thumbs-up"></i> {{ $user->Doctor->work_exp }} Year Of Experience</li>
 
                                  <li><i class="fas fa-map-marker-alt"></i> {{ $user->Doctor->Area->area_name }}</li>
                                  <li><i class="far fa-money-bill-alt"></i> ৳500-1000 per visit </li>
@@ -197,6 +197,26 @@
                                                      <div class="timeline-content">
 
                                                          <h4 class="exp-title">{{ $user->Doctor->present_address }}</h4>
+
+                                                     </div>
+                                                 </div>
+                                             </li>
+
+                                         </ul>
+                                     </div>
+                                 </div>
+                                 <div class="widget awards-widget">
+                                     <h4 class="widget-title">Experience</h4>
+                                     <div class="experience-box">
+                                         <ul class="experience-list">
+                                             <li>
+                                                 <div class="experience-user">
+                                                     <div class="before-circle"></div>
+                                                 </div>
+                                                 <div class="experience-content">
+                                                     <div class="timeline-content">
+
+                                                         <h4 class="exp-title">{{ $user->Doctor->work_exp }} Year Of Experience</h4>
 
                                                      </div>
                                                  </div>

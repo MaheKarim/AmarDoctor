@@ -7,6 +7,7 @@ use App\SiteSettings;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Auth;
+use User;
 
 class LoginController extends Controller
 {
@@ -23,14 +24,10 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    protected $redirectTo ;
-
-
-
-    public function __construct()
+    protected function authenticated (Request $request, $user)
     {
         if (Auth::check() && Auth::user()->role->id == 1 ) {
-           $this->redirectTo = route('admin.dashboard');
+            $this->redirectTo = route('admin.dashboard');
 
         } elseif(Auth::check() && Auth::user()->role->id == 2 ) {
             $this->redirectTo = route('doctor.dashboard');
@@ -39,11 +36,14 @@ class LoginController extends Controller
             $this->redirectTo = route('nurse.dashboard');
 
         } else {
-            $this->redirectTo = url('/');
+            $this->redirectTo = route('search.doctor');
         }
+    }
 
+
+    public function __construct()
+    {
          $this->middleware('guest')->except('logout');
-
     }
 
 
@@ -56,7 +56,6 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         $settings = SiteSettings::find(1);
-
         return view('auth.login', compact('settings'));
     }
 

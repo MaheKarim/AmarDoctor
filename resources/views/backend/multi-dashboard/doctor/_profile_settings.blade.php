@@ -150,6 +150,11 @@
 										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Specialization" name="edu_degree" value="{{$details->edu_degree}}"  id="edu_degree">
 										<small class="form-text text-muted">Note : It'll be under your name</small>
                                     </div>
+									<div class="col-md-6">
+										<label>Work Experience </label>
+										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Specialization" name="work_exp" value="{{$details->work_exp}}"  id="work_exp">
+
+                                    </div>
                                     <br>
                                     <div class="col-md-6">
                                         <div class="form-group">
