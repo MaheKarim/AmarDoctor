@@ -23,9 +23,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#edit">
-                                    <span class="link-collapse">Edit Profile</span>
-                                </a>
+
                             </li>
                             <li>
                                 <a href="#settings">
@@ -55,21 +53,19 @@
                     <a href="{{ route('admin.showAllUser') }}">
                         <i class="fas fa-user-shield"></i>
                         <p>Show All User</p>
-                            {{-- <span class="badge badge-success">4</span> --}}
+
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.showAllNurse') }}">
                         <i class="fa fa-ambulance" aria-hidden="true"></i>
                         <p>Show All Nurse</p>
-                            {{-- <span class="badge badge-success">4</span> --}}
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('showArea') }}">
                         <i class="fas fa-desktop"></i>
                         <p>Area Create / Show</p>
-                            {{-- <span class="badge badge-success">4</span> --}}
                     </a>
                 </li>
 
@@ -77,7 +73,6 @@
                 <a href="{{ route('showCategory') }}">
                     <i class="fas fa-medkit"></i>
                         <p>Doctor Type / Category</p>
-                        {{-- <span class="badge badge-success">4</span> --}}
                     </a>
                 </li>
 
