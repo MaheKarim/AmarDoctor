@@ -142,30 +142,32 @@
                             <thead>
                             <tr>
                                 <th>Buyer Name</th>
-                                <th>Buyer Phn</th>
                                 <th>Buyer Email</th>
+                                <th>Buyer Phn</th>
                                 <th>Product Name</th>
-                                <th>Date</th>
+                                <th>Product Package Price</th>
+                                <th>Booking Date</th>
                                 <th>Status</th>
                                 <th>Action</th>
                                 <th>Delete</th>
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($product_bookings as $productbooking)
                                 <tr>
-                                    <td>PP</td>
-                                    <td>UU</td>
-                                    <td>OO</td>
-                                    <td>LL</td>
-                                    <td>YY</td>
-                                    <td>BB</td>
+                                    <td>{{ $productbooking->user->name }}</td>
+                                    <td>{{ $productbooking->user->email }}</td>
+                                    <td>{{ $productbooking->user->phn_number }}</td>
+                                    <td>{{ $productbooking->get_product_details->product_name }}</td>
+                                    <td>{{ $productbooking->get_product_details->package_rate }}</td>
+                                    <td>{{ $productbooking->created_at->format('jS F') }}</td>
+                                    <td>{!! $productbooking->Status->status_name !!}</td>
                                     <td>
-                                        <a href="#" type="button" class="btn btn-warning">Edit</a>
+                                        <a href="#" type="button" class="btn btn-sm btn-warning">Edit</a> |  <a href="#" type="button" class="btn btn-sm btn-danger">Delete</a>
                                     </td>
-                                    <td>
-                                        <a href="#" type="button" class="btn btn-danger">Delete</a>
-                                    </td>
+                                   <td>JJ</td>
                                 </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
