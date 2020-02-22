@@ -14,19 +14,19 @@
                 <div class="col-sm">
                     <div class="text-center muhin">
                         <div class="">
-                            <a href="#">
+                            <a href="{{route('productSee', $product->product_slug)}}">
                             <span class="LazyLoad is-visible">
                                   <img src="{{ asset('storage') }}/{{$product->package_image}}" alt="" class="img-fluid" width="360px" height="239px">
                             </span>
                             </a>
                         </div>
                         <br>
-                        <h6><a href="#">{{ $product->product_name }}</a></h6>
+                        <h6><a href="{{route('productSee', $product->product_slug)}}">{{ $product->product_name }}</a></h6>
                         <span>{!! Str::limit($product ->description, 100,  ' .....') !!}</span>
                         <div class="u-border__top--blue_4 u-margin--10__top"></div>
                         <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
-                            <div class="u-d__inline ">24% off</div>
-                        </div> <a class="btn btn-dark-green" href="#">Explore</a>
+
+                        </div> <a class="btn btn-dark-green" href="{{route('productSee', $product->product_slug)}}">Explore</a>
                     </div>
                 </div>
             @endforeach

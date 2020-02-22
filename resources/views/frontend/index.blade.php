@@ -61,7 +61,7 @@
             <div class="col-sm">
                     <div class="text-center muhin">
                         <div class="">
-                            <a href="#">
+                            <a href="{{route('productSee', $product->product_slug)}}">
                             <span class="LazyLoad is-visible">
                                   <img src="{{ asset('storage') }}/{{$product->thumbnail_medium}}" alt="" class="img-fluid">
                             </span>
