@@ -27,7 +27,7 @@ class ContactFormController extends Controller
         ]);
         // dd($request->all());
         // Send An Email
-        Mail::to('admin@test.com')->send(new ContactFormMail($data));
+        Mail::to('info@amardoctor.com.bd')->send(new ContactFormMail($data));
         return redirect(route('contact.form'));
     }
 }
