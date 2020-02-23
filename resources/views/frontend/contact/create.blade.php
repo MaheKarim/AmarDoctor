@@ -9,9 +9,13 @@
                 <!-- Login Tab Content -->
                 <div class="account-content">
                     <div class="row align-items-center justify-content-center">
-                        {{--<div class="col-md-7 col-lg-6 login-left">--}}
-                            {{--<img src="{{ asset('') }}frontend/assets/img/login-banner.png" class="img-fluid" alt="AmarDoctor Login">--}}
-                        {{--</div>--}}
+
+                        @if (session()->has('message'))
+                            <div class="alert alert-info" role="alert">
+                                <strong>Mail Sent Successfully!</strong>      {{ session()->get('message') }}
+                            </div>
+                        @endif
+
                         <div class="col-md-12 col-lg-8">
                             <div class="login-header">
                                 <h3>Contact <span>For Nurse</span></h3>

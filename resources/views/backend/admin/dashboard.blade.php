@@ -125,13 +125,7 @@
     <!-- Product Booking Start -->
     <div class="row">
         <div class="col-md-12">
-            <!-- Notification Start Here -->
-            @if (session()->has('success'))
-                <div class="alert alert-success">
-                    {{ session()->get('success') }}
-                </div>
-        @endif
-        <!-- Notification End Here -->
+
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Product Buying Request</h4>
@@ -166,6 +160,50 @@
                                         <a href="{{ route('editStatus.productBooking', $productbooking->id) }}" type="button" class="btn btn-sm btn-info">Edit</a>
                                     </td>
                                    <td><a href="{{ route('deleteProductBooking' , $productbooking->id) }}" type="button" class="btn btn-sm btn-danger">Delete</a></td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Booking End --><!-- Product Booking Start -->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Notification Start Here -->
+
+        <!-- Notification End Here -->
+            <div class="card">
+                <div class="card-header">
+                    <h4 align="center" class="card-title" style="background-color: darkcyan; color: white;">Nursing Service Request</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="basic-datatables" class="display table table-striped table-hover" >
+                            <thead>
+                            <tr>
+                                <th> Name</th>
+                                <th> Email</th>
+                                <th> PHN Number</th>
+                                <th> Address</th>
+                                <th> MSG</th>
+                                <th> Booking Date</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($mails as $mail)
+                                <tr>
+                                    <td>{{ $mail->customer_name }}</td>
+                                    <td>{{ $mail->customer_email }}</td>
+                                    <td>{{ $mail->customer_phn }}</td>
+                                    <td>{{ $mail->customer_address }}</td>
+                                    <td>{{ $mail->customer_message }}</td>
+                                    <td>{{ $mail->created_at->format('jS F') }}</td>
+
+                                   <td><a href="{{ route('deleteContactForm', $mail->id) }}" type="button" class="btn btn-sm btn-danger">Delete</a></td>
                                 </tr>
                             @endforeach
                             </tbody>

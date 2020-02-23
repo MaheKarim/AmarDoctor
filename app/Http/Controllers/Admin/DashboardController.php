@@ -6,6 +6,7 @@ use App\Booking;
 use App\Doctor;
 use App\ProductBooking;
 use App\User;
+use App\ContactForm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -18,6 +19,8 @@ class DashboardController extends Controller
         $data = [ ];
         $data['booking_all'] = Booking::orderBy('created_at', 'desc')->get();
         $data['product_bookings'] = ProductBooking::all();
+        $data['mails'] = ContactForm::orderBy('created_at', 'desc')->get();
+
         return view('backend.admin.dashboard', $data);
     }
     

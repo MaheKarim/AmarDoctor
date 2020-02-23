@@ -51,7 +51,7 @@ class BookingController extends Controller
         $data = [ ];
         $data['bookings'] = Booking::find($id);
         $data['bookings']->delete();
-        session()->flash('success','Booking Deleted Successfully!');
+        session()->flash('success','Nurse Service Deleted Successfully!');
         return redirect(route('admin.dashboard'));
     }
 }

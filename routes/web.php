@@ -78,6 +78,7 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
 
     Route::get('/contact/service/nursing','ContactFormController@create')->name('contact.form');
     Route::post('/contact-store','ContactFormController@store')->name('contact.store');
+    Route::get('/contact/delete/{id}', 'ContactFormController@delete')->name('deleteContactForm');
 
 /*
 |--------------------------------------------------------------------------

@@ -6,6 +6,7 @@ use App\Mail\ContactFormMail;
 use App\SiteSettings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\ContactForm;
 
 class ContactFormController extends Controller
 {
@@ -16,7 +17,7 @@ class ContactFormController extends Controller
         return view('frontend.contact.create', compact('settings'));
     }
 
-    public function store ()
+    public function store (Request $request)
     {
         $data = request()->validate([
             'customer_name' => 'required',
@@ -27,7 +28,25 @@ class ContactFormController extends Controller
         ]);
         // dd($request->all());
         // Send An Email
-        Mail::to('info@amardoctor.com.bd')->send(new ContactFormMail($data));
+        $mails = new ContactForm();
+        $mails->customer_name = $request->customer_name;
+        $mails->customer_email = $request->customer_email;
+        $mails->customer_phn = $request->customer_phn;
+        $mails->customer_address = $request->customer_address;
+        $mails->customer_message = $request->customer_message;
+        $mails->save();
+
+       // Mail::to('info@amardoctor.com.bd')->send(new ContactFormMail($data));
+
+        session()->flash('message', 'Thanks, For Your Message. We\'ll be in touch.');
         return redirect(route('contact.form'));
+    }
+
+    public function delete ($id)
+    {
+        $mail = ContactForm::find($id);
+        $mail->delete();
+        session()->flash('success','Nurse Service Booking Deleted!');
+        return redirect(route('admin.dashboard'));
     }
 }
