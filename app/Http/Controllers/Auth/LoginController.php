@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\SiteSettings;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\SiteSettings;
 use Illuminate\Http\Request;
 use Auth;
 use User;
@@ -75,10 +75,31 @@ class LoginController extends Controller
         //  return $this->field();
         if (Auth::attempt([$this->field() => request()->phn_number, 'password' => request()->password])) {
 
-            return redirect()->intended(route('search.doctor'));
+            return redirect()->intended(url('/'));
         } else {
             return redirect()->back()->withInput('phn_number');
         }
+    }
+
+    public function showUserLoginForm()
+
+    {
+        $settings = SiteSettings::find(1);
+        return view('auth.login', ['url' => 'user'], compact('settings'));
+    }
+
+    public function userLogin(Request $request)
+    {
+//        $this->validate($request, [
+//            'email'   => 'required|email',
+//            'password' => 'required|min:6'
+//        ]);
+
+        if (Auth::guard('user')->attempt(['phn_number' => $request->phn_number, 'password' => $request->password], $request->get('remember'))) {
+
+            return redirect()->intended('search.doctor');
+        }
+        return back()->withInput('phn_number');
     }
 
 }

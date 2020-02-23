@@ -140,3 +140,7 @@ Route::get('booking/confirmation/{id}/done','BookingController@booking_confirmat
 Route::get('/booking-show','BookingController@showbooking')->name('bookingShow');
 
 
+
+Route::get('/login/user', 'Auth\LoginController@showUserLoginForm');
+
+

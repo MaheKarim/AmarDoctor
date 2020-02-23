@@ -28,16 +28,46 @@
             </div>
             <div class="row">
                 <div class="col-sm">
-                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/offer1.jpg"></a>
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Basic Health.jpg"></a>
                 </div>
                 <div class="col-sm">
-                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/offer2.webp"></a>
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Cardiac Check-up Package-1.jpg"></a>
                 </div>
                 <div class="col-sm">
-                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/offer3.webp"></a>
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Child Health Check-up Package.jpg"></a>
                 </div>
                 <div class="col-sm">
-                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/offer4.webp"></a>
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Comprehensive Health check-up package for Female.jpg"></a>
+                </div>
+            </div>
+          <br>
+            <div class="row">
+                <div class="col-sm">
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Comprehensive Health check-up package for Male.jpg"></a>
+                </div>
+                <div class="col-sm">
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Executive Health check-up package for Male.jpg"></a>
+                </div>
+                <div class="col-sm">
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Liver  Check-up package-1.jpg"></a>
+                </div>
+                <div class="col-sm">
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Pre-Employment Health Check-up Package.jpg"></a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm">
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Pre-Marital  Check-up Package.jpg"></a>
+                </div>
+                <div class="col-sm">
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Primary Diabetic Check-up Package.jpg"></a>
+                </div>
+                <div class="col-sm">
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Renal or Kidney Check-up Package.jpg"></a>
+                </div>
+                <div class="col-sm">
+                    <a href="#"><img class="img-fluid" src="{{asset('/')}}frontend/assets/img/package/Smoker Health Check-up Package.jpg"></a>
                 </div>
             </div>
         </div>
