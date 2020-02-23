@@ -24,7 +24,7 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    public function authenticated (Request $request, $user)
+    protected function authenticated (Request $request, $user)
     {
         if (Auth::check() && Auth::user()->role->id == 1 ) {
             $this->redirectTo = route('admin.dashboard');
@@ -40,6 +40,7 @@ class LoginController extends Controller
         }
     }
 
+   // protected $redirectTo = $this->authenticated();
 
     public function __construct()
     {
@@ -71,11 +72,11 @@ class LoginController extends Controller
     public function login()
     {
         // Check Right Position
-      //  return $this->field();
-        if (Auth::attempt([$this->field()=>request()->phn_number, 'password' => \request()->password ])){
-           // Wanna Return Authenticated function
-            return redirect()->intended('/');
-        }else{
+        //  return $this->field();
+        if (Auth::attempt([$this->field() => request()->phn_number, 'password' => request()->password])) {
+
+            return redirect()->intended(route('search.doctor'));
+        } else {
             return redirect()->back()->withInput('phn_number');
         }
     }
