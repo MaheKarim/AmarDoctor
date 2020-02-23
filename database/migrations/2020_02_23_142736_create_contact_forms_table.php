@@ -19,7 +19,7 @@ class CreateContactFormsTable extends Migration
             $table->string('customer_email');
             $table->integer('customer_phn');
             $table->text('customer_address');
-            $table->longText('customer_address');
+            $table->longText('customer_message');
             $table->timestamps();
         });
     }
