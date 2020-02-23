@@ -124,15 +124,15 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-xs-12">
-                    <a href="#"> <img class="img-fluid" src="{{asset('/')}}frontend/assets/img/checkup.jpg"> </a>
+                    <a href="{{ route('allProduct') }}"> <img class="img-fluid" src="{{asset('/')}}frontend/assets/img/checkup.jpg"> </a>
                     <br>
                     <br>
-                    <h4><a href="#">Comprehensive Young Indian Health Checkup</a></h4> <span>Ideal for male aged 21 to 40 years</span> </div>
+                   <span>Ideal for male aged 21 to 40 years</span> </div>
                 <div class="col-md-6 col-xs-12">
-                    <a href="#"> <img class="img-fluid" src="{{asset('/')}}frontend/assets/img/doctoor.jpg"> </a>
+                    <a href="{{ route('search.doctor') }}"> <img class="img-fluid" src="{{asset('/')}}frontend/assets/img/doctoor.jpg"> </a>
                     <br>
                     <br>
-                    <h4><a href="#">Comprehensive Young Indian Health Checkup</a></h4> <span>Ideal for male aged 21 to 40 years</span> </div>
+                    <span>Ideal for male aged 21 to 40 years</span> </div>
             </div>
         </div>
     </section>

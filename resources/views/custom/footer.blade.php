@@ -56,7 +56,7 @@
 
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">For Doctors / Nurse</h2>
+									<h2 class="footer-title">Carreer</h2>
 									<ul>
 
 										<li><a href=" {{ route('login') }} "><i class="fas fa-angle-double-right"></i>Doctor Login</a></li>
