@@ -69,12 +69,21 @@
 							</li>
 
 							<li class="has-submenu">
-								<a href="{{route('search.doctor')}}">Doctor Search</a>
+								<a  href="{{route('search.doctor')}}">Doctor Search</a>
 							</li>
 							<li class="has-submenu">
 								<a href="{{route('contact.form')}}">Nursing Service</a>
 							</li>
-                            @auth
+							<li class="has-submenu">
+								<a href="#">Career <i class="fas fa-chevron-down"></i></a>
+								<ul class="submenu">
+									<li><a href="{{route('doctorSignUpForm')}}">Doctor Register</a></li>
+									<li><a href="{{route('login')}}">Doctor Login</a></li>
+									<li><a href="{{ route('nurse.signup') }}">Nurse Register</a></li>
+									<li><a href="{{ route('login') }}">Nurse Login</a></li>
+								</ul>
+							</li>
+						@auth
                             <li class="has-submenu">
                                 <a href="{{ route('user.dashboard') }}">Your Dashboard</a>
                             </li>
