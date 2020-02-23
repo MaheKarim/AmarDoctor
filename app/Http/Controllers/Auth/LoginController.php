@@ -90,10 +90,11 @@ class LoginController extends Controller
 
     public function userLogin(Request $request)
     {
-//        $this->validate($request, [
-//            'email'   => 'required|email',
-//            'password' => 'required|min:6'
-//        ]);
+        $this->validate($request, [
+          'email'   => 'required|email',
+        //  'phn_number'   => 'required|min:11',
+          'password' => 'required|min:6'
+      ]);
 
         if (Auth::guard('user')->attempt(['phn_number' => $request->phn_number, 'password' => $request->password], $request->get('remember'))) {
 

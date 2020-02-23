@@ -76,6 +76,8 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::get('/product/edit/{product}','ProductController@edit')->name('editProduct');
     Route::post('/update/product','ProductController@update')->name('updateProduct');
 
+    Route::get('/contact/service/nursing','ContactFormController@create')->name('contact.form');
+    Route::post('/contact-store','ContactFormController@store')->name('contact.store');
 
 /*
 |--------------------------------------------------------------------------
