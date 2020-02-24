@@ -46,13 +46,13 @@
 								<span></span>
 							</span>
 						</a>
-						<a href="index.php" class="navbar-brand logo">
+						<a href="{{ url('/') }}" class="navbar-brand logo">
 							<img src="{{ asset('/') }}frontend/assets/img/logo.png" class="img-fluid" alt="Logo">
 						</a>
 					</div>
 					<div class="main-menu-wrapper">
 						<div class="menu-header">
-							<a href="index.php" class="menu-logo">
+							<a href="{{ url('/') }}" class="menu-logo">
 								<img src="{{ asset('/') }}frontend/assets/img/logo.png" class="img-fluid" alt="Logo">
 							</a>
 							<a id="menu_close" class="menu-close" href="javascript:void(0);">
@@ -86,6 +86,8 @@
 						@auth
                             <li class="has-submenu">
                                 <a href="{{ route('user.dashboard') }}">Your Dashboard</a>
+                            </li> <li class="has-submenu">
+                                <a href="{{ route('logout') }}">Logout</a>
                             </li>
                             @endauth
 						</ul>

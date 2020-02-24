@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\SiteSettings;
 use Illuminate\Http\Request;
@@ -25,22 +26,8 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
     protected function authenticated (Request $request, $user)
-    {
-        if (Auth::check() && Auth::user()->role->id == 1 ) {
-            $this->redirectTo = route('admin.dashboard');
+    { }
 
-        } elseif(Auth::check() && Auth::user()->role->id == 2 ) {
-            $this->redirectTo = route('doctor.dashboard');
-
-        } elseif(Auth::check() && Auth::user()->role->id == 3 ) {
-            $this->redirectTo = route('nurse.dashboard');
-
-        } else {
-            $this->redirectTo = route('search.doctor');
-        }
-    }
-
-   // protected $redirectTo = $this->authenticated();
 
     public function __construct()
     {
@@ -61,46 +48,31 @@ class LoginController extends Controller
     }
 
 
-    public function field()
+    public function field(): string
     {
-        if (filter_var(request()->phn_number,FILTER_VALIDATE_EMAIL)){
-            return 'email';
-        }else{
-            return 'phn_number';
+        return filter_var(request()->phn_number,FILTER_VALIDATE_EMAIL) ? 'email' : 'phn_number';
+    }
+
+    public function redirectPath()
+    {
+        if (Auth::user()->role->id === 1) {
+            return route('admin.dashboard');
+        } if (Auth::user()->role->id === 2) {
+            return route('admin.dashboard');
+        } if (Auth::user()->role->id === 3) {
+            return route('admin.dashboard');
         }
-    }
-    public function login()
-    {
-        // Check Right Position
-        //  return $this->field();
-        if (Auth::attempt([$this->field() => request()->phn_number, 'password' => request()->password])) {
 
-            return redirect()->intended(url('/'));
-        } else {
-            return redirect()->back()->withInput('phn_number');
+        return route('search.doctor');
+    }
+    public function login(LoginRequest $request)
+    {
+        if (Auth::attempt([$this->field() => $request->phn_number, 'password' => $request->password])) {
+            return redirect($this->redirectPath());
         }
+
+         return $this->sendFailedLoginResponse($request);
     }
 
-    public function showUserLoginForm()
-
-    {
-        $settings = SiteSettings::find(1);
-        return view('auth.login', ['url' => 'user'], compact('settings'));
-    }
-
-    public function userLogin(Request $request)
-    {
-        $this->validate($request, [
-          'email'   => 'required|email',
-        //  'phn_number'   => 'required|min:11',
-          'password' => 'required|min:6'
-      ]);
-
-        if (Auth::guard('user')->attempt(['phn_number' => $request->phn_number, 'password' => $request->password], $request->get('remember'))) {
-
-            return redirect()->intended('search.doctor');
-        }
-        return back()->withInput('phn_number');
-    }
 
 }

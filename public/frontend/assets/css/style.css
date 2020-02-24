@@ -7232,3 +7232,60 @@ html.menu-opened body {
 		margin-bottom: 10px;
 	}
 }
+/*muhin css*/
+.ourworks-box {
+	width: 60%;
+	justify-content: center;
+	text-align: center;
+}
+
+.our-works-head {
+	font-size: 30px;
+	font-weight: 400;
+	color: black;
+}
+
+.introduce {
+	height: auto;
+	background-color: white;
+	box-shadow: 0 3px 10px #5969f642;
+	border-bottom: 4px solid #5969f6;
+	color: black;
+}
+
+.introduce:hover {
+	box-shadow: 0 3px 15px #5969f666;
+	border-bottom: 4px solid #B122e5;
+	color: black;
+	text-decoration: none;
+}
+
+.flex-column-1 {
+	height: auto;
+	width: 100%;
+}
+
+.text-gray {
+	color: gray;
+}
+
+.pic {
+	height: 70px;
+	width: 70px;
+	margin-left: 20px;
+	border-radius: 50%;
+	transition: all .2s ease-in-out;
+}
+
+.introduce:hover .pic {
+	transform: scale(1.1);
+}
+
+.pb-3,
+.py-3 {
+	padding-bottom: 0px !important;
+}
+
+#client-testimonial-carousel {min-height: 200px;}
+
+/*end muhin css*/
