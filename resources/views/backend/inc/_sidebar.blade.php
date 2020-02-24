@@ -35,6 +35,12 @@
                 </div>
             </div>
             <ul class="nav nav-primary">
+                <li class="nav-item">
+                    <a class="btn btn-info"  href="{{ route('admin.showAllDoctor') }}">
+                        <i style="color: white" class="fas fa-home"></i>
+                        <p style="color: white">Go To Site</p>
+                    </a>
+                </li>
 
                 <li class="nav-section">
                     <span class="sidebar-mini-icon">
@@ -42,11 +48,10 @@
                     </span>
                     <h4 class="text-section">Internal Function</h4>
                 </li>
-                 <li class="nav-item">
+                  <li class="nav-item">
                     <a href="{{ route('admin.showAllDoctor') }}">
                         <i class="fas fa-user-md"></i>
                         <p>Show All Doctor</p>
-                            {{-- <span class="badge badge-success">4</span> --}}
                     </a>
                 </li>
                 <li class="nav-item">

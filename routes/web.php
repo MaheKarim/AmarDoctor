@@ -6,7 +6,6 @@
 |--------------------------------------------------------------------------
 */
 
-use Illuminate\Support\Facades\Artisan;
 
 Route::get('/install','FrontendController@install');
 
@@ -97,7 +96,7 @@ Route::group(['as'=>'doctor.', 'prefix' => 'doctor', 'namespace' => 'Doctor', 'm
     Route::post('/change-password', 'CustomAuthController@FormPassChange')->name('passwordFrom');
     Route::get('/custom/login', 'CustomAuthController@showPage')->name('customDoctorLogin');
     Route::post('custom-login', 'CustomAuthController@login');
-    Route::get("doctor/signup", "DoctorController@signUpForm")->name("doctorSignUpForm");
+    Route::get("doctor/register", "DoctorController@signUpForm")->name("doctorSignUpForm");
     Route::post("doctor/signup", "DoctorController@signUpFormSubmit")->name("doctorSignUpFormSubmit");
 
     Route::get('profile/{username}' , 'ProfileController@show')->name('profile.show');
@@ -119,7 +118,7 @@ Route::group(['as'=>'nurse.' ,'prefix' => 'nurse', 'namespace' => 'Nurse', 'midd
     Route::get('/profile/settings',    'NurseProfileController@settings_page')->name('nurse_ProfilePage');
     Route::post('/profile/update',     'NurseProfileController@profile_update')->name('profileAllUpdate');
 });
-Route::get('nurse/signup',      'Nurse\NurseAuthController@nurseSignUpForm')->name("nurse.signup");
+Route::get('nurse/register',      'Nurse\NurseAuthController@nurseSignUpForm')->name("nurse.signup");
 Route::post('nurse/signup',     'Nurse\NurseAuthController@registerNurse')->name('nurse.signup_page');
 
 /*

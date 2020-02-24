@@ -56,7 +56,7 @@
 
 								<!-- Footer Widget -->
 								<div class="footer-widget footer-menu">
-									<h2 class="footer-title">Carreer</h2>
+									<h2 class="footer-title">Career</h2>
 									<ul>
 
 										<li><a href=" {{ route('login') }} "><i class="fas fa-angle-double-right"></i>Doctor Login</a></li>
@@ -107,7 +107,7 @@
 							<div class="row">
 								<div class="col-md-6 col-lg-6">
 									<div class="copyright-text">
-										<p class="mb-0">&copy; 2020 AmarDoctor. All rights reserved.</p>
+										<p class="mb-0">&copy; {{ now()->year }} AmarDoctor. All rights reserved.</p>
 									</div>
 								</div>
 								<div class="col-md-6 col-lg-6">
