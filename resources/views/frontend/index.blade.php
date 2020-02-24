@@ -246,7 +246,7 @@
                         </div>
                         <br>
                         <h6><a href="{{route('productSee', $product->product_slug)}}">{{ $product->product_name }}</a></h6>
-                        <span>{!! Str::limit($product ->description, 100,  ' .....') !!}</span>
+                        <span>{!! Str::limit($product->description, 95,  ' .....') !!}</span>
                         <div class="u-border__top--blue_4 u-margin--10__top"></div>
                         <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
 

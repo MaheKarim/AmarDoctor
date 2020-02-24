@@ -77,7 +77,7 @@
                                             <li><i class="far fa-thumbs-up"></i> {{ $doctor->work_exp }} Year Experience</li>
 {{--                                            <li><i class="far fa-comment"></i> 17 Feedback</li>--}}
                                             <li><i class="fas fa-map-marker-alt"></i> {{$doctor->Area->area_name}}</li>
-                                            <li><i class="far fa-money-bill-alt"></i> ৳500 - ৳1000 <i class="fas fa-info-circle" data-toggle="tooltip" title="Term & Condition Apply!"></i> </li>
+
                                         </ul>
                                     </div>
                                     <div class="clinic-booking">

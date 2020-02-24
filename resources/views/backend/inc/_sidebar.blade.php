@@ -36,7 +36,7 @@
             </div>
             <ul class="nav nav-primary">
                 <li class="nav-item">
-                    <a class="btn btn-info"  href="{{ route('admin.showAllDoctor') }}">
+                    <a class="btn btn-info"  href="{{ url('/') }}">
                         <i style="color: white" class="fas fa-home"></i>
                         <p style="color: white">Go To Site</p>
                     </a>

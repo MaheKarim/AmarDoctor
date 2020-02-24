@@ -63,7 +63,7 @@
                                  <li><i class="far fa-thumbs-up"></i> {{ $user->Doctor->work_exp }} Year Of Experience</li>
 
                                  <li><i class="fas fa-map-marker-alt"></i> {{ $user->Doctor->Area->area_name }}</li>
-                                 <li><i class="far fa-money-bill-alt"></i> ৳500-1000 per visit </li>
+
                              </ul>
                          </div>
                          @auth

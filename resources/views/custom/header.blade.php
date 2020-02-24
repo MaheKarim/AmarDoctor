@@ -86,9 +86,10 @@
 						@auth
                             <li class="has-submenu">
                                 <a href="{{ route('user.dashboard') }}">Your Dashboard</a>
-                            </li> <li class="has-submenu">
-                                <a href="{{ route('logout') }}">Logout</a>
                             </li>
+								<li class="has-submenu">
+									<a class="nav-link header-login" href="{{route('logout')}}">Logout</a>
+								</li>
                             @endauth
 						</ul>
 					</div>
@@ -105,7 +106,8 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link header-login" href="{{route('login')}}">Login</a>
-						</li><li class="nav-item">
+						</li>
+						<li class="nav-item">
 							<a class="nav-link header-login" href="{{route('register')}}">Register</a>
 						</li>
 					</ul>

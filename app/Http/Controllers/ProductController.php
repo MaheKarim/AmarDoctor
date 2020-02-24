@@ -117,7 +117,7 @@ class ProductController extends Controller
         Storage::delete($products->package_image);
         $products->delete();
 
-        session()->flash('success','Category Deleted Successfully!');
+        session()->flash('success','Product Deleted Successfully!');
         return redirect(route('showProduct'));
     }
 
