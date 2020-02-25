@@ -238,7 +238,7 @@
                 <div class="col-sm">
                     <div class="text-center muhin">
                         <div class="">
-                            <a href="{{route('productSee', $product->product_slug)}}">
+                            <a href="{!! Str::limit(route('productSee', $product->product_slug, '5', '....')) !!}">
                             <span class="LazyLoad is-visible">
                                   <img src="{{ asset('storage') }}/{{$product->thumbnail_medium}}" alt="" class="img-fluid">
                             </span>
