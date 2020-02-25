@@ -24,6 +24,9 @@ Route::get('/home', function () { return redirect (route('user.dashboard')); });
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+
 
 
 /*

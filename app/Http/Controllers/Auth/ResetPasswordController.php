@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\SiteSettings;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Auth;
 
@@ -52,5 +53,11 @@ class ResetPasswordController extends Controller
         }
 
         $this->middleware('guest');
+    }
+
+    public function showResetForm ()
+    {
+        $settings = SiteSettings::find(1);
+        return view('auth.passwords.reset', compact('settings'));
     }
 }
