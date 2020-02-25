@@ -37,7 +37,7 @@
                                         <input type="text" class="form-control" name="package_rate" id="package_rate" value="{{ $products->package_rate }}" placeholder="Enter Package Rate">
                                     </div>
                                     <div class="form-group">
-                                        <label for="text">Update Package Rate</label>
+                                        <label for="text">Update Package PHN Number</label>
                                         <input type="text" class="form-control" name="phn_number" id="phn_number" value="{{ $products->phn_number }}" placeholder="Enter PHN Number">
                                     </div>
                                     <div class="form-group">
