@@ -41,8 +41,8 @@
                                     <span class="span-or">or</span>
                                 </div>
 
-                                <div class="text-center dont-have">Are You Doctor ? Don’t have an account? <a href="{{ route('doctorSignUpForm') }}">Register</a></div>
-                                <div class="text-center dont-have">Are You Nurse ? Don’t have an account? <a href="{{ route('nurse.signup_page') }}">Register</a></div>
+
+                                <div class="text-center dont-have">Forget Your Password ?  <a href="{{ url('/password/reset') }}"> Reset Your Password</a></div>
                             </form>
                         </div>
                     </div>
