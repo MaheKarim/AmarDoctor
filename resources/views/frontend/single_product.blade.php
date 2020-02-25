@@ -70,7 +70,7 @@
         <br>
         <div class="row">
             <div class="col-md-12 col-xs-12">
-                <h4>Who should book this checkup?</h4>
+                <h3>Why should book this checkup?</h3>
                 <p>{!! $product->description !!}</p>
             </div>
         </div>
