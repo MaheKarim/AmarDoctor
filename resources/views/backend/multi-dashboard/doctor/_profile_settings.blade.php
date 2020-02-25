@@ -153,7 +153,10 @@
 									<div class="col-md-6">
 										<label>Work Experience </label>
 										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Experience (Only Digit)" name="work_exp" value="{{$details->work_exp}}"  id="work_exp">
-
+                                    </div>
+                                    <br><div class="col-md-6">
+										<label>Your Visting Fees</label>
+										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Your Fees" name="doctor_fees" value="{{$details->doctor_fees}}"  id="doctor_fees">
                                     </div>
                                     <br>
                                     <div class="col-md-6">

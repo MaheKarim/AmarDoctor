@@ -26,6 +26,7 @@ class CreateDoctorsTable extends Migration
             $table->integer('status')->default(1);
             $table->integer('area_name_id')->nullable();
             $table->integer('category_name_id')->nullable();
+            $table->string('doctor_fees')->nullable();
             $table->timestamps();
         });
     }

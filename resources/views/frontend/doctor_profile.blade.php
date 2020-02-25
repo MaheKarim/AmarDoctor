@@ -61,9 +61,8 @@
                          <div class="clini-infos">
                              <ul>
                                  <li><i class="far fa-thumbs-up"></i> {{ $user->Doctor->work_exp }} Year Of Experience</li>
-
                                  <li><i class="fas fa-map-marker-alt"></i> {{ $user->Doctor->Area->area_name }}</li>
-
+                                 <li><i class="far fa-money-bill-alt"></i> {{ $user->Doctor->doctor_fees }} <i class="fas fa-info-circle" data-toggle="tooltip" title="Visiting Fees May Update!"></i> </li>
                              </ul>
                          </div>
                          @auth
