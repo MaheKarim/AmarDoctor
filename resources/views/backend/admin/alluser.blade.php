@@ -23,7 +23,7 @@
                             <div class="alert alert-success">
                                 {{ session()->get('success') }}
                             </div>
-                    @endif
+                          @endif
                     <!-- Notification End Here -->
 
                         <div class="table-responsive">
@@ -35,11 +35,12 @@
                                     <th>Patient PHN NUMBER</th>
                                     <th>Patient Username</th>
                                     <th>Patient ID Created</th>
+                                    <th>Action</th>
 
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($details_user as $detail)
+                          @foreach ($details_user as $detail)
                                     <tr>
                                         <td>{{ $detail->name }}</td>
                                         <td>{{ $detail->email }}</td>
@@ -49,12 +50,7 @@
 
                                         <td>
                                             <div class="form-button-action">
-                                                <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                                    <i class="fa fa-edit"></i>
-                                                </a>
-                                                <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-                                                    <i class="fa fa-times"></i>
-                                                </a>
+                                                <a href="{{ route('admin.deleteUser', $detail->id) }}" type="button" class="btn btn-sm btn-danger">Delete</a>
                                             </div>
                                         </td>
                                     </tr>

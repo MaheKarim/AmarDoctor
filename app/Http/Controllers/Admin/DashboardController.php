@@ -10,6 +10,7 @@ use App\ContactForm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -32,6 +33,7 @@ class DashboardController extends Controller
 
     public function showAllUser()
     {
+
         $details_user = User::where('role_id',4)->get();
         return view('backend.admin.alluser',compact('details_user'));
     }
@@ -39,5 +41,13 @@ class DashboardController extends Controller
     {
         $details_user = User::where('role_id',3)->get();
         return view('backend.admin.allnurse',compact('details_user'));
+    }
+
+    public function destroyUser ($id)
+    {
+
+     $details_user =    DB::table('users')->where('role_id',4, $id)->delete();
+        return view('backend.admin.alluser', compact('details_user'));
+
     }
 }

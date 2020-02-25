@@ -36,6 +36,8 @@
                                     <th>Doctor Edu Degree</th>
                                     <th>Doctor BMDC Certificate</th>
                                     <th>Category</th>
+                                    <th>Area</th>
+                                    <th>Action</th>
 
                                 </tr>
                                 </thead>
@@ -50,20 +52,10 @@
                                             <img style="width: 50px; max-width: auto;" src="{{ asset('storage') }}/{{ $doctor->bmdc_cer}}">
                                         </td>
                                         <td>{{ $doctor->Category->category_name}}</td>
-
-
+                                        <td>{{ $doctor->Area->area_name}}</td>
 
                                         <td>
-                                            <div class="form-button-action">
-                                                <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                                    <i class="fa fa-edit"></i>
-                                                </a>
-
-                                                <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-                                                    <i class="fa fa-times"></i>
-                                                </a>
-
-                                            </div>
+                                            <a href="{{ route('admin.deleteDoctor', $doctor->id) }}" type="button" class="btn btn-sm btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
