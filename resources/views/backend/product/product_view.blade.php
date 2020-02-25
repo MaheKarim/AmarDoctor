@@ -5,7 +5,7 @@
 <div class="page-inner">
         <div class="page-header">
             <h4 class="page-title">
-                @yield('title','Show Shop')
+                @yield('title','Show All Products')
             </h4>
         </div>
         <div class="row">
@@ -50,7 +50,7 @@
                                         <th>Product Image</th>
                                         <th>Package Rate</th>
                                         <th>Total Rate</th>
-                                        <th>PHN Number</th>
+
                                         <th style="width: 10%">Action</th>
                                     </tr>
                                 </thead>
@@ -66,7 +66,7 @@
                                     <td> <img style="width:100%;max-width:300px" src="{{ asset('storage')}}/{{$product->package_image }} " /> </td>
                                     <td> {{ $product->total_rate }} </td>
                                     <td> {{ $product->package_rate }} </td>
-                                    <td> {{ $product->phn_number }} </td>
+
                                         <td>
                                             <div class="form-button-action">
 

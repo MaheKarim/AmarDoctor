@@ -41,10 +41,7 @@
                     <div class="col-md-4 col-3"><h6 style="font-weight:bold;">&#2547; {{ $product->package_rate }}</h6></div>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col-md-8 col-9"><h6>Call Us : </h6></div>
-                    <div class="col-md-4 col-3"><h6 style="font-weight:bold;"> +880{{ $product->phn_number }}</h6></div>
-                </div>
+
                 <hr>
                 @auth
                 <div class="btn-search">
@@ -53,18 +50,10 @@
                 @endauth
                 @if (!Auth::check())
 
-                <span style="background-color: aqua">For Buy This Product, You Have To Login!</span>
+                <span style="background-color: aqua">To book this package, You have to login!</span>
 
             @endif
-                <!-- Modal Start Here -->
 
-                <!-- Button trigger modal -->
-
-
-                <!-- Modal -->
-
-
-                <!-- Modal Off Here -->
             </div>
         </div>
         <br>

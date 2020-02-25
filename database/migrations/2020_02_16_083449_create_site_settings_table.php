@@ -21,7 +21,6 @@ class CreateSiteSettingsTable extends Migration
             $table->longText('site_shortDescription')->nullable();
             $table->string('site_fbLink')->nullable();
             $table->string('site_ytLink')->nullable();
-            $table->string('site_twitterLink')->nullable();
             $table->string('site_logo')->nullable();
             $table->timestamps();
         });

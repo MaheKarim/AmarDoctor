@@ -23,10 +23,6 @@
 												<li>
 													<a href="{{ $settings->site_ytLink }}" target="_blank"><i class="fab fa-twitter"></i> </a>
 												</li>
-												<li>
-													<a href="{{ $settings->site_twitterLink }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-												</li>
-
 											</ul>
 										</div>
 									</div>
@@ -107,7 +103,9 @@
 							<div class="row">
 								<div class="col-md-6 col-lg-6">
 									<div class="copyright-text">
-										<p class="mb-0">&copy; {{ now()->year }} AmarDoctor. All rights reserved.</p>
+										<p class="mb-0">&copy; {{ now()->year }} AmarDoctor.  Developed By
+											<a href="https://webash.tech"> WeBash Tech </a>
+										</p>
 									</div>
 								</div>
 								<div class="col-md-6 col-lg-6">

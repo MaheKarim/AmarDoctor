@@ -15,14 +15,12 @@
                     <i class="flaticon-right-arrow"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Forms</a>
+                    <a href="#">Settings</a>
                 </li>
                 <li class="separator">
                     <i class="flaticon-right-arrow"></i>
                 </li>
-                <li class="nav-item">
-                    <a href="#">Basic Form</a>
-                </li>
+
             </ul>
         </div>
         <div class="row">
@@ -81,10 +79,7 @@
                                         <label for="text">Add Youtube Link</label>
                                         <input type="text" class="form-control" name="site_ytLink" id="text" placeholder="Enter Youtube Link" value="{{$site_data->site_ytLink}}">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="text">Add Twitter Link</label>
-                                        <input type="text" class="form-control" name="site_twitterLink" id="text" placeholder="Enter Twitter Link" value="{{$site_data->site_twitterLink}}">
-                                    </div>
+
                             </div>
                         </div>
                         <div class="card-action">

@@ -69,12 +69,7 @@
 
                                     <label for="text">Package Rate</label>
                                     <input type="text" class="form-control" name="package_rate" id="text" placeholder="Package Rate">
-
-                                    <label for="text">Add Product Number</label>
-                                    <input type="text" class="form-control" name="phn_number" id="text" placeholder="Phn Number">
-
-
-                                    <label for="text">Choose Shop Image</label>
+                                    <label for="text">Choose Product Image</label>
                                    <input type="file" class="form-control" name="package_image">
                                 </div>
                                 </div>
