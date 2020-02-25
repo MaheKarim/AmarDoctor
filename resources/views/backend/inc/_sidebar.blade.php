@@ -121,6 +121,11 @@
                                         <span class="sub-item">Control Panel</span>
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="{{ url('/admin/log-reader') }}">
+                                        <span class="sub-item">Log Reader</span>
+                                    </a>
+                                </li>
 
                             </ul>
                         </div>

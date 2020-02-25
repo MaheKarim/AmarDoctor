@@ -13,6 +13,7 @@ Route::get('/clear', 'FrontendController@clear');
 
 Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 Route::get('/dashboard', function () { return redirect (route('user.dashboard')); });
+Route::get('/admin', function () { return redirect (route('admin.dashboard')); });
 Route::get('/home', function () { return redirect (route('user.dashboard')); });
 
 /*
@@ -45,6 +46,18 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
 
 
 });
+
+Route::group([
+    'namespace' => '\Haruncpi\LaravelLogReader\Controllers',
+    'middleware' => ['auth','admin']
+],
+    function () {
+        Route::get(config('laravel-log-reader.view_route_path'), 'LogReaderController@getIndex');
+        Route::post(config('laravel-log-reader.view_route_path'), 'LogReaderController@postDelete');
+        Route::get(config('laravel-log-reader.api_route_path'), 'LogReaderController@getLogs');
+    }
+);
+
     Route::get('/product/booking/{id}','ProductBookingController@productBooking')->name('productBooking');
     Route::get('/delete/product_booking/{id}', 'ProductBookingController@productbookingDelete')->name('deleteProductBooking');
     Route::get('/product/edit/status/{id}','ProductBookingController@edit')->name('editStatus.productBooking');

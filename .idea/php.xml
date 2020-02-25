@@ -109,6 +109,7 @@
       <path value="$PROJECT_DIR$/vendor/unisharp/laravel-ckeditor" />
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
       <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
+      <path value="$PROJECT_DIR$/vendor/haruncpi/laravel-log-reader" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
