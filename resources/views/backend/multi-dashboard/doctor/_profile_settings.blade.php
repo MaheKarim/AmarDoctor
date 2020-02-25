@@ -152,7 +152,7 @@
                                     </div>
 									<div class="col-md-6">
 										<label>Work Experience </label>
-										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Specialization" name="work_exp" value="{{$details->work_exp}}"  id="work_exp">
+										<input class="input-tags form-control" type="text" data-role="tagsinput" placeholder="Enter Experience (Only Digit)" name="work_exp" value="{{$details->work_exp}}"  id="work_exp">
 
                                     </div>
                                     <br>
