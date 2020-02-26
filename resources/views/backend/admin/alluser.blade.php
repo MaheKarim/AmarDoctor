@@ -5,7 +5,7 @@
     <div class="page-inner">
         <div class="page-header">
             <h4 class="page-title">
-                @yield('title','Show Doctor')
+                @yield('title','Show All User')
             </h4>
         </div>
         <div class="row">
@@ -19,9 +19,9 @@
                         <!-- Modal -->
 
                         <!-- Notification Start Here -->
-                        @if (session()->has('success'))
-                            <div class="alert alert-success">
-                                {{ session()->get('success') }}
+                        @if (session()->has('warning'))
+                            <div class="alert alert-danger">
+                                {{ session()->get('warning') }}
                             </div>
                           @endif
                     <!-- Notification End Here -->

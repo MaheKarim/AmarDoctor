@@ -43,11 +43,13 @@ class DashboardController extends Controller
         return view('backend.admin.allnurse',compact('details_user'));
     }
 
-    public function destroyUser ($id)
+    public function destroy ($id)
     {
 
-     $details_user =    DB::table('users')->where('role_id',4, $id)->delete();
-        return view('backend.admin.alluser', compact('details_user'));
+         DB::table('users')->where('id', $id)->delete();
+        // User::find($id)->delete();
+        session()->flash('warning','User Deleted Successfully!');
+        return redirect()->route('admin.showAllUser');
 
     }
 }

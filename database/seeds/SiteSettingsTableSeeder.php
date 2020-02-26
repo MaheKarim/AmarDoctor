@@ -23,7 +23,7 @@ class SiteSettingsTableSeeder extends Seeder
             'site_shortDescription' => Str::random(25),
             'site_fbLink' => 'Lorem Ipsum',
             'site_ytLink' => 'Lorem Ipsum',
-            'site_twitterLink' => 'Lorem Ipsum',
+
         ]);
     }
 }

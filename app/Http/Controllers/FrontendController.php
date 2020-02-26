@@ -40,7 +40,7 @@ class FrontendController extends Controller
         Artisan::call('storage:link');
         Artisan::call('db:seed');
 
-        return 'Migrate, Storage:Link, DB Seed Done!';
+        return 'Migrate Reset, Storage:Link, DB Seed Done!';
     }
 
 }
