@@ -22,6 +22,7 @@ class UsersTableSeeder extends Seeder
             'username' => 'admin',
             'email' => 'admin@blog.com',
             'password' => Hash::make('rootadmin'),
+            'created_at' => \Carbon\Carbon::now(),
 
         ]);
         DB::table('users')->insert([
@@ -31,6 +32,7 @@ class UsersTableSeeder extends Seeder
             'username' => 'doctor',
             'email' => 'doctor@blog.com',
             'password' => Hash::make('rootdoctor'),
+            'created_at' => \Carbon\Carbon::now(),
 
         ]);
         DB::table('users')->insert([
@@ -40,6 +42,7 @@ class UsersTableSeeder extends Seeder
             'username' => 'nurse',
             'email' => 'nurse@blog.com',
             'password' => Hash::make('rootnurse'),
+            'created_at' => \Carbon\Carbon::now(),
 
         ]);
         DB::table('users')->insert([
@@ -49,6 +52,7 @@ class UsersTableSeeder extends Seeder
             'username' => 'user',
             'email' => 'user@blog.com',
             'password' => Hash::make('rootuser'),
+            'created_at' => \Carbon\Carbon::now(),
 
         ]);
     }
