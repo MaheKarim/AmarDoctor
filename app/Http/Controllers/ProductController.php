@@ -41,7 +41,6 @@ class ProductController extends Controller
         $products->description = $request->description;
         $products->total_rate = $request->total_rate;
         $products->package_rate = $request->package_rate;
-        $products->phn_number = $request->phn_number;
         $products->product_slug = $request->product_slug;
         $products->save();
 
@@ -55,7 +54,6 @@ class ProductController extends Controller
             'product_name' => 'required|min:3|max:120',
             'description' =>  'required|max:1500',
             'total_rate'  => 'required|max:25',
-            'phn_number'  => 'required|max:11',
             'package_image' => 'required'
          ]);
 
@@ -69,7 +67,6 @@ class ProductController extends Controller
                 "description" => $request->description,
                 "total_rate" => $request->total_rate,
                 "package_rate" => $request->package_rate,
-                "phn_number" => $request->phn_number,
                 "package_image" => $request->package_image,
             ]);
 
