@@ -55,10 +55,7 @@ class DashboardController extends Controller
     {
 
         $users = User::where('id', $id)->pluck('id');
-        //dd();
         Doctor::whereIn('user_id', $users)->delete();
-
-       // dd($id); 
         $users->delete();
 
         session()->flash('warning','Doctor Deleted Successfully!');
