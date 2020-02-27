@@ -15,7 +15,7 @@ class CreateDoctorsTable extends Migration
     {
         Schema::create('doctors', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('present_address')->nullable();
             $table->string('bmdc_reg_no')->nullable();
             $table->longText('work_exp')->nullable();
@@ -27,6 +27,8 @@ class CreateDoctorsTable extends Migration
             $table->integer('area_name_id')->nullable();
             $table->integer('category_name_id')->nullable();
             $table->string('doctor_fees')->nullable();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
