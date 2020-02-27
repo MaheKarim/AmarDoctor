@@ -24,7 +24,7 @@ class DashboardController extends Controller
 
         return view('backend.admin.dashboard', $data);
     }
-    
+
     public function showDoctorAll()
     {
         $doctors = Doctor::all();
@@ -51,28 +51,17 @@ class DashboardController extends Controller
         return redirect()->route('admin.showAllUser');
     }
 
-    public function destroyDoctor ($id)
+    public function destroyDoctor($id)
     {
-//        DB::table('doctors')->foreign('user_id')
-////            ->references('id')->on('users')
-////            ->onDelete('cascade');
-///
-//        $details_user = User::findOrfail($id);
-//        $details_user->Doctor()->delete();
-//        $details_user->delete();
-       // $doctors = Doctor::where('id', $id)->delete();
-        // Delete User Also
-     //   $details_user = User::where('id',$id)->delete();
 
-        $user = User::find($id);
+        $users = User::where('id', $id)->pluck('id');
+        //dd();
+        Doctor::whereIn('user_id', $users)->delete();
 
-        if ($user) {
-            $user->Doctor()->detach();
-            $user->delete();
+       // dd($id); 
+        $users->delete();
 
-        }
         session()->flash('warning','Doctor Deleted Successfully!');
         return redirect()->route('admin.showAllDoctor');
-
     }
 }
