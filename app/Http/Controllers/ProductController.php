@@ -34,18 +34,20 @@ class ProductController extends Controller
         return view('backend.product.edit_product', $data);
     }
 
-    public function update (Request $request)
+    public function update (Request $request, Product $product)
     {
-        $products = Product::findOrfail($request)->first();
-        $products->product_name = $request->product_name;
-        $products->description = $request->description;
-        $products->total_rate = $request->total_rate;
-        $products->package_rate = $request->package_rate;
-        $products->product_slug = $request->product_slug;
-        $products->save();
+        $product = Product::find(Input::get('id'));
 
-        session()->flash('success','Successfully Updated!');
-        return redirect(route('showProduct'));
+
+        if ($product) {
+            File::update('public/'.$product->image);
+            $product->update(Input::all());
+            return Redirect::to('admin/products/index')
+                ->with('message', 'Product Updated');
+        }
+
+        return Redirect::to('admin/products/index')
+            ->with('message', 'Something went wrong, please try again');
     }
 
     public function store(Request $request){
@@ -123,7 +125,6 @@ class ProductController extends Controller
     {
         $data = [ ];
         $data['settings'] = SiteSettings::find(1);
-
         $data['products'] = Product::paginate(3);
 
         return view('frontend.allproduct', $data);

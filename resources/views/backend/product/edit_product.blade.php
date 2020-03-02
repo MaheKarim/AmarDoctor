@@ -41,6 +41,11 @@
                                         <label for="text">Update Package Slug</label>
                                         <input type="text" class="form-control" name="product_slug" id="product_slug" value="{{ $products->product_slug }}" placeholder="Update Product Slug">
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="text">Choose Product Image</label>
+                                        <input type="file" class="form-control" name="package_image">
+                                    </div>
                             </div>
                         </div>
                     </div>
