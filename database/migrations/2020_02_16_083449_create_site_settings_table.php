@@ -23,7 +23,7 @@ class CreateSiteSettingsTable extends Migration
             $table->string('site_ytLink')->nullable();
             $table->string('site_logo')->nullable();
             $table->timestamps();
-        });
+    });
     }
 
     /**

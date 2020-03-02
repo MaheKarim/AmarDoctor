@@ -21,7 +21,7 @@
 													<a href="{{ $settings->site_fbLink }}" target="_blank"><i class="fab fa-facebook-f"></i> </a>
 												</li>
 												<li>
-													<a href="{{ $settings->site_ytLink }}" target="_blank"><i class="fab fa-twitter"></i> </a>
+													<a href="{{ $settings->site_ytLink }}" target="_blank"><i class="fab fa-youtube"></i> </a>
 												</li>
 											</ul>
 										</div>
