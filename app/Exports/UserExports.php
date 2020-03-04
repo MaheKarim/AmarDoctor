@@ -12,6 +12,6 @@ class UserExports implements FromCollection
     */
     public function collection()
     {
-        return User::where('role_id',4)->get();
+        return User::all();
     }
 }

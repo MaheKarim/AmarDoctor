@@ -13,6 +13,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex align-items-center">
+                            <form action="{{route('admin.export.onlyDoctor')}}" method="POST">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <button class="btn btn-outline-info">Download Doctor Info</button>
+                            </form>
                         </div>
                     </div>
                     <div class="card-body">
