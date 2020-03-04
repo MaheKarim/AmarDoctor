@@ -15,6 +15,8 @@
         "laravel/framework": "5.8.*",
         "laravel/helpers": "^1.1",
         "laravel/tinker": "^1.0",
+        "maatwebsite/excel": "3.1.19",
+        "phpoffice/phpspreadsheet": "^1.11",
         "silber/bouncer": "v1.0.0-rc.6",
         "unisharp/laravel-ckeditor": "^4.7",
         "yajra/laravel-datatables-oracle": "^9.8"
