@@ -12,7 +12,12 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center pull-right">
+                        <form action="{{route('admin.export.onlyUser')}}" method="POST">
+
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <button class="btn btn-outline-info">Download User Info</button>
+                        </form>
                         </div>
                     </div>
                     <div class="card-body">

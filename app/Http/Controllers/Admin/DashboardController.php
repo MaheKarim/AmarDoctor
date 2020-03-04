@@ -9,8 +9,12 @@ use App\User;
 use App\ContactForm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Exports\UserExports;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class DashboardController extends Controller
 {
@@ -53,12 +57,24 @@ class DashboardController extends Controller
 
     public function destroyDoctor($id)
     {
-
         $users = User::where('id', $id)->pluck('id');
         Doctor::whereIn('user_id', $users)->delete();
         $users->delete();
 
         session()->flash('warning','Doctor Deleted Successfully!');
         return redirect()->route('admin.showAllDoctor');
+    }
+
+    public function exportUser(Request $request)
+    {
+//        $data = User::all();
+//        Excel::download('user_data',function ($excel) use ($data){
+//            $excel->sheet('Sheet 1', function ($sheet) use ($data){
+//                $sheet->fromArray($data);
+//            });
+//        })->export('xls');
+
+      // return redirect()->back()->with('success','Download Successfully!');
+        return Excel::download(new UserExports, 'users.xlsx');
     }
 }
