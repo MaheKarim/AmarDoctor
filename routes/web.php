@@ -97,6 +97,7 @@ Route::group([
     Route::get('/product/edit/{product}','ProductController@edit')->name('editProduct');
     Route::post('/update/product','ProductController@update')->name('updateProduct');
 
+    Route::get('/doctor/service', 'DoctorContactController@create')->name('contact.doctor_form');
     Route::get('/contact/service/nursing','ContactFormController@create')->name('contact.form');
     Route::post('/contact-store','ContactFormController@store')->name('contact.store');
     Route::get('/contact/delete/{id}', 'ContactFormController@delete')->name('deleteContactForm');

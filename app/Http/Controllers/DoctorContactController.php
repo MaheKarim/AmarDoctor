@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DoctorContact;
 use Illuminate\Http\Request;
+use App\SiteSettings;
 
 class DoctorContactController extends Controller
 {
@@ -24,7 +25,9 @@ class DoctorContactController extends Controller
      */
     public function create()
     {
-        //
+        // start from here
+        $settings = SiteSettings::find(1);
+        return view('frontend.contact.doctor_contact', compact('settings'));
     }
 
     /**
