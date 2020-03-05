@@ -1,18 +1,15 @@
 @include('custom.header')
-
 <div class="content">
     <div class="container-fluid">
-
         <div class="row">
             <div class="col-md-8 offset-md-2">
-
                 <!-- Login Tab Content -->
                 <div class="account-content">
                     <div class="row align-items-center justify-content-center">
 
                         @if (session()->has('message'))
                             <div class="alert alert-info" role="alert">
-                                <strong>Mail Sent Successfully!</strong>      {{ session()->get('message') }}
+                                <strong>Your Request Sent Successfully!</strong>      {{ session()->get('message') }}
                             </div>
                         @endif
 
@@ -27,7 +24,7 @@
                                     </ul>
                                 @endif
                             </div>
-                            <form action="#" method="POST">
+                            <form action="{{ route('contact.store_doctor') }}" method="POST">
                                 @csrf
                                 <div class="form-group form-focus">
                                     <input type="text" name="dContact_name" value="{{ old('dContact_name') }}" class="form-control floating">
@@ -49,27 +46,17 @@
                                     <input type="text" name="dContact_address" class="form-control floating">
                                     <label class="focus-label">Your Location / Address</label>
                                     <div> {{ $errors->first('dContact_address') }}</div>
-
                                 </div>
-
-
                                 <br> <hr>
-
                                 <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Submit</button>
-
                             </form>
                             <hr> <br>
                         </div>
                     </div>
                 </div>
                 <!-- /Login Tab Content -->
-
             </div>
         </div>
-
     </div>
-
 </div>
-
-
 @include('custom.footer')

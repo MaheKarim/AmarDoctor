@@ -72,6 +72,9 @@
 								<a  href="{{route('search.doctor')}}">Doctor Search</a>
 							</li>
 							<li class="has-submenu">
+								<a  href="{{route('contact.doctor_form')}}">Doctor at Home</a>
+							</li>
+							<li class="has-submenu">
 								<a href="{{route('contact.form')}}">Nursing Service</a>
 							</li>
 							<li class="has-submenu">

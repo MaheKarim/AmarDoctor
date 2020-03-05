@@ -41,8 +41,9 @@
 										<li><a href="{{ route('login') }} "><i class="fas fa-angle-double-right"></i> Login</a></li>
 										<li><a href="{{ route('register') }}"><i class="fas fa-angle-double-right"></i> Register</a></li>
 										<li><a href="{{ route('user.dashboard') }}"><i class="fas fa-angle-double-right"></i> Dashboard</a></li>
-										<li><a href="{{ url('/password/reset') }}"><i class="fas fa-angle-double-right"></i>Reset Password</a></li>
+										{{--<li><a href="{{ url('/password/reset') }}"><i class="fas fa-angle-double-right"></i>Reset Password</a></li>--}}
 										<li><a href="{{ route('search.doctor') }}"><i class="fas fa-angle-double-right"></i> Search for Doctors</a></li>
+										<li><a href="{{ route('contact.doctor_form') }}"><i class="fas fa-angle-double-right"></i> Search for Doctors</a></li>
 									</ul>
 								</div>
 								<!-- /Footer Widget -->
