@@ -30,10 +30,9 @@
 
 
 <!-- Sweet Alert -->
-<script src="asset('assets/js/plugin/sweetalert/sweetalert.min.js')"></script>
 
 <!-- Atlantis JS -->
-<script src="asset('assets/js/atlantis.min.js')"></script>
+<script src="{{  asset('/') }}assets/js/atlantis.js"></script>
 <script src="{{asset('assets/js/url-generator.js')}}"></script>
 
 <script>

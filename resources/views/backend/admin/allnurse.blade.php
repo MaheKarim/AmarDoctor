@@ -13,6 +13,14 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex align-items-center">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <form action="{{route('admin.export.onlyNurse')}}" method="POST">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <button class="btn btn-outline-info">Download Nurse Info</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">
@@ -48,16 +56,7 @@
                                         <td>{{ $detail->nursing_reg_number }}</td>
                                         <td>{{ $detail->created_at }}</td>
 
-                                        <td>
-                                            <div class="form-button-action">
-                                                <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                                    <i class="fa fa-edit"></i>
-                                                </a>
-                                                <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-                                                    <i class="fa fa-times"></i>
-                                                </a>
-                                            </div>
-                                        </td>
+
                                     </tr>
                                 @endforeach
                                 </tbody>

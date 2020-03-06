@@ -48,6 +48,7 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::get('show/all_nurse','DashboardController@showAllNurse')->name('showAllNurse');
 
     Route::post('/export-user','DashboardController@exportUser')->name('export.onlyUser');
+    Route::post('/export-nurse','DashboardController@exportNurse')->name('export.onlyNurse');
     Route::post('/export-doctor','DashboardController@exportDoctor')->name('export.onlyDoctor');
 
     Route::get('/delete/doctor/service/{id}', 'DashboardController@destroyDoctorReq')->name('delete.doctor_req');

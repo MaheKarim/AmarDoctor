@@ -350,7 +350,7 @@
                                 <th> Email</th>
                                 <th> PHN Number</th>
                                 <th> Address</th>
-                                <th> Service </th>
+                                <th> Service Requested</th>
                                 <th> MSG</th>
                                 <th> Booking Date</th>
                                 <th>Delete</th>

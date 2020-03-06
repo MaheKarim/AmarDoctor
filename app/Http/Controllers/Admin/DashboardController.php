@@ -6,6 +6,7 @@ use App\Booking;
 use App\Doctor;
 use App\DoctorContact;
 use App\Exports\DoctorsExport;
+use App\Exports\NurseExport;
 use App\ProductBooking;
 use App\User;
 use App\ContactForm;
@@ -74,6 +75,11 @@ class DashboardController extends Controller
     {
     //  Code for 3.1.19 version
         return Excel::download(new DoctorsExport, 'doctors.xlsx');
+    }
+
+    public function exportNurse (Request $request)
+    {
+        return Excel::download(new NurseExport, 'nurse.xlsx');
     }
 
     public function destroyDoctorReq ($id)
