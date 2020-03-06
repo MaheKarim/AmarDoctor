@@ -66,7 +66,7 @@
                 </li>
                 <li class="nav-item">
                 <a href="{{ route('admin.nursing_service.index') }}">
-                    <i class="fas fa-medkit"></i>
+                    <i class="fas fa-server"></i>
                         <p>Nursing Service</p>
                     </a>
                 </li>

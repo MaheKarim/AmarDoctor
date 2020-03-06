@@ -57,6 +57,8 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::get('/nursing/service/index', 'NursingServiceController@index')->name('nursing_service.index');
     Route::get('/nursing/service/create', 'NursingServiceController@create')->name('nursing_service.create');
     Route::post('nursing-store','NursingServiceController@store')->name('nursing_service.store');
+    Route::get('/nursing/service/edit/{id}', 'NursingServiceController@edit')->name('nursing_service.edit');
+    Route::post('nursing-update','NursingServiceController@update')->name('nursing_service.update');
     Route::get('/nursing/service/delete/{nursingService}', 'NursingServiceController@destroy')->name('nursing_service.destroy');
 
 

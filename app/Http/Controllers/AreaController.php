@@ -88,7 +88,7 @@ class AreaController extends Controller
         $areas->area_name = $request->area_name;
         $areas->save();
 
-        session()->flash('success','Successfully Updated!');
+        session()->flash('success','Area Successfully Updated!');
         return redirect(route('showArea'));
     }
 

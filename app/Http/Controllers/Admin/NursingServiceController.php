@@ -37,6 +37,9 @@ class NursingServiceController extends Controller
      */
     public function store(Request $request)
     {
+         $request->validate([
+            'nursingservice_name' => 'required|min: 4|unique:nursing_services'
+        ]);
         // add to database
         $nursing_service = new NursingService();
         $nursing_service->nursingservice_name = $request->nursingservice_name;
@@ -63,9 +66,13 @@ class NursingServiceController extends Controller
      * @param  \App\NursingService  $nursingService
      * @return \Illuminate\Http\Response
      */
-    public function edit(NursingService $nursingService)
+    public function edit($id)
     {
         //
+        $data = [ ];
+        $data['nursing_service'] = NursingService::find($id);
+
+        return view('backend.nursing_service.edit_nursingservice' , $data);
     }
 
     /**
@@ -77,7 +84,16 @@ class NursingServiceController extends Controller
      */
     public function update(Request $request, NursingService $nursingService)
     {
-        //
+        // update
+       $request->validate([
+           'nursingservice_name' => 'required|min: 4|unique:nursing_services'
+       ]);
+       $nursingService = NursingService::findOrfail($request)->first();
+       $nursingService->nursingservice_name = $request->nursingservice_name;
+       $nursingService->save();
+
+       session()->flash('success','Nursing Service Successfully Updated!');
+       return redirect(route('admin.nursing_service.index'));
     }
 
     /**
@@ -86,10 +102,10 @@ class NursingServiceController extends Controller
      * @param  \App\NursingService  $nursingService
      * @return \Illuminate\Http\Response
      */
-    public function destroy(NursingService $nursingService)
+    public function destroy($id)
     {
         // delete option
-        NursingService::where('id', $nursingService)->delete();
+        NursingService::where('id', $id)->delete();
 
         session()->flash('warning', 'Nursing Service Deleted Successfully!');
         return redirect()->route('admin.nursing_service.index');

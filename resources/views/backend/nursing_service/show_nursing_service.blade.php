@@ -55,14 +55,12 @@
 
                                         <td>
                                             <div class="form-button-action">
-                                                <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
-                                                    <i class="fa fa-edit"></i>
+                                                <a href="{{ route('admin.nursing_service.edit', $key->id) }}" type="button" class="btn btn-warning btn-round btn-sm ml-auto">
+                                                  Edit
                                                 </a>
-
-                                                <a href="{{ route('admin.nursing_service.destroy' , $key->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-                                                    <i class="fa fa-times"></i>
+                                                |
+                                                <a href="{{ route('admin.nursing_service.destroy', $key->id) }}" type="button" class="btn btn-danger btn-round btn-sm ml-auto">    Delete
                                                 </a>
-
                                             </div>
                                         </td>
                                     </tr>
