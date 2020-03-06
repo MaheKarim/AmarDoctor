@@ -50,10 +50,14 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::post('/export-user','DashboardController@exportUser')->name('export.onlyUser');
     Route::post('/export-doctor','DashboardController@exportDoctor')->name('export.onlyDoctor');
 
-
     Route::get('/delete/doctor/service/{id}', 'DashboardController@destroyDoctorReq')->name('delete.doctor_req');
     Route::get('/delete/user/{id}', 'DashboardController@destroy')->name('deleteUser');
     Route::get('/delete/doctor/{id}', 'DashboardController@destroyDoctor')->name('deleteDoctor');
+
+    Route::get('/nursing/service/index', 'NursingServiceController@index')->name('nursing_service.index');
+    Route::get('/nursing/service/create', 'NursingServiceController@create')->name('nursing_service.create');
+    Route::post('nursing-store','NursingServiceController@store')->name('nursing_service.store');
+    Route::get('/nursing/service/delete/{nursingService}', 'NursingServiceController@destroy')->name('nursing_service.destroy');
 
 
 });
@@ -166,8 +170,6 @@ Route::get('/search/doctor', 'SearchController@search_doctor')->name('search.doc
 
 Route::get('booking/confirmation/{id}/done','BookingController@booking_confirmation')->name('booking.confirmation');
 Route::get('/booking-show','BookingController@showbooking')->name('bookingShow');
-
-
 
 Route::get('/login/user', 'Auth\LoginController@showUserLoginForm');
 

@@ -64,6 +64,12 @@
                         <p>Doctor Type / Category</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                <a href="{{ route('admin.nursing_service.index') }}">
+                    <i class="fas fa-medkit"></i>
+                        <p>Nursing Service</p>
+                    </a>
+                </li>
 
                 <li class="nav-section">
                     <span class="sidebar-mini-icon">
