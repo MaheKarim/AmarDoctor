@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Booking;
 use App\Doctor;
+use App\DoctorContact;
 use App\Exports\DoctorsExport;
 use App\ProductBooking;
 use App\User;
@@ -23,6 +24,7 @@ class DashboardController extends Controller
         $data['booking_all'] = Booking::orderBy('created_at', 'desc')->get();
         $data['product_bookings'] = ProductBooking::all();
         $data['mails'] = ContactForm::orderBy('created_at', 'desc')->get();
+        $data['doctors_contact'] = DoctorContact::latest()->get();
 
         return view('backend.admin.dashboard', $data);
     }
@@ -72,5 +74,13 @@ class DashboardController extends Controller
     {
     //  Code for 3.1.19 version
         return Excel::download(new DoctorsExport, 'doctors.xlsx');
+    }
+
+    public function destroyDoctorReq ($id)
+    {
+        DoctorContact::where('id', $id)->delete();
+
+        session()->flash('warning','Doctor Service Request Deleted Successfully!');
+        return redirect()->route('admin.dashboard');
     }
 }

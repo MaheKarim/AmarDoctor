@@ -219,6 +219,12 @@
                     {{ session()->get('success') }}
                 </div>
             @endif
+            <!-- Another -->
+            @if (session()->has('warning'))
+                <div class="alert alert-danger">
+                    {{ session()->get('warning') }}
+                </div>
+            @endif
         <!-- Notification End Here -->
             <div class="card">
                 <div class="card-header">
@@ -331,9 +337,6 @@
     <!-- Product Booking End --><!-- Product Booking Start -->
     <div class="row">
         <div class="col-md-12">
-            <!-- Notification Start Here -->
-
-        <!-- Notification End Here -->
             <div class="card">
                 <div class="card-header">
                     <h4 align="center" class="card-title" style="background-color: darkcyan; color: white;">Nursing Service Request</h4>
@@ -373,5 +376,45 @@
         </div>
     </div>
     <!-- Product Booking End -->
+    <!-- Doctor Service request Start -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 align="center" class="card-title" style="background-color: #1abc9c; color: white;">Doctor Service Request</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="basic-datatables" class="display table table-striped table-hover" >
+                            <thead>
+                            <tr>
+                                <th> Name</th>
+                                <th> Email</th>
+                                <th> PHN Number</th>
+                                <th> Address</th>
+                                <th> Booking Date</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($doctors_contact as $key)
+                                <tr>
+                                    <td>{{ $key->dContact_name }}</td>
+                                    <td>{{ $key->dContact_email }}</td>
+                                    <td>{{ $key->dContact_phn }}</td>
+                                    <td>{{ $key->dContact_address }}</td>
+                                    <td>{{ $key->created_at->format('jS F') }}</td>
+
+                                    <td><a href="{{ route('admin.delete.doctor_req', $key->id) }}" type="button" class="btn btn-sm btn-danger">Delete</a></td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Doctor Service request End -->
 </div>
 @endsection
