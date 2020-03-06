@@ -45,11 +45,23 @@
                                     <label class="focus-label">Your Phn Number</label>
                                     <div> {{ $errors->first('customer_phn') }}</div>
                                 </div>
+
+                                <div class="form-group">
+                                    <label>Select Any Service</label>
+                                    <select name="nursing_service_id" class="form-control select">
+                                        @php($nursing_service = \App\NursingService::all())
+                                            <option value="selected" selected="selected">Please Select Any Service   ...</option>
+                                        @foreach ($nursing_service as $key)
+                                            <option {{ ( $key->nursing_service_id == $key->id) ? "Selected" : ""  }} value="{{$key->id}}">{{$key->nursingservice_name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+
                                 <div class="form-group form-focus">
                                     <input type="text" name="customer_address" class="form-control floating">
                                     <label class="focus-label">Your Location / Address</label>
                                     <div> {{ $errors->first('customer_address') }}</div>
-
                                 </div>
                                 <div class="form-group form-focus">
                                     <label class="focus-label">Why You Need Nurse ?</label>

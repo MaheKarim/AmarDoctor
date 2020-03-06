@@ -34,6 +34,7 @@ class ContactFormController extends Controller
         $mails->customer_phn = $request->customer_phn;
         $mails->customer_address = $request->customer_address;
         $mails->customer_message = $request->customer_message;
+        $mails->nursing_service_id = $request->nursing_service_id;
         $mails->save();
 
        // Mail::to('info@amardoctor.com.bd')->send(new ContactFormMail($data));

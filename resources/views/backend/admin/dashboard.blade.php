@@ -350,6 +350,7 @@
                                 <th> Email</th>
                                 <th> PHN Number</th>
                                 <th> Address</th>
+                                <th> Service </th>
                                 <th> MSG</th>
                                 <th> Booking Date</th>
                                 <th>Delete</th>
@@ -362,6 +363,7 @@
                                     <td>{{ $mail->customer_email }}</td>
                                     <td>{{ $mail->customer_phn }}</td>
                                     <td>{{ $mail->customer_address }}</td>
+                                    <td>{{ $mail->nursing_service_details->nursingservice_name }}</td>
                                     <td>{{ $mail->customer_message }}</td>
                                     <td>{{ $mail->created_at->format('jS F') }}</td>
 
