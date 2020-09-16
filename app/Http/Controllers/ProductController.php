@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Image;
+use Illuminate\Support\Facades\Input;
+use Redirect;
 
 
 class ProductController extends Controller
@@ -46,8 +48,8 @@ class ProductController extends Controller
                 ->with('message', 'Product Updated');
         }
 
-        return Redirect::to('admin/products/index')
-            ->with('message', 'Something went wrong, please try again');
+        session()->flash('success', 'Something went wrong, please try again');
+        return redirect(route('showProduct'));
     }
 
     public function store(Request $request){
