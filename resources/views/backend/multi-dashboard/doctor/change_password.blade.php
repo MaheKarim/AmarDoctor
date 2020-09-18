@@ -51,7 +51,7 @@
                                                    @endif
 
                                 </div>
-                                <h1 color="blue"> Don't change password now</h1>
+                                <h1 color="blue">Change your password now!</h1>
                                 <!-- Change Password Form -->
                                 <form method="POST" action="{{ route('passwordFrom') }}">
                                     @csrf
