@@ -251,7 +251,7 @@
                         <div class="u-border__top--blue_4 u-margin--10__top"></div>
                         <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
 
-                        </div> <a class="btn btn-info" href="{{route('productSee', $product->product_slug)}}">Details</a>
+                        </div> <a class="btn btn-info" style='font-size:17px;' href="{{route('productSee', $product->product_slug)}}">Details &#8594;</a>
                     </div>
                 </div>
             @endforeach
