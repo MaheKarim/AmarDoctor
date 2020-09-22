@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-4 col-lg-8">
-                                <form action="{{ route('updateProduct') }}" method="POST">
+                                <form action="{{ route('updateProduct') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label for="text">Update Product Name</label>
