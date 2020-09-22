@@ -7,7 +7,6 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active"><a href="{{ route('search.doctor') }}"><img class="d-block w-100" src="{{asset('/')}}frontend/assets/img/banner1.jpg" alt="First slide"></a>  </div>
                         <div class="carousel-item"><a href="https://amardoctor.com.bd/public/index.php/contact/service/nursing"> <img class="d-block w-100" src="{{asset('/')}}frontend/assets/img/banner2.jpg" alt="Second slide"></a> </div>
-                        <div class="carousel-item"><a href="{{ route('search.doctor') }}"> <img class="d-block w-100" src="{{asset('/')}}frontend/assets/img/banner3.jpg" alt="Third slide"> </a></div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
@@ -250,7 +249,7 @@
                         <div class="u-border__top--blue_4 u-margin--10__top"></div>
                         <div class="u-margin--15__top u-t-c--green_2 u-font--bold"><i class="icon-ic_discount"></i>
 
-                        </div> <a class="btn btn-info" href="{{route('productSee', $product->product_slug)}}">Explore</a>
+                        </div> <a class="btn btn-info" href="{{route('productSee', $product->product_slug)}}">Details</a>
                     </div>
                 </div>
             @endforeach
