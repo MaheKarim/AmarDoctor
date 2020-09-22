@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use App\Http\Controllers\File;
 use Image;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Input;
 use Redirect;
 
@@ -39,18 +40,50 @@ class ProductController extends Controller
 
     public function update (Request $request, Product $product)
     {
-        $product = Product::find(Input::get('id'));
+        Product::findOrfail($request->product_name_id)->update([
+            "product_name" => $request->product_name,
+            "description" => $request->description,
+            "product_slug" => $request->product_slug,
+            "total_rate" => $request->total_rate,
+            "package_rate" => $request->package_rate,
+            "updated_at" => Carbon::now(),
+          ]);
 
+          if($request->hasFile('package_image')) {
+              Storage::delete(Product::findOrfail($request->product_name_id)->package_image);
+              Storage::delete(Product::findOrfail($request->product_name_id)->thumbnail_medium);
 
-        if ($product) {
-            File::update('public/'.$product->image);
-            $product->update(Input::all());
-            return Redirect::to('admin/products/index')
-                ->with('message', 'Product Updated');
-        }
+              //get filename with extension
+              $fileNameWithExtension = $request->file('package_image')->getClientOriginalName();
+              //get filename without extension
+              $fileName = pathinfo($fileNameWithExtension, PATHINFO_FILENAME);
+              //get file extension
+              $extension = $request->file('package_image')->getClientOriginalExtension();
+              //filename to store
+              $fileNameToStore = str_replace(' ', '-', $fileName).'-'.time().'.'.$extension;
+              //Upload File
+              $imagePath = $request->file('package_image')->storeAs("package_images", $fileNameToStore);
 
-        session()->flash('success', 'Something went wrong, please try again');
-        return redirect(route('showProduct'));
+              $thumbnailPathMedium = $request->file('package_image')->storeAs ("package_images/thumbnailMedium", $fileNameToStore);
+              //Resize image here
+
+              //Thumbnail Medium
+              $thubmnailRealPathMedium = public_path("/storage/$thumbnailPathMedium");
+              $thumbnailMedium = Image::make($thubmnailRealPathMedium)->resize(348, 196, function($constraint) {
+                  $constraint->aspectRatio();
+              });
+             $thumbnailMedium->save($thubmnailRealPathMedium);
+              // New Codes for resize & store images Ends
+
+              Product::find($request->product_name_id)->update([
+                  "package_image" => $imagePath,
+                  "thumbnail_medium" => $thumbnailPathMedium,
+
+              ]);
+          }
+
+      session()->flash('success','Product Updated Successfully!');
+      return redirect(route('showProduct'));
     }
 
     public function store(Request $request){
