@@ -228,7 +228,7 @@
         <!-- Notification End Here -->
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Appointment List</h4>
+                    <h4 class="card-title" align="center" style="background-color: #82ccdd; color: white;">Appointment List</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -243,22 +243,8 @@
                                 <th>Status</th>
                                 <th>Action</th>
                                 <th>Delete</th>
-
                             </tr>
                             </thead>
-                            <tfoot>
-                            <tr>
-                                <th>Patient Name</th>
-                                <th>Doctor Name</th>
-                                <th>Category</th>
-                                <th>Appointment date</th>
-                                <th>User PHN No</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                                <th>Delete</th>
-
-                            </tr>
-                            </tfoot>
                             <tbody>
 
                 @foreach($booking_all  as $booking)
@@ -293,7 +279,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Product Buying Request</h4>
+                    <h4 class="card-title" align="center" style="background-color: #60a3bc; color: white;">Product Buying Request</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -339,7 +325,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 align="center" class="card-title" style="background-color: darkcyan; color: white;">Nursing Service Request</h4>
+                    <h4 align="center" class="card-title" style="background-color: #3c6382; color: white;">Nursing Service Request</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -383,7 +369,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 align="center" class="card-title" style="background-color: #1abc9c; color: white;">Doctor Service Request</h4>
+                    <h4 align="center" class="card-title" style="background-color: #0a3d62; color: white;">Doctor Service Request</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

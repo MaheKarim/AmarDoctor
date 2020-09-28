@@ -78,6 +78,7 @@ class DashboardController extends Controller
             'present_address' =>$request->present_address,
             'work_exp' =>$request->work_exp,
             'doctor_fees' =>$request->doctor_fees,
+            'service_status_id' => $request->service_status_id,
         ]);
 
         return back()->with('success', 'Profile Updated Successfully!');

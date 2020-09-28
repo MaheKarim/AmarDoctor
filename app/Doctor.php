@@ -15,6 +15,12 @@ class Doctor extends Model
     {
         return $this->belongsTo('App\Area', 'area_name_id','id');
     }
+
+    public function HomeServiceStatus()
+    {
+        return $this->belongsTo('App\HomeServiceStatus', 'service_status_id', 'id');
+    }
+
     public function Category()
     {
         return $this->belongsTo('App\Category' ,'category_name_id' ,'id');

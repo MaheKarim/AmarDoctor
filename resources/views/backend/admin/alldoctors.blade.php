@@ -31,7 +31,7 @@
                     <!-- Notification End Here -->
 
                         <div class="table-responsive">
-                            <table id="add-row" class="display table table-striped table-hover" >
+                            <table id="add-row" class="display table table-striped table-hover">
                                 <thead>
                                 <tr>
                                     <th>Doctor Name</th>
@@ -39,6 +39,7 @@
                                     <th>Doctor PHN Number</th>
                                     <th>Doctor Edu Degree</th>
                                     <th>Doctor BMDC Certificate</th>
+                                    <th>Home Service</th>
                                     <th>Category</th>
                                     <th>Area</th>
                                     <th>Action</th>
@@ -53,13 +54,16 @@
                                         <td>{{ $doctor->User->phn_number }}</td>
                                         <td>{{ $doctor->edu_degree }}</td>
                                         <td>
-                                            <img style="width: 50px; max-width: auto;" src="{{ asset('storage') }}/{{ $doctor->bmdc_cer}}">
+                                            <img style="width: 50px; max-width: auto;"
+                                                 src="{{ asset('storage') }}/{{ $doctor->bmdc_cer}}">
                                         </td>
+                                        <td>{{ $doctor->HomeServiceStatus->service_status }}</td>
                                         <td>{{ $doctor->Category->category_name}}</td>
                                         <td>{{ $doctor->Area->area_name}}</td>
 
                                         <td>
-                                            <a href="{{ route('admin.deleteDoctor', $doctor->id) }}" type="button" class="btn btn-sm btn-danger">Delete</a>
+                                            <a href="{{ route('admin.deleteDoctor', $doctor->id) }}" type="button"
+                                               class="btn btn-sm btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach

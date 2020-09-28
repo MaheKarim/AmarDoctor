@@ -27,7 +27,7 @@ class CreateDoctorsTable extends Migration
             $table->integer('area_name_id')->nullable();
             $table->integer('category_name_id')->nullable();
             $table->string('doctor_fees')->nullable();
-
+            $table->integer('service_status_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

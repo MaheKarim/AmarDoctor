@@ -26,6 +26,7 @@ class CreateNursesTable extends Migration
             $table->string('nid_card')->nullable();
             $table->string('reg_card')->nullable();
             $table->integer('area_name_id')->nullable();
+            $table->integer('service_status_id')->nullable();
             $table->timestamps();
         });
     }

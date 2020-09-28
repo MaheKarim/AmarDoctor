@@ -54,7 +54,7 @@
                                         <h4 style="font-size: 18px">
                                             Appointment Date
                                         </h4>
-                                        <input type="datetime-local" class="form-control" name="appoint_date">
+                                        <input type="datetime-local" class="form-control" name="appoint_date" value="{{ $data->appoint_date }}">
                                     </div>
 
                             </div>
