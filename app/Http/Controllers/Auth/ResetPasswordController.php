@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\SiteSettings;
+use App\Http\Controllers\Auth\User;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Auth;
 
@@ -59,5 +60,20 @@ class ResetPasswordController extends Controller
     {
         $settings = SiteSettings::find(1);
         return view('auth.passwords.reset', compact('settings'));
+    }
+
+    public function password(\Illuminate\Http\Request $request)
+    {
+       // dd($request->all());
+        $user = User::whereEmail($request->email)->first();
+
+        if (count($user) == 0){
+            return redirect()->back()->with(['error' => 'This Mail From Mars Nor From Planet :D']);
+        }
+        $user = Sentinel::findById($user->id);
+        $reminder = Reminder::exists($user) ? : Reminder::create($user);
+        $this->sendEmail($user, $reminder->code);
+
+        return redirect()->back()->with(['success', 'Check Your Mail!']);
     }
 }

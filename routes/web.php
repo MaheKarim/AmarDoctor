@@ -27,6 +27,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+Route::post('get/password-link/','Auth\ResetPasswordController@password')->name('password.email');
 
 
 
