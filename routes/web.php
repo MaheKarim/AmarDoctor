@@ -64,7 +64,9 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::get('/nursing/service/delete/{nursingService}', 'NursingServiceController@destroy')->name('nursing_service.destroy');
 
 
+
 });
+
 
 Route::group([
     'namespace' => '\Haruncpi\LaravelLogReader\Controllers',
@@ -113,6 +115,13 @@ Route::group([
     Route::get('/contact/service/nursing','ContactFormController@create')->name('contact.form');
     Route::post('/contact-store','ContactFormController@store')->name('contact.store');
     Route::get('/contact/delete/{id}', 'ContactFormController@delete')->name('deleteContactForm');
+    // Admin Custom Data Save
+    Route::get( '/show/custom_information', 'AdminFormController@show')->name('showCustomData');
+    Route::get( '/add/custom_information', 'AdminFormController@index')->name('indexCustomData');
+    Route::post('/save-custom_data','AdminFormController@store')->name('saveData');
+    Route::get('/custom_data/delete/{id}', 'AdminFormController@destroy')->name('deleteCustomData');
+    Route::get('/edit/custom_data/{id}','AdminFormController@edit')->name('editCustomData');
+    Route::post('/update/custom-data','AdminFormController@update')->name('updateCustomData');
 
 /*
 |--------------------------------------------------------------------------

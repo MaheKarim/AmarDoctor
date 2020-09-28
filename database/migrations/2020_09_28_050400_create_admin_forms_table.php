@@ -21,7 +21,7 @@ class CreateAdminFormsTable extends Migration
             $table->string('doctor_name')->nullable();
             $table->string('amount')->nullable();
             $table->text('remarks')->nullable();
-            $table->date('appoint_date')->nullable();
+            $table->dateTime('appoint_date')->nullable();
             $table->timestamps();
         });
     }

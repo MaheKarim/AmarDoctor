@@ -44,7 +44,7 @@
                   </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('admin.showAllDoctor') }}">
+                    <a href="{{ route('showCustomData') }}">
                         <i class="fas fa-database"></i>
                         <p>Preserve Data</p>
                         <span class="badge badge-info">{{ \App\AdminForm::count() }}</span>
