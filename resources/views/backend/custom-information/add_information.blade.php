@@ -96,7 +96,7 @@
                         </div>
                         <div class="card-action">
                             <button class="btn btn-success">Submit</button>
-                            <a href="{{ route('showArea') }}" class="btn btn-danger">Cancel</a>
+                            <a href="{{ route('showCustomData') }}" class="btn btn-danger">Cancel</a>
                         </div>
                         </form>
                     </div>
