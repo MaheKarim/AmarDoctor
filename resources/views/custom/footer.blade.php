@@ -107,7 +107,7 @@
 								<div class="col-md-6 col-lg-6">
 									<div class="copyright-text">
 										<p class="mb-0">&copy; {{ now()->year }} AmarDoctor.  Developed By
-											<a href="https://webash.tech"> WeBash Tech </a>
+											<a href="https://mahekarim.me" target="_blank"> WeBash Tech </a>
 										</p>
 									</div>
 								</div>
