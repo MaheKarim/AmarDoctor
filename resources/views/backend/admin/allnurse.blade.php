@@ -43,20 +43,26 @@
                                     <th>Nurse PHN Number</th>
                                     <th>Nurse Username</th>
                                     <th>Nurse Reg No</th>
+                                    <th>Nurse Home Service</th>
+                                    <th>Nurse Area</th>
+                                    <th>Edu Institute</th>
+                                    <th>Passing Year</th>
                                     <th>Nurse ID Created</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach ($details_user as $detail)
                                     <tr>
-                                        <td>{{ $detail->name }}</td>
-                                        <td>{{ $detail->email }}</td>
-                                        <td>{{ $detail->phn_number }}</td>
-                                        <td>{{ $detail->username }}</td>
+                                        <td>{{ $detail->User->name }}</td>
+                                        <td>{{ $detail->User->email }}</td>
+                                        <td>{{ $detail->User->phn_number }}</td>
+                                        <td>{{ $detail->User->username }}</td>
                                         <td>{{ $detail->nursing_reg_number }}</td>
+                                        <td>{{ $detail->HomeServiceStatus->service_status }}</td>
+                                        <td>{{ $detail->Area->area_name }}</td>
+                                        <td>{{ $detail->edu_institute }}</td>
+                                        <td>{{ $detail->passing_year }}</td>
                                         <td>{{ $detail->created_at }}</td>
-
-
                                     </tr>
                                 @endforeach
                                 </tbody>

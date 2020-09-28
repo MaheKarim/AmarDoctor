@@ -63,7 +63,7 @@ class NurseProfileController extends Controller
             'nursing_reg_number'=>$request->nursing_reg_number,
             'about_me'=>$request->about_me,
             'edu_degree' =>$request->edu_degree,
-//            'nid_card' =>$image,
+            'service_status_id' => $request->service_status_id,
         ]);
 
         return back()->with('success', 'Profile Updated Successfully!');

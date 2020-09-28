@@ -7,6 +7,7 @@ use App\Doctor;
 use App\DoctorContact;
 use App\Exports\DoctorsExport;
 use App\Exports\NurseExport;
+use App\Nurse;
 use App\ProductBooking;
 use App\User;
 use App\ContactForm;
@@ -44,7 +45,8 @@ class DashboardController extends Controller
     }
     public function showAllNurse()
     {
-        $details_user = User::where('role_id',3)->get();
+       // $details_user = User::where('role_id',3)->get();
+        $details_user = Nurse::all();
         return view('backend.admin.allnurse',compact('details_user'));
     }
 

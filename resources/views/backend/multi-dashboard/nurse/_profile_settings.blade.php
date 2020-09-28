@@ -134,6 +134,19 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <!-- New Part Can Be Create Start -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Are you Wanna give Home Service ?</label>
+                                                <select name="service_status_id" class="form-control select">
+                                                    @php($statuses = \App\HomeServiceStatus::all())
+                                                    @foreach ($statuses as $data)
+                                                        <option {{ ( $details->service_status_id == $data->id) ? "Selected" : ""  }} value="{{$data->id}}">{{$data->service_status}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- New Part Can Be Create End -->
                                     </div>
                                 </div>
                             </div>
