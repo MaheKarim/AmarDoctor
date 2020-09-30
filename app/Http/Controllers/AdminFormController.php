@@ -39,11 +39,11 @@ class AdminFormController extends Controller
     public function store(Request $request)
     {
         // Validation Code
-        $validatedData = $request->validate([
-            'patient_name' => 'required|max:255',
-            'patient_number' => 'integer|max:13',
-            'amount' => 'integer|min:1|max:10'
-        ]);
+//        $validatedData = $request->validate([
+//            'patient_name' => 'required|max:255',
+//            'patient_number' => 'integer|max:13',
+//            'amount' => 'integer|min:1|max:10'
+//        ]);
         // Store Data
         $adminForms = new AdminForm();
         $adminForms->hospital_name = $request->hospital_name;
