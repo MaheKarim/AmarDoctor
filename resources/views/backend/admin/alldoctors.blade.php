@@ -27,19 +27,21 @@
                             <div class="alert alert-success">
                                 {{ session()->get('success') }}
                             </div>
-                    @endif
+                        @endif
                     <!-- Notification End Here -->
 
                         <div class="table-responsive">
                             <table id="add-row" class="display table table-striped table-hover">
                                 <thead>
                                 <tr>
-                                    <th>Doctor Name</th>
-                                    <th>Doctor Email</th>
-                                    <th>Doctor PHN Number</th>
-                                    <th>Doctor Edu Degree</th>
-                                    <th>Doctor BMDC Certificate</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>PHN Number</th>
+                                    <th>Edu Degree</th>
+                                    <th>BMDC Certificate</th>
+                                    <th>NID Pic</th>
                                     <th>Home Service</th>
+                                    <th>Doctor Fees</th>
                                     <th>Category</th>
                                     <th>Area</th>
                                     <th>Action</th>
@@ -57,7 +59,12 @@
                                             <img style="width: 50px; max-width: auto;"
                                                  src="{{ asset('storage') }}/{{ $doctor->bmdc_cer}}">
                                         </td>
+                                        <td>
+                                            <img style="width: 50px; max-width: auto;"
+                                                 src="{{ asset('storage') }}/{{ $doctor->nid_pic}}">
+                                        </td>
                                         <td>{{ $doctor->HomeServiceStatus->service_status }}</td>
+                                        <td>{{ $doctor->doctor_fees }}</td>
                                         <td>{{ $doctor->Category->category_name}}</td>
                                         <td>{{ $doctor->Area->area_name}}</td>
 
@@ -71,6 +78,36 @@
                             </table>
 
                         </div>
+                        <!-- New table Start -->
+                        <br> <br> <br>
+                        <div class="table-responsive">
+                            <table id="add-row" class="display table table-striped table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>PHN Number</th>
+                                    <th>Home Service</th>
+                                    <th>Category</th>
+                                    <th>Area</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach ($availabledoctors as $availabledoctor)
+                                    <tr>
+                                        <td>{{ $availabledoctor->User->name }}</td>
+                                        <td>{{ $availabledoctor->User->email }}</td>
+                                        <td>{{ $availabledoctor->User->phn_number }}</td>
+                                        <td>{{ $availabledoctor->HomeServiceStatus->service_status }}</td>
+                                        <td>{{ $availabledoctor->Category->category_name}}</td>
+                                        <td>{{ $availabledoctor->Area->area_name}}</td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <!-- New table End -->
                     </div>
                 </div>
             </div>

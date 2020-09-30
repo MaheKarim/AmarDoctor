@@ -21,9 +21,6 @@ class HomeServiceStatusSeeder extends Seeder
             'service_status' => 'Yes',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
-        DB::table('home_service_statuses')->insert([
-            'service_status' => 'Maybe but Not Sure',
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-        ]);
+        
     }
 }

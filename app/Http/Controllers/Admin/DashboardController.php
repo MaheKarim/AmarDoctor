@@ -33,8 +33,10 @@ class DashboardController extends Controller
 
     public function showDoctorAll()
     {
-        $doctors = Doctor::all();
-        return view('backend.admin.alldoctors', compact('doctors'));
+       // $doctors = Doctor::all();
+        $availabledoctors = Doctor::where('service_status_id', 2)->get();
+        $doctors = Doctor::where('service_status_id', 1)->get();
+        return view('backend.admin.alldoctors', compact('doctors', 'availabledoctors'));
     }
 
     public function showAllUser()
