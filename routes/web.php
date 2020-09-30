@@ -9,9 +9,7 @@
 
 Route::get('/install','FrontendController@install');
 Route::get('/optimize','FrontendController@optimize');
-
 Route::get('/clear', 'FrontendController@clear');
-
 Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 Route::get('/dashboard', function () { return redirect (route('user.dashboard')); });
 Route::get('/admin', function () { return redirect (route('admin.dashboard')); });

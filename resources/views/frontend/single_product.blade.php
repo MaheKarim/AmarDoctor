@@ -16,6 +16,8 @@
 </div>
 <!-- /Breadcrumb -->
 
+
+
 <!-- Page Content -->
 <div class="content">
     <div class="container-fluid">
@@ -63,7 +65,12 @@
                 <p>{!! $product->description !!}</p>
             </div>
         </div>
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox"></div>
     </div>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f74245424995474"></script>
 
 </div>
 <!-- /Page Content -->
