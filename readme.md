@@ -11,7 +11,7 @@
 
 ## About AmarDoctor
 #### Admin Panel Overview
-![Admin Panel](https://user-images.githubusercontent.com/16819523/75204073-165d1300-579a-11ea-8b50-954c95dfb075.png) 
+![Admin Dashboard](https://user-images.githubusercontent.com/16819523/94730654-5f56f480-0385-11eb-8794-a96010f8de4b.png)
 
 ###### Control Panel
 ![Control Panel](https://user-images.githubusercontent.com/16819523/75204242-8cfa1080-579a-11ea-9ee2-f060398286ce.png)
