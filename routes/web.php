@@ -44,7 +44,6 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::post('settings-update','SiteSettingsController@store')->name('settings.store');
 
     Route::get('show/all_doctor','DashboardController@showDoctorAll')->name('showAllDoctor');
-   // Route::get('service_available','DashboardController@availableDoctor')->name('showAvailableDoctor');
     Route::get('show/all_user','DashboardController@showAllUser')->name('showAllUser');
     Route::get('show/all_nurse','DashboardController@showAllNurse')->name('showAllNurse');
 

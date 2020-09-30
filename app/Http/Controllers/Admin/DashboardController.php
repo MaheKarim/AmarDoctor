@@ -33,23 +33,24 @@ class DashboardController extends Controller
 
     public function showDoctorAll()
     {
-       // $doctors = Doctor::all();
-        $availabledoctors = Doctor::where('service_status_id', 2)->get();
         $doctors = Doctor::where('service_status_id', 1)->get();
+        $availabledoctors = Doctor::where('service_status_id', 2)->get();
+
         return view('backend.admin.alldoctors', compact('doctors', 'availabledoctors'));
     }
 
     public function showAllUser()
     {
-
         $details_user = User::where('role_id',4)->get();
+
         return view('backend.admin.alluser',compact('details_user'));
     }
     public function showAllNurse()
     {
-       // $details_user = User::where('role_id',3)->get();
-        $details_user = Nurse::all();
-        return view('backend.admin.allnurse',compact('details_user'));
+        $details_user = Nurse::where('service_status_id', 1)->get();
+        $nurses = Nurse::where('service_status_id', 2)->get();
+
+        return view('backend.admin.allnurse',compact('details_user', 'nurses'));
     }
 
     public function destroy ($id)

@@ -16,8 +16,7 @@
 </div>
 <!-- /Breadcrumb -->
 
-
-
+<br>
 <!-- Page Content -->
 <div class="content">
     <div class="container-fluid">
@@ -33,14 +32,14 @@
                 <h3>Selected Package</h3>
                 <hr>
                 <div class="row">
-                    <div class="col-md-8 col-9"><h6>Total Rate</h6></div>
-                    <div class="col-md-4 col-3"><h6 style="font-weight:bold;">&#2547; {{ $product->total_rate }}</h6></div>
+                    <div class="col-md-8 col-9"><strike><h4>Regular Price</h4></strike></div>
+                    <div class="col-md-4 col-3"><strike><h4 style="font-weight:bold;">&#2547; {{ $product->total_rate }}</h4></strike></div>
                 </div>
 
                 <hr>
                 <div class="row">
-                    <div class="col-md-8 col-9"><h6>Package Rate</h6></div>
-                    <div class="col-md-4 col-3"><h6 style="font-weight:bold;">&#2547; {{ $product->package_rate }}</h6></div>
+                    <div class="col-md-8 col-9"><h3>Discount Price</h3></div>
+                    <div class="col-md-4 col-3"><h3 style="font-weight:bold;">&#2547; {{ $product->package_rate }}</h3></div>
                 </div>
                 <hr>
 
@@ -68,6 +67,8 @@
 
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <div class="addthis_inline_share_toolbox"></div>
+
+        <br> <br>
     </div>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f74245424995474"></script>

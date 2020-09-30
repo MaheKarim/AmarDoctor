@@ -40,12 +40,12 @@
                                     <th>Edu Degree</th>
                                     <th>BMDC Certificate</th>
                                     <th>NID Pic</th>
+                                    <th>Working Experience</th>
                                     <th>Home Service</th>
                                     <th>Doctor Fees</th>
                                     <th>Category</th>
                                     <th>Area</th>
                                     <th>Action</th>
-
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -63,6 +63,7 @@
                                             <img style="width: 50px; max-width: auto;"
                                                  src="{{ asset('storage') }}/{{ $doctor->nid_pic}}">
                                         </td>
+                                        <td>{{ $doctor->work_exp }}</td>
                                         <td>{{ $doctor->HomeServiceStatus->service_status }}</td>
                                         <td>{{ $doctor->doctor_fees }}</td>
                                         <td>{{ $doctor->Category->category_name}}</td>
@@ -87,9 +88,15 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>PHN Number</th>
+                                    <th>Edu Degree</th>
+                                    <th>BMDC Certificate</th>
+                                    <th>NID Pic</th>
+                                    <th>Working Experience</th>
                                     <th>Home Service</th>
+                                    <th>Doctor Fees</th>
                                     <th>Category</th>
                                     <th>Area</th>
+                                    <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -98,9 +105,25 @@
                                         <td>{{ $availabledoctor->User->name }}</td>
                                         <td>{{ $availabledoctor->User->email }}</td>
                                         <td>{{ $availabledoctor->User->phn_number }}</td>
+                                        <td>{{ $availabledoctor->edu_degree }}</td>
+                                        <td>
+                                            <img style="width: 50px; max-width: auto;"
+                                                 src="{{ asset('storage') }}/{{ $availabledoctor->bmdc_cer}}">
+                                        </td>
+                                        <td>
+                                            <img style="width: 50px; max-width: auto;"
+                                                 src="{{ asset('storage') }}/{{ $availabledoctor->nid_pic}}">
+                                        </td>
+                                        <td>{{ $availabledoctor->work_exp }}</td>
                                         <td>{{ $availabledoctor->HomeServiceStatus->service_status }}</td>
+                                        <td>{{ $availabledoctor->doctor_fees }}</td>
                                         <td>{{ $availabledoctor->Category->category_name}}</td>
                                         <td>{{ $availabledoctor->Area->area_name}}</td>
+
+                                        <td>
+                                            <a href="{{ route('admin.deleteDoctor', $doctor->id) }}" type="button"
+                                               class="btn btn-sm btn-danger">Delete</a>
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>

@@ -48,8 +48,8 @@
                                         <th>Product Slug</th>
                                         <th>Description</th>
                                         <th>Product Image</th>
-                                        <th>Package Rate</th>
-                                        <th>Total Rate</th>
+                                        <th>Regular Price</th>
+                                        <th>Discount Price</th>
 
                                         <th style="width: 10%">Action</th>
                                     </tr>

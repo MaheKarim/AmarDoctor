@@ -38,13 +38,13 @@
                             <table id="add-row" class="display table table-striped table-hover" >
                                 <thead>
                                 <tr>
-                                    <th>Nurse Name</th>
-                                    <th>Nurse Mail</th>
-                                    <th>Nurse PHN Number</th>
-                                    <th>Nurse Username</th>
-                                    <th>Nurse Reg No</th>
-                                    <th>Nurse Home Service</th>
-                                    <th>Nurse Area</th>
+                                    <th> Name</th>
+                                    <th> Mail</th>
+                                    <th> PHN Number</th>
+                                    <th> Username</th>
+                                    <th> Reg No</th>
+                                    <th> Home Service</th>
+                                    <th> Area</th>
                                     <th>Edu Institute</th>
                                     <th>Passing Year</th>
                                     <th>Nurse ID Created</th>
@@ -68,6 +68,43 @@
                                 </tbody>
                             </table>
                         </div>
+                            <br> <br> <br> <br>
+                        <!-- Start From Here -->
+                        <div class="table-responsive">
+                            <table id="add-row" class="display table table-striped table-hover" >
+                                <thead>
+                                <tr>
+                                    <th> Name</th>
+                                    <th> Mail</th>
+                                    <th> PHN Number</th>
+                                    <th> Username</th>
+                                    <th> Reg No</th>
+                                    <th> Home Service</th>
+                                    <th> Area</th>
+                                    <th>Edu Institute</th>
+                                    <th>Passing Year</th>
+                                    <th>Nurse ID Created</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach ($nurses as $nurse)
+                                    <tr>
+                                        <td>{{ $nurse->User->name }}</td>
+                                        <td>{{ $nurse->User->email }}</td>
+                                        <td>{{ $nurse->User->phn_number }}</td>
+                                        <td>{{ $nurse->User->username }}</td>
+                                        <td>{{ $nurse->nursing_reg_number }}</td>
+                                        <td>{{ $nurse->HomeServiceStatus->service_status }}</td>
+                                        <td>{{ $nurse->Area->area_name }}</td>
+                                        <td>{{ $nurse->edu_institute }}</td>
+                                        <td>{{ $nurse->passing_year }}</td>
+                                        <td>{{ $nurse->created_at }}</td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Start From Here -->
                     </div>
                 </div>
             </div>
