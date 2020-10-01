@@ -1,5 +1,5 @@
 @include('custom.header')
-<div class="content" style="background:#A9B74F;">
+<div class="content" style="background:#227093;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -15,7 +15,7 @@
 
                         <div class="col-md-12 col-lg-8">
                             <div class="login-header">
-                                <h1 style="font-size: 32px; text-align: center;">Doctor Service at Home @900 BDT</span></h1>
+                                <h1 style="font-size: 32px; text-align: center; color: #f5f6fa">Doctor Service at Home @900 BDT</span></h1>
                                 @if (count($errors)>0)
                                     <ul>
                                         @foreach($errors->all() as $error)

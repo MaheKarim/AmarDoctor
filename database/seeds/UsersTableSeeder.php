@@ -20,8 +20,8 @@ class UsersTableSeeder extends Seeder
             'role_id' => '1',
             'name' => 'MR Admin',
             'username' => 'admin',
-            'email' => 'admin@blog.com',
-            'password' => Hash::make('rootadmin'),
+            'email' => 'admin@admin.com',
+            'password' => Hash::make('password'),
             'created_at' => \Carbon\Carbon::now(),
 
         ]);
@@ -30,8 +30,8 @@ class UsersTableSeeder extends Seeder
             'role_id' => '2',
             'name' => 'MR Doctor',
             'username' => 'doctor',
-            'email' => 'doctor@blog.com',
-            'password' => Hash::make('rootdoctor'),
+            'email' => 'doctor@doctor.com',
+            'password' => Hash::make('password'),
             'created_at' => \Carbon\Carbon::now(),
 
         ]);
@@ -40,8 +40,8 @@ class UsersTableSeeder extends Seeder
             'role_id' => '3',
             'name' => 'MR Nurse',
             'username' => 'nurse',
-            'email' => 'nurse@blog.com',
-            'password' => Hash::make('rootnurse'),
+            'email' => 'nurse@nurse.com',
+            'password' => Hash::make('password'),
             'created_at' => \Carbon\Carbon::now(),
 
         ]);
@@ -50,8 +50,8 @@ class UsersTableSeeder extends Seeder
             'role_id' => '4',
             'name' => 'MR User',
             'username' => 'user',
-            'email' => 'user@blog.com',
-            'password' => Hash::make('rootuser'),
+            'email' => 'user@user.com',
+            'password' => Hash::make('password'),
             'created_at' => \Carbon\Carbon::now(),
 
         ]);

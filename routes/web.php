@@ -62,7 +62,13 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::post('nursing-update','NursingServiceController@update')->name('nursing_service.update');
     Route::get('/nursing/service/delete/{nursingService}', 'NursingServiceController@destroy')->name('nursing_service.destroy');
 
-
+    // Admin Custom Data Save
+    Route::get( '/show/custom_information', 'AdminFormController@show')->name('showCustomData');
+    Route::get( '/add/custom_information', 'AdminFormController@index')->name('indexCustomData');
+    Route::post('/save-custom_data','AdminFormController@store')->name('saveData');
+    Route::get('/custom_data/delete/{id}', 'AdminFormController@destroy')->name('deleteCustomData');
+    Route::get('/edit/custom_data/{id}','AdminFormController@edit')->name('editCustomData');
+    Route::post('/update/custom-data','AdminFormController@update')->name('updateCustomData');
 
 });
 
@@ -78,13 +84,7 @@ Route::group([
     }
 );
 
-    // Admin Custom Data Save
-    Route::get( '/show/custom_information', 'AdminFormController@show')->name('showCustomData');
-    Route::get( '/add/custom_information', 'AdminFormController@index')->name('indexCustomData');
-    Route::post('/save-custom_data','AdminFormController@store')->name('saveData');
-    Route::get('/custom_data/delete/{id}', 'AdminFormController@destroy')->name('deleteCustomData');
-    Route::get('/edit/custom_data/{id}','AdminFormController@edit')->name('editCustomData');
-    Route::post('/update/custom-data','AdminFormController@update')->name('updateCustomData');
+
 
     Route::get('/product/booking/{id}','ProductBookingController@productBooking')->name('productBooking');
     Route::get('/delete/product_booking/{id}', 'ProductBookingController@productbookingDelete')->name('deleteProductBooking');

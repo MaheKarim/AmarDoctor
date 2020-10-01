@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\AdminForm;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 
 class AdminFormController extends Controller
 {
@@ -57,7 +59,7 @@ class AdminFormController extends Controller
 
         session()->flash('success','Custom Data Save Successfully!');
 
-        return redirect(route('showCustomData'));
+        return redirect(route('admin.showCustomData'));
     }
 
     /**
@@ -117,7 +119,7 @@ class AdminFormController extends Controller
 
         session()->flash('success','Custom Data Updated Successfully!');
 
-        return redirect(route('showCustomData'));
+        return redirect(route('admin.showCustomData'));
 
     }
 
@@ -134,6 +136,6 @@ class AdminFormController extends Controller
         $data['adminForms'] = AdminForm::find($id);
         $data['adminForms']->delete();
         session()->flash('success','Custom Data Deleted Successfully!');
-        return redirect(route('showCustomData'));
+        return redirect(route('admin.showCustomData'));
     }
 }

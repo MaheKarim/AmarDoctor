@@ -14,7 +14,7 @@
                     <div class="card-header">
                         <div class="d-flex align-items-center">
 
-                            <a href="{{ route('indexCustomData') }}" class="btn btn-primary btn-round ml-auto">
+                            <a href="{{ route('admin.indexCustomData') }}" class="btn btn-primary btn-round ml-auto">
                                 <i class="fa fa-plus"></i>
                                 Add Custom Information
                             </a>
@@ -59,11 +59,11 @@
                                         <td>{{ date('d-M-Y h:i', strtotime($data->created_at)) }}</td>
                                         <td>
                                             <div class="form-button-action">
-                                                <a href="{{ route('editCustomData' , $data->id) }}"  type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+                                                <a href="{{ route('admin.editCustomData' , $data->id) }}"  type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
 
-                                                    <a href="{{ route('deleteCustomData', $data->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+                                                    <a href="{{ route('admin.deleteCustomData', $data->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
                                                         <i class="fa fa-times"></i>
                                                     </a>
 

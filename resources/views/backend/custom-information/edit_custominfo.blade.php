@@ -17,7 +17,7 @@
                             <div class="col-md-4 col-lg-8">
 
 
-                                <form action="{{ route('updateCustomData') }}" method="POST">
+                                <form action="{{ route('admin.updateCustomData') }}" method="POST">
                                     @csrf
                                     <div class="form-group">
                                         <h4 style="font-size: 18px" class="text">Add Hospital Name</h4>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="card-action">
                             <button class="btn btn-success">Submit</button>
-                            <a href="{{ route('showArea') }}" class="btn btn-danger">Cancel</a>
+                            <a href="{{ route('admin.showCustomData') }}" class="btn btn-danger">Cancel</a>
                         </div>
                         </form>
                     </div>

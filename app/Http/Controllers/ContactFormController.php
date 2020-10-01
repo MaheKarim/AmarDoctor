@@ -26,8 +26,7 @@ class ContactFormController extends Controller
             'customer_address' => 'required|min:5',
             'customer_message' => 'required',
         ]);
-        // dd($request->all());
-        // Send An Email
+
         $mails = new ContactForm();
         $mails->customer_name = $request->customer_name;
         $mails->customer_email = $request->customer_email;
@@ -36,8 +35,6 @@ class ContactFormController extends Controller
         $mails->customer_message = $request->customer_message;
         $mails->nursing_service_id = $request->nursing_service_id;
         $mails->save();
-
-       // Mail::to('info@amardoctor.com.bd')->send(new ContactFormMail($data));
 
         session()->flash('message', 'Thanks, For Your Message. We\'ll be in touch.');
         return redirect(route('contact.form'));

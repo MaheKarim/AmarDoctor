@@ -8,21 +8,7 @@ use App\SiteSettings;
 
 class DoctorContactController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         // start from here
@@ -30,12 +16,7 @@ class DoctorContactController extends Controller
         return view('frontend.contact.doctor_contact', compact('settings'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         // Code Start
@@ -46,7 +27,7 @@ class DoctorContactController extends Controller
             'dContact_address' => 'required|min:5',
 
         ]);
-        // dd($request->all());
+
         // Send An Email
         $mails = new DoctorContact();
         $mails->dContact_name = $request->dContact_name;
@@ -59,48 +40,6 @@ class DoctorContactController extends Controller
         return redirect(route('contact.doctor_form'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\DoctorContact  $doctorContact
-     * @return \Illuminate\Http\Response
-     */
-    public function show(DoctorContact $doctorContact)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\DoctorContact  $doctorContact
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(DoctorContact $doctorContact)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\DoctorContact  $doctorContact
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, DoctorContact $doctorContact)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\DoctorContact  $doctorContact
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(DoctorContact $doctorContact)
-    {
-        //
-    }
 }

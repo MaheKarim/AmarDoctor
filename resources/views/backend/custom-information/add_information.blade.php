@@ -16,13 +16,13 @@
                     <i class="flaticon-right-arrow"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('showCustomData') }}">Show Custom Information</a>
+                    <a href="{{ route('admin.showCustomData') }}">Show Custom Information</a>
                 </li>
                 <li class="separator">
                     <i class="flaticon-right-arrow"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('indexCustomData') }}">Add Custom Data</a>
+                    <a href="{{ route('admin.indexCustomData') }}">Add Custom Data</a>
                 </li>
             </ul>
         </div>
@@ -54,7 +54,7 @@
                                     </div>
                             @endif
                             <!-- Notification End Here -->
-                                <form action="{{ route('saveData') }}" method="POST">
+                                <form action="{{ route('admin.saveData') }}" method="POST">
                                     @csrf
                                     <div class="form-group">
                                         <h4 style="font-size: 18px" class="text">Add Hospital Name</h4>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="card-action">
                             <button class="btn btn-success">Submit</button>
-                            <a href="{{ route('showCustomData') }}" class="btn btn-danger">Cancel</a>
+                            <a href="{{ route('admin.showCustomData') }}" class="btn btn-danger">Cancel</a>
                         </div>
                         </form>
                     </div>
