@@ -17,9 +17,9 @@ class CreateAdminFormsTable extends Migration
             $table->bigIncrements('id');
             $table->string('hospital_name')->nullable();
             $table->string('patient_name')->nullable();
-            $table->string('patient_number')->nullable();
+            $table->integer('patient_number')->nullable();
             $table->string('doctor_name')->nullable();
-            $table->string('amount')->nullable();
+            $table->integer('amount')->nullable();
             $table->text('remarks')->nullable();
             $table->dateTime('appoint_date')->nullable();
             $table->timestamps();

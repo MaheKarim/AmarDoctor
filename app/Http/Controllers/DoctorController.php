@@ -34,8 +34,6 @@ class DoctorController extends Controller
             'password' => 'required|unique:users|min:8',
             'area_name_id' => 'required',
             'category_name_id' => 'required',
-
-
        ]);
         $user_id = User::insertGetId([
             'role_id' => 2,

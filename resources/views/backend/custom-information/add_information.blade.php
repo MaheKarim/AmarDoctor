@@ -58,26 +58,26 @@
                                     @csrf
                                     <div class="form-group">
                                         <h4 style="font-size: 18px" class="text">Add Hospital Name</h4>
-                                        <input type="text" class="form-control" name="hospital_name" id="text">
+                                        <input type="text" class="form-control" name="hospital_name" id="text" value="{{ old('hospital_name') }}">
                                     </div>
 
                                     <div class="form-group">
                                         <h4 style="font-size: 18px" class="text">Add Patient Name</h4>
-                                        <input type="text" class="form-control" name="patient_name" id="text">
+                                        <input type="text" class="form-control" name="patient_name" id="text" value="{{ old('patient_name') }}">
                                     </div>
 
                                     <div class="form-group">
-                                        <h4 style="font-size: 18px" class="text">Add Patient Number</h4>
-                                        <input type="text" class="form-control" name="patient_number" id="text">
+                                        <h4 style="font-size: 18px" class="text">Add Patient Phone Number</h4>
+                                        <input type="text" class="form-control" name="patient_number" id="text" value="{{ old('patient_number') }}">
                                     </div>
 
                                     <div class="form-group">
                                         <h4 style="font-size: 18px" class="text">Add Doctor Name</h4>
-                                        <input type="text" class="form-control" name="doctor_name" id="text">
+                                        <input type="text" class="form-control" name="doctor_name" id="text" value="{{ old('doctor_name') }}">
                                     </div>
                                     <div class="form-group">
                                         <h4 style="font-size: 18px" class="text">Amount</h4>
-                                        <input type="text" class="form-control" name="amount" id="text">
+                                        <input type="text" class="form-control" name="amount" id="text" value="{{ old('amount') }}">
                                     </div>
                                     <div class="form-group">
                                         <h4 style="font-size: 18px">
@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="form-group">
                                         <h4 style="font-size: 18px">
-                                            Remarks
+                                            Date
                                         </h4>
                                         <input type="datetime-local" class="form-control" name="appoint_date" >
                                     </div>
