@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Add Products
+    Add Product
 @endsection
 @section('content')
 <div class="page-inner">
@@ -65,10 +65,10 @@
                                     <textarea id="description" type="text" class="form-control" name="description" id="text" placeholder="Product Description"></textarea>
 
                                     <label for="text">Total Rate</label>
-                                    <input type="text" class="form-control" name="total_rate" id="text" placeholder="Total Rate">
+                                    <input type="text" class="form-control" name="total_rate" id="text" placeholder="Total Regular Price">
 
                                     <label for="text">Package Rate</label>
-                                    <input type="text" class="form-control" name="package_rate" id="text" placeholder="Package Rate">
+                                    <input type="text" class="form-control" name="package_rate" id="text" placeholder="Discount Price">
                                     <label for="text">Choose Product Image</label>
                                    <input type="file" class="form-control" name="package_image">
                                 </div>
