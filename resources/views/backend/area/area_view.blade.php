@@ -14,7 +14,7 @@
                     <div class="card-header">
                         <div class="d-flex align-items-center">
 
-                        <a href="{{ route('addArea') }}" class="btn btn-primary btn-round ml-auto">
+                        <a href="{{ route('admin.addArea') }}" class="btn btn-primary btn-round ml-auto">
                                 <i class="fa fa-plus"></i>
                                 Add Area
                             </a>
@@ -36,7 +36,6 @@
                                 <thead>
                                 <tr>
                                     <th>Area Name</th>
-
                                     <th>Area Created At</th>
                                     <th>Area Updated At</th>
                                     <th style="width: 10%">Action</th>
@@ -51,11 +50,11 @@
                                         <td>{{ $area->updated_at }}</td>
                                         <td>
                                             <div class="form-button-action">
-                                            <a href="{{ route('editArea', $area->id) }}"  type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+                                            <a href="{{ route('admin.editArea', $area->id) }}"  type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
                                                 @if( $area->id != 1)
-                                            <a href="{{ route('deleteArea', $area->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+                                            <a href="{{ route('admin.deleteArea', $area->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
                                                         <i class="fa fa-times"></i>
                                                     </a>
                                                 @endif
@@ -65,7 +64,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                       
+
                         </div>
                     </div>
                 </div>

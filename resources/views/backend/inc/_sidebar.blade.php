@@ -71,7 +71,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('showArea') }}">
+                    <a href="{{ route('admin.showArea') }}">
                         <i class="fas fa-desktop"></i>
                         <p>Area Create / Show</p>
                     </a>

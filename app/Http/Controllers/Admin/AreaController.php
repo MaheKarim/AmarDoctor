@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Area;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 
 class AreaController extends Controller
 {
@@ -48,7 +50,7 @@ class AreaController extends Controller
         $areas->save();
         // flash msg
         session()->flash('success','Area Created Successfully!');
-        return redirect(route('showArea'));
+        return redirect(route('admin.showArea'));
 
     }
 
@@ -89,7 +91,7 @@ class AreaController extends Controller
         $areas->save();
 
         session()->flash('success','Area Successfully Updated!');
-        return redirect(route('showArea'));
+        return redirect(route('admin.showArea'));
     }
 
     /**
@@ -105,7 +107,7 @@ class AreaController extends Controller
         $areas->delete();
 
         session()->flash('success','Area Deleted Successfully!');
-        return redirect(route('showArea'));
+        return redirect(route('admin.showArea'));
     }
 
 

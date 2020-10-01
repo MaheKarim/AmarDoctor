@@ -70,6 +70,14 @@ Route::group(['as'=>'admin.' , 'prefix' => 'admin', 'namespace' => 'Admin', 'mid
     Route::get('/edit/custom_data/{id}','AdminFormController@edit')->name('editCustomData');
     Route::post('/update/custom-data','AdminFormController@update')->name('updateCustomData');
 
+    // Area Route
+    Route::get('/area/view','AreaController@show')->name('showArea');
+    Route::get('/area/add','AreaController@index')->name('addArea');
+    Route::post('store-area', 'AreaController@store')->name('areaSave');
+    Route::get('/area/edit/{area}','AreaController@edit')->name('editArea');
+    Route::post('/update-area','AreaController@update')->name('updateArea');
+    Route::get('/area/delete/{id}','AreaController@delete')->name('deleteArea');
+
 });
 
 
@@ -95,12 +103,7 @@ Route::group([
     Route::post('status_change','BookingController@bookingStatusStore')->name('statusChangeOpt');
     Route::get('/booking/delete/{id}', 'BookingController@delete')->name('bookingDelete');
 
-    Route::get('/area/view','AreaController@show')->name('showArea');
-    Route::get('/area/add','AreaController@index')->name('addArea');
-    Route::post('store-area', 'AreaController@store');
-    Route::get('/area/edit/{area}','AreaController@edit')->name('editArea');
-    Route::post('/update-area','AreaController@update')->name('updateArea');
-    Route::get('/area/delete/{id}','AreaController@delete')->name('deleteArea');
+
 
     Route::get('/category/view', 'CategoryController@view')->name('showCategory');
     Route::get('/category/delete/{id}', 'CategoryController@delete')->name('deleteCategory');

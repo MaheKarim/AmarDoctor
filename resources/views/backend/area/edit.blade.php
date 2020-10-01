@@ -17,7 +17,7 @@
                             <div class="col-md-4 col-lg-8">
 
 
-                                <form action="{{ route('updateArea') }}" method="POST">
+                                <form action="{{ route('admin.updateArea') }}" method="POST">
                                  @csrf
                                 <div class="form-group">
                                 <label for="text">Update Area Name</label>
@@ -29,7 +29,7 @@
                         </div>
                         <div class="card-action">
                                 <button class="btn btn-success">Submit</button>
-                        <a href="{{ url('/show/area') }}" class="btn btn-danger">Cancel</a>
+                        <a href="{{ route('admin.showArea') }}" class="btn btn-danger">Cancel</a>
                         </div>
                        </form>
                     </div>

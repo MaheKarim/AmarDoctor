@@ -54,7 +54,7 @@
                         </div>
                            @endif
                         <!-- Notification End Here -->
-                    <form action="{{ url('store-area') }}" method="POST">
+                    <form action="{{ route('admin.areaSave') }}" method="POST">
                         <!--  -->
                              @csrf
                             <div class="form-group">
@@ -65,7 +65,7 @@
                     </div>
                     <div class="card-action">
                             <button class="btn btn-success">Submit</button>
-                    <a href="{{ route('showArea') }}" class="btn btn-danger">Cancel</a>
+                    <a href="{{ route('admin.showArea') }}" class="btn btn-danger">Cancel</a>
                     </div>
                    </form>
                 </div>
