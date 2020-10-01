@@ -15,9 +15,9 @@
 
                        <div class="d-flex align-items-center">
                        <a href="{{ route('addProduct') }}" class="btn btn-primary btn-round ml-auto">
-                                    <i class="fa fa-plus"></i>
-                                    Add Product
-                            </a>
+                                <i class="fa fa-plus"></i>
+                                Add Product
+                        </a>
                     </div>
 
                     </div>
@@ -50,7 +50,6 @@
                                         <th>Product Image</th>
                                         <th>Regular Price</th>
                                         <th>Discount Price</th>
-
                                         <th style="width: 10%">Action</th>
                                     </tr>
                                 </thead>
