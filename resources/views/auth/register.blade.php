@@ -30,19 +30,19 @@
                                     <form action="{{ route('register') }}" method="POST">
                                         @csrf
 											<div class="form-group form-focus">
-												<input type="text" name="name" class="form-control floating">
+												<input type="text" name="name" class="form-control floating" value="{{old('name')}}">
                                                 <label class="focus-label">Name</label>
 											</div>
 											<div class="form-group form-focus">
-												<input type="email" name="email" class="form-control floating">
+												<input type="email" name="email" class="form-control floating" value="{{old('email')}}">
 												<label class="focus-label">Email</label>
 											</div>
 											<div class="form-group form-focus">
-												<input type="text" name="phn_number" class="form-control floating">
+												<input type="text" name="phn_number" class="form-control floating" value="{{old('phn_number')}}">
 												<label class="focus-label">PHN Number</label>
 											</div>
 										    <div class="form-group form-focus">
-												<input type="text" name="username" class="form-control floating">
+												<input type="text" name="username" class="form-control floating" value="{{old('username')}}">
 												<label class="focus-label">Username</label>
 											</div>
 											<div class="form-group form-focus">

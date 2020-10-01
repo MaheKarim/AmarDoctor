@@ -30,6 +30,8 @@ class NurseAuthController extends Controller
             'username' => 'required|unique:users|min:4',
             'phn_number' => 'required|unique:users|min:11',
             'email' => 'unique:users|required',
+            'nursing_reg_number' => 'required|unique:nurses',
+            'password' => 'required|unique:users|min:8',
 
         ]);
 

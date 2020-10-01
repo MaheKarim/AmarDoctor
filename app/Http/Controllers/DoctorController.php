@@ -24,12 +24,18 @@ class DoctorController extends Controller
     public function signUpFormSubmit(Request $request)
     {
        $request->validate([
-            'name' => 'required|max:255|min:6',
+            'name' => 'required|max:255|min:4',
             'username' => 'required|unique:users|min:4',
             'phn_number' => 'required|unique:users|min:11',
             'email' => 'unique:users|required',
             'nid_pic' =>  'required|image',
             'bmdc_cer' =>  'required|image',
+            'bmdc_reg_no' => 'required|unique:doctors',
+            'password' => 'required|unique:users|min:8',
+            'area_name_id' => 'required',
+            'category_name_id' => 'required',
+
+
        ]);
         $user_id = User::insertGetId([
             'role_id' => 2,

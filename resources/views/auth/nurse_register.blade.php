@@ -29,19 +29,19 @@
                             <form action="{{ route('nurse.signup_page') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group form-focus">
-                                    <input type="text" name="name" class="form-control floating">
+                                    <input type="text" name="name" class="form-control floating" value="{{old('name')}}">
                                     <label class="focus-label">Name</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="text" name="username" class="form-control floating">
+                                    <input type="text" name="username" class="form-control floating" value="{{old('username')}}">
                                     <label class="focus-label">User Name</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="text" name="email" class="form-control floating">
+                                    <input type="text" name="email" class="form-control floating" value="{{old('email')}}">
                                     <label class="focus-label">E-mail Address</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="text" name="phn_number" class="form-control floating">
+                                    <input type="text" name="phn_number" class="form-control floating" value="{{old('phn_number')}}">
                                     <label class="focus-label">Mobile Number</label>
                                 </div>
                                 <div class="form-group form-focus">
@@ -49,11 +49,11 @@
                                     <label class="focus-label">Create Password</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="text" name="nursing_reg_number" class="form-control floating">
+                                    <input type="text" name="nursing_reg_number" class="form-control floating" value="{{old('nursing_reg_number')}}">
                                     <label class="focus-label">Nursing Registration Number</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="text" name="edu_degree" class="form-control floating">
+                                    <input type="text" name="edu_degree" class="form-control floating" value="{{old('edu_degree')}}">
                                     <label class="focus-label">Edu Degree</label>
                                 </div>
 {{--                                <div class="form-group form-focus">--}}

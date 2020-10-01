@@ -26,19 +26,19 @@
                             <form action="{{ route('doctorSignUpFormSubmit') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group form-focus">
-                                    <input type="text" name="name" class="form-control floating">
+                                    <input type="text" name="name" class="form-control floating" value="{{old('name')}}">
                                     <label class="focus-label">Name</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="text" name="username" class="form-control floating">
+                                    <input type="text" name="username" class="form-control floating" value="{{old('username')}}">
                                     <label class="focus-label">User Name</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="text" name="email" class="form-control floating">
+                                    <input type="text" name="email" class="form-control floating" value="{{old('email')}}">
                                     <label class="focus-label">E-mail Address</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="text" name="phn_number" class="form-control floating">
+                                    <input type="text" name="phn_number" class="form-control floating" value="{{old('phn_number')}}">
                                     <label class="focus-label">Mobile Number</label>
                                 </div>
                                 <!-- Area Start -->
@@ -47,7 +47,7 @@
                                     <select name="area_name_id" class="form-control select">
                                         @php($areas= \App\Area::all())
                                         @foreach ($areas as $area)
-                                            <option value="{{ $area->id }}">{{$area->area_name}}</option>
+                                            <option value="{{ $area->id }}" {{ old('area_name_id') == $area->id ? 'selected' : '' }}>{{$area->area_name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -58,7 +58,7 @@
                                     <select name="category_name_id" class="form-control select">
                                         @php($categories= \App\Category::all())
                                         @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                            <option value="{{ $category->id }}" {{ old('category_name_id') == $category->id ? 'selected' : '' }} >{{ $category->category_name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -68,7 +68,7 @@
                                     <label class="focus-label">Create Password</label>
                                 </div>
                                 <div class="form-group form-focus">
-                                    <input type="text" name="bmdc_reg_no" class="form-control floating">
+                                    <input type="text" name="bmdc_reg_no" class="form-control floating" value="{{old('phn_number')}}">
                                     <label class="focus-label">BMDC Registration Number</label>
                                 </div>
                                 <div class="form-group form-focus">
