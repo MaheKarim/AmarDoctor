@@ -7,8 +7,8 @@
 */
 
 
-Route::get('/install','FrontendController@install');
-Route::get('/optimize','FrontendController@optimize');
+Route::get('/install', 'FrontendController@install');
+Route::get('/optimize', 'FrontendController@optimize');
 Route::get('/clear', 'FrontendController@clear');
 Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 Route::get('/dashboard', function () { return redirect (route('user.dashboard')); });
@@ -23,9 +23,9 @@ Route::get('/home', function () { return redirect (route('user.dashboard')); });
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-Route::post('get/password-link/','Auth\ResetPasswordController@password')->name('password.email');
+// Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
+//Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+//Route::post('get/password-link/', 'Auth\ResetPasswordController@password')->name('password.email');
 
 
 
