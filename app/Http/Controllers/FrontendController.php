@@ -40,10 +40,10 @@ class FrontendController extends Controller
 
     public function install ()
     {
-         Artisan::call('migrate:reset');
-         Artisan::call('migrate');
+        //  Artisan::call('migrate:reset');
+        //  Artisan::call('migrate');
         Artisan::call('storage:link');
-        Artisan::call('db:seed');
+      //  Artisan::call('db:seed');
 
         return 'Migrate Reset, Storage:Link, DB Seed Done!';
     }

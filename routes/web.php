@@ -7,9 +7,9 @@
 */
 
 
-Route::get('/install', 'FrontendController@install');
-Route::get('/optimize', 'FrontendController@optimize');
-Route::get('/clear', 'FrontendController@clear');
+//Route::get('/install','FrontendController@install');
+//Route::get('/optimize','FrontendController@optimize');
+//Route::get('/clear', 'FrontendController@clear');
 Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 Route::get('/dashboard', function () { return redirect (route('user.dashboard')); });
 Route::get('/admin', function () { return redirect (route('admin.dashboard')); });
@@ -24,8 +24,8 @@ Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 // Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
-//Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-//Route::post('get/password-link/', 'Auth\ResetPasswordController@password')->name('password.email');
+// Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+// Route::post('get/password-link/','Auth\ResetPasswordController@password')->name('password.email');
 
 
 
@@ -186,8 +186,8 @@ Route::group(['as'=>'user.' ,'prefix' => 'user', 'namespace' => 'User', 'middlew
 Route::get('/search/your/doctor', 'SearchController@search')->name('search.doctor');
 Route::get('/search/doctor', 'SearchController@search_doctor')->name('search.doctorProfile');
 
-Route::get('booking/confirmation/{id}/done','BookingController@booking_confirmation')->name('booking.confirmation');
-Route::get('/booking-show','BookingController@showbooking')->name('bookingShow');
+Route::get('booking/confirmation/{id}/done' ,'BookingController@booking_confirmation')->name('booking.confirmation');
+Route::get('/booking-show' ,'BookingController@showbooking')->name('bookingShow');
 
 Route::get('/login/user', 'Auth\LoginController@showUserLoginForm');
 
