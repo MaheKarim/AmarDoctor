@@ -19,7 +19,6 @@
                                 @foreach($areas as $area)
                                     <option value="{{ $area->id }}">{{$area->area_name}}</option>
                                     @endforeach
-
                             </select>
                             <span class="form-text">Based on your Location</span>
                         </div>

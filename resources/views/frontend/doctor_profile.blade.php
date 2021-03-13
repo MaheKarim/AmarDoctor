@@ -51,10 +51,7 @@
                                  <p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{ $user->Doctor->Area->area_name }} - <a href="javascript:void(0);">Get Directions</a></p>
 
                              </div>
-                             {{--<div class="clinic-services">--}}
-                                 {{--<span>Dental Fillings</span>--}}
-                                 {{--<span>Teeth Whitneing</span>--}}
-                             {{--</div>--}}
+
                          </div>
                      </div>
                      <div class="doc-info-right">
@@ -107,80 +104,11 @@
                                  <!-- /About Details -->
 
                                  <!-- Education Details -->
-                                 {{--<div class="widget education-widget">--}}
-                                     {{--<h4 class="widget-title">Education</h4>--}}
-                                     {{--<div class="experience-box">--}}
-                                         {{--<ul class="experience-list">--}}
-                                             {{--<li>--}}
-                                                 {{--<div class="experience-user">--}}
-                                                     {{--<div class="before-circle"></div>--}}
-                                                 {{--</div>--}}
-                                                 {{--<div class="experience-content">--}}
-                                                     {{--<div class="timeline-content">--}}
-                                                         {{--<a href="#/" class="name">American Dental Medical University</a>--}}
-                                                         {{--<div>BDS</div>--}}
-                                                         {{--<span class="time">1998 - 2003</span>--}}
-                                                     {{--</div>--}}
-                                                 {{--</div>--}}
-                                             {{--</li>--}}
-                                             {{--<li>--}}
-                                                 {{--<div class="experience-user">--}}
-                                                     {{--<div class="before-circle"></div>--}}
-                                                 {{--</div>--}}
-                                                 {{--<div class="experience-content">--}}
-                                                     {{--<div class="timeline-content">--}}
-                                                         {{--<a href="#/" class="name">American Dental Medical University</a>--}}
-                                                         {{--<div>MDS</div>--}}
-                                                         {{--<span class="time">2003 - 2005</span>--}}
-                                                     {{--</div>--}}
-                                                 {{--</div>--}}
-                                             {{--</li>--}}
-                                         {{--</ul>--}}
-                                     {{--</div>--}}
-                                 {{--</div>--}}
+
                                  <!-- /Education Details -->
 
                                  <!-- Experience Details -->
-                                 {{--<div class="widget experience-widget">--}}
-                                     {{--<h4 class="widget-title">Work & Experience</h4>--}}
-                                     {{--<div class="experience-box">--}}
-                                         {{--<ul class="experience-list">--}}
-                                             {{--<li>--}}
-                                                 {{--<div class="experience-user">--}}
-                                                     {{--<div class="before-circle"></div>--}}
-                                                 {{--</div>--}}
-                                                 {{--<div class="experience-content">--}}
-                                                     {{--<div class="timeline-content">--}}
-                                                         {{--<a href="#/" class="name">Glowing Smiles Family Dental Clinic</a>--}}
-                                                         {{--<span class="time">2010 - Present (5 years)</span>--}}
-                                                     {{--</div>--}}
-                                                 {{--</div>--}}
-                                             {{--</li>--}}
-                                             {{--<li>--}}
-                                                 {{--<div class="experience-user">--}}
-                                                     {{--<div class="before-circle"></div>--}}
-                                                 {{--</div>--}}
-                                                 {{--<div class="experience-content">--}}
-                                                     {{--<div class="timeline-content">--}}
-                                                         {{--<a href="#/" class="name">Comfort Care Dental Clinic</a>--}}
-                                                         {{--<span class="time">2007 - 2010 (3 years)</span>--}}
-                                                     {{--</div>--}}
-                                                 {{--</div>--}}
-                                             {{--</li>--}}
-                                             {{--<li>--}}
-                                                 {{--<div class="experience-user">--}}
-                                                     {{--<div class="before-circle"></div>--}}
-                                                 {{--</div>--}}
-                                                 {{--<div class="experience-content">--}}
-                                                     {{--<div class="timeline-content">--}}
-                                                         {{--<a href="#/" class="name">Dream Smile Dental Practice</a>--}}
-                                                         {{--<span class="time">2005 - 2007 (2 years)</span>--}}
-                                                     {{--</div>--}}
-                                                 {{--</div>--}}
-                                             {{--</li>--}}
-                                         {{--</ul>--}}
-                                     {{--</div>--}}
-                                 {{--</div>--}}
+
                                  <!-- /Experience Details -->
 
                                  <!-- Awards Details -->
@@ -227,31 +155,11 @@
                                  <!-- /Awards Details -->
 
                                  <!-- Services List -->
-                                 {{--<div class="service-list">--}}
-                                     {{--<h4>Services</h4>--}}
-                                     {{--<ul class="clearfix">--}}
-                                         {{--<li>Tooth cleaning </li>--}}
-                                         {{--<li>Root Canal Therapy</li>--}}
-                                         {{--<li>Implants</li>--}}
-                                         {{--<li>Composite Bonding</li>--}}
-                                         {{--<li>Fissure Sealants</li>--}}
-                                         {{--<li>Surgical Extractions</li>--}}
-                                     {{--</ul>--}}
-                                 {{--</div>--}}
+
                                  <!-- /Services List -->
 
                                  <!-- Specializations List -->
-                                 {{--<div class="service-list">--}}
-                                     {{--<h4>Specializations</h4>--}}
-                                     {{--<ul class="clearfix">--}}
-                                         {{--<li>Children Care</li>--}}
-                                         {{--<li>Dental Care</li>--}}
-                                         {{--<li>Oral and Maxillofacial Surgery </li>--}}
-                                         {{--<li>Orthodontist</li>--}}
-                                         {{--<li>Periodontist</li>--}}
-                                         {{--<li>Prosthodontics</li>--}}
-                                     {{--</ul>--}}
-                                 {{--</div>--}}
+
                                  <!-- /Specializations List -->
 
                              </div>
