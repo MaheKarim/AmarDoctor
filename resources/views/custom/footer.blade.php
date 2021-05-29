@@ -106,8 +106,8 @@
 							<div class="row">
 								<div class="col-md-6 col-lg-6">
 									<div class="copyright-text">
-										<p class="mb-0">&copy; {{ now()->year }} AmarDoctor.  Developed By
-											<a href="https://mahekarim.me" target="_blank"> WeBash Tech </a>
+										<p class="mb-0">&copy; {{ now()->year }} Doctor Appointment System.  Developed By
+											<a href="https://mahekarim.me" target="_blank"> Minhaj - Ismail - Tanbhir </a>
 										</p>
 									</div>
 								</div>
