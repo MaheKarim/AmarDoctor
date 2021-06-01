@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Doctor;
 
 
+use App\Booking;
 use App\SiteSettings;
 use App\User;
 use App\Doctor;
@@ -16,7 +17,6 @@ use Illuminate\Support\Facades\Hash;
 
 class DashboardController extends Controller
 {
-    //  dashboard for Doctor
 
     public function index()
     {
@@ -24,8 +24,9 @@ class DashboardController extends Controller
       $details = Doctor::where('user_id', $data->id)->first();
       $details_user = User::where('id', $data->id)->first();
       $settings = SiteSettings::find(1);
+      $bookings = Booking::orderBy('created_at', 'desc')->get();
 
-      return view('backend.multi-dashboard.doctor._home_doctor', compact('data','details','details_user' ,'settings'));
+      return view('backend.multi-dashboard.doctor._home_doctor', compact('data','details','details_user' ,'settings', 'bookings'));
     }
 
     public function profile_seetings()

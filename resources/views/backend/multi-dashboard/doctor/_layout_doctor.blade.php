@@ -88,7 +88,24 @@
 								</div>
 							</div>
 
-
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Patient Name</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Created</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($bookings as $booking)
+                                <tr>
+                                    <th>{{ $booking->user->name }}</th>
+                                    <td>{{ $booking->Status->status_name }}</td>
+                                    <td>{{ $booking->created_at }}</td>
+                                </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
 
 						</div>
 					</div>
