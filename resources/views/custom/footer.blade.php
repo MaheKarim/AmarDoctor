@@ -107,7 +107,7 @@
 								<div class="col-md-6 col-lg-6">
 									<div class="copyright-text">
 										<p class="mb-0">&copy; {{ now()->year }} Doctor Appointment System.  Developed By
-											<a href="https://mahekarim.me" target="_blank"> Minhaj - Ismail - Tanbhir </a>
+											<a href="https://mahekarim.me" target="_blank">Team DIU CSE </a>
 										</p>
 									</div>
 								</div>
