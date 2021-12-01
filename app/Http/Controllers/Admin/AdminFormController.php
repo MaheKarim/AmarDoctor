@@ -16,9 +16,7 @@ class AdminFormController extends Controller
      */
     public function index()
     {
-
         return view('backend.custom-information.add_information');
-
     }
 
     /**
@@ -48,13 +46,7 @@ class AdminFormController extends Controller
         ]);
         // Store Data
         $adminForms = new AdminForm();
-        $adminForms->hospital_name = $request->hospital_name;
-        $adminForms->patient_name = $request->patient_name;
-        $adminForms->patient_number = $request->patient_number;
-        $adminForms->doctor_name = $request->doctor_name;
-        $adminForms->amount = $request->amount;
-        $adminForms->remarks = $request->hospital_name;
-        $adminForms->appoint_date = $request->appoint_date;
+        $adminForms->fill($request->all());
         $adminForms->save();
 
         session()->flash('success','Custom Data Save Successfully!');

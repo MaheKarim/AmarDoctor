@@ -46,7 +46,7 @@ class AreaController extends Controller
         ]);
         // insert code start here
         $areas = new Area();
-        $areas->area_name = $request->area_name;
+        $areas->fill($request->all());
         $areas->save();
         // flash msg
         session()->flash('success','Area Created Successfully!');

@@ -26,9 +26,7 @@ class ReviewController extends Controller
 
       // code...
       $reviews = new Review();
-      $reviews->reviewer_name = $request->reviewer_name;
-      $reviews->reviewer_designation = $request->reviewer_designation;
-      $reviews->reviewer_review = $request->reviewer_review;
+      $reviews->fill($request->all());
       $reviews->reviewer_image =  $image;
       $reviews->save();
 

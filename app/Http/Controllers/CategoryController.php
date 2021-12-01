@@ -37,7 +37,7 @@ class CategoryController extends Controller
         ]);
 
         $categories = new Category();
-        $categories->category_name = $request->category_name;
+        $categories->fill($request->all());
         $categories->save();
 
         session()->flash('success','Category Created Successfully!');

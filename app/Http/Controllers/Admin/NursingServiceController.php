@@ -93,6 +93,7 @@ class NursingServiceController extends Controller
        $nursingService->save();
 
        session()->flash('success','Nursing Service Successfully Updated!');
+
        return redirect(route('admin.nursing_service.index'));
     }
 
