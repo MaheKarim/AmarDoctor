@@ -4,13 +4,6 @@
     @extends('backend._layout')
     @elseif(Auth::user()->role_id == 2)
         @extends('backend.multi-dashboard.doctor._layout_doctor')
-{{--} @else(Auth::user()->role_id == 2) {--}}
-{{--@extends('backend.multi-dashboard.doctor._layout_doctor')--}}
-{{--}@else(Auth::user()->role_id == 3) {--}}
-{{--@extends('backend.multi-dashboard.nurse._layout_nurse')--}}
-{{--} @else{--}}
-{{--@extends('backend.multi-dashboard.user._layout_user')--}}
-{{--}--}}
 @endif
 
 @section('content')

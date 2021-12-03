@@ -10,6 +10,8 @@
 //Route::get('/install','FrontendController@install');
 //Route::get('/optimize','FrontendController@optimize');
 //Route::get('/clear', 'FrontendController@clear');
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'FrontendController@indexpage')->name('frontEndRoot');
 Route::get('/dashboard', function () { return redirect (route('user.dashboard')); });
 Route::get('/admin', function () { return redirect (route('admin.dashboard')); });
@@ -176,6 +178,8 @@ Route::post('nurse/signup',     'Nurse\NurseAuthController@registerNurse')->name
 */
 Route::group(['as'=>'user.' ,'prefix' => 'user', 'namespace' => 'User', 'middleware' =>['auth', 'user']], function() {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/settings', 'UserSettingsController@index')->name('user.settings');
+    Route::post('settings', 'UserSettingsController@update')->name('user.updateInfo');
 });
 
 /*

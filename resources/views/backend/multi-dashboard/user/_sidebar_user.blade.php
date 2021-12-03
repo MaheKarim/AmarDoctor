@@ -40,6 +40,12 @@
                         <p>Search Doctor</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('user.user.settings') }}">
+                        <i class="fas fa-square-full"></i>
+                        <p>Settings</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
