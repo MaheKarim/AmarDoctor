@@ -17,6 +17,7 @@
         "laravel/helpers": "^1.1",
         "laravel/tinker": "^1.0",
         "maatwebsite/excel": "3.1.19",
+        "myclabs/php-enum": "^1.7",
         "phpoffice/phpspreadsheet": "^1.11",
         "silber/bouncer": "v1.0.0-rc.6",
         "unisharp/laravel-ckeditor": "^4.7",

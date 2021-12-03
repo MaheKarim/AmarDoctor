@@ -2,8 +2,8 @@
 
 namespace App;
 
+use App\Enums\CodePrefix;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Silber\Bouncer\Database\HasRolesAndAbilities;
 
@@ -58,5 +58,9 @@ class User extends Authenticatable
         return $this->belongsTo('App\Product');
     }
 
+    public function getCodeAttribute()
+    {
+        return generate_order_code($this->id, CodePrefix::PATIENT);
+    }
 
 }

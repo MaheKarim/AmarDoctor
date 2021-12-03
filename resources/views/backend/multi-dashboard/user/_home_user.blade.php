@@ -4,11 +4,15 @@
 <div class="panel-header bg-primary-gradient">
     <div class="page-inner py-5">
         <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+{{--            <div>--}}
+{{--                <h2 class="text-white pb-2 fw-bold">Hello Dear, {{ Auth::user()->name }} </h2>--}}
+{{--                <h5 class="text-white op-7 mb-2">Your Username: {{ Auth::user()->username }}</h5>--}}
+{{--            </div>--}}
             <div>
-                <h2 class="text-white pb-2 fw-bold">Hello Dear, {{ Auth::user()->name }} </h2>
-                <h5 class="text-white op-7 mb-2">Your Username: {{ Auth::user()->username }}</h5>
+                @foreach($codes as $code)
+                <h2 class="text-white pb-2 fw-bold">Hello UserID - {{ \App\Enums\CodePrefix::PATIENT }} {{ now()->year }} {{ $code->id }} </h2>
+                @endforeach
             </div>
-
         </div>
     </div>
 </div>
