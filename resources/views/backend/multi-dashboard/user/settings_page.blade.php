@@ -29,7 +29,7 @@
                         <form method="POST" action="{{route('user.user.updateInfo')}}">
                             @csrf
                             <div class="form-group">
-                                <label for="status">Update Status</label>
+                                <label for="blood_group">Blood Group</label>
                                 <select name="blood_group" id="" class="form-control">
                                     @foreach(trans('blood.blood_group') as $key => $item)
                                         <option value="{{$key}}" {{(old('blood_group') == $key || data_get($user, 'blood_group') == $key) ? 'selected':''}} > {{ $item }}</option>
@@ -41,7 +41,7 @@
                                 <label for="status">Do You Wanna Donate Blood</label>
                                 <select name="status" id="" class="form-control">
                                     @foreach(trans('boolean.status') as $key => $item)
-                                        <option value="{{$key}}"  {{(old('status') == $key || data_get($user, 'status') == $key) ? 'selected':''}} > {{ $item }}</option>
+                                        <option value="{{$key}}" {{(old('status') == $key || data_get($user, 'status') == $key) ? 'selected':''}} > {{ $item }}</option>
                                     @endforeach
                                 </select>
                             </div>
