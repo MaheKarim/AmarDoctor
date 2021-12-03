@@ -15,8 +15,6 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-4 col-lg-8">
-
-
                                 <form action="{{ route('admin.updateArea') }}" method="POST">
                                  @csrf
                                 <div class="form-group">
@@ -24,17 +22,17 @@
                                 <input type="text" class="form-control" name="area_name" id="area_name" value="{{ $areas->area_name }}" placeholder="Enter Area Name">
                                 <input type="hidden" name="area_name_id"  value="{{ $areas->id }}">
                                 </div>
-                                </div>
                             </div>
                         </div>
                         <div class="card-action">
                                 <button class="btn btn-success">Submit</button>
                         <a href="{{ route('admin.showArea') }}" class="btn btn-danger">Cancel</a>
-                        </div>
                        </form>
                     </div>
                 </div>
             </div>
         </div>
    </div>
+</div>
+    </div>
 @endsection

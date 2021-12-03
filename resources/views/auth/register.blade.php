@@ -45,6 +45,10 @@
 												<input type="text" name="username" class="form-control floating" value="{{old('username')}}">
 												<label class="focus-label">Username</label>
 											</div>
+                                            <div class="form-group form-focus">
+												<input type="text" name="address" class="form-control floating" value="{{old('address')}}">
+												<label class="focus-label">Address</label>
+											</div>
 											<div class="form-group form-focus">
 												<input type="password" name="password" class="form-control floating">
 												<label class="focus-label">Create Password</label>

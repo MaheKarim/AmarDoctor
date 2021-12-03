@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('profile_image')->default('default.png')->nullable();
             $table->tinyInteger('blood_group')->default(\App\Enums\BloodGroup::APOSITIVE)->nullable();
             $table->tinyInteger('status')->default(\App\Enums\Boolean::NO)->nullable();
+            $table->longText('address')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

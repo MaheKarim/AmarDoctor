@@ -192,6 +192,7 @@ Route::get('/search/doctor', 'SearchController@search_doctor')->name('search.doc
 
 Route::get('booking/confirmation/{id}/done' ,'BookingController@booking_confirmation')->name('booking.confirmation');
 Route::get('/booking-show' ,'BookingController@showbooking')->name('bookingShow');
+Route::get('/all-blood-donor', 'BloodDonationController@index')->name('blood.donor');
 
 Route::get('/login/user', 'Auth\LoginController@showUserLoginForm');
 

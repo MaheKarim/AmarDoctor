@@ -63,7 +63,9 @@
 							<li class="active">
 								<a href="{{ url('/')}}">Home</a>
 							</li>
-
+                            <li>
+                                <a href="{{route('blood.donor')}}">Blood Donor</a>
+                            </li>
 							<li>
 								<a href="{{route('allProduct')}}">Diagnostic Product</a>
 							</li>
@@ -74,16 +76,16 @@
 							<li>
 								<a  href="{{route('contact.doctor_form')}}">Doctor at Home</a>
 							</li>
-							<li>
-								<a href="{{route('contact.form')}}">Nursing Service</a>
-							</li>
+{{--							<li>--}}
+{{--								<a href="{{route('contact.form')}}">Nursing Service</a>--}}
+{{--							</li>--}}
 							<li class="has-submenu">
 								<a href="#">Career <i class="fas fa-chevron-down"></i></a>
 								<ul class="submenu">
 									<li><a href="{{route('doctorSignUpForm')}}">Doctor Register</a></li>
 									<li><a href="{{route('login')}}">Doctor Login</a></li>
-									<li><a href="{{ route('nurse.signup') }}">Nurse Register</a></li>
-									<li><a href="{{ route('login') }}">Nurse Login</a></li>
+{{--									<li><a href="{{ route('nurse.signup') }}">Nurse Register</a></li>--}}
+{{--									<li><a href="{{ route('login') }}">Nurse Login</a></li>--}}
 								</ul>
 							</li>
 				        <li class="mn">

@@ -23,12 +23,20 @@
                     <h4 class="text-section">Internal Option</h4>
                 </li>
 
-                 <li class="nav-item">
-                    <a href="{{ url('/') }}">
+                <li class="nav-item">
+                    <a href="{{ url('/user/dashboard') }}" >
                         <i class="fas fa-home"></i>
+                        <p>My Dashboard</p>
+                    </a>
+                </li>
+
+                 <li class="nav-item">
+                    <a href="{{ url('/') }}" target="_blank">
+                        <i class="fas fa-hospital"></i>
                         <p>Homepage</p>
                     </a>
-                </li><li class="nav-item">
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('allProduct') }}">
                         <i class="fas fa-desktop"></i>
                         <p>All Product</p>

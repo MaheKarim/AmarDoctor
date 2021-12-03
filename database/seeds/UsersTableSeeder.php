@@ -51,6 +51,10 @@ class UsersTableSeeder extends Seeder
             'name' => 'MR User',
             'username' => 'user',
             'email' => 'user@user.com',
+            'phn_number' => '01303062727',
+            'blood_group' => \App\Enums\BloodGroup::APOSITIVE,
+            'status' => \App\Enums\Boolean::NO,
+            'address' => 'Agargaon Taltola',
             'password' => Hash::make('password'),
             'created_at' => \Carbon\Carbon::now(),
 

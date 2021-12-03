@@ -12,16 +12,18 @@ class UserSettingsController extends Controller
     public function index()
     {
         $user = User::find(Auth::id());
-
-        return view('backend.multi-dashboard.user.settings_page', compact('user'));
+        $status = trans('boolean.status');
+        return view('backend.multi-dashboard.user.settings_page', compact('user', 'status'));
     }
 
     public function update(Request $request)
     {
-            $user = User::findOrFail(Auth::id());
-            $user->fill($request->all());
-//            dd($request);
-            $user->update();
+        $id = Auth::id();
+        User::find($id)->update([
+            'status'=> $request->status,
+            'address'=>$request->address,
+            'blood_group'=>$request->blood_group,
+        ]);
 
             return redirect()->route('user.user.settings');
     }

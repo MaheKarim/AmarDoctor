@@ -24,10 +24,17 @@
                             @endif
 
                         </div>
-                        {{ $user->blood_group }} , {{ $user->status }}
+                        Address ::    {{ $user->address }} <br>
+                        Your  Blood Group :: {{ trans('blood.blood_group.'.$user->blood_group) }} , <br>
+                        Do You Wanna Donate Blood ??    {{ trans('boolean.status.'.$user->status) }}
                         <!-- Change Password Form -->
                         <form method="POST" action="{{route('user.user.updateInfo')}}">
                             @csrf
+                            <div class="form-group">
+                                <label for="status">Address</label>
+                                <input name="address" class="form-control" value="{{ $user->address }}" >
+
+                            </div>
                             <div class="form-group">
                                 <label for="blood_group">Blood Group</label>
                                 <select name="blood_group" id="" class="form-control">
@@ -39,9 +46,10 @@
 
                             <div class="form-group">
                                 <label for="status">Do You Wanna Donate Blood</label>
-                                <select name="status" id="" class="form-control">
+                                <select name="status"  class="form-control">
+                                    <option value="">Select Status</option>
                                     @foreach(trans('boolean.status') as $key => $item)
-                                        <option value="{{$key}}" {{(old('status') == $key || data_get($user, 'status') == $key) ? 'selected':''}} > {{ $item }}</option>
+                                        <option value="{{$key}}" @if($user->status == $key) selected @endif> {{ $item }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -59,3 +67,9 @@
 
 
 @endsection
+<script>
+    import Index from "../../../../../public/ckeditor/samples/toolbarconfigurator/index.html";
+    export default {
+        components: {Index}
+    }
+</script>
