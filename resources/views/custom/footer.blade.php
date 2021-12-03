@@ -44,7 +44,7 @@
 										{{--<li><a href="{{ url('/password/reset') }}"><i class="fas fa-angle-double-right"></i>Reset Password</a></li>--}}
 										<li><a href="{{ route('search.doctor') }}"><i class="fas fa-angle-double-right"></i> Search for Doctors</a></li>
 										<li><a href="{{ route('contact.doctor_form') }}"><i class="fas fa-angle-double-right"></i> Doctor at Home</a></li>
-										<li><a href="{{ route('contact.form') }}"><i class="fas fa-angle-double-right"></i>Nursing Service</a></li>
+{{--										<li><a href="{{ route('contact.form') }}"><i class="fas fa-angle-double-right"></i>Nursing Service</a></li>--}}
 									</ul>
 								</div>
 								<!-- /Footer Widget -->
@@ -60,8 +60,8 @@
 
 										<li><a href=" {{ route('login') }} "><i class="fas fa-angle-double-right"></i>Doctor Login</a></li>
 										<li><a href=" {{ route('doctorSignUpForm') }} "><i class="fas fa-angle-double-right"></i>Doctor Register</a></li>
-                                        <li><a href=" {{route('login')}} "><i class="fas fa-angle-double-right"></i> Nurse Login</a></li>
-                                        <li><a href=" {{route('nurse.signup')}} "><i class="fas fa-angle-double-right"></i> Nurse Register</a></li>
+{{--                                        <li><a href=" {{route('login')}} "><i class="fas fa-angle-double-right"></i> Nurse Login</a></li>--}}
+{{--                                        <li><a href=" {{route('nurse.signup')}} "><i class="fas fa-angle-double-right"></i> Nurse Register</a></li>--}}
 									</ul>
 								</div>
 								<!-- /Footer Widget -->
