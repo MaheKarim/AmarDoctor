@@ -5,7 +5,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		<title>Doctor Appointment</title>
+		<title>{{ config('app.name') }}</title>
 
 		<!-- Favicons -->
 		<link type="image/x-icon" href="{{ asset('/') }}frontend/assets/img/favicon.png" rel="icon">

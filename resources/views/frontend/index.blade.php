@@ -9,7 +9,7 @@
                         <div class="carousel-item"><a href="https://amardoctor.com.bd/products"> <img class="d-block w-100" src="{{asset('/')}}frontend/assets/img/amar2.jpg" alt="Second slide"></a> </div>
                          <div class="carousel-item"><a href="https://amardoctor.com.bd/public/index.php/contact/service/nursing"> <img class="d-block w-100" src="{{asset('/')}}frontend/assets/img/24.jpg" alt="Second slide"></a> </div>
                           <div class="carousel-item"><a href="https://amardoctor.com.bd/public/index.php/search/your/doctor"><img class="d-block w-100" src="{{asset('/')}}frontend/assets/img/25.jpg" alt="First slide"></a>  </div>
-                   
+
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
                 </div>
@@ -204,11 +204,11 @@
                 <!--                </div>-->
                 <!--            </a>-->
                 <!--        </div>-->
-                        
+
 
                 <!--    </div>-->
                 <!--</div>-->
-                
+
             </div>
             <!-- Left and right controls -->
             <a class="carousel-control-prev" href="#demo" data-slide="prev" style="opacity: 1; left: -10%;">
@@ -294,10 +294,10 @@
     </div>
 </section>
 <!-- End Services1 -->
-<br> 
+<br>
 <br>
 <!-- Start Testimonials -->
-<div class="col-lg-10 offset-lg-1 pt-5 pb-5 text-light" style="background-color:#15558d;">
+<div class="col-lg-10 offset-lg-1 pt-5 pb-5 text-light" style="background-color:#1abc9c;">
     <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel" style="height:200px;">
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active text-center p-4">
