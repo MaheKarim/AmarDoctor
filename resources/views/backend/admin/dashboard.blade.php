@@ -39,17 +39,17 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card card-dark bg-secondary2">
-                <div class="card-body curves-shadow">
-                    <h1>{{ $users = \App\User::where('role_id','3')->count() }}</h1>
-                    <h5 class="op-10">Total Nurse</h5>
-                    <div class="pull-right">
-                        <h3 class="fw-bold op-10">Nurse Database</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--        <div class="col-md-4">--}}
+{{--            <div class="card card-dark bg-secondary2">--}}
+{{--                <div class="card-body curves-shadow">--}}
+{{--                    <h1>{{ $users = \App\User::where('role_id','3')->count() }}</h1>--}}
+{{--                    <h5 class="op-10">Total Nurse</h5>--}}
+{{--                    <div class="pull-right">--}}
+{{--                        <h3 class="fw-bold op-10">Nurse Database</h3>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
 
     <!-- Start -->
@@ -321,49 +321,51 @@
         </div>
     </div>
     <!-- Product Booking End --><!-- Product Booking Start -->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 align="center" class="card-title" style="background-color: #3c6382; color: white;">Nursing Service Request</h4>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table id="basic-datatables" class="display table table-striped table-hover" >
-                            <thead>
-                            <tr>
-                                <th> Name</th>
-                                <th> Email</th>
-                                <th> PHN Number</th>
-                                <th> Address</th>
-                                <th> Service Requested</th>
-                                <th> MSG</th>
-                                <th> Booking Date</th>
-                                <th>Delete</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($mails as $mail)
-                                <tr>
-                                    <td>{{ $mail->customer_name }}</td>
-                                    <td>{{ $mail->customer_email }}</td>
-                                    <td>{{ $mail->customer_phn }}</td>
-                                    <td>{{ $mail->customer_address }}</td>
-                                    <td>{{ $mail->nursing_service_details->nursingservice_name }}</td>
-                                    <td>{{ $mail->customer_message }}</td>
-                                    <td>{{ $mail->created_at->format('jS F') }}</td>
+    <!-- Nurse Start -->
+                {{--    <div class="row">--}}
+{{--        <div class="col-md-12">--}}
+{{--            <div class="card">--}}
+{{--                <div class="card-header">--}}
+{{--                    <h4 align="center" class="card-title" style="background-color: #3c6382; color: white;">Nursing Service Request</h4>--}}
+{{--                </div>--}}
+{{--                <div class="card-body">--}}
+{{--                    <div class="table-responsive">--}}
+{{--                        <table id="basic-datatables" class="display table table-striped table-hover" >--}}
+{{--                            <thead>--}}
+{{--                            <tr>--}}
+{{--                                <th> Name</th>--}}
+{{--                                <th> Email</th>--}}
+{{--                                <th> PHN Number</th>--}}
+{{--                                <th> Address</th>--}}
+{{--                                <th> Service Requested</th>--}}
+{{--                                <th> MSG</th>--}}
+{{--                                <th> Booking Date</th>--}}
+{{--                                <th>Delete</th>--}}
+{{--                            </tr>--}}
+{{--                            </thead>--}}
+{{--                            <tbody>--}}
+{{--                            @foreach($mails as $mail)--}}
+{{--                                <tr>--}}
+{{--                                    <td>{{ $mail->customer_name }}</td>--}}
+{{--                                    <td>{{ $mail->customer_email }}</td>--}}
+{{--                                    <td>{{ $mail->customer_phn }}</td>--}}
+{{--                                    <td>{{ $mail->customer_address }}</td>--}}
+{{--                                    <td>{{ $mail->nursing_service_details->nursingservice_name }}</td>--}}
+{{--                                    <td>{{ $mail->customer_message }}</td>--}}
+{{--                                    <td>{{ $mail->created_at->format('jS F') }}</td>--}}
 
-                                   <td><a href="{{ route('deleteContactForm', $mail->id) }}" type="button" class="btn btn-sm btn-danger">Delete</a></td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--                                   <td><a href="{{ route('deleteContactForm', $mail->id) }}" type="button" class="btn btn-sm btn-danger">Delete</a></td>--}}
+{{--                                </tr>--}}
+{{--                            @endforeach--}}
+{{--                            </tbody>--}}
+{{--                        </table>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <!-- Product Booking End -->
+    <!-- Nurse End -->
     <!-- Doctor Service request Start -->
     <div class="row">
         <div class="col-md-12">

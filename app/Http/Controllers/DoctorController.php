@@ -60,6 +60,7 @@ class DoctorController extends Controller
             'bmdc_reg_no' => $request->bmdc_reg_no,
             'area_name_id' => $request->area_name_id,
             'category_name_id' => $request->category_name_id,
+            'service_status_id' => $request->service_status_id,
         ]);
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password]))
