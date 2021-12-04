@@ -180,12 +180,12 @@
                                 <i class="flaticon-delivery-truck text-primary"></i>
                             </div>
                         </div>
-                        <div class="col-7 col-stats">
-                            <div class="numbers">
-                                <p class="card-category">Nurse Booking</p>
-                                <h4 class="card-title">{{ \App\ContactForm::count() }}</h4>
-                            </div>
-                        </div>
+{{--                        <div class="col-7 col-stats">--}}
+{{--                            <div class="numbers">--}}
+{{--                                <p class="card-category">Nurse Booking</p>--}}
+{{--                                <h4 class="card-title">{{ \App\ContactForm::count() }}</h4>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
