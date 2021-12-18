@@ -10,6 +10,46 @@
 </p>
 
 ## About AmarDoctor
+
+### Environment Instructions
+    1) Docker: Read The docker-compose.yml file and Docker Folder
+    2) XAMPP: Simple Instructions. Minimum PHP version 7.3.0. 
+
+****
+### Commandline Instructions :
+➡️     Go to your project folder & copy env file `cp  .env.example .env` <br> 
+➡️     Install Composer  `composer install` also run `composer dump-autoload` <br>
+➡️     Then Update Your New  `.env` file. <br>
+➡️     Update Your `DB_DATABASE` Name & Write the same name in MySQL DB <br>
+➡️     Run `php artisan migrate` <br>
+➡️     Run `php artisan db:seed` <br>
+➡️     Now You Have To Link with Storage `php artisan storage:link` <br>
+➡️     Now serve your server `php artisan serve` | [ You can off Server by <b> Ctrl+C </b> ]
+****
+### Login Credentials :
+ You have Four User Type <br>
+`1) Admin`
+`2) Doctor`
+`3) Nurse` 
+`4) User`
+
+[ * ] Admin Mail : `admin@admin.com` <br>
+[ * ] Admin Password: `password` <br>
+[ * ] Doctor Mail : `doctor@doctor.com` <br>
+[ * ] Doctor Password: `password`   <br>
+[ * ] Nurse Mail : `nurse@nurse.com`    <br>
+[ * ] Nurse Password: `password`   <br>
+[ * ] User Mail : `user@user.com`    <br>
+[ * ] User Password: `password`   <br>
+***
+
+
+
+
+
+
+
+
 #### Admin Panel Overview
 ![Admin Dashboard](https://user-images.githubusercontent.com/16819523/94730654-5f56f480-0385-11eb-8794-a96010f8de4b.png)
 
