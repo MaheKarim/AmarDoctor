@@ -18,7 +18,7 @@ services:
     build:
       context: ./docker/site
       args:
-        - PHP_VERSION=${PHP_VERSION:-7.2}
+        - PHP_VERSION=${PHP_VERSION:-7.3}
     volumes:
       - ./:/var/www/site:cached
     networks:

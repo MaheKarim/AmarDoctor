@@ -15,3 +15,5 @@ yarn-error.log
 /docker
 /docker/*
 docker-compose.yml
+.idea/AmarDoctor.iml
+.idea/php.xml
