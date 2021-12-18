@@ -44,12 +44,6 @@
 ***
 
 
-
-
-
-
-
-
 #### Admin Panel Overview
 ![Admin Dashboard](https://user-images.githubusercontent.com/16819523/94730654-5f56f480-0385-11eb-8794-a96010f8de4b.png)
 
