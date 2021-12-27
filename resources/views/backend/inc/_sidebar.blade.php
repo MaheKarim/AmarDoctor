@@ -63,12 +63,12 @@
 
                     </a>
                 </li>
-                {{--                <li class="nav-item">--}}
-                {{--                    <a href="{{ route('admin.showAllNurse') }}">--}}
-                {{--                        <i class="fa fa-ambulance" aria-hidden="true"></i>--}}
-                {{--                        <p>Show All Nurse</p>--}}
-                {{--                    </a>--}}
-                {{--                </li>--}}
+                <li class="nav-item">
+                    <a href="{{ route('admin.showAllNurse') }}">
+                        <i class="fa fa-ambulance" aria-hidden="true"></i>
+                        <p>Show All Nurse</p>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.showArea') }}">
                         <i class="fas fa-desktop"></i>
@@ -83,13 +83,13 @@
                         <span class="badge badge-default">{{ \App\Category::count() }} </span>
                     </a>
                 </li>
-                {{--                <li class="nav-item">--}}
-                {{--                <a href="{{ route('admin.nursing_service.index') }}">--}}
-                {{--                    <i class="fas fa-server"></i>--}}
-                {{--                        <p>Nursing Service</p>--}}
-                {{--                    <span class="badge badge-danger">{{ \App\NursingService::count() }} </span>--}}
-                {{--                    </a>--}}
-                {{--                </li>--}}
+                <li class="nav-item">
+                    <a href="{{ route('admin.nursing_service.index') }}">
+                        <i class="fas fa-server"></i>
+                        <p>Nursing Service</p>
+                        <span class="badge badge-danger">{{ \App\NursingService::count() }} </span>
+                    </a>
+                </li>
 
                 <li class="nav-section">
                     <span class="sidebar-mini-icon">
