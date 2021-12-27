@@ -113,7 +113,7 @@
                 <li class="nav-item">
                     <a data-toggle="collapse" href="#base">
                         <i class="fas fa-layer-group"></i>
-                        <p>Seetings</p>
+                        <p>Settings</p>
                         <span class="caret"></span>
                     </a>
                     <div class="collapse" id="base">
