@@ -36,7 +36,7 @@
                             @foreach($prescriptions as $prescription)
                                 <tr>
                                     <td>{{ data_get($prescription, "name") }}</td>
-                                    <td>{{ data_get($prescription, "file") }}</td>
+                                    <td> <img style="width:100%;max-width:300px" src="{{ asset('storage')}}/{{$prescription->file }} " /> </td>
                                 </tr>
 
                             @endforeach
