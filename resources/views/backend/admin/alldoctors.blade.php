@@ -121,7 +121,7 @@
                                         <td>{{ $availabledoctor->Area->area_name}}</td>
 
                                         <td>
-                                            <a href="{{ route('admin.deleteDoctor', $doctor->id) }}" type="button"
+                                            <a href="{{ route('admin.deleteDoctor', $availabledoctor->id) }}" type="button"
                                                class="btn btn-sm btn-danger">Delete</a>
                                         </td>
                                     </tr>
