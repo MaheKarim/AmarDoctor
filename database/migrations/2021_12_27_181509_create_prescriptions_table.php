@@ -15,7 +15,11 @@ class CreatePrescriptionsTable extends Migration
     {
         Schema::create('prescriptions', function (Blueprint $table) {
             $table->id();
+            $table->tinyInteger('user_id');
+            $table->string('name');
+            $table->string('file');
             $table->timestamps();
+
         });
     }
 

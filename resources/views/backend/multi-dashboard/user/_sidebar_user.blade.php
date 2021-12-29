@@ -49,6 +49,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('user.prescription.create') }}">
+                        <i class="fas fa-palette"></i>
+                        <p>Prescription Upload</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('user.user.settings') }}">
                         <i class="fas fa-square-full"></i>
                         <p>Settings</p>

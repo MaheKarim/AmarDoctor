@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use App\Prescription;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use function view;
 
 class PrescriptionController extends Controller
 {
@@ -14,7 +17,8 @@ class PrescriptionController extends Controller
      */
     public function index()
     {
-        //
+        $prescriptions = Prescription::where('user_id', '=', Auth::id())->get();
+        return view('backend.multi-dashboard.user.p_index', compact('prescriptions'));
     }
 
     /**
@@ -24,7 +28,7 @@ class PrescriptionController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.multi-dashboard.user.prescription_upload');
     }
 
     /**
@@ -35,7 +39,17 @@ class PrescriptionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->has('file')) {
+            $image = $request->file('file')->store('package_images');
+        }
+
+        $prescription = new Prescription();
+        $prescription->fill($request->all());
+        $prescription->user_id = Auth::user()->id;
+        $prescription->file = $image;
+        $prescription->save();
+
+        return redirect()->route('user.prescription.index');
     }
 
     /**

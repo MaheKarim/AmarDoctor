@@ -180,6 +180,10 @@ Route::group(['as'=>'user.' ,'prefix' => 'user', 'namespace' => 'User', 'middlew
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('/settings', 'UserSettingsController@index')->name('user.settings');
     Route::post('settings', 'UserSettingsController@update')->name('user.updateInfo');
+
+    Route::get('/my/prescription','PrescriptionController@index')->name('prescription.index');
+    Route::get('/prescription/create','PrescriptionController@create')->name('prescription.create');
+    Route::post('prescription','PrescriptionController@store')->name('prescription.store');
 });
 
 /*
