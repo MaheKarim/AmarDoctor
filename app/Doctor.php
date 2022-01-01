@@ -6,10 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Doctor extends Model
 {
-//    protected  $table=['doctors'];
-    //
+
     protected  $guarded = [ ];
-   // protected  $primaryKey = 'area_name_id';
 
     public function Area()
     {
