@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Blade;
 use App\User;
 use App\SiteSettings;
+use Illuminate\Pagination\Paginator; //add this too
 
 class AppServiceProvider extends ServiceProvider
 {
