@@ -34,10 +34,13 @@ class AppServiceProvider extends ServiceProvider
         User::deleting(function ($user) {
             $user->Doctor()->delete();
         });
-        
+
+
+
         view()->composer('*', function ($view){
-            $settings =SiteSettings::find(1); 
+            $settings =SiteSettings::find(1);
             $view->with('settings', $settings);
         });
+        Paginator::useBootstrap();
     }
 }
